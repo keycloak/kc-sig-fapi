@@ -1,0 +1,16 @@
+{
+    "CN": "Keycloak-fapi CA",
+    "key": {
+        "algo": "ecdsa",
+        "size": 256
+    },
+    "names": [
+        {
+            "C": "JP",
+            "L": "",
+            "O": "Secure OSS Sig",
+            "OU": "Keycloak-fapi",
+            "ST": "CA"
+        }
+    ]
+}
