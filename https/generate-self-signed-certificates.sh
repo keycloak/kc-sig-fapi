@@ -3,12 +3,15 @@
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
 
-# Install cfssl
-mkdir -p .bin
-curl -s -L -o .bin/cfssl https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
-curl -s -L -o .bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
-chmod +x .bin/{cfssl,cfssljson}
-PATH=$PATH:.bin
+type cfssl
+if [ $? -ne 0 ]; then
+    # Install cfssl
+    mkdir -p .bin
+    curl -s -L -o .bin/cfssl https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+    curl -s -L -o .bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+    chmod +x .bin/{cfssl,cfssljson}
+    PATH=$PATH:.bin
+fi
 
 # Generate
 cfssl gencert -initca ca-csr.json | cfssljson -bare ca

@@ -4,6 +4,8 @@
         "127.0.0.1",
         "localhost",
         "*.secureoss.jp",
+        "keycloak.org",
+        "*.keycloak.org",
         "keycloak-fapi.org",
         "*.keycloak-fapi.org"
     ],
