@@ -28,7 +28,7 @@ cat << EOS > server-csr.json
         "keycloak.org",
         "*.keycloak.org",
         "$KC_HOST",
-        "$RC_HOST"
+        "$RS_HOST"
     ],
     "key": {
         "algo": "ecdsa",
