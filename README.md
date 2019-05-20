@@ -43,6 +43,7 @@ If you would like to run the server on Docker for Windows, change `volumes` in `
 Then, build & boot all the containers.
 
 ```
+> mvn clean package
 > docker-compose up
 ```
 

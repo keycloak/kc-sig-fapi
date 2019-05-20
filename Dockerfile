@@ -11,7 +11,7 @@ FROM jboss/keycloak:6.0.1
 USER root
 
 # Install keyclaok-gatekeeper
-RUN curl https://downloads.jboss.org/keycloak/6.0.1/gatekeeper/keycloak-gatekeeper-linux-amd64.tar.gz | tar zx -C /usr/local/sbin/
+RUN curl -s https://downloads.jboss.org/keycloak/6.0.1/gatekeeper/keycloak-gatekeeper-linux-amd64.tar.gz | tar zx -C /usr/local/sbin/
 RUN mkdir -p /opt/jboss/keycloak-gatekeeper
 ADD resource-server/config.yml /opt/jboss/keycloak-gatekeeper/config.yml
 ADD resource-server/*-server-info.txt /opt/jboss/keycloak-gatekeeper/
