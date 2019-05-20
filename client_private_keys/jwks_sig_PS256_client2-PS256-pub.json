@@ -1,0 +1,12 @@
+{
+    "keys": [
+        {
+            "use": "sig",
+            "kty": "RSA",
+            "kid": "client2-PS256",
+            "alg": "PS256",
+            "n": "yl6LaMavWDPJyEdKRqagbizjX0CGkVM0yyyJBQBcLK8ca1VIcFZ70A4fwTx9yesJkBG19nk02rl33WSB1Fb0CUUXXMjKYPMNYSA62WoKI8vYk1v9gnTqQwyTGhWNIJPpCqY_nvMKy8NaNAt8n6Pv1hDxxNpI33-bUwDJw3t3aCJ7Tu96gkiRNjDWILjHLhGkpRb-kF7JDSm2i9jcyhiGGadcNwhRIH5Gz5yyPn6cvUV5T6-vY1ZwiLrJQ47YRSxavuiPnYv06ULik9iv4DeDwW2ixDtziVnhO671VegJ0mFrAuFZ2nxptP1U5qWit37mH3RjFxjOdx7z0PzkztysIQ",
+            "e": "AQAB"
+        }
+    ]
+}

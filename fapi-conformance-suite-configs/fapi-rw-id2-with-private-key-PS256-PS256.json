@@ -1,0 +1,105 @@
+{
+    "alias": "keycloak",
+    "description": "conformance suite using Keycloak FAPI-RW with private_key",
+    "server": {
+        "discoveryUrl": "https://keycloak-fapi.org:9443/auth/realms/test/.well-known/openid-configuration"
+    },
+    "client": {
+        "client_id": "client1-private_key_jwt-PS256-PS256",
+        "scope": "openid",
+        "jwks": {
+    "keys": [
+        {
+            "use": "sig",
+            "kty": "RSA",
+            "kid": "client1-PS256",
+            "alg": "PS256",
+            "n": "qY7s9nWFw5LsrM-jMUvUv7FanB81go0Nx_zeHVDyjb_kk7em_qTZfQ-67388wMob7nMe--pHn7td14w3ucQuakHWOgfdrTGA7624zKEdYteK7mPTiYc5Qyyvok3ZjhOS6L9gmF01lVLLfL-2vIqipajQ1tizdX72Y4IbgkHtrK3OInVuPjRdaDa2KP5H8bbVn9JfyPqcmAeTqAVgQk1iX33LeiRCT_ctGy6piUYlOusc6ftknHE5H5qf_73M0PoJkLFT1EKz5wrgBu-nVhzjRxZ5ECs8qpf6lMo0CGp_T6qQEA9vbMWBkpw27tl-luFHtLWOsmlA65MF8wXS4yGfdQ",
+            "e": "AQAB",
+            "d": "lcbF9TN89HR9km1cB3intqkQlCZRW0AEM2tgPN87UxF19TJeVkQCRiG2DEcFwHsHz0trzDV4DVYyH-whcXwlUAFWHi7Cl3HKJm37du6_CYfClrAhtTN41qjLgIBqM8GAnQ4oYo67fWsEiu7CmauQ3urPh2kmpRyAwwe0Cwz3yPbRilhRGMgKrD5QVIqKZpd6uk_tQ3QjAWELFpJJrJIpRfUD9YwhmVZKSoBvriGMeizilOMWNeZMlBPiiF1DxGCfLUaQqCzKClhu2TbiSkhwzu_HoMhfo751ZqbOr39sIoCkRMfWO2qhhBeYta1ckKMMGiX_tvS9-iPAzsRiDhT2xQ",
+            "p": "wHaJ0cy1X0iQtzeDMF3tzOrhcx388EvgkOZE5vxLSpik6nRPebZxzZU-7MYpIw4jvkyXmeTE7LwsshzIGo-dTZ2Jq20i8hSE6l6iIlQkifAWlheFarsgjp81o3heXVUJ5NttLDAIvtNJoBy0OWvVxl76TNxQBLB2rB178qKWACs",
+            "q": "4YiovPRHd3uKL-jt1kwwApeKQiVAX7-iqfr7Jkexl_WxlINzEVY4sy50iEYRh8tfGzbPzkS7QZnpf3BiShFWI2xO9RVQK1ryj6nFqndy66J27nrCYEqPt1MhBuNS78i3YJXM3XmFD2oifIM4NYApzn7MkgAbRi-CInwa6JOvbt8",
+            "dp": "gCeud7P-5ZaVPlrJkVBKQ1P3kUbboUp1GycppEFFBUQFNFUEgsA4oTMK9nCw_bWxmUq4-_F4K0bV4DgICp-sl_0Zqbt_NIDzTHh9L6yls-_ZqlG5Niuqby2WcuZ4t18jum9eD7lgaWiZsvLKEx459-BQfROKeMTkEJGFcjhO94c",
+            "dq": "1BozptCNTZ8PjJMg6gLou-dMjXx_GA0fq4BwJcYTDPhxs1wUIV_XHxw3V9mdrvniTbO0pyYYfU-EOue0aDf5rIK1luQea0ezCsz9Kp3_o_88nncwymIU2rIBQ3sSipNXciwvaLJaIu8L09GMUTRhHOQ--6fB_rW7SzcwDz6lJD0",
+            "qi": "PHtQH4v5R4kfRD9T2VNIkw8ngp7azPgXom6azPGU_i2mmldek6d1289vgK7nVGbEN0O72WknsoJ3aiCKvw5Gx6nE3AdeV_V0Gca83EFx4_ehaokGYo6xTat-QNwyZZVldGVYB98tgzmux3TOiBQ3pExF8-lfzZzyEd2c0HP7Dbk"
+        }
+    ]
+} 
+    },
+    "client2": {
+        "client_id": "client2-private_key_jwt-PS256-PS256",
+        "scope": "openid",
+        "jwks": {
+    "keys": [
+        {
+            "use": "sig",
+            "kty": "RSA",
+            "kid": "client2-PS256",
+            "alg": "PS256",
+            "n": "yl6LaMavWDPJyEdKRqagbizjX0CGkVM0yyyJBQBcLK8ca1VIcFZ70A4fwTx9yesJkBG19nk02rl33WSB1Fb0CUUXXMjKYPMNYSA62WoKI8vYk1v9gnTqQwyTGhWNIJPpCqY_nvMKy8NaNAt8n6Pv1hDxxNpI33-bUwDJw3t3aCJ7Tu96gkiRNjDWILjHLhGkpRb-kF7JDSm2i9jcyhiGGadcNwhRIH5Gz5yyPn6cvUV5T6-vY1ZwiLrJQ47YRSxavuiPnYv06ULik9iv4DeDwW2ixDtziVnhO671VegJ0mFrAuFZ2nxptP1U5qWit37mH3RjFxjOdx7z0PzkztysIQ",
+            "e": "AQAB",
+            "d": "eTeYmfIpJdQfke_h9d_pSRVqPKwR7wrAHNNYX76Pd9SMWV6EPYYQM9fB_aWWU1SOLdXuAO0pU7q0qdCCVAahtsvD6rf7QYdVBFCh74ks-bQozlvTxkjx6aemlYFDP7hZZx-eDD_Yv6UMaxBWXel8x-TubNOzwuxUxas7L_TM2Xp83kxoDRn8ZAIbT0_TnCLtdMZNm5Yr4PGDwVo77bWt2W2Zy3z0hC6zTWZFYX4zG_hwqqAo-2t5jonUPG6JA5pWjt4Zsbr5IJWj72_U_itSMh6KfHBDfa7rz5mGOlJJiKlAg_y17cHr3nTsVfPHRgN1ho0bSsqZrivkSH-2Hjp4AQ",
+            "p": "1en01qSV4OtXwI_KP7cor82rhJV8pWRFz4AormzfVXcLag9sluOGZqy-k4y5SDFlxv-PIKIiGe-Ch10kk8ZrMEag2GFiSHtkf_eZ_oOkKOOr8xFOK-9yYqXMrZMMeNPkoktGM_0RywXyyJ3Edi5qfezRtCWxvl9jjv2oDXaVEvE",
+            "q": "8i8hhI3P15b5by-CXGXpd70nU5H_C5AS-1I8VBVtLj29yJFdpQywj98WjNPd7LaUBO5NZo9npDcDVqzaZfl9VJA_hXcwb-NqpE_XyLHfQq0GT__BglvA7kq5SeAEfrcZpxXYBKsgDsugGitZtKLi38-0C0kCqGzWdEqedmz8zDE",
+            "dp": "uPFGGlE_t68hNj3bGU0soxpJQR7RHllcNfNSuMMuL8D1oGPneWkLKTgOqJjRFAaJPQx0XT1wCEZX7tprpku1Ho7hv1Iq3Am6sRyMCk0cH7H_Vu5OTJP_rCQ2mpb5AHoKQPqdnpMc0A-7gRFN6vNkZKzb_Uldq_7in5zUr5cnebE",
+            "dq": "fU9xslqGLnEJw0P72b9JnBEdZhpmsx7rE2srl_42LfT4W-0LXTlBqk-uJVQCwlZ-JEcBeY29_LQSYCi0IIuFE9pHY9GWGG69YSOG7WtLr_5DA-W7xK2hGCtF0Dm_Wal39oJQ8alxvvYRczj3A4Y8ib241RYD8A3QsP9jGret3iE",
+            "qi": "FpIPrody_qMl5UNFYf6JBKQisQlnWja2FzQNd50D_lNzFq_Gw7F_NN7h_sPSB9EYuqdJi7e8-AEiHTHeGFDHaMb2H1eFrZDJWIiySGkAIBVQlY2L-LrsTZZugNlSoQKYYdb8vjsQvIDzFK7uD5NkBUWSY0o_DSN3JhZmo02bHUM"
+        }
+    ]
+} 
+    },
+    "mtls": {
+        "cert": "-----BEGIN CERTIFICATE-----\nMIIDGDCCAr6gAwIBAgIUfYPpcvOfShL0AnpjQKom8VUqV6wwCgYIKoZIzj0EAwIw\nZjELMAkGA1UEBhMCSlAxCzAJBgNVBAgTAkNBMRcwFQYDVQQKEw5TZWN1cmUgT1NT\nIFNpZzEWMBQGA1UECxMNS2V5Y2xvYWstZmFwaTEZMBcGA1UEAxMQS2V5Y2xvYWst\nZmFwaSBDQTAeFw0xOTA1MjAwNzE1MDBaFw0yNDA1MTgwNzE1MDBaMGExCzAJBgNV\nBAYTAkpQMQ8wDQYDVQQIEwZDbGllbnQxFzAVBgNVBAoTDlNlY3VyZSBPU1MgU2ln\nMRYwFAYDVQQLEw1LZXljbG9hay1mYXBpMRAwDgYDVQQDEwdjbGllbnQxMIIBIjAN\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqDRaVRXYvVgY/zUXSx+JUzPXBdtb\nvZGw7ci6LLAtpSNT457FlD+ay8INYfyMRW8g/hKWkYAeFeqJFPla7Q+imMwS5JdT\nMepT3Yah6WIESfgmnS2qHMYeuD/28kNE10EsKLTi+YGi2Kx7oKJUsWQe4FHQ0Rmm\n3jesprOIlsK8qBEC/HRARd6wnszQ+oopTZ5zhefZfsfGsYxw7jJfNddkxTkw+P25\nP0AY4KfnUKRmq4pEtEGrNHRrKRhvinmVs3cWCerfGgT352giyxA6a5nkQk/zaevs\n7JOHkpvdevTUpgxmW6CDatFeWVjTN8RPIPosqTqxbrHbF7ranB+GDgkUMwIDAQAB\no4GDMIGAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDAjAMBgNV\nHRMBAf8EAjAAMB0GA1UdDgQWBBQy5cjjNdopjRbkyyPB0b8/icJo2jAfBgNVHSME\nGDAWgBQcY4rg0hELDBI66tmYVAkgF95gxTALBgNVHREEBDACggAwCgYIKoZIzj0E\nAwIDSAAwRQIhAOT0hTXSilve2qmHNYMy5HGV9HDi1vXZLQQntoWD3MQsAiA5Xl/m\nK5ASAqvyx3hDZQwZT9JkVbzLSTcil7uNoK0G5g==\n-----END CERTIFICATE-----\n",
+        "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAqDRaVRXYvVgY/zUXSx+JUzPXBdtbvZGw7ci6LLAtpSNT457F\nlD+ay8INYfyMRW8g/hKWkYAeFeqJFPla7Q+imMwS5JdTMepT3Yah6WIESfgmnS2q\nHMYeuD/28kNE10EsKLTi+YGi2Kx7oKJUsWQe4FHQ0Rmm3jesprOIlsK8qBEC/HRA\nRd6wnszQ+oopTZ5zhefZfsfGsYxw7jJfNddkxTkw+P25P0AY4KfnUKRmq4pEtEGr\nNHRrKRhvinmVs3cWCerfGgT352giyxA6a5nkQk/zaevs7JOHkpvdevTUpgxmW6CD\natFeWVjTN8RPIPosqTqxbrHbF7ranB+GDgkUMwIDAQABAoIBAH8kY4uhId2ts+dk\nuCC+y8yqiMQSlXvrnnN+oMuauEX1ODn8D5kJovaVzgvdHCJ359ZlMo706sjiKZBD\nE+nRQbSBvV4wzGAUoiP22nhQ8LEA9B8nH0j0sM/Q+dcR5f1XdAuo/1BeHzvs1N4N\nFjuoVHZ3IYKNA0dBii3P01UyCex3BZgsXEHdAzlEudKuWJHLohJQJ4H8ExvfvJ9t\nnGDJ0zKwAj9R0DB3x9n1k4iPq07btVsjtuiZT1ngZhz76hHNzf2BPyi6bPRzasPj\n5hDP4ir2PlhyrzvVvIedd27c0a4BYOasP/mY+ORzAFO6iIgL4a7C3uc+1jAO9s/S\nHhx84KECgYEA1V0k4z/myy1iF2PSkO1a6QzGvltqOdiFrd8gf2+jJCEfdm8Djp4D\n/a6tpH17Oukw9EbeKlDrRLq0HnlBkexh93BQgzj0n+dYELVpPPal28Ezk6tK5hw1\nIVuPWUebkg5GbilKqSb6lgpL7S6a+/eMHXqxCA40Cg2oEom5/IRYlMkCgYEAydEI\nylSVfIFYGuaJkJUTwrV6JbNHcn4UeX6+YowYzS41IjJ5/59SqBm2eR3UHut1T9q+\nOm4aSA6Krp33rmB7jkSwwKPb8cRszgdlbqXHRoNSDMHhHmLzvtB1b95zmj51c4em\nIqp8fS7bGR7R98W4oZ9GRqGGFn/nBuBrcG4GyxsCgYB67q/SP386kWtzDpDD7/3x\nSOs5wnHx4k8jXuvagPf+WRdHpa7m/SRPhdWGcMYPq0wJcsuOlhD4CJq+9B5TdV78\nsjmxYZ+Qgjq7Zcq81V+6vhZ5frgo3Re/oIF3b0qzXIY38pKR42N+D3Cvt6qUgoy4\nb3iQq55QLI4qIDCIzbg8AQKBgQDJI5nUNarq9Op/nQa736hbJY3Ap0ZtGLWFRUmw\nZBqP3B6+n3oxx3OU8FOJsK3pxxgbZ1KyX2u4Jy4WzH++/pAGAfX7eRRLiE48pOh1\n96l9YIJVDqI0K8Dsi0yQGzAyKU/bvfVZlXsPNLTO+4WeoSPbiSd8W52NLRpvIxpR\naodAwwKBgEeAqIwy3B+nTBkrgu437X6oBAHLD29I11oZmPHh/A+WyvmRpIRmT9qb\nBXFUkt4vJWMq9crlsfWAuiVoA0dST9u5qYJmeIXAH80eK5enIiol1j00uPlOoBNu\nXKqcCVjNd/+CmTa2SEPt0B7Bo7jIIpY3NPTaOMousfvbWJdINxX+\n-----END RSA PRIVATE KEY-----\n"
+    },
+    "mtls2": {
+        "cert": "-----BEGIN CERTIFICATE-----\nMIIDGTCCAr6gAwIBAgIUW8+9wkVDjSAIEgDEbfWBzI+0k6owCgYIKoZIzj0EAwIw\nZjELMAkGA1UEBhMCSlAxCzAJBgNVBAgTAkNBMRcwFQYDVQQKEw5TZWN1cmUgT1NT\nIFNpZzEWMBQGA1UECxMNS2V5Y2xvYWstZmFwaTEZMBcGA1UEAxMQS2V5Y2xvYWst\nZmFwaSBDQTAeFw0xOTA1MjAwNzE1MDBaFw0yNDA1MTgwNzE1MDBaMGExCzAJBgNV\nBAYTAkpQMQ8wDQYDVQQIEwZDbGllbnQxFzAVBgNVBAoTDlNlY3VyZSBPU1MgU2ln\nMRYwFAYDVQQLEw1LZXljbG9hay1mYXBpMRAwDgYDVQQDEwdjbGllbnQyMIIBIjAN\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz+NDJs8dRJfS7RydoSRO31pWVyyi\nZpfoG2gLcxp5he0Cz8ppSIczaiM1nuoer+KCisuDGMFWD05oQ7l+mkAjXKhkEKAj\nbXhF43176T6PbP06A9JN1ACNGcc/o0csVLLBIqtbScENjbBf2AiSc6vchGPd0zHs\nN+UCBfD+wnJ3t9GDPPEdlNYvcruRkIXylKrae/rUmDZenHRXR6dFVvcCEqWrhfeu\nblWXEbe4dlkbdgrcYVcVkMjgzGQH+C6n0emDanAToNumByE1ciej0lyfiedaWMzf\nzl9E0Sn2w1X+ShyFzXjuStbW/40y/Bx9Pt0O/b+8Qy1k0qA7z5KtrJldLwIDAQAB\no4GDMIGAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDAjAMBgNV\nHRMBAf8EAjAAMB0GA1UdDgQWBBQA/v6eNj3TANkWl5xsDZw+exGpYTAfBgNVHSME\nGDAWgBQcY4rg0hELDBI66tmYVAkgF95gxTALBgNVHREEBDACggAwCgYIKoZIzj0E\nAwIDSQAwRgIhAMKOP4SvHcnlZUmNsY76FsV+QdlbOucOV4qki6RkRlh1AiEAqr8C\nq+wgwGS7/l+0CKAnMru4AsUhs9cbJDpmqAaZ0XA=\n-----END CERTIFICATE-----\n",
+        "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEAz+NDJs8dRJfS7RydoSRO31pWVyyiZpfoG2gLcxp5he0Cz8pp\nSIczaiM1nuoer+KCisuDGMFWD05oQ7l+mkAjXKhkEKAjbXhF43176T6PbP06A9JN\n1ACNGcc/o0csVLLBIqtbScENjbBf2AiSc6vchGPd0zHsN+UCBfD+wnJ3t9GDPPEd\nlNYvcruRkIXylKrae/rUmDZenHRXR6dFVvcCEqWrhfeublWXEbe4dlkbdgrcYVcV\nkMjgzGQH+C6n0emDanAToNumByE1ciej0lyfiedaWMzfzl9E0Sn2w1X+ShyFzXju\nStbW/40y/Bx9Pt0O/b+8Qy1k0qA7z5KtrJldLwIDAQABAoIBAQC1gxLw4coGSCHs\n0h13w4HyVqgoeVpbBautsky89ZLBss3PrEX9A7+Knq+Ez5p3q+ibU1Jl3PlNaAJ1\nj5LRD8tQbd7g/VGxlWBAXyI/51XHrdpn18oIn2qT5XrVD6HPWjx0DvYoEZ3J5wPo\nVqO4x4hFOAVJD7/WlegMU/28vcF2Bq+gjn+aPkVe5+dscZ7wpXufbZJGzr4fdc5A\nVFuwO3x0gwvcCwfbEaA0RTELZ9YOkcy0FIFa6aJTMRLUoltLa5JgfL7YrHCRH/n0\nS3EuqhziwWxVlIBeUsrprs2A+yn8Ue2iDDhP26ySxDPY5pgftrRN71Br4IrD7ys4\naR+o3GQxAoGBAPI8dc51HPKOCHYOXBSq0Rmkws+p6HrdfGZIKFsE07V1po5qQWwA\nRbgHTErj5RFWt4U3BvTYAdKjjBJRFIqBSMGq3NEeoI4TOmu9Ownp7SCTLyuFlOk9\nRX4eMm7nJX20eKSRfZlXaHR+5Jgxl1C8WrwtHMDYJ4MoNf17qPU2e6DjAoGBANuz\nLH0n8m7FYJdVNMJDoQY1GclfuDW7Y8nHsh0KzWPlG4eWvxvv1yWMXlKlZDRl4xP/\nApcjFGSUrs83EplNjhfQq0l/2FMG2+uyjklseoDmyErszhYaeiCe075xBV7YbOx/\n2+W0d4lHj3oeUk+jAMn1XkfhBQvnu7cYdF9TTQBFAoGAdNQkHUbuhy1pd0bFslIQ\nN0X3jyBrN5bLAKmcjQlu8f2kLtugYe5fsboTWatAN3STXnSDrmLfvi+SxuLD/WkN\nJhq6FUGoPd2YN440gzuHWkaiYWMzxqn+ci0uNb7VniMEbJqe8O3vOwBYT+7bA91U\nBZ3cWEXoCKHEKFUTz/BO//ECgYEAoIPV+1MWU0wt+CMuushCe5CMWI5wvgE9NQ2L\n2qAr09JuPLAszLJ81FgsCeIAxi+yqsdkExx0J9Bhr8+i7RK2wDubCcY4POEECL6a\nKpbxIgB7UhKVt5x8ohyow7k7nUIuwtPfy4IA2/HGqAhDRx/m0adNzOJgl4Qlp+5c\nB9GKrqkCgYEAgAWsESsPVLo+k7NJxSH0yh0MrupAHt/zW0R2ar2gRaY7QRzfvZHU\nSCVFNV8bo9OFO/RspyJ64WJJmwVPwcm6cscYG69U34Oq2f1esRcllyc2DJtSQfWL\nGdvTYG7qaMGsGxHMMYJlaBiaspizdXol95Dx4FflLmmqPVu8rk/xyo4=\n-----END RSA PRIVATE KEY-----\n"
+    },
+    "resource": {
+        "resourceUrl": "https://keycloak-fapi.org:10443/",
+        "institution_id": "xxx"
+    },
+    "browser": [
+        {
+            "match": "https://keycloak-fapi.org:9443/auth/realms/test/openid-connect/auth*",
+            "tasks": [
+                {
+                    "task": "Initial Login",
+                    "match": "https://keycloak-fapi.org:9443/auth/realms/test/openid-connect/auth*",
+                    "commands": [
+                        [
+                            "text",
+                            "name",
+                            "username",
+                            "john"
+                        ],
+                        [
+                            "text",
+                            "name",
+                            "password",
+                            "john"
+                        ],
+                        [
+                            "click",
+                            "name",
+                            "login"
+                        ]
+                    ]
+                },
+                {
+                    "task": "Verify Complete",
+                    "match": "https://*/test/a/keycloak/callback*",
+                    "commands": [
+                        [
+                            "wait",
+                            "id",
+                            "submission_complete",
+                            10
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
