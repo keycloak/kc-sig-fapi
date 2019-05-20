@@ -106,9 +106,10 @@ Also, modify your `hosts` file in your local machine as follow.
 1. Open https://localhost:8443
 2. Choose **FAPI-RW-ID2: with private key and mtls holder of key Test Plan** in test plans
 3. Click `JSON` tab and paste content of [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-RS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-RS256-PS256.json).
-4. Click `Start Test Plan` button and follow the instructions.
+4. Click `Start Test Plan` button and follow the instructions. To proceed with the tests, You can authenticate using `john` account with password 'john'.
 
-**Note: There is a known issue when using PS256/ES256 as request object signature alg. To proceed all test cases, we need to use RS256 instead of them currently.**
+**Note: There is a known issue when using PS256/ES256 as request object signature alg. To proceed with all the test cases, we need to use RS256 instead of them currently.**
+
 
 ## For Developers
 
