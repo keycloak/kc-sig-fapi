@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# ARG1: Realm name
-# ARG2: Hostname:port of FAPI Conformance suite server
+# ARG1: Alias of FAPI Conformance suite server config
+# ARG2: Hostname:port of Keycloak server
 # ARG3: Hostname:port of Resource server
-REALM=${1:-test}
+# ARG4: Realm name
+# ARG5: Scope
+FCSS_ALIAS=${1:-keycloak}
 KC_HOST_PORT=${2:-keycloak-fapi.org:9443}
-RS_HOST_PORT=${3:-rs.keycloak-fapi.org:10443}
-
-
-SCOPE="openid"
-FCSS_ALIAS=keycloak
+RS_HOST_PORT=${3:-keycloak-fapi.org:10443}
+REALM=${4:-test}
+SCOPE=${5:-openid}
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
@@ -59,7 +59,49 @@ generateConfigWithPrivateKey() {
     "resource": {
         "resourceUrl": "https://$RS_HOST_PORT/",
         "institution_id": "xxx"
-    }
+    },
+    "browser": [
+        {
+            "match": "https://$KC_HOST_PORT/auth/realms/$REALM/openid-connect/auth*",
+            "tasks": [
+                {
+                    "task": "Initial Login",
+                    "match": "https://$KC_HOST_PORT/auth/realms/$REALM/openid-connect/auth*",
+                    "commands": [
+                        [
+                            "text",
+                            "name",
+                            "username",
+                            "john"
+                        ],
+                        [
+                            "text",
+                            "name",
+                            "password",
+                            "john"
+                        ],
+                        [
+                            "click",
+                            "name",
+                            "login"
+                        ]
+                    ]
+                },
+                {
+                    "task": "Verify Complete",
+                    "match": "https://*/test/a/$FCSS_ALIAS/callback*",
+                    "commands": [
+                        [
+                            "wait",
+                            "id",
+                            "submission_complete",
+                            10
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
 }
 EOS
 }
@@ -69,4 +111,8 @@ echo "Generating FAPI Conformance suite config json..."
 generateConfigWithPrivateKey PS256 PS256 > fapi-rw-id2-with-private-key-PS256-PS256.json
 generateConfigWithPrivateKey ES256 ES256 > fapi-rw-id2-with-private-key-ES256-ES256.json
 generateConfigWithPrivateKey RS256 PS256 > fapi-rw-id2-with-private-key-RS256-PS256.json
+
+# Generate text files contains the server's hostname:port to inform Keycloak & Resource Server container
+echo $KC_HOST_PORT > ../resource-server/keycloak-server-info.txt
+echo $RS_HOST_PORT > ../resource-server/resource-server-info.txt
 

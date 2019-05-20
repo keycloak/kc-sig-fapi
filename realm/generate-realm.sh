@@ -1,12 +1,49 @@
 #!/bin/bash
 
-# ARG1: Realm name
+# ARG1: Alias of FAPI Conformance suite server config
 # ARG2: Hostname:port of FAPI Conformance suite server
-REALM=${1:-test}
+# ARG3: Realm name
+FCSS_ALIAS=${1:-keycloak}
 FCSS_HOST_PORT=${2:-localhost:8443}
+REALM=${3:-test}
 
 
-FCSS_ALIAS=keycloak
+# Workaround: keycloak-gatekeeper doesn't support PS256/ES256 verification
+ACCESS_TOKEN_ALG=RS256
+# See https://gitlab.com/openid/conformance-suite/wikis/Users/How-to-be-added-to-the-regular-automated-tests-run#required-redirect-urls
+REDIRECT_URIS=`cat << EOS
+                "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://staging.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://demo.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://$FCSS_HOST_PORT/test/a/$FCSS_ALIAS/callback",
+                "https://$FCSS_HOST_PORT/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://localhost.emobix.co.uk/test/a/$FCSS_ALIAS/callback",
+                "https://localhost.emobix.co.uk/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://localhost.emobix.co.uk:8443/test/a/$FCSS_ALIAS/callback",
+                "https://localhost.emobix.co.uk:8443/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-1.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-2.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-3.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-4.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-5.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-6.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-7.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-8.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://review-app-dev-branch-9.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://staging.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://demo.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-1.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-2.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-3.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-4.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-5.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-6.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-7.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-8.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://review-app-dev-branch-9.certification.openid.net/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum"
+EOS
+`
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
@@ -24,7 +61,7 @@ generateClient() {
     [ "$2" = "mtls" ] && CLIENT_AUTH_TYPE="client-x509"
     [ "$2" = "private_key_jwt" ] && CLIENT_AUTH_TYPE="client-jwt"
     ROS_ALG=$3
-    TOKEN_ALG=$4
+    ID_TOKEN_ALG=$4
     [ "$2" = "mtls" ] && X509_SUBJECTDN="\"x509.subjectdn\": \"$1\","
 
     PEM_BODY_FILE=../client_private_keys/pem-body_sig_${ROS_ALG}_${1}-${ROS_ALG}-pub.pem
@@ -45,20 +82,32 @@ generateClient() {
             "fullScopeAllowed": true,
             "protocol": "openid-connect",
             "redirectUris": [
-                "https://$FCSS_HOST_PORT/test/a/$FCSS_ALIAS/callback",
-                "https://$FCSS_HOST_PORT/plans.html/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum"
+$REDIRECT_URIS
             ],
             "attributes": {
                 $X509_SUBJECTDN
                 "request.object.signature.alg": "$ROS_ALG",
                 "jwt.credential.kid": "$CLIENT_PUBLIC_KEY_KID",
                 "jwt.credential.public.key": "$CLIENT_PUBLIC_KEY_PEM",
-                "access.token.signed.response.alg": "$TOKEN_ALG",
+                "access.token.signed.response.alg": "$ACCESS_TOKEN_ALG",
                 "exclude.session.state.from.auth.response": "false",
-                "id.token.signed.response.alg": "$TOKEN_ALG",
+                "id.token.signed.response.alg": "$ID_TOKEN_ALG",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true"
-            }
+            },
+            "protocolMappers": [
+                {
+                    "name": "aud",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-audience-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "included.client.audience": "resource-server",
+                        "id.token.claim": "false",
+                        "access.token.claim": "true"
+                    }
+                }
+            ]
         }
 EOS
 }
@@ -115,7 +164,24 @@ $CLIENT2_PRIVATE_KEY_JWT_ES256_ES256,
 $CLIENT1_MTLS_RS256_PS256,
 $CLIENT2_MTLS_RS256_PS256,
 $CLIENT1_PRIVATE_KEY_JWT_RS256_PS256,
-$CLIENT2_PRIVATE_KEY_JWT_RS256_PS256
+$CLIENT2_PRIVATE_KEY_JWT_RS256_PS256,
+        {
+            "clientId": "resource-server",
+            "bearerOnly": true,
+            "standardFlowEnabled": false,
+            "implicitFlowEnabled": false,
+            "directAccessGrantsEnabled": false,
+            "serviceAccountsEnabled": false,
+            "publicClient": false,
+            "enabled": true,
+            "clientAuthenticatorType": "client-secret",
+            "fullScopeAllowed": true,
+            "protocol": "openid-connect",
+            "redirectUris": [
+            ],
+            "attributes": {
+            }
+        }
     ],
     "components": {
         "org.keycloak.keys.KeyProvider": [

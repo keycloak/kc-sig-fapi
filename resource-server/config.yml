@@ -1,0 +1,16 @@
+#discovery-url: https://keycloak-fapi.org:9443/auth/realms/test
+#listen: 0.0.0.0:10443
+client-id: resource-server
+tls-cert: /etc/x509/https/tls.crt
+# the location of a private key for TLS
+tls-private-key: /etc/x509/https/tls.key
+# the public key for the ca, used for mutual TLS
+tls-ca-certificate: /etc/x509/https/client-ca.crt
+encryption-key: vGcLt8ZUdPX5fXhtLZaPHZkGWHZrT6T8xKHWf5RPfqAocuiQ6nUbNHyc3oF2toO2tr
+upstream-url: http://127.0.0.1:3000/
+enable-default-deny: true
+no-redirects: true
+enable-session-cookies: false
+skip-openid-provider-tls-verify: true
+openid-provider-timeout: 120s
+

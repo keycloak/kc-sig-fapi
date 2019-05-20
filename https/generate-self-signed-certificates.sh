@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# ARG1: Hostname of Keycloak server
+# ARG2: Hostname of Resource server
+KC_HOST=${1:-keycloak-fapi.org}
+RS_HOST=${2:-keycloak-fapi.org}
+
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
 
@@ -12,6 +17,34 @@ if [ $? -ne 0 ]; then
     chmod +x .bin/{cfssl,cfssljson}
     PATH=$PATH:.bin
 fi
+
+cat << EOS > server-csr.json
+{
+    "CN": "secureoss.jp",
+    "hosts": [
+        "127.0.0.1",
+        "localhost",
+        "*.secureoss.jp",
+        "keycloak.org",
+        "*.keycloak.org",
+        "$KC_HOST",
+        "$RC_HOST"
+    ],
+    "key": {
+        "algo": "ecdsa",
+        "size": 256
+    },
+    "names": [
+        {
+            "C": "JP",
+            "L": "",
+            "O": "Secure OSS Sig",
+            "OU": "Keycloak-fapi",
+            "ST": "Server"
+        }
+    ]
+}
+EOS
 
 # Generate
 cfssl gencert -initca ca-csr.json | cfssljson -bare ca
