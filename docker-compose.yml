@@ -1,0 +1,56 @@
+version: '3'
+services:
+  load_balancer:
+    build:
+      context: ./load-balancer
+    ports:
+     - "443:443"
+    environment:
+     - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
+     - RESOURCE_FQDN=${RESOURCE_FQDN}
+     - CONFORMANCE_SUITE_FQDN=${CONFORMANCE_SUITE_FQDN}
+    depends_on:
+     - keycloak
+     - keycloak_gatekeeper
+    networks:
+      default:
+        aliases:
+         - ${KEYCLOAK_FQDN}
+         - ${RESOURCE_FQDN}
+      conformance-suite_default:
+        aliases:
+         - ${KEYCLOAK_FQDN}
+         - ${RESOURCE_FQDN}
+  keycloak:
+    build:
+      context: ./keycloak
+    volumes:
+     - ./https/server.pem:/etc/x509/https/tls.crt
+     - ./https/server-key.pem:/etc/x509/https/tls.key
+     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+    ports:
+     - "8787:8787"
+    environment:
+     - KEYCLOAK_USER=${KEYCLOAK_USER}
+     - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
+    command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug"
+  keycloak_gatekeeper:
+    build:
+      context: ./keycloak-gatekeeper
+    volumes:
+     - ./https/server.pem:/etc/x509/https/tls.crt
+     - ./https/server-key.pem:/etc/x509/https/tls.key
+     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+    environment:
+     - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
+     - KEYCLOAK_REALM=${KEYCLOAK_REALM}
+    depends_on:
+     - resource_server
+  resource_server:
+    build:
+      context: ./resource-server
+
+networks:
+  conformance-suite_default:
+    external: true
+

@@ -3,22 +3,24 @@
 The purpose of this project is to run [Conformance Testing for FAPI Read/Write OPs](https://openid.net/certification/fapi_op_testing/) with Keycloak server, find issues and improve them.
 The final goal is, of course, to receive official FAPI OpenID Provider Certifications.
 
-## How to run FAPI Conformance suite with Keycloak server in your local machine.
+## How to run FAPI Conformance suite with Keycloak server in your local machine
 
 ### Software requirements
 
 * [Docker CE](https://docs.docker.com/install/)
 * [Docker Compose](https://docs.docker.com/compose/)
+* JDK and [Maven](https://maven.apache.org/)
 
 ### Run FAPI Conformance suite server
 
-Clone [FAPI Conformance suite repository](https://gitlab.com/openid/conformance-suite).
+Clone [FAPI Conformance suite repository](https://gitlab.com/openid/conformance-suite) and move into the directory.
 
 ```
-> git clone https://gitlab.com/openid/conformance-suite.git
+git clone https://gitlab.com/openid/conformance-suite.git
+cd conformance-suite
 ```
 
-If you would like to run the server on Docker for Windows, change `volumes` in `docker-compose.yml` as follows. 
+If you would like to run the server on Docker for Windows, add `volumes` for mongodb and use it in `docker-compose.yml` as follows. 
 
 ```
 @@ -3,7 +3,7 @@ services:
@@ -40,66 +42,35 @@ If you would like to run the server on Docker for Windows, change `volumes` in `
 +
 ```
 
-Then, build & boot all the containers.
+Then, build the server using Maven.
 
 ```
-> mvn clean package
-> docker-compose up
+mvn clean package
 ```
 
-Once booted, stop all containers by `CTRL + c`. 
-Then get the gateway address in the docker network which is created when initial boot.
+Finally, boot all the containers using Docker Compose.
+
+**Note: We need to set the environment variable `FINTECHLABS_BASE_URL` to change from `https://localhost:8443`** 
 
 ```
-> docker network inspect conformance-suite_default | grep Gateway
-                    "Gateway": "172.18.0.1"
-```
-
-Then add the gateway address as `extra_hosts` with your local keycloak server FQDN into `docker-compose.yml`. This configuration is needed to access from FAPI Conformance suite server to your local keycloak server's endpoints such as token endpoint request and resource request.
-
-```
-   server:
-     build:
-       context: ./server-dev
-     volumes:
-      - ./target/:/server/
-     command: java -jar /server/fapi-test-suite.jar --fintechlabs.devmode=true --fintechlabs.startredir=true
-     links:
-      - mongodb:mongodb
-      - microauth:microauth
-+    extra_hosts:
-+     - "keycloak-fapi.org:172.18.0.1"
-     depends_on:
-      - mongodb
-     logging:
-```
-
-Finally, boot all the containers again.
-
-```
-> docker-compose up
+docker-compose up
 ```
 
 ### Run Local Keycloak server
 
-This repository contains default self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs. If you would like to use the configurations as it is, you only need to build a container image and run it.
+This repository contains default self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs.
+If you would like to use the configurations as it is, you only need to build and boot all the containers using Docker Compose.
 
 ```
-> docker build -t keycloak-fapi .
-...
-Successfully tagged keycloak-fapi:latest
-> docker run --rm -it -p 10443:10443 -p 9443:9443 \
-    -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin \
-    keycloak-fapi -b 0.0.0.0 -Djboss.socket.binding.port-offset=1000
+docker-compose up
 ```
 
-* **Note1: You need to set `-Djboss.socket.binding.port-offset=1000` option to use 9443 port for TLS in Keycloak server because FAPI Conformance suite server uses 8443 port.**
-* **Note2: You need to expose 10443 port for Resource Server.**
+### Modify your `hosts` file
 
-Also, modify your `hosts` file in your local machine as follow.
+To access to Keycloak and Resource server with FQDN, modify your `hosts` file in your local machine as follows.
 
 ```
-127.0.0.1 keycloak-fapi.org
+127.0.0.1 as.keycloak-fapi.org rs.keycloak-fapi.org
 ```
 
 ### Run FAPI Conformance test plan
@@ -112,6 +83,78 @@ Also, modify your `hosts` file in your local machine as follow.
 **Note: There is a known issue when using PS256/ES256 as request object signature alg. To proceed with all the test cases, we need to use RS256 instead of them currently.**
 
 
+## How to deploy the servers on the internet
+
+In you would like to deploy on the internet, follow instructions below which use Amazon Linux 2 on Amazaon EC2 as an example.
+
+Install Docker.
+
+```
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+```
+
+Install Docker Compose.
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Clone sources from GitHub.
+
+```
+git clone https://gitlab.com/openid/conformance-suite.git
+git clone https://github.com/jsoss-sig/keycloak-fapi.git
+```
+
+Export environment variables with the FQDN which you want to use.
+
+```
+export KEYCLOAK_FQDN=as.keycloak-fapi.org
+export RESOURCE_FQDN=rs.keycloak-fapi.org
+export CONFORMANCE_SUITE_FQDN=conformance-suite.keycloak-fapi.org
+```
+
+Modify `conformance-suite/docker-compose.xml` as follows.
+
+```
+       context: ./server-dev
+     volumes:
+      - ./target/:/server/
+-    command: java -jar /server/fapi-test-suite.jar --fintechlabs.devmode=true --fintechlabs.startredir=true
++    command: java -jar /server/fapi-test-suite.jar --fintechlabs.devmode=true --fintechlabs.startredir=true --fintechlabs.base_url=https://${CONFORMANCE_SUITE_FQDN}
+     links:
+      - mongodb:mongodb
+      - microauth:microauth
+```
+
+Build FAPI Conformance suite server and boot the all containers using Docker Compose.
+
+```
+cd conformance-suite
+mvn clean package
+docker-compose up -d
+```
+
+Generate server certificates, Keycloak realm config and FAPI Conformance suite configs with your FQDN.
+
+```
+cd ../keycloak-fapi
+./https/generate-server.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
+./keycloak/generate-realm.sh $CONFORMANCE_SUITE_FQDN
+./fapi-conformance-suite-configs/generate-fapi-conformance-suite-configs.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
+```
+
+Boot the containers using Docker Compose.
+
+```
+docker-compose up -d
+```
+
+
 ## For Developers
 
 **Currently, generators of all configurations are written with bash script and some CLI tools for linux-amd64.**
@@ -119,22 +162,15 @@ Also, modify your `hosts` file in your local machine as follow.
 Run `generate-all.sh` script simply to generate self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs.
 
 ```
-> ./generate-all.sh
-```
-
-Then build a docker container image.
-
-```
-> docker build -t keycloak-fapi .
+./generate-all.sh
 ```
 
 Now, you can boot a Keyclaok server with new configurations.
 
 ```
-> docker run --rm -it -p 8787:8787 -p 10443:10443 -p 9443:9443 \
-    -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin \
-    keycloak-fapi -b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug
+docker-compose up --force-recreate
 ```
+
 
 ## License
 

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# ARG1: Alias of FAPI Conformance suite server config
-# ARG2: Hostname:port of Keycloak server
-# ARG3: Hostname:port of Resource server
+# ARG1: Hostname of Keycloak server
+# ARG2: Hostname of Resource server
+# ARG3: Alias of FAPI Conformance suite server config
 # ARG4: Realm name
 # ARG5: Scope
-FCSS_ALIAS=${1:-keycloak}
-KC_HOST_PORT=${2:-keycloak-fapi.org:9443}
-RS_HOST_PORT=${3:-keycloak-fapi.org:10443}
+KC_HOST=${1:-as.keycloak-fapi.org}
+RS_HOST=${2:-rs.keycloak-fapi.org}
+FCSS_ALIAS=${3:-keycloak}
 REALM=${4:-test}
 SCOPE=${5:-openid}
 
@@ -36,7 +36,7 @@ generateConfigWithPrivateKey() {
     "alias": "$FCSS_ALIAS",
     "description": "conformance suite using Keycloak FAPI-RW with private_key",
     "server": {
-        "discoveryUrl": "https://$KC_HOST_PORT/auth/realms/$REALM/.well-known/openid-configuration"
+        "discoveryUrl": "https://$KC_HOST/auth/realms/$REALM/.well-known/openid-configuration"
     },
     "client": {
         "client_id": "client1-private_key_jwt-${ROS_ALG}-$TOKEN_ALG",
@@ -57,16 +57,16 @@ generateConfigWithPrivateKey() {
         "key": "$CLIENT2_MTLS_KEY"
     },
     "resource": {
-        "resourceUrl": "https://$RS_HOST_PORT/",
+        "resourceUrl": "https://$RS_HOST/",
         "institution_id": "xxx"
     },
     "browser": [
         {
-            "match": "https://$KC_HOST_PORT/auth/realms/$REALM/openid-connect/auth*",
+            "match": "https://$KC_HOST/auth/realms/$REALM/openid-connect/auth*",
             "tasks": [
                 {
                     "task": "Initial Login",
-                    "match": "https://$KC_HOST_PORT/auth/realms/$REALM/openid-connect/auth*",
+                    "match": "https://$KC_HOST/auth/realms/$REALM/openid-connect/auth*",
                     "commands": [
                         [
                             "text",
@@ -111,8 +111,4 @@ echo "Generating FAPI Conformance suite config json..."
 generateConfigWithPrivateKey PS256 PS256 > fapi-rw-id2-with-private-key-PS256-PS256.json
 generateConfigWithPrivateKey ES256 ES256 > fapi-rw-id2-with-private-key-ES256-ES256.json
 generateConfigWithPrivateKey RS256 PS256 > fapi-rw-id2-with-private-key-RS256-PS256.json
-
-# Generate text files contains the server's hostname:port to inform Keycloak & Resource Server container
-echo $KC_HOST_PORT > ../resource-server/keycloak-server-info.txt
-echo $RS_HOST_PORT > ../resource-server/resource-server-info.txt
 
