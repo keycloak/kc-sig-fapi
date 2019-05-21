@@ -13,13 +13,14 @@ The final goal is, of course, to receive official FAPI OpenID Provider Certifica
 
 ### Run FAPI Conformance suite server
 
-Clone [FAPI Conformance suite repository](https://gitlab.com/openid/conformance-suite).
+Clone [FAPI Conformance suite repository](https://gitlab.com/openid/conformance-suite) and move into the directory.
 
 ```
-> git clone https://gitlab.com/openid/conformance-suite.git
+git clone https://gitlab.com/openid/conformance-suite.git
+cd conformance-suite
 ```
 
-If you would like to run the server on Docker for Windows, change `volumes` in `docker-compose.yml` as follows. 
+If you would like to run the server on Docker for Windows, add `volumes` for mongodb and use it in `docker-compose.yml` as follows. 
 
 ```
 @@ -3,7 +3,7 @@ services:
@@ -44,8 +45,7 @@ If you would like to run the server on Docker for Windows, change `volumes` in `
 Then, build the server using Maven.
 
 ```
-> cd conformance-suite
-> mvn clean package
+mvn clean package
 ```
 
 Finally, boot all the containers using Docker Compose.
@@ -53,37 +53,29 @@ Finally, boot all the containers using Docker Compose.
 **Note: We need to set the environment variable `FINTECHLABS_BASE_URL` to change from `https://localhost:8443`** 
 
 ```
-> export FINTECHLABS_BASE_URL=https://conformance-suite.keycloak-fapi.org
-> docker-compose up
+docker-compose up
 ```
 
 ### Run Local Keycloak server
 
-This repository contains default self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs. If you would like to use the configurations as it is, you only need to build a container image and run it.
+This repository contains default self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs.
+If you would like to use the configurations as it is, you only need to build and boot all the containers using Docker Compose.
 
 ```
-> docker build -t keycloak-fapi .
-...
-Successfully tagged keycloak-fapi:latest
-```
-
-Then, boot all the containers using Docker Compose.
-
-```
-> docker-compose up
+docker-compose up
 ```
 
 ### Modify your `hosts` file
 
-To access using FQDN, modify your `hosts` file in your local machine as follow.
+To access to Keycloak and Resource server with FQDN, modify your `hosts` file in your local machine as follows.
 
 ```
-127.0.0.1 as.keycloak-fapi.org rs.keycloak-fapi.org conformance-suite.keycloak-fapi.org
+127.0.0.1 as.keycloak-fapi.org rs.keycloak-fapi.org
 ```
 
 ### Run FAPI Conformance test plan
 
-1. Open https://conformance-suite.keycloak-fapi.org
+1. Open https://localhost:8443
 2. Choose **FAPI-RW-ID2: with private key and mtls holder of key Test Plan** in test plans
 3. Click `JSON` tab and paste content of [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-RS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-RS256-PS256.json).
 4. Click `Start Test Plan` button and follow the instructions. To proceed with the tests, You can authenticate using `john` account with password `john`.
@@ -93,8 +85,7 @@ To access using FQDN, modify your `hosts` file in your local machine as follow.
 
 ## How to deploy the servers on the internet
 
-In you would like to deploy on the internet, follow below instructions.
-We will use Amazon Linux 2 on Amazaon EC2 as an example.
+In you would like to deploy on the internet, follow instructions below which use Amazon Linux 2 on Amazaon EC2 as an example.
 
 Install Docker.
 
@@ -112,14 +103,14 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-Fetch sources.
+Clone sources from GitHub.
 
 ```
 git clone https://gitlab.com/openid/conformance-suite.git
 git clone https://github.com/jsoss-sig/keycloak-fapi.git
 ```
 
-Export environment variables with your FQDN.
+Export environment variables with the FQDN which you want to use.
 
 ```
 export KEYCLOAK_FQDN=as.keycloak-fapi.org
@@ -127,12 +118,24 @@ export RESOURCE_FQDN=rs.keycloak-fapi.org
 export CONFORMANCE_SUITE_FQDN=conformance-suite.keycloak-fapi.org
 ```
 
-Build FAPI Conformance suite and boot the containers using Docker Compose.
+Modify `conformance-suite/docker-compose.xml` as follows.
+
+```
+       context: ./server-dev
+     volumes:
+      - ./target/:/server/
+-    command: java -jar /server/fapi-test-suite.jar --fintechlabs.devmode=true --fintechlabs.startredir=true
++    command: java -jar /server/fapi-test-suite.jar --fintechlabs.devmode=true --fintechlabs.startredir=true --fintechlabs.base_url=https://${CONFORMANCE_SUITE_FQDN}
+     links:
+      - mongodb:mongodb
+      - microauth:microauth
+```
+
+Build FAPI Conformance suite server and boot the all containers using Docker Compose.
 
 ```
 cd conformance-suite
 mvn clean package
-export FINTECHLABS_BASE_URL=https://$CONFORMANCE_SUITE_FQDN
 docker-compose up -d
 ```
 

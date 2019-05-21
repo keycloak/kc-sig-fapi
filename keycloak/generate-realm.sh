@@ -15,6 +15,8 @@ REDIRECT_URIS=`cat << EOS
                 "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback",
                 "https://staging.certification.openid.net/test/a/$FCSS_ALIAS/callback",
                 "https://demo.certification.openid.net/test/a/$FCSS_ALIAS/callback",
+                "https://localhost:8443/test/a/$FCSS_ALIAS/callback",
+                "https://localhost:8443/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
                 "https://$FCSS_HOST/test/a/$FCSS_ALIAS/callback",
                 "https://$FCSS_HOST/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
                 "https://localhost.emobix.co.uk/test/a/$FCSS_ALIAS/callback",
