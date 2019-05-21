@@ -16,9 +16,11 @@ services:
       default:
         aliases:
          - ${KEYCLOAK_FQDN}
+         - ${RESOURCE_FQDN}
       conformance-suite_default:
         aliases:
          - ${KEYCLOAK_FQDN}
+         - ${RESOURCE_FQDN}
   keycloak:
     build:
       context: ./keycloak
