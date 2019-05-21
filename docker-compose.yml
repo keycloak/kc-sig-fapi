@@ -25,7 +25,7 @@ services:
     volumes:
      - ./https/server.pem:/etc/x509/https/tls.crt
      - ./https/server-key.pem:/etc/x509/https/tls.key
-     - ./https/ca.pem:/etc/x509/https/client-ca.crt
+     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
     ports:
      - "8787:8787"
     environment:
@@ -38,7 +38,7 @@ services:
     volumes:
      - ./https/server.pem:/etc/x509/https/tls.crt
      - ./https/server-key.pem:/etc/x509/https/tls.key
-     - ./https/ca.pem:/etc/x509/https/client-ca.crt
+     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
     environment:
      - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
      - KEYCLOAK_REALM=${KEYCLOAK_REALM}
