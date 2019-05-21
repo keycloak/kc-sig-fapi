@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# ARG1: Alias of FAPI Conformance suite server config
-# ARG2: Hostname:port of FAPI Conformance suite server
+# ARG1: Hostname of FAPI Conformance suite server
+# ARG2: Alias of FAPI Conformance suite server config
 # ARG3: Realm name
-FCSS_ALIAS=${1:-keycloak}
-FCSS_HOST_PORT=${2:-localhost:8443}
+FCSS_HOST=${1:-conformance-suite.keycloak-fapi.org}
+FCSS_ALIAS=${2:-keycloak}
 REALM=${3:-test}
 
 
@@ -15,8 +15,8 @@ REDIRECT_URIS=`cat << EOS
                 "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback",
                 "https://staging.certification.openid.net/test/a/$FCSS_ALIAS/callback",
                 "https://demo.certification.openid.net/test/a/$FCSS_ALIAS/callback",
-                "https://$FCSS_HOST_PORT/test/a/$FCSS_ALIAS/callback",
-                "https://$FCSS_HOST_PORT/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
+                "https://$FCSS_HOST/test/a/$FCSS_ALIAS/callback",
+                "https://$FCSS_HOST/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
                 "https://localhost.emobix.co.uk/test/a/$FCSS_ALIAS/callback",
                 "https://localhost.emobix.co.uk/test/a/$FCSS_ALIAS/callback?dummy1=lorem&dummy2=ipsum",
                 "https://localhost.emobix.co.uk:8443/test/a/$FCSS_ALIAS/callback",
