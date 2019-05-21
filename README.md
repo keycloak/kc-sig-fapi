@@ -50,8 +50,6 @@ mvn clean package
 
 Finally, boot all the containers using Docker Compose.
 
-**Note: We need to set the environment variable `FINTECHLABS_BASE_URL` to change from `https://localhost:8443`** 
-
 ```
 docker-compose up
 ```
@@ -119,6 +117,8 @@ export CONFORMANCE_SUITE_FQDN=conformance-suite.keycloak-fapi.org
 ```
 
 Modify `conformance-suite/docker-compose.xml` as follows.
+
+**Note: We need to set `fintechlabs.base_url` with public FQDN to change from `https://localhost:8443`** 
 
 ```
        context: ./server-dev
