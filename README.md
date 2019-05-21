@@ -56,6 +56,13 @@ docker-compose up
 
 ### Run Local Keycloak server
 
+Clone [jsoss-sig/keycloak-fapi](https://github.com/jsoss-sig/keycloak-fapi) and move into the directory.
+
+```
+git clone https://github.com/jsoss-sig/keycloak-fapi.git
+cd keycloak-fapi
+```
+
 This repository contains default self-signed certificates for HTTPS, client private keys, Keycloak Realm JSON and FAPI Conformance suite config JSONs.
 If you would like to use the configurations as it is, you only need to build and boot all the containers using Docker Compose.
 
