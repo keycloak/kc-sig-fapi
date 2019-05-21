@@ -12,8 +12,8 @@ if [ $? -ne 0 ]; then
         curl -s -L -o .bin/cfssl https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
         curl -s -L -o .bin/cfssljson https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
         chmod +x .bin/{cfssl,cfssljson}
-        PATH=$PATH:.bin
     fi
+    PATH=$PATH:.bin
 fi
 
 # Generate
