@@ -90,7 +90,7 @@ To access to Keycloak and Resource server with FQDN, modify your `hosts` file in
 
 ## How to deploy the servers on the internet
 
-In you would like to deploy on the internet, follow instructions below which use Amazon Linux 2 on Amazaon EC2 as an example.
+If you would like to deploy on the internet, follow instructions below which use Amazon Linux 2 on Amazaon EC2 as an example.
 
 Install Docker.
 
