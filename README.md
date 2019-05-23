@@ -150,9 +150,7 @@ Generate server certificates, Keycloak realm config and FAPI Conformance suite c
 
 ```
 cd ../keycloak-fapi
-./https/generate-server.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
-./keycloak/generate-realm.sh $CONFORMANCE_SUITE_FQDN
-./fapi-conformance-suite-configs/generate-fapi-conformance-suite-configs.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
+./setup-fqdn.sh
 ```
 
 Boot the containers using Docker Compose.

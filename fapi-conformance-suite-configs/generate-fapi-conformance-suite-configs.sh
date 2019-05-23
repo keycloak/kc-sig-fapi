@@ -17,12 +17,14 @@ cd $DIR
 ########################################
 # Generate FAPI Conformance suite config for Private Key function
 #
-# ARG1: Request object signature alg and private_key_jwt alg
-# ARG2: ID/Access Token signature alg
+# ARG1: Client authentication type (mtls or private_key_jwt)
+# ARG2: Request object signature alg and private_key_jwt alg
+# ARG3: ID/Access Token signature alg
 ########################################
-generateConfigWithPrivateKey() {
-    ROS_ALG=$1
-    TOKEN_ALG=$2
+generateConfig() {
+    CLIENT_AUTH_TYPE=$1
+    ROS_ALG=$2
+    TOKEN_ALG=$3
 
     CLIENT1_JWKS=`cat ../client_private_keys/jwks_sig_${ROS_ALG}_client1-${ROS_ALG}.json`
     CLIENT2_JWKS=`cat ../client_private_keys/jwks_sig_${ROS_ALG}_client2-${ROS_ALG}.json`
@@ -39,12 +41,12 @@ generateConfigWithPrivateKey() {
         "discoveryUrl": "https://$KC_HOST/auth/realms/$REALM/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-private_key_jwt-${ROS_ALG}-$TOKEN_ALG",
+        "client_id": "client1-${CLIENT_AUTH_TYPE}-${ROS_ALG}-$TOKEN_ALG",
         "scope": "$SCOPE",
         "jwks": $CLIENT1_JWKS 
     },
     "client2": {
-        "client_id": "client2-private_key_jwt-${ROS_ALG}-${TOKEN_ALG}",
+        "client_id": "client2-${CLIENT_AUTH_TYPE}-${ROS_ALG}-${TOKEN_ALG}",
         "scope": "$SCOPE",
         "jwks": $CLIENT2_JWKS 
     },
@@ -108,7 +110,11 @@ EOS
 
 echo "Generating FAPI Conformance suite config json..."
 
-generateConfigWithPrivateKey PS256 PS256 > fapi-rw-id2-with-private-key-PS256-PS256.json
-generateConfigWithPrivateKey ES256 ES256 > fapi-rw-id2-with-private-key-ES256-ES256.json
-generateConfigWithPrivateKey RS256 PS256 > fapi-rw-id2-with-private-key-RS256-PS256.json
+generateConfig private_key_jwt PS256 PS256 > fapi-rw-id2-with-private-key-PS256-PS256.json
+generateConfig private_key_jwt ES256 ES256 > fapi-rw-id2-with-private-key-ES256-ES256.json
+generateConfig private_key_jwt RS256 PS256 > fapi-rw-id2-with-private-key-RS256-PS256.json
+
+generateConfig mtls PS256 PS256 > fapi-rw-id2-with-mtls-PS256-PS256.json
+generateConfig mtls ES256 ES256 > fapi-rw-id2-with-mtls-ES256-ES256.json
+generateConfig mtls RS256 PS256 > fapi-rw-id2-with-mtls-RS256-PS256.json
 

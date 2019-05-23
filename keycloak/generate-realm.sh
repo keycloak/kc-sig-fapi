@@ -64,7 +64,7 @@ generateClient() {
     [ "$2" = "private_key_jwt" ] && CLIENT_AUTH_TYPE="client-jwt"
     ROS_ALG=$3
     ID_TOKEN_ALG=$4
-    [ "$2" = "mtls" ] && X509_SUBJECTDN="\"x509.subjectdn\": \"$1\","
+    [ "$2" = "mtls" ] && X509_SUBJECTDN="\"x509.subjectdn\": \"CN=${1}, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP\","
 
     PEM_BODY_FILE=../client_private_keys/pem-body_sig_${ROS_ALG}_${1}-${ROS_ALG}-pub.pem
     CLIENT_PUBLIC_KEY_PEM=`cat $PEM_BODY_FILE`
