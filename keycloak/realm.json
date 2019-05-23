@@ -64,7 +64,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client1",
+                "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "jwt.credential.public.key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0J5vAPXfZS755gaBYn2PEakdHLtAmZc0cKA5wTL89V4uz9sdkiub+S91cJUTqfxqFFwFe+acTKW7+HKOusJREq3oWNyv394+2OXSDz15Lso6GEATorSRTWzfqUjogjOOBxrvxrcMyxS2RM/NjaNPw2PDWO6u0/BHPWbzyKdKbzzGsuqpd4bZ85+xzDXhXRe0n23GCnGxpPM0SvsW9CAme23+ET/F6VdfPKkX0GSU/vxdwEwGUrk5sbBmtoLcj+pfpJKaA7ZbtLsngrIVIPRNUdcP3eCPiYHrDltsi1wnWlnRj2OBcqfM6bVOQfIiVLv+UC2PgY9gmzzw+Q86GPBQOwIDAQAB",
@@ -135,7 +135,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client2",
+                "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "jwt.credential.public.key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6DHkboNmEegAyz9N6ux6UwEyI7a2pB3Dv+EOalRuvtqhh6jPsUd6TQZk385DzofNgYZaO1kC9wmYqD4mmQO7N6ZMvZQAbMmCat72+vHKxvZYzjcURMHTK+GDtvOUjbXzC3C0yboOS8qnO5etwho5PXETe3xdgjnERSekgAXdqzGxJEKincPWzcpoaPTpWROf4D9wNnS+rgwyd0CKp20NzoByhUtxMOKJn2t6wmBqgp7SEVOOgwRPEKMiD8u14jY+9xNfG3kOdAHMArSFb5HJN6USyFmFXROczEXOwJgvoCkY0p0hg2NCzImkPgbDmdj/otzLGjB9m3gtIoAa7THzKQIDAQAB",
@@ -206,7 +206,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client1",
+                "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "jwt.credential.public.key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKhIuh2un6UWcBCIQqr5s3lSN42mrp5kjdf3JrasR1E5tQhfKNnpDv58u76anno4mMQc4BsZ3dffQQyFLtIb5XA==",
@@ -277,7 +277,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client2",
+                "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "jwt.credential.public.key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEX1K2NP56XffP8ZvkSJiD3ZiaD6A1forvWkZ2AzqbyMFLYZBQoDDSBbmRP6UR6EuS3TY/EDoK6QidCG+jWFZw2g==",
@@ -632,7 +632,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client1",
+                "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "jwt.credential.public.key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo6Jz6e3tDkfOTuzPlCgK2ljVCVmOdkchusOMFF6DHTsBEv4GWo/ReNV7GggY/0NRUzZWKRDBNe09rBeC5Oc6ympHVD2mozJjfRDj8vpN2f8k2bhI2f6YXy1FMDb83SmfU6AEhmWV/kRAwZS32xExO70lvptjGoINM2YPFkuYVySQ1jeRUSGmC+XIV9+K6+zNhL8QHDTm+5Nza69AehffW2rfuggOoYZ772QxiEOYqdLyNPzegLjIfwXFZdEdRGX6OmNWaCXWzP4oLPut52+HC/2pYmgiixAVkKbIYIgKomzrXMhzi6tutyWMzcW3GPn1OMcWBdXPEebH6Hp+rEJ/7QIDAQAB",
@@ -703,7 +703,7 @@
                 "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
             ],
             "attributes": {
-                "x509.subjectdn": "client2",
+                "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "jwt.credential.public.key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA74Zcnrnyq+d6NuhVvkqgbK2pqVz5arlap5G1qUx8EJAwaQ5zE6thUgt/vho/VqsdI+AsNq4+QiWvodTfZlQJY1jMsu3BD+TaY00V4qR3mJm4ToIQYpu81e8zAfSJtL/7CksMpjb/o7N6xanaAYqo+CKvhqIBBi/gOCiMWilo2ucbzmBtv5Rmzue0kkbCcj2zG4JBgwHLi+o/m2E4R0eNUrs26lDlrBAR4VR8ZWfwLv2UI7PMOEV1hvCKppD2x/Z+QFmVBaHkM1gXLTlunrkuiK4aJ0CrKpWcVFfgorjYCQYr8esq8OAd3sLf+FxbOuzZ+yIK5uJ83Z/0LsfYfX8g0QIDAQAB",
