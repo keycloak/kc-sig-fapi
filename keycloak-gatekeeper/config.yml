@@ -13,4 +13,6 @@ no-redirects: true
 enable-session-cookies: false
 skip-openid-provider-tls-verify: true
 openid-provider-timeout: 180s
+enable-token-verification-by-token-introspection: true
+enable-fapi-interaction-id: true
 

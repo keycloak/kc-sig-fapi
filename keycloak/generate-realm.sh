@@ -177,6 +177,7 @@ $CLIENT2_PRIVATE_KEY_JWT_RS256_PS256,
             "publicClient": false,
             "enabled": true,
             "clientAuthenticatorType": "client-secret",
+            "secret": "2ef90464-b0fc-4e06-965d-19ef671a3e22",
             "fullScopeAllowed": true,
             "protocol": "openid-connect",
             "redirectUris": [
