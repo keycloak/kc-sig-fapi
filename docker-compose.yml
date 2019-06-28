@@ -44,8 +44,8 @@ services:
     environment:
      - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
      - KEYCLOAK_REALM=${KEYCLOAK_REALM}
-     - TOKEN_INTROSPECTION_URL=https://${KEYCLOAK_FQDN}/auth/${KEYCLOAK_REALM}/protocol/openid-connect/token/introspect
-     - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
+     - PROXY_TOKEN_INTROSPECTION_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token/introspect
+     - PROXY_CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
     depends_on:
      - resource_server
   resource_server:

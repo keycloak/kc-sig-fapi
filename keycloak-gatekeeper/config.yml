@@ -15,4 +15,6 @@ skip-openid-provider-tls-verify: true
 openid-provider-timeout: 180s
 enable-token-verification-by-token-introspection: true
 enable-fapi-interaction-id: true
+enable-logging: true
+enable-json-logging: true
 
