@@ -20,11 +20,12 @@ enable-json-logging: true
 # tls-use-modern-settings: true
 tls-min-version: TLS1.2
 tls-cipher-suites:
-  - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+  # - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+  # - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
   - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+  - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 tls-prefer-server-cipher-suites: true
 tls-curve-preferences:
   - P256
   - X25519
-
 
