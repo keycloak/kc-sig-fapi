@@ -3,7 +3,7 @@
 # ARG1: Hostname of FAPI Conformance suite server
 # ARG2: Hostname of Keycloak server
 # ARG3: Hostname of Resource server
-CONFORMANCE_SUITE_FQDN=${1-conformance-suite.keycloak-fapi.org}
+CONFORMANCE_SUITE_FQDN=${1:-conformance-suite.keycloak-fapi.org}
 KEYCLOAK_FQDN=${2:-as.keycloak-fapi.org}
 RESOURCE_FQDN=${3:-rs.keycloak-fapi.org}
 
