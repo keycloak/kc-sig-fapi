@@ -34,8 +34,8 @@ cat << EOS > server-csr.json
         "$RS_HOST"
     ],
     "key": {
-        "algo": "ecdsa",
-        "size": 256
+        "algo": "rsa",
+        "size": 2048
     },
     "names": [
         {

@@ -13,4 +13,19 @@ no-redirects: true
 enable-session-cookies: false
 skip-openid-provider-tls-verify: true
 openid-provider-timeout: 180s
+enable-token-verification-by-token-introspection: true
+enable-fapi-interaction-id: true
+enable-logging: true
+enable-json-logging: true
+# tls-use-modern-settings: true
+tls-min-version: TLS1.2
+tls-cipher-suites:
+  # - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+  # - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+  - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+  - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+tls-prefer-server-cipher-suites: true
+tls-curve-preferences:
+  - P256
+  - X25519
 
