@@ -74,6 +74,7 @@ generateClient() {
         {
             "clientId": "$CLIENT_ID",
             "bearerOnly": false,
+            "consentRequired": true,
             "standardFlowEnabled": true,
             "implicitFlowEnabled": true,
             "directAccessGrantsEnabled": false,
@@ -152,6 +153,16 @@ cat << EOS > realm.json
                 {
                     "type": "password",
                     "value": "john"
+                }
+            ]
+        },
+        {
+            "username": "mike",
+            "enabled": true,
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "mike"
                 }
             ]
         }
