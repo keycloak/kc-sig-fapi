@@ -27,6 +27,6 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/accounts", accountsHandler)
+	http.HandleFunc("/", accountsHandler)
 	http.ListenAndServe(":3000", nil)
 }
