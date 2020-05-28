@@ -10,6 +10,8 @@ REALM=${3:-test}
 
 # Workaround: keycloak-gatekeeper doesn't support PS256/ES256 verification
 ACCESS_TOKEN_ALG=RS256
+# Keycloak needs to use JWKS URL for request object verification with PS256/ES256
+CLIENT_JWKS_URL=http://$FCSS_HOST/
 # See https://gitlab.com/openid/conformance-suite/wikis/Users/How-to-be-added-to-the-regular-automated-tests-run#required-redirect-urls
 REDIRECT_URIS=`cat << EOS
                 "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback",
@@ -66,8 +68,6 @@ generateClient() {
     ID_TOKEN_ALG=$4
     [ "$2" = "mtls" ] && X509_SUBJECTDN="\"x509.subjectdn\": \"CN=${1}, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP\","
 
-    PEM_BODY_FILE=../client_private_keys/pem-body_sig_${ROS_ALG}_${1}-${ROS_ALG}-pub.pem
-    CLIENT_PUBLIC_KEY_PEM=`cat $PEM_BODY_FILE`
     CLIENT_PUBLIC_KEY_KID=$1-$ROS_ALG
 
     cat << EOS
@@ -89,13 +89,15 @@ $REDIRECT_URIS
             "attributes": {
                 $X509_SUBJECTDN
                 "request.object.signature.alg": "$ROS_ALG",
+                "jwks.url": "$CLIENT_JWKS_URL",
                 "jwt.credential.kid": "$CLIENT_PUBLIC_KEY_KID",
                 "jwt.credential.public.key": "$CLIENT_PUBLIC_KEY_PEM",
                 "access.token.signed.response.alg": "$ACCESS_TOKEN_ALG",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "$ID_TOKEN_ALG",
                 "request.object.required": "request or request_uri",
-                "tls.client.certificate.bound.access.tokens": "true"
+                "tls.client.certificate.bound.access.tokens": "true",
+                "use.jwks.url": "true"
             },
             "protocolMappers": [
                 {
