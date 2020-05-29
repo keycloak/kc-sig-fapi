@@ -51,6 +51,12 @@ services:
   resource_server:
     build:
       context: ./resource-server
+  client_jwks_server:
+    build:
+      context: ./client_private_keys
+    volumes:
+     - ./client_private_keys:/keys
+    command: /keys
 
 networks:
   conformance-suite_default:

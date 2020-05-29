@@ -36,12 +36,12 @@ generateConfig() {
     cat << EOS
 {
     "alias": "$FCSS_ALIAS",
-    "description": "conformance suite using Keycloak FAPI-RW with private_key",
+    "description": "FAPI-RW-ID2: Keycloak test with ${CLIENT_AUTH_TYPE} client authentication (RequestObject:${ROS_ALG}/IDToken:${TOKEN_ALG})",
     "server": {
         "discoveryUrl": "https://$KC_HOST/auth/realms/$REALM/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-${CLIENT_AUTH_TYPE}-${ROS_ALG}-$TOKEN_ALG",
+        "client_id": "client1-${CLIENT_AUTH_TYPE}-${ROS_ALG}-${TOKEN_ALG}",
         "scope": "$SCOPE",
         "jwks": $CLIENT1_JWKS 
     },
