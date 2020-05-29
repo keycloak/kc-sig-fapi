@@ -111,6 +111,20 @@ $REDIRECT_URIS
                         "id.token.claim": "false",
                         "access.token.claim": "true"
                     }
+                },
+                {
+                    "name": "acr",
+                    "protocol": "openid-connect",
+                    "protocolMapper": "oidc-hardcoded-claim-mapper",
+                    "consentRequired": false,
+                    "config": {
+                        "claim.value": "urn:mace:incommon:iap:silver",
+                        "userinfo.token.claim": "false",
+                        "id.token.claim": "true",
+                        "access.token.claim": "false",
+                        "claim.name": "acr",
+                        "jsonType.label": "String"
+                    }
                 }
             ]
         }
