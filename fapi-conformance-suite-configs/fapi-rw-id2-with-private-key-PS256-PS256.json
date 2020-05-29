@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "conformance suite using Keycloak FAPI-RW with private_key",
+    "description": "FAPI-RW-ID2: Keycloak test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },

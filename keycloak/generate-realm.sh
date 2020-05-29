@@ -11,7 +11,7 @@ REALM=${3:-test}
 # Workaround: keycloak-gatekeeper doesn't support PS256/ES256 verification
 ACCESS_TOKEN_ALG=RS256
 # Keycloak needs to use JWKS URL for request object verification with PS256/ES256
-CLIENT_JWKS_URL=http://$FCSS_HOST/
+CLIENT_JWKS_URL=http://client_jwks_server:3000/
 # See https://gitlab.com/openid/conformance-suite/wikis/Users/How-to-be-added-to-the-regular-automated-tests-run#required-redirect-urls
 REDIRECT_URIS=`cat << EOS
                 "https://www.certification.openid.net/test/a/$FCSS_ALIAS/callback",

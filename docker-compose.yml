@@ -54,8 +54,6 @@ services:
   client_jwks_server:
     build:
       context: ./client_private_keys
-    ports:
-     - "80:3000"
     volumes:
      - ./client_private_keys:/keys
     command: /keys
