@@ -92,7 +92,6 @@ $REDIRECT_URIS
                 "request.object.signature.alg": "$ROS_ALG",
                 "jwks.url": "$CLIENT_JWKS_URL",
                 "jwt.credential.kid": "$CLIENT_PUBLIC_KEY_KID",
-                "jwt.credential.public.key": "$CLIENT_PUBLIC_KEY_PEM",
                 "access.token.signed.response.alg": "$ACCESS_TOKEN_ALG",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "$ID_TOKEN_ALG",
