@@ -28,6 +28,7 @@
     ],
     "clients": [
         {
+            "id" : "c61d93dc-467d-4fa9-9b58-6d21e2276eac",
             "clientId": "client1-mtls-PS256-PS256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -77,7 +78,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -115,6 +116,7 @@
             ]
         },
         {
+            "id" : "fe548191-270e-4749-bcae-930a9abbc66e",
             "clientId": "client2-mtls-PS256-PS256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -164,7 +166,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -202,6 +204,7 @@
             ]
         },
         {
+            "id" : "5826281c-f5c0-4d06-a49f-0b877b49dd8e",
             "clientId": "client1-mtls-ES256-ES256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -251,7 +254,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -289,6 +292,7 @@
             ]
         },
         {
+            "id" : "7e359b9f-a9ed-41d3-8bef-5323191ad7a1",
             "clientId": "client2-mtls-ES256-ES256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -338,7 +342,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -376,6 +380,7 @@
             ]
         },
         {
+            "id" : "0380f98c-7567-40e7-9e4a-82f0249dc4e7",
             "clientId": "client1-private_key_jwt-PS256-PS256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -425,7 +430,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -463,6 +468,7 @@
             ]
         },
         {
+            "id" : "2c93ead7-256f-4260-848a-207b4ffe740b",
             "clientId": "client2-private_key_jwt-PS256-PS256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -512,7 +518,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -550,6 +556,7 @@
             ]
         },
         {
+            "id" : "a40263fd-7e4a-4c63-9544-763dd178fffb",
             "clientId": "client1-private_key_jwt-ES256-ES256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -599,7 +606,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -637,6 +644,7 @@
             ]
         },
         {
+            "id" : "227af5b9-0899-4949-8c0f-85bad117a14c",
             "clientId": "client2-private_key_jwt-ES256-ES256",
             "bearerOnly": false,
             "consentRequired": true,
@@ -686,7 +694,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -773,7 +781,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -860,7 +868,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -947,7 +955,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -1034,7 +1042,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -1166,6 +1174,149 @@
                     ]
                 }
             }
-        ]
+        ],
+        "org.keycloak.services.clientpolicy.ClientPolicyProvider" : [ {
+            "name" : "MyPolicy",
+            "providerId" : "client-policy-provider",
+            "subComponents" : { },
+            "config" : {
+              "client-policy-executor-ids" : [ "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf", "47e818e3-f0d8-4a90-ace7-1a8b2362cec7" ],
+              "client-policy-condition-ids" : [ "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146" ]
+            }
+          } ],
+        "org.keycloak.services.clientpolicy.executor.ClientPolicyExecutorProvider" : [ {
+            "id" : "47e818e3-f0d8-4a90-ace7-1a8b2362cec7",
+            "name" : "SecureRequestObjectExecutor",
+            "providerId" : "secure-reqobj-executor",
+            "subComponents" : { },
+            "config" : { }
+          }, {
+            "id" : "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf",
+            "name" : "SecureResponseTypeExecutor",
+            "providerId" : "secure-responsetype-executor",
+            "subComponents" : { },
+            "config" : { }
+          } ],
+        "org.keycloak.services.clientpolicy.condition.ClientPolicyConditionProvider" : [ {
+            "id" : "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146",
+            "name" : "ClientRolesCondition",
+            "providerId" : "clientroles-condition",
+            "subComponents" : { },
+            "config" : {
+              "roles" : [ "sample-client-role" ]
+            }
+          } ]
+    },
+    "roles" : {
+        "realm" : [ {
+          "name" : "sample-realm-role",
+          "description" : "Sample realm role",
+          "composite" : false,
+          "clientRole" : false,
+          "containerId" : "test",
+          "attributes" : { }
+        }, {
+          "name" : "realm-composite-role",
+          "description" : "Realm composite role containing client role",
+          "composite" : true,
+          "composites" : {
+            "realm" : [ "sample-realm-role" ],
+            "client" : {
+              "client1-mtls-PS256-PS256" : [ "sample-client-role" ],
+              "client2-mtls-PS256-PS256" : [ "sample-client-role" ],
+              "client1-mtls-ES256-ES256" : [ "sample-client-role" ],
+              "client2-mtls-ES256-ES256" : [ "sample-client-role" ],
+              "client1-private_key_jwt-PS256-PS256" : [ "sample-client-role" ],
+              "client2-private_key_jwt-PS256-PS256" : [ "sample-client-role" ],
+              "client1-private_key_jwt-ES256-ES256" : [ "sample-client-role" ],
+              "client2-private_key_jwt-ES256-ES256" : [ "sample-client-role" ]
+            }
+          },
+          "clientRole" : false,
+          "containerId" : "test",
+          "attributes" : { }
+        } ],
+        "client" : {      
+          "client1-mtls-PS256-PS256" : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "c61d93dc-467d-4fa9-9b58-6d21e2276eac",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client2-mtls-PS256-PS256" : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "fe548191-270e-4749-bcae-930a9abbc66e",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client1-mtls-ES256-ES256" : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "5826281c-f5c0-4d06-a49f-0b877b49dd8e",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client2-mtls-ES256-ES256" : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "7e359b9f-a9ed-41d3-8bef-5323191ad7a1",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client1-private_key_jwt-PS256-PS256"  : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "0380f98c-7567-40e7-9e4a-82f0249dc4e7",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client2-private_key_jwt-PS256-PS256"  : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "2c93ead7-256f-4260-848a-207b4ffe740b",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client1-private_key_jwt-ES256-ES256"  : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "a40263fd-7e4a-4c63-9544-763dd178fffb",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ],
+          "client2-private_key_jwt-ES256-ES256"  : [ {
+            "name" : "sample-client-role",
+            "description" : "Sample client role",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "227af5b9-0899-4949-8c0f-85bad117a14c",
+            "attributes" : {
+              "sample-client-role-attribute" : [ "sample-client-role-attribute-value" ]
+            }
+          } ]
+        }
     }
 }
