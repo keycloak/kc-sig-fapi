@@ -180,6 +180,22 @@ Now, you can boot a Keyclaok server with new configurations.
 docker-compose up --force-recreate
 ```
 
+## Run FAPI Conformance test against local built keycloak
+
+If you would like to run FAPI Conformance test against local built keycloak, modify `docker-compose.yml` as follows.
+
+```
+@@ -28,6 +28,7 @@ services:
+      - ./https/server.pem:/etc/x509/https/tls.crt
+      - ./https/server-key.pem:/etc/x509/https/tls.key
+      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
++     - <path to locally built keycloak>:/opt/jboss/keycloak
+     ports:
+      - "8787:8787"
+     environment:
+```
+
+It overrides the keycloak of the base image with the one built on the local machine.
 
 ## License
 
