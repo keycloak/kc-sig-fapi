@@ -77,7 +77,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -164,7 +164,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -251,7 +251,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -338,7 +338,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -425,7 +425,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -512,7 +512,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "PS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -599,7 +599,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -686,7 +686,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "ES256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -773,7 +773,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -860,7 +860,7 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -947,7 +947,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -1034,7 +1034,7 @@
             "attributes": {
                 
                 "request.object.signature.alg": "RS256",
-                "jwks.url": "http://client_jwks_server:3000/",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",

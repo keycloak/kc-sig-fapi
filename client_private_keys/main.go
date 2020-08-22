@@ -13,6 +13,10 @@ type JWKS struct {
 	Keys []json.RawMessage `json:"keys"`
 }
 
+type PubKey struct {
+	KID string `json:"kid"`
+}
+
 func createJWKS(dir string) ([]json.RawMessage, error) {
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
@@ -30,15 +34,25 @@ func createJWKS(dir string) ([]json.RawMessage, error) {
 				return nil, err
 			}
 			jwks = append(jwks, b)
+
+			var pubKeys PubKey
+			if err := json.Unmarshal(b, &pubKeys); err != nil {
+				log.Fatal(err)
+			}
+			keyMaps[pubKeys.KID] = b
+
 		}
+
 	}
 
 	return jwks, nil
 }
 
 func jwksHandler(w http.ResponseWriter, r *http.Request) {
-	jwks := JWKS{Keys: keys}
-	j, err := json.Marshal(jwks)
+	kid := r.URL.Query().Get("kid")
+	clientKeys := []json.RawMessage{keyMaps[kid]}
+	clientJwks := JWKS{Keys: clientKeys}
+	k, err := json.Marshal(clientJwks)
 	if err != nil {
 		log.Printf("Failed to marshal jwks. err: %v", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -46,10 +60,12 @@ func jwksHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.Write(j)
+	w.Write(k)
 }
 
 var keys []json.RawMessage
+
+var keyMaps = make(map[string]json.RawMessage)
 
 func main() {
 	flag.Parse()
