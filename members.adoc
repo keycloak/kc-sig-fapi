@@ -1,0 +1,38 @@
+Below is the list of FAPI SIG members
+
+If you think some information is outdated, either provide a pull request or send an email to the `keycloak-dev` mailing list.
+
+[cols=2*,options="header"]
+|===
+|Company
+|Name
+
+|Adorsys
+|Andrii Murashkin, Dmytro Mishchuk, Dmytro Storozhyk, Francis Pouatcha, Hryhorii
+
+|Backbase
+|Etienne Koekemoer, Gareth Filer, Jonathan Meyler
+
+|BANFICO
+|Arun Ganesh, Kannan Rasappan, Pritish Joshi
+
+|Hitachi
+|Ryo Kawai, Takashi Norimatsu
+
+|Independent
+|Vinod, Vishnu Prakash
+
+|Integral Technology Solutions
+|Brendan Rothwell, Cameron Locke
+
+|Nomura Research Institute
+|Hiroyuki Wada
+
+|Red Hat
+|Abhishek Koserwal, Boleslaw Dawidowicz, Marek Posolda, Stian Thorgersen 
+
+|Temenos
+|James Holland 
+
+
+|===
