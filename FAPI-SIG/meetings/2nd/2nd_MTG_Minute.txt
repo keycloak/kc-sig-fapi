@@ -1,0 +1,64 @@
+Title :
+ FAPI-SIG(Special Interest Group) Community 2nd Meeting
+
+Date :
+ Wed 9 Sep 2020
+
+Time :
+ 08:00 - 09:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys GmbH)
+
+Host :
+ Francis Pouatcha (Adorsys GmbH)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 2nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI-SIG_2nd_MTG_agenda.pdf [2] FAPI Support Milestone
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI_Support_Milestone.pdf
+ [3] FAPI-SIG Activities Update #1 in Japan
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No1_JPN.pdf
+ [4] FAPI-SIG Activities Update #2 in Japan
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No2_JPN.pdf
+ [5] FAPI-SIG Activities Update #3 in Japan
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No3_JPN.pdf
+
+Recording :
+ https://zoom.us/rec/share/qi4aAj00m2g0FAF888K65HW2xCDeNHN9UgxOhp0wv0IVrtvPIYIyY_EJnPmxTMoT.AkyD6x6JuVvjWzSI
+
+Summary :
+
+ * Keycloak Development Team Side : Milestone FAPI-RW
+   It seems a reasonable milestone. The dev team promotes reviewing related PRs that have already been sent to keycloak
+
+ * Keycloak Development Team Side : Milestone FAPI-CIBA
+   It also a seems reasonable milestone.
+
+ * FAPI-CIBA tasks break down and estimate
+   Currently, which works are needed for accomplishing FAPI-CIBA in detail is not clarified.
+   Takashi clarifies this point.
+
+ * Conformance Tests for FAPI-RW and FAPI-CIBA
+   Currently, Integral Tech has already some advance on automating FAPI-RW conformance test run.
+   Banfico can treat with these Conformance Test run tasks about FAPI-RW and FAPI-CIBA.
+
+ * Project Management
+   We use github's project to manage and track FAPI-SIG activities.
+   To manage works, we use issues of the github's repository and existing keycloak's JIRA tickets.
+
+ * Contribution
+   Reviewing PRs is one way of contributing FAPI-SIG activities.
+
+ * Get FAPI certificates
+   Red Hat can fund payment for getting FAPI certificates.
+
+ * Regular Web Meeting
+   We will have bi-week regular web meetings.
+   8:00 - 9:00 GMT in 1 hour
+
+ * Next Web Meeting
+   Wed 23 8:00 - 9:00 GMT in 1 hour

@@ -1,0 +1,57 @@
+Title :
+ FAPI-SIG(Special Interest Group) Community 3rd Meeting
+
+Date :
+ Wed 23 Sep 2020
+
+Time :
+ 08:00 - 09:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys GmbH)
+
+Host :
+ Francis Pouatcha (Adorsys GmbH)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 3rd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/3rd/presentations/FAPI-SIG_3rd_MTG_agenda.pdf
+ [2] FAPI-SIG Activities Update #4 in Japan
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No4_JPN.pdf
+
+Recording :
+ https://zoom.us/rec/share/tyE3d1lXhHX60RZvUeBZMD3Ev1J2LLm9KcbW1h5s6vUm0xqcRChhRaYyEj7x_93b.g5iYH-rFG783TtAq
+
+Summary :
+
+ * Governance
+   FAPI-SIG needs its clear governance.
+   Defining clear goals and projects to achieve them
+   A few people manage and coordinate these projects
+   Assigning contributors to them and watch their progresses
+   Clarifying contributors of FAPI-SIG
+   Taking notes about regular meetings
+
+ * Ongoing works
+   Banfico has made progresses on running the latest FAPI-RW conformance tests and tries to give feedback to making them onto CI/CD pipeline of keycloak.
+
+ * Client Policies
+   Security profile like FAPI-RW relies on Client Policies.
+   However, Client Policies is still preview feature. Their UI is still missing.
+
+ * New Admin REST API (clear JSON Documentation)
+   New clear JSON Documentation will become introduced (e.g. User Profile).
+   It affects Client Policies related works.
+
+ * New Admin Console
+   New Admin Console and its UIs will be introduced.
+   It affects Client Policies related works.
+
+ * Next Web Meeting
+   Wed 7 Oct 8:00 - 9:00 GMT in 1 hour

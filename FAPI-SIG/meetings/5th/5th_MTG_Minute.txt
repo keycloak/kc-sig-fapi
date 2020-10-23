@@ -1,0 +1,83 @@
+Title :
+ FAPI-SIG(Special Interest Group) Community 5th Meeting
+
+Date :
+ Wed 21 Oct 2020
+
+Time :
+ 08:00 - 09:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys GmbH)
+
+Host :
+ Francis Pouatcha (Adorsys GmbH)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 5th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/5th/presentations/FAPI-SIG_5th_MTG_agenda%20.pdf
+ [2] Client Policies Practical Guide
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf
+
+Recording :
+ https://zoom.us/rec/share/qBtek4D3EyPKFNV02fSnQoR2xYolyqJA40uwu6tCufPVGnjponl_d8Adu2ePYlZo.CtYPWewjgPSGCW3U
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Milestone]
+    - At the beginning of Nov 2020 : Pass conformance tests (w/MTLS and/or w/Private Key)
+      -> Completed
+    - At the end of Nov 2020 : All PRs sent needed to pass conformance test
+      -> Completed
+   [Issues]
+    BANFICO, Integral Tech, Nomura Research Institute work on them.
+    4 Issues remaining to complete this project
+      0 Resolved
+      3 Assigned
+      1 Not Assigned
+        #45 Integrating FAPI-RW conformance tests run into keycloak’s CI/CD pipeline
+         -> BANFICO and Integral Technology Solutions are now working on it.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Milestone]
+    - At the end of Nov 2020 : All PRs sent needed to support FAPI-CIBA OP poll w/MTLS and/or w/Private Key 
+      -> In progress
+   [Issues]
+    Adorsys, BANFICO, Hitachi, Red Hat work on them.
+    13 Issues to complete this project
+      0 Resolved
+      4 PR sent, in review 
+      6 Assigned
+      3 Not Assigned
+
+ * Updates : Client Policy Official Support project
+   It has been modified by considering New Admin REST API & Console UI support.
+     - Only support New Admin Console. Not support the existing Admin Console.
+     - Also support New Admin REST API (clear JSON Document)
+     - Realizing FAPI-RW by only using Client Policies is optional task for the first milestone.
+     - Skip Client Registration Policy migration to Client Policies.
+   [Milestone]
+   - At the end of Mar 2021 : All PRs merged needed to support
+     * External Interfaces
+      - New Admin REST API
+      - New Admin Console UI
+   [Issues]
+    TBD
+
+ * New Admin Console
+   It is not yet available.
+   Therefore, it is good to work with New Admin REST API at first.
+
+ * Keycloak OAuth 2.0 Security Best Current Practice Alignment
+   Showing the work to clarify how keycloak treats with BCP :
+   https://docs.google.com/document/d/1dfPd7wYy83PJVN22dXzTXo29ZFSh2ineVNO_I_f4uvk/edit
+
+ * Next Web Meeting
+   Wed 4 Nov 8:00 - 9:00 GMT in 1 hour

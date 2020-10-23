@@ -1,0 +1,43 @@
+Title :
+ FAPI-SIG(Special Interest Group) Community 1st Meeting
+
+Date :
+ Fri 7 Aug 2020
+
+Time :
+ 08:30 - 09:30 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys GmbH)
+
+Host :
+ Francis Pouatcha (Adorsys GmbH)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 1st Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/1st/presentations/FAPI-SIG_1st_MTG_agenda.pdf
+
+Recording :
+ https://zoom.us/rec/share/4PdJbKmzqnxOZdLfuRHyZ_4iJYrCX6a81SJKqPsFyUhyg69lzxnf53_t-ZBGCGJT
+
+Summary :
+
+ * Working Repository
+   We can store and share all FAPI-SIG activity related information onto jsoss-sig/keycloak-fapi repository.
+
+ * Project Manager
+   Vinod can work as PM from Sep.
+
+ * Keycloak Development Team Side Support
+   Keycloak Development Team can help FAPI-SIG activities. E.g. reviewing PRs from FAPI-SIG activities in preference to others relatively for giving fast feedback to FAPI-SIG activities.
+
+ * Communication Channel
+   - keycloak developer mailing list
+   - zulip chat
+     https://keycloak.zulipchat.com/#narrow/stream/248413-dev-sig-fapi
+
+ * Next Web Meeting
+   Wed 9 Sep 8:00 - 9:00 GMT in 1 hour
