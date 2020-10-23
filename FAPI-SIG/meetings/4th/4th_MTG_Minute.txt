@@ -1,0 +1,68 @@
+Title :
+ FAPI-SIG(Special Interest Group) Community 4th Meeting
+
+Date :
+ Wed 7 Oct 2020
+
+Time :
+ 08:00 - 09:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys GmbH)
+
+Host :
+ Francis Pouatcha (Adorsys GmbH)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 4th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/4th/presentations/FAPI-SIG_4th_MTG_agenda.pdf
+ [2] CIBA Prototype Implementation Practical Guide
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/FAPI-CIBA/CIBA_PrototypeImplPracticalGuide.pdf
+
+ [3] FAPI-CIBA Contribution Guide
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/FAPI-CIBA/FAPI-CIBA_ContributionGuide.pdf
+
+Recording :
+ https://zoom.us/rec/play/bzOjuI1h-4pjPXkX71Snoq1FM44S836S-PnZ7DDd8bip6mNxCcY3T8Or2TuIuEmoobvnroTNqajyzrtr.aChNRjeHzRN6Ro5i?continueMode=true&_x_zm_rtaid=DdA5aV8dRdasmB9cAJvwYA.1602553613512.e4af3969e7924a5b475cf5e114ce444e&_x_zm_rhtaid=86
+
+Summary :
+
+ * FAPI-SIG members
+   found in https://github.com/keycloak/kc-sig-fapi/blob/master/members.adoc
+
+ * FAPI-SIG repository
+   It has been transferred from jsoss-sig/keycloak-fapi to keycloak/kc-sig-fapi.
+
+ * FAPI-RW project
+   Remaining PRs have been merged.
+   all conformance tests of both FAPI-RW OP w/MTLS & w/Private Key have been passed against the keycloak in the local environment.
+
+ * FAPI-CIBA project
+   Its major 1 task have been broken down into 13 separate subtasks.
+
+ * New Client Policy Official Support project
+   It has been proposed for Client Policies to be officially supported.
+   Need official support for FAPI-RW security profile so that Client Policies' official support are needed at first.
+
+ * keycloak next release
+   Not assure but might be expected in Nov.
+
+ * New Admin REST API (clear JSON Document) for Client Policies.
+   Not yet determine whether it support or not for the first milestone of Client Policy Official Support.
+
+ * New Admin Console for Client Policies
+   Admin Console itself is still in development phase.
+   Not yet determine whether it support or not for the first milestone of Client Policy Official Support.
+   Keycloak dev team will bring some updated information on the next web meeting.
+
+ * Migration of Client Registration Policy to Client Policy
+   There is the option that at this time we skip migration of Client Registration Policy to Client Policy.
+
+ * Next Web Meeting
+   Wed 21 Oct 8:00 - 9:00 GMT in 1 hour
