@@ -11,7 +11,7 @@ services:
      - CONFORMANCE_SUITE_FQDN=${CONFORMANCE_SUITE_FQDN}
     depends_on:
      - keycloak
-     - keycloak_gatekeeper
+     - api_gateway_nginx
     networks:
       default:
         aliases:
@@ -35,18 +35,20 @@ services:
      - KEYCLOAK_USER=${KEYCLOAK_USER}
      - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
     command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug -Dkeycloak.profile=preview"
-  keycloak_gatekeeper:
+  api_gateway_nginx:
     build:
-      context: ./keycloak-gatekeeper
+      context: ./api-gateway-nginx
     volumes:
      - ./https/server.pem:/etc/x509/https/tls.crt
      - ./https/server-key.pem:/etc/x509/https/tls.key
      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+     - ./https/ca.pem:/usr/local/share/ca-certificates/keycloak-fapi-ca.pem
     environment:
-     - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
-     - KEYCLOAK_REALM=${KEYCLOAK_REALM}
-     - PROXY_TOKEN_INTROSPECTION_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token/introspect
-     - PROXY_CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
+     - SERVER_NAME=${RESOURCE_FQDN}
+     - INTROSPECTION_ENDPOINT_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token/introspect
+     # JWT access token veirfication can't pass reuse-authorisation-code case
+     # - DISCOVERY_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration
+     - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
     depends_on:
      - resource_server
   resource_server:
