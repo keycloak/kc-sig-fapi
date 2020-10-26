@@ -6,7 +6,7 @@
     },
     "client": {
         "client_id": "client1-mtls-ES256-ES256",
-        "scope": "openid",
+        "scope": "openid email",
         "jwks": {
     "keys": [
         {
@@ -24,7 +24,7 @@
     },
     "client2": {
         "client_id": "client2-mtls-ES256-ES256",
-        "scope": "openid",
+        "scope": "openid email",
         "jwks": {
     "keys": [
         {

@@ -6,7 +6,7 @@
     },
     "client": {
         "client_id": "client1-private_key_jwt-RS256-PS256",
-        "scope": "openid",
+        "scope": "openid email",
         "jwks": {
     "keys": [
         {
@@ -28,7 +28,7 @@
     },
     "client2": {
         "client_id": "client2-private_key_jwt-RS256-PS256",
-        "scope": "openid",
+        "scope": "openid email",
         "jwks": {
     "keys": [
         {

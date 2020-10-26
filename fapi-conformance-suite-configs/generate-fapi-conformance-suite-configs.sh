@@ -9,7 +9,7 @@ KC_HOST=${1:-as.keycloak-fapi.org}
 RS_HOST=${2:-rs.keycloak-fapi.org}
 FCSS_ALIAS=${3:-keycloak}
 REALM=${4:-test}
-SCOPE=${5:-openid}
+SCOPE=${5:-openid email}
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
