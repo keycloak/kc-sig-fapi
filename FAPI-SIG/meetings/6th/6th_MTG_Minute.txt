@@ -1,0 +1,134 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 6th Meeting
+
+Date :
+ Wed 4 Nov 2020
+
+Time :
+ 09:00 - 10:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Andrii Murashkin (Adorsys)
+ Dmytro Mishchuk (Adorsys)
+ Etienne Koekemoer (Backbase)
+ Hryhorii Hevorkian (Adorsys)
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Mykhailo Kyrychenko
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 6th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/6th/presentations/FAPI-SIG_6th_MTG_agenda%20.pdf
+
+Recording :
+ https://zoom.us/rec/share/aS7xgxAeLSV351wQcOSpOmKEa4m8jPoPG7u8bErjkFdruijOd8Ce4-a41gSSeJGL.G1a7IBkWADkaDFpQ
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 Nov 2020, 8 weeks remaining
+      18 of 21 issues resolved (90%)
+   [Issues]
+    BANFICO, Integral Tech, Nomura Research Institute work on them.
+    4 Issues remaining to complete this project
+      1 Resolved     (+1)
+      2 Assigned     (-1)
+      1 Not Assigned ( 0)
+   [Topics]
+    - keycloak-gatekeeper has been replaced with nginx in FAPI-RW conformance test run environment
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 12 weeks remaining
+      6 of 13 issues resolved (46%)
+   [Issues]
+    Adorsys, BANFICO, Hitachi, Red Hat work on them.
+    13 Issues to complete this project
+      6 Resolved           (+6)
+      0 PR sent, in review ( 0)
+      7 Assigned           (+1)
+      0 Not Assigned       (-3)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 20 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Issues]
+    None works on them.
+    1 Issues to complete this project
+      1 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 31 Dec 2020, 8 weeks remaining
+      0 of 3 issues resolved (0%)
+   [Issues]
+    None works on them.
+    3 Issues to complete this project
+      3 Not Assigned       ( 0)
+   [Topics]
+    - slightly difficult situation due to no one starting any work.
+    - existing Admin Console for Client Policies will also be partially supported
+      (show/edit JSON representation only).
+    - keycloak development team will review the PR of the design document for new Admin REST API.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 20 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Issues]
+    None works on them.
+    2 Issues to complete this project
+      2 Not Assigned       ( 0)
+   [Notes]
+    - The progress of New Admin Console by keycloak development team affects this milestone.
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 20 weeks remaining
+      1 of 14 issues resolved (7%)
+   [Issues]
+    Hitachi works on them.
+    14 Issues to complete this project
+      1 Resolved           ( 0)
+      2 PR sent, in review (+2)
+      7 Assigned           (-2)
+      3 Not Assigned       ( 0)
+   [Notes]
+     - PR's review priority by keycloak development team affects this milestone.
+     - Adorsys member might help with not assigned issues.
+     - Compared with issues on M/S#1 and M/S#2, issues on this milestone seems to be relatively easy
+       because there is the document for Client Policies 
+       (Client Policies Practical Guide : https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf) .
+     - keycloak development team will review the PRs currently waiting for review and PRs that will be sent afterwards.
+
+ * Other Topics of Client Policy Official Support
+   - Built-in Default Client Policies is deferred due to a lack of manpower.
+   - Client Registration Policies Migration is deferred due to a lack of manpower.
+
+ * Next Web Meeting
+   Wed 18 Nov 9:00 - 10:00 GMT in 1 hour
+ 
