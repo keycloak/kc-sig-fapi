@@ -10,6 +10,6 @@ FROM alpine:3.9
 
 # Install client-jwks-server for testing
 COPY --from=builder /go/src/github.com/soss-sig/keycloak-fapi/client-jwks-server /usr/local/sbin/
-
+ADD . /keys
 ENTRYPOINT [ "client-jwks-server" ]
 
