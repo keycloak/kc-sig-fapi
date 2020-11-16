@@ -1,4 +1,4 @@
-version: '3'
+version: '3.6'
 services:
   load_balancer:
     build:
@@ -12,28 +12,29 @@ services:
     depends_on:
      - keycloak
      - api_gateway_nginx
+     - httpd
     networks:
       default:
         aliases:
          - ${KEYCLOAK_FQDN}
          - ${RESOURCE_FQDN}
-      conformance-suite_default:
-        aliases:
-         - ${KEYCLOAK_FQDN}
-         - ${RESOURCE_FQDN}
+         - ${CONFORMANCE_SUITE_FQDN}
   keycloak:
     build:
       context: ./keycloak
-    volumes:
-     - ./https/server.pem:/etc/x509/https/tls.crt
-     - ./https/server-key.pem:/etc/x509/https/tls.key
-     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
-#     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
+      args:
+        KEYCLOAK_BASE_IMAGE: ${KEYCLOAK_BASE_IMAGE}
+        KEYCLOAK_REALM_IMPORT_FILENAME: ${KEYCLOAK_REALM_IMPORT_FILENAME}
     ports:
      - "8787:8787"
     environment:
      - KEYCLOAK_USER=${KEYCLOAK_USER}
      - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
+    volumes:
+     - ./https/server.pem:/etc/x509/https/tls.crt
+     - ./https/server-key.pem:/etc/x509/https/tls.key
+     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+#     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
     command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug -Dkeycloak.profile=preview"
   api_gateway_nginx:
     build:
@@ -51,6 +52,7 @@ services:
      - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
     depends_on:
      - resource_server
+     - keycloak
   resource_server:
     build:
       context: ./resource-server
@@ -58,10 +60,57 @@ services:
     build:
       context: ./client_private_keys
     volumes:
-     - ./client_private_keys:/keys
+      - ./client_private_keys:/keys
     command: /keys
-
-networks:
-  conformance-suite_default:
-    external: true
-
+  test_runner:
+    build:
+      context: ./test-runner
+    environment:
+     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - ./fapi-conformance-suite-configs:/json-config
+    depends_on:
+     - load_balancer
+     - keycloak
+     - server
+  mongodb:
+    image: mongo
+#    volumes:
+#     - mongodata:/data/db
+  httpd:
+    build:
+      context: ${OPENID_GIT_URL}#${OPENID_GIT_TAG}:httpd
+    ports:
+      - "8443:8443"
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./conformance-suite
+      args:
+        OPENID_GIT_URL: ${OPENID_GIT_URL}
+        OPENID_GIT_TAG: ${OPENID_GIT_TAG}
+    ports:
+      - "9999:9999"
+    volumes:
+      - ${MVN_HOME}:/root/.m2
+      - ./report:/conformance-suite/report
+      - ./fapi-conformance-suite-configs/:/conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/
+    environment:
+      - CONFORMANCE_SERVER=https://${CONFORMANCE_SUITE_FQDN}
+      - CONFORMANCE_DEV_MODE=1
+      - MONGODB_HOST=mongodb
+    links:
+      - mongodb:mongodb
+    depends_on:
+      - mongodb
+      - keycloak
+    logging:
+      # limit logs retained on host
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "5"
+#volumes:
+#  mongodata:
