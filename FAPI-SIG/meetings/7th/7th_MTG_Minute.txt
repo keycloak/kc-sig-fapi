@@ -1,0 +1,129 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 7th Meeting
+
+Date :
+ Wed 18 Nov 2020
+
+Time :
+ 09:00 - 10:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Adorsys from Kyiv, Ukraine
+ Brendan Rothwell (Integral Technology Solutions)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Dmytro Mishchuk (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Mykhailo Kyrychenko
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 7th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/7th/presentations/FAPI-SIG_7th_MTG_agenda.pdf
+Recording :
+ https://zoom.us/rec/share/vFJGGSBCN01NxUPoQCvueHPsozzg3RemeBRrqkAzsPPgRCt3Yjjk1PlejnjQXQla.L1ATSTp8FuMqehXl
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 Dec 2020, 6 weeks remaining
+      18 of 21 issues resolved (90%)
+   [Issues]
+    BANFICO, Integral Tech work on them.
+    4 Issues remaining to complete this project
+      1 Resolved     ( 0)
+      2 Assigned     ( 0)
+      1 Not Assigned ( 0)
+   [Topics]
+    - Automation of FAPI-RW Conformance Test run has been completed.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 10 weeks remaining
+      7 of 13 issues resolved (54%)
+   [Issues]
+    Adorsys, BANFICO, Hitachi, Red Hat work on them.
+    13 Issues to complete this project
+      7 Resolved           (+1)
+      2 PR sent, in review (+2)
+      4 Assigned           (-3)
+      0 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 18 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Issues]
+    None works on them.
+    1 Issues to complete this project
+      1 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 31 Dec 2020, 6 weeks remaining
+      0 of 5 issues resolved (0%)
+   [Issues]
+    Hitachi works on them.
+    5 Issues to complete this project
+      0 Resolved           ( 0)
+      1 PR sent, in review (+1)
+      1 Assigned           (+1)
+      3 Not Assigned       ( 0)
+   [Topics]
+    - keycloak development team will review the PR of the design document for new Admin REST API on the next week.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 18 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Issues]
+    None works on them.
+    2 Issues to complete this project
+      2 Not Assigned       ( 0)
+   [Notes]
+    - The progress of New Admin Console by keycloak development team affects this milestone.
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 18 weeks remaining
+      7 of 14 issues resolved (50%)
+   [Issues]
+    Adorsys, Hitachi works on them.
+    14 Issues to complete this project
+      6 Resolved           (+5)
+      1 PR sent, in review ( 0)
+      6 Assigned           (+2)
+      1 Not Assigned       ( 0)
+   [Notes]
+     - PR's review priority by keycloak development team affects this milestone.
+     - Adorsys member can help with not assigned issues.
+     - keycloak development team will review the PRs currently waiting for review and PRs that will be sent afterwards.
+
+ * Other Topics - Projects in the Future
+   - If possible, the member could inform the points keycloak does not satisfy for complying with their regional regulations.
+
+ * Next Web Meeting
+   Wed 2 Dec 9:00 - 10:00 GMT in 1 hour
+ 
