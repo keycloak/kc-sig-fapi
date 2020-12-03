@@ -1,0 +1,128 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 8th Meeting
+
+Date :
+ Wed 2 Dec 2020
+
+Time :
+ 09:00 - 10:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Andrii Murashkin (Adorsys)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Dmytro Mishchuk (Adorsys)
+ Hryhorii Hevorkian (Adorsys)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 8th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/8th/presentations/FAPI-SIG_8th_MTG_agenda.pdf
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 Dec 2020, 4 weeks remaining
+      18 of 21 issues resolved (90%)
+   [Issues]
+    No updates.
+    4 Issues remaining to complete this project
+      1 Resolved     ( 0)
+      2 Assigned     ( 0)
+      1 Not Assigned ( 0)
+   [Topics]
+    - Automation of FAPI-RW Conformance Test run has been completed but not yet been integrated onto keycloak itself.
+    - The completion of this M/S depends on when the next version of keycloak is released because 2 remaining issues need to use this version to run FAPI-RW conformance tests against it.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 8 weeks remaining
+      7 of 13 issues resolved (54%)
+   [Issues]
+    Adorsys, BANFICO, Hitachi, Red Hat work on them.
+    13 Issues to complete this project
+      8 Resolved           (+1)
+      1 PR sent, in review ( 0)
+      4 Assigned           (-1)
+      0 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 16 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Issues]
+    None works on them.
+    1 Issues to complete this project
+      1 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 31 Dec 2020, 4 weeks remaining
+      0 of 5 issues resolved (0%)
+   [Issues]
+    Hitachi works on them.
+    6 Issues to complete this project
+      0 Resolved           ( 0)
+      2 PR sent, in review (+2)
+      1 Assigned           (-1)
+      3 Not Assigned       ( 0)
+   [Topics]
+    - The review the PR of the design document for new Admin REST API is in progress.
+    - This M/S can not be completed along with the original schedule. It will be re-scheduled.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 16 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Issues]
+    None works on them.
+    2 Issues to complete this project
+      2 Not Assigned       ( 0)
+   [Notes]
+    - The progress of New Admin Console by keycloak development team affects this milestone.
+    - The concept design for New Admin Console UI for Client Policies is in development.
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 16 weeks remaining
+      8 of 13 issues resolved (62%)
+   [Issues]
+    Adorsys, Hitachi works on them.
+    13 Issues to complete this project
+      7 Resolved           (+1)
+      2 PR sent, in review ( 0)
+      4 Assigned           ( 0)
+      0 Not Assigned       (-1)
+   [Notes]
+     - PR's review priority by keycloak development team affects this milestone.
+
+ * Other Topics
+   - FAPI-CIBA PR strategy : the current big PR (about 6ksteps) will be separated onto several small PRs and these are submitted consecutively.
+   - OIDC Client Public Key Management : making client's EC public key management easy. This topic might be treated under this SIG.
+   - Dynamic Client Registration : how to meet PSD2/eIDAS. This topic will be elaborated in the future FAPI-SIG meeting.
+   - Meeting Schedule : 16 Dec (10th), 6 Jan (11th), 20 Jan, biweekly as usual.
+
+ * Next Web Meeting
+   Wed 16 Dec 9:00 - 10:00 GMT in 1 hour
+ 
