@@ -32,6 +32,9 @@ Presentation Materials :
  [1] FAPI-SIG Community 8th Meeting Agenda
      https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/8th/presentations/FAPI-SIG_8th_MTG_agenda.pdf
 
+Recording :
+  https://zoom.us/rec/play/d4Q0NYu_cKMlrT-EL8Lv9S6-CSYRdWeGYo8XbrodEQHdkjRy6wr6fTfu-ywYudK-0fUdTu0JLUZa8Vvu.y-YuC-cu7eKTSXPX?autoplay=true
+
 Summary :
 
  * Updates : FAPI-RW project
