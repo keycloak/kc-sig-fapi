@@ -1,0 +1,139 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 9th Meeting
+
+Date :
+ Wed 16 Dec 2020
+
+Time :
+ 09:00 - 10:00 GMT in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Adorsys from Kyiv, Ukraine
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Jonathan Meyler (Backbase)
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 9th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/9th/presentations/FAPI-SIG_9th_MTG_agenda.pdf
+
+Recording :
+  https://zoom.us/rec/share/QUNccSHHLBg5HN7tpAQehM6s7JU0_tcmQXvjI2TipqY0YANLcaO-d4NF5JF9NKRG.p1imU-7p3-ETaSg5
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Objective]
+    In Q2 2021, we can use FAPI-RW security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 March 2021, 14 weeks remaining (re-scheduled)
+      18 of 21 issues resolved (90%)
+   [Issues]
+    No updates.
+    4 Issues remaining to complete this project
+      1 Resolved     ( 0)
+      1 In Progress  ( 0)
+      2 Assigned     ( 0)
+      0 Not Assigned ( 0)
+   [Topics]
+    - Automation of FAPI-RW Conformance Test run had been completed but not yet been integrated onto keycloak itself.
+    - The completion of this M/S depends on when the next version of keycloak is released because 2 remaining issues need to use this version to run FAPI-RW conformance tests against it.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 6 weeks remaining
+      7 of 13 issues resolved (54%)
+   [Issues]
+    Adorsys, BANFICO, Hitachi, Red Hat work on them.
+    13 Issues to complete this project
+      8 Resolved           ( 0)
+      1 PR sent, in review ( 0)
+      4 Assigned           ( 0)
+      0 Not Assigned       ( 0)
+   [Topics]
+    - First PR for CIBA support was sent.
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 14 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Issues]
+    None works on them.
+    1 Issues to complete this project
+      1 Not Assigned       ( 0)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 28 Feb 2021, 12 weeks remaining (re-scheduled)
+      0 of 6 issues resolved (0%)
+   [Issues]
+    Hitachi works on them.
+    6 Issues to complete this project
+      0 Resolved           ( 0)
+      2 In Progress        ( 0)
+      1 Assigned           ( 0)
+      3 Not Assigned       ( 0)
+   [Topics]
+    - The review the PR of the design document for new Admin REST API will come to an end.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 14 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Issues]
+    None works on them.
+    2 Issues to complete this project
+      2 Not Assigned       ( 0)
+   [Notes]
+    - The progress of New Admin Console by keycloak development team affects this milestone.
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 14 weeks remaining
+      11 of 13 issues resolved (85%)
+   [Issues]
+    Adorsys, Hitachi works on them.
+    13 Issues to complete this project
+     11 Resolved           (+4)
+      2 In Progress        ( 0)
+      4 Assigned           (-4)
+      0 Not Assigned       ( 0)
+   [Notes]
+     - Subproject : Client Registration Policies Migration was started by FAPI-SIG collaborators.
+     - PR's review priority by keycloak development team affects this milestone.
+
+ * Other Topics
+   - Proposal for meeting PSD2
+     At first showing the analysis result of how CIBA fits PSD2 Berlin Group in the future FAPI-SIG meeting
+   - Client Registration Policy coexists in RH-SSO 7.5
+     The existing officially supported Client Registration Policy will be still officially supported in RH-SS0 7.5 because Client Policy that can replace Client Registration Policy will be released as the technology preview at first in the RH-SSO 7.5.
+   - FAPI-RW Certificate
+     Even if passing all FAPI-RW conformance tests requires activation of Client Policy as technology preview in RH-SSO, after clarifying the configuration needed to pass all FAPI-RW conformance tests, we need to discuss which product has to be certified, how to display being certified on the server, how to publish this result, and so on.
+   - Meeting Schedule
+     Next 6 Jan 2021 (10th), and biweekly as usual.
+
+ * Next Web Meeting
+   Wed 6 Jan 2021 9:00 - 10:00 GMT in 1 hour
+ 
