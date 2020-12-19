@@ -82,7 +82,7 @@ docker-compose up --build --exit-code-from test_runner
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:11.0.1)
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:12.0.1)
     * The keycloak image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
