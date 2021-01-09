@@ -1,0 +1,111 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 10th Meeting
+
+Date :
+ Wed 6 Jan 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Abhishek Koserwal (Red Hat)
+ Adorsys from Kyiv, Ukraine
+ Charlène Sophie (ANS)
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 10th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/10th/presentations/FAPI-SIG_10th_MTG_agenda.pdf
+
+Recording :
+  https://zoom.us/rec/share/nI7l4wdD1zLKGpAFCiLSXQOYt4xlOkOU3MTN9psOG3ABayzJ2HiwdVxPwYa2C6ny.1iG36-2u1t8jMeLY
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Objective]
+    In Q2 2021, we can use FAPI-RW security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 March 2021, 11 weeks remaining
+      20 of 21 issues resolved (95%)
+   [Topics]
+    - Confirmed that keycloak 12 can pass both conformance test of ​FAPI-RW OP w/MTLS and w/Private Key on local environment.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 3 weeks remaining
+      7 of 13 issues resolved (54%).
+   [Topics]
+    Nothing
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 14 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Topics]
+    - 
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 28 Feb 2021, 9 weeks remaining
+      0 of 6 issues resolved (0%)
+   [Topics]
+    - The PR of the design document is updated by incorporating feedbacks from its review.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 11 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 11 weeks remaining
+      11 of 13 issues resolved (85%)
+   [Topics]
+    Nothing
+
+ * Other Discussion Topics
+   - Adapting FAPI-RW to PSD2
+     It is difficult to adapt FAPI-RW security profile to PSD2 requirements, especially The Berlin Group's implementation NextGen PSD2.
+     Currently, The Berlin Group considers the design for how to adapt FAPI-RW security profile to PSD2 requirements.
+     It needs help with review of this: https://docs.google.com/document/d/1e5M5aLgNgiu4kkPIt3BjSHBt2mZL9DkcQ7bfL4Zqdgw/edit
+     The main point that PSD2 covers but FAPI-RW does not cover is Consent Management. However, FAPI-WG of OID-F also discusses Consent/Grant Management on https://bitbucket.org/openid/fapi/issues/276/consent-management-in-fapi
+   - Using keycloak for PSD2
+     The major problem that arises when using keycloak for PSD2 is treating dynamic scopes (including consent_id) because the scope must be registered in advance on keycloak.
+     As its workaround, the custom authenticator (provider) could treat it.
+   - DPoP support contribution
+     Backbase plans DPoP support contribution.
+   - Features being tech preview might block business
+     In some case, when using keycloak/RH-SSO on business (e.g. financial industry), it might be problem if the needed feature is tech preview.
+     keycloak's FAPI-RW security support relies on Client Policy that is treated as tech preview for a while, which means that FAPI-RW support is considered to be also tech preview.
+   - CIBA PR review help
+     The review of the CIBA PR takes a lot of time. It might be helpful if FAPI-SIG members could help to review the CIBA PR.
+     https://github.com/keycloak/keycloak/pull/7679
+
+ * Next Web Meeting
+   Wed 20 Jan 2021 9:00 - 10:00 UTC in 1 hour
+ 
