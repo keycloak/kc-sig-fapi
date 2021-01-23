@@ -1,0 +1,102 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 11th Meeting
+
+Date :
+ Wed 20 Jan 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Andrii Murashkin (Adorsys)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Hryhorii Hevorkian (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+ Rafael Marins (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 11th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/11th/presentations/FAPI-SIG_11th_MTG_agenda.pdf
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Objective]
+    In Q2 2021, we can use FAPI-RW security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 March 2021, 11 weeks remaining
+      20 of 21 issues resolved (95%)
+   [Topics]
+    - Follow the final version of FAPI 1.0
+      OpenID Foundation fix the final version of FAPI 1.0.
+      Our works have been based on the Implementers Draft version 2 of FAPI.
+      Therefore, we need to follow this final version of FAPI 1.0.
+      (renamed : FAPI-RO -> FAPI 1.0 Baseline, FAPI-RW -> FAPI 1.0 Advanced)
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 31 Jan 2021, 1 weeks remaining
+      7 of 13 issues resolved (54%).
+   [Topics]
+    - Waiting for review on PR for pure CIBA protocol support.
+    - M/S#1 will be re-scheduled.
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 11 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 28 Feb 2021, 7 weeks remaining
+      1 of 6 issues resolved (16%)
+   [Topics]
+    - The PR of the design document for New Admin REST API has been approved and merged.
+    - Thanks to contribution by FAPI-SIG member, PRs for Client Registration Policy Migration have been prepared.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 11 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    - M/S#3 Client Policy Available for FAPI-RW
+      by 31 Mar 2021, 11 weeks remaining
+      13 of 13 issues resolved (100%)
+   [Topics]
+     - All issues have been resolved.
+
+ * Other Discussion Topics
+   - Work Item Proposal : keycloak PSD2 support
+     Try to make keycloak (+ other software components) comply with PSD2 in EU.
+     Adorsys and Hitach can work on this work item.
+     The dedicated breakout session might be set up afterwards.
+
+ * Next Web Meeting
+   Wed 3 Feb 2021 9:00 - 10:00 UTC in 1 hour
+ 
