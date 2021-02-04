@@ -8,6 +8,5 @@ done
 
 # Sometimes keycloak is still starting up at this point if no maven dependencies need downloading in server service (sleep 20)
 sleep 20
-
 [ $AUTOMATE_TESTS == true ] &&
 docker exec kc-sig-fapi_server_1 bash -c "/conformance-suite/.gitlab-ci/run-tests.sh --server-tests-only"
