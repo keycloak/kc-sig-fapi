@@ -5,6 +5,10 @@ cd $DIR
 
 type jwk-keygen
 if [ $? -ne 0 ]; then
+    if [[ "$(uname)" == "Darwin" ]]; then
+        echo "Please install go and downlaod the jwk-keygen with 'go get github.com/openstandia/jwk-keygen'"
+        exit 1
+    fi
     # Install jwk-keygen
     mkdir -p .bin
     curl -s -L https://github.com/openstandia/jwk-keygen/releases/download/v0.1/jwk-keygen-v0.1-linux-amd64.tar.gz | tar zx -C .bin
