@@ -1,0 +1,95 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 12th Meeting
+
+Date :
+ Wed 3 Feb 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Adorsys - Kyiv
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 12th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/12th/presentations/FAPI-SIG_12th_MTG_agenda.pdf
+
+Recording :
+ https://zoom.us/rec/share/ncJE21WiB4mRcmckK3uVgLoDj31vCwhfg9_a_GS_mo5LY3yNg8U5PhyGl8E_AU-G.ULKBWLER7zoqDWFe
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Objective]
+    In Q2 2021, we can use FAPI-RW security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 March 2021, 9 weeks remaining
+      20 of 21 issues resolved (95%)
+   [Topics]
+    Nothing
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 28 Feb 2021, 5 weeks remaining
+      7 of 13 issues resolved (54%).
+   [Topics]
+    - Pure CIBA PR review was started.
+    - M/S#1 was re-scheduled.
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 9 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 28 Feb 2021, 5 weeks remaining
+      1 of 6 issues resolved (16%)
+   [Topics]
+    Nothing
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 9 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Topics]
+    - Concept design was resumed by RH UXD team : https://marvelapp.com/prototype/6e70eh2/screen/74918976
+
+ * Other Discussion Topics
+   - Work Item Proposal : Grant/Consent Management support onto keycloak
+     Standard - FAPI 2.0 Grant Management API, UMA (User Management Access)
+     Location - where to manage and processing grant management data
+     Objective - how to meet region specific ecosystem (UK OpenBanking, PSD2, CDR) requirements about consent/grant management
+     Use case - openfinance, uk pension dashboard
+     How to proceed - Writing the design document might be a good first step toward supporting consent management to keycloak.
+     reference :
+        https://bitbucket.org/openid/fapi/src/master/Financial_API_Grant_Management.md
+        https://danielfett.de/download/fapi-evolution.pdf
+        https://bitbucket.org/openid/fapi/issues/276/consent-management-in-fapi
+
+ * Next Web Meeting
+   Wed 17 Feb 2021 9:00 - 10:00 UTC in 1 hour
+ 
