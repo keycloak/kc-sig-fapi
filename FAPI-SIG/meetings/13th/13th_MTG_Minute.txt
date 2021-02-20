@@ -1,0 +1,95 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 13th Meeting
+
+Date :
+ Wed 17 Feb 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+TBD
+ Adorsys - Kyiv
+ Christophe Lannoy
+ Kannan Rasappan (Banfico)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 13th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/13th/presentations/FAPI-SIG_13th_MTG_agenda.pdf
+
+Recording :
+ https://zoom.us/rec/share/MTZZwU5g_nCPSVVUcqWSXm91lIoTJWQ-v6-wRI3-OsEFPOUsKoum1PZHDCYOtjP3.pCRtm697PmqADN0w
+
+Summary :
+
+ * Updates : FAPI-RW project
+   [Objective]
+    In Q2 2021, we can use FAPI-RW security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#2 All FAPI-RW Conformance Tests Passed
+      by 31 March 2021, 7 weeks remaining
+      20 of 21 issues resolved (95%)
+   [Topics]
+    Nothing
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#1 All FAPI-CIBA(poll) Pull-Requests Merged
+      by 28 Feb 2021, 3 weeks remaining
+      7 of 13 issues resolved (54%).
+   [Topics]
+    - need to reschedule it to finish it by the end of Mar.
+
+   [Milestone]
+    M/S#2 All FAPI-CIBA(poll) Conformance Tests Passed
+      by 31 Mar 2021, 7 weeks remaining
+      0 of 1 issues resolved (0%)
+   [Topics]
+    Nothing
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 28 Feb 2021, 3 weeks remaining
+      1 of 6 issues resolved (16%)
+   [Topics]
+    - PR sent for new Admin REST API for client policies.
+    - need to reschedule it to finish it by the end of Mar.
+
+   [Milestone]
+    - M/S#2 Client Policy Available on New Admin Console
+      by 31 Mar 2021, 7 weeks remaining
+      0 of 2 issues resolved (0%)
+   [Topics]
+    - Frozen due to 
+
+ * Other Discussion Topics
+   - OIDC Client Public Keys Management
+     This makes us to use ECDSA and RSASSA-PSS based algorithm client public key easily and in more convenient way.
+     The details are published in order for other member to work on this issue.
+     -> uploaded on FAPI-SIG github repository.
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/OIDC-Client-Keys/FAPI-SIG-Annex_OIDC_Client_Keys.pdf
+   - How to accelerate PR review for pure CIBA support to help keycloak development team's review
+     The web meeting as other time slot would be set up so that Takashi describes and explains the pure CIBA support PR if needed.
+   - Keycloak and Client Authentication on the TLS layer (eIDAS) 
+     How to proceed : Adorsys will provide the design suggestion/document for the review incorporating the previous breakout web meeting. 
+
+ * Next Web Meeting
+   Wed 3 Mar 2021 9:00 - 10:00 UTC in 1 hour
+ 
