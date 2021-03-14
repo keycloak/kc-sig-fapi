@@ -7,12 +7,11 @@
 # ARG5: Realm name
 # ARG6: Scope
 FCSS_ALIAS=${1:-keycloak}
-FCSS_HOST=${2-conformance-suite.keycloak-fapi.org}
+FCSS_HOST=${2:-conformance-suite.keycloak-fapi.org}
 KC_HOST=${3:-as.keycloak-fapi.org}
 RS_HOST=${4:-rs.keycloak-fapi.org}
 REALM=${5:-test}
 SCOPE=${6:-openid}
-
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
@@ -22,4 +21,3 @@ cd $DIR
 ./client_private_keys/generate-keys.sh
 ./keycloak/generate-realm.sh $FCSS_HOST $FCSS_ALIAS $REALM
 ./fapi-conformance-suite-configs/generate-fapi-conformance-suite-configs.sh $KC_HOST $RS_HOST $FCSS_ALIAS $REALM $SCOPE
-
