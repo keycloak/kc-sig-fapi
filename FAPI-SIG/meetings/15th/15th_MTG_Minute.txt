@@ -1,0 +1,84 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 15th Meeting
+
+Date :
+ Wed 17 Mar 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent) (absent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Andrii Murashkin (Adorsys)
+ Guy Moyo (Adorsys)
+ Hryhorii Hevorkian (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 15th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/15th/presentations/FAPI-SIG_15th_MTG_agenda.pdf
+
+Summary :
+ * Updates : FAPI-RW project (Follow-up)
+   [Topics]
+    - The final version of FAPI 1.0 has been released so that we need to follow this final version.
+    - However, need to wait for the PR for New Admin REST API Implementation for Client Policies being merged (KEYCLOAK-16805).
+      The keycloak development team could start reviewing this PR.
+
+ * Updates : FAPI-CIBA(poll mode) project
+   [Objective]
+    In Q2 2021, we can use FAPI-CIBA(poll mode) security profile support by keycloak and RH-SSO 7.5
+   [Milestone]
+    M/S#3 Pure CIBA Pull-Requests Merged​
+      by 31 Mar 2021, 2 weeks remaining
+      0 of 1 issue resolved (0%)
+   [Topics]
+    - Due to merging the PR for RFC 8628 Device Grant that the keycloak development team prioritized, the keycloak development team could accelerate the review.
+    - Device Grant and CIBA have some similarities so that this PR needs to follow the style of the merged Device Grant codes.
+
+ * Updates : Client Policy Official Support project
+   [Milestone]
+    M/S#1 Client Policy Available on Existing Admin Console
+      by 31 Mar 2021, 4 weeks remaining
+      1 of 3 issues resolved (33%)
+   [Topics]
+   - The keycloak development team could accelerate the review.
+   - The Client Policies' representation in JSON and User Profile's one have some similarities so that this PR needs to incorporate this point.
+
+ * Other Discussion Topics
+   - Proposing Working Items in FY 2021
+     New working items have been proposed.​
+     [Security Features]​
+     - OIDC Client’s Public Key Management​
+     - OAuth 2.0 Demonstration of Proof-of-Possession (DPoP)​
+     - FAPI 2.0 (baseline/advanced)​
+       - Pushed Authorization Request (PAR)​
+       - Rich Authorization Request (RAR)​
+       - Grant Management API
+     [Market Specific Features]​
+     <PSD2>​
+       - Following eIDAS regulations​
+         - QWAC verification​
+       - Consent Management​
+     <UK OpenBanking>​
+       - Onboarding​
+         - Software Statement Support​
+         - Software Statement Assertion (SSA) Verification
+
+ * Next Web Meeting
+   Wed 31 Mar 2021 8:00 - 9:00 UTC in 1 hour
+ 
