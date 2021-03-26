@@ -68,7 +68,7 @@ If you would like to use the configurations as it is, you only need to build and
 Run the following command from the project basedir to start the test suite
 
 ```
-docker-compose up --build
+docker-compose -p keycloak-fapi up --build
 ```
 The OpenID FAPI Conformance test interface will then be reachable at [https://localhost:8443](https://localhost:8443).
 See instructions in [Run FAPI Conformance test plan](#Run-FAPI-Conformance-test-plan) 
@@ -77,7 +77,7 @@ section for running the tests manually in your browser.
 To stop all containers after the automated tests have run:
 
 ```
-docker-compose up --build --exit-code-from test_runner
+docker-compose -p keycloak-fapi up --build --exit-code-from test_runner
 ```
 
 The following options can be set as environment variables before the above command:
@@ -97,7 +97,7 @@ The following options can be set as environment variables before the above comma
 
 **Example:**
 ```
-KEYCLOAK_BASE_IMAGE=jboss/keycloak:6.0.1 docker-compose up --build
+KEYCLOAK_BASE_IMAGE=jboss/keycloak:6.0.1 docker-compose -p keycloak-fapi up --build
 ```
 
 To stop and remove all containers, run the following:
@@ -148,7 +148,7 @@ Run `generate-all.sh` script simply to generate self-signed certificates for HTT
 Now, you can boot a Keycloak server with new configurations.
 
 ```
-docker-compose up --force-recreate
+docker-compose -p keycloak-fapi up --force-recreate
 ```
 
 ## Run FAPI Conformance test against local built keycloak
@@ -171,7 +171,7 @@ It overrides the keycloak of the base image with the one built on the local mach
 Then run the FAPI Conformance Suite with KEYCLOAK_REALM_IMPORT_FILENAME env var:
 
 ```
-KEYCLOAK_REALM_IMPORT_FILENAME=realm-local.json docker-compose up --build
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-local.json docker-compose -p keycloak-fapi up --build
 ```
 
 ## Run FAPI Conformance test with persistent OpenID Server DB volume
