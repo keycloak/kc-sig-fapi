@@ -32,6 +32,9 @@ Presentation Materials :
  [1] FAPI-SIG Community 15th Meeting Agenda
      https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/15th/presentations/FAPI-SIG_15th_MTG_agenda.pdf
 
+Recording :
+ https://zoom.us/rec/share/Bn3wY9Gso3i5JpCoL3YZnaV2rmnCdnNjSTWsdAUNbFQwtNoGDsXFfHN21dlBYfYv.pDOi2jUjMZZyU0Sp
+
 Summary :
  * Updates : FAPI-RW project (Follow-up)
    [Topics]
