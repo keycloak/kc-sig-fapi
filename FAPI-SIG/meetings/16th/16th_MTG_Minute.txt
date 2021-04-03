@@ -1,0 +1,83 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 16th Meeting
+
+Date :
+ Wed 31 Mar 2021
+
+Time :
+ 09:00 - 10:00 UTC in 1 hour
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Adorsys, Kyiv
+ Dmitry Telegin (Backbase)
+ Dmytro Mishchuk (Adorsys)
+ Guy Moyo (Adorsys)
+ Jon Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 16th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/16th/presentations/FAPI-SIG_16th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+ * Updates : FAPI-CIBA(poll mode)
+   KEYCLOAK-12137 OpenID Connect Client Initiated Backchannel Authentication (CIBA)​
+   The keycloak development team has been reviewing it intensively.
+
+ * Updates : Client Policies
+   KEYCLOAK-16805 Client Policy : Support New Admin REST API (Implementation)
+   The keycloak development team has been reviewing it intensively.
+
+ * New : OAuth 2.0 Demonstration of Proof-of-Possession (DPoP)​
+   Its design document's PR has been submitted (by Backbase)
+   https://github.com/keycloak/keycloak-community/pull/254
+
+ * New : Pushed Authorization Request (PAR)​
+   Its design document's PR has been submitted (by Adorsys)
+   https://github.com/keycloak/keycloak-community/pull/255
+
+ * Other Discussion Topics
+   - Recap Working Items in FY 2021
+     [Security Features]​
+     - OIDC Client’s Public Key Management​
+     - OAuth 2.0 Demonstration of Proof-of-Possession (DPoP)​
+     - FAPI 2.0 (baseline/advanced)​
+       - Pushed Authorization Request (PAR)​
+       - Rich Authorization Request (RAR)​
+       - Grant Management API
+     [Market Specific Features]​
+     <PSD2>​
+       - Following eIDAS regulations​
+         - QWAC verification​
+       - Consent Management​
+     <UK OpenBanking>​
+       - Onboarding​
+         - Software Statement Support​
+         - Software Statement Assertion (SSA) Verification
+
+   - Time of this meeting
+     Considering the situation that participants of this FAPI-SIG meeting live all over the world, the time of this meeting might be moved 1 or 2 hours later 
+
+ * Next Web Meeting
+   Wed 14 Apr 2021 8:00 - 9:00 UTC in 1 hour
+   (Time of this meeting might be changed)
+ 
