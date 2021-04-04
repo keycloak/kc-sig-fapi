@@ -1174,38 +1174,42 @@
                     ]
                 }
             }
-        ],
-        "org.keycloak.services.clientpolicy.ClientPolicyProvider" : [ {
-            "name" : "MyPolicy",
-            "providerId" : "client-policy-provider",
-            "subComponents" : { },
-            "config" : {
-                "client-policy-executor-ids" : [ "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf", "47e818e3-f0d8-4a90-ace7-1a8b2362cec7" ],
-                "client-policy-condition-ids" : [ "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146" ]
-            }
-        } ],
-        "org.keycloak.services.clientpolicy.executor.ClientPolicyExecutorProvider" : [ {
-            "id" : "47e818e3-f0d8-4a90-ace7-1a8b2362cec7",
-            "name" : "SecureRequestObjectExecutor",
-            "providerId" : "secure-reqobj-executor",
-            "subComponents" : { },
-            "config" : { }
-        }, {
-            "id" : "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf",
-            "name" : "SecureResponseTypeExecutor",
-            "providerId" : "secure-responsetype-executor",
-            "subComponents" : { },
-            "config" : { }
-        } ],
-        "org.keycloak.services.clientpolicy.condition.ClientPolicyConditionProvider" : [ {
-            "id" : "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146",
-            "name" : "ClientRolesCondition",
-            "providerId" : "clientroles-condition",
-            "subComponents" : { },
-            "config" : {
-                "roles" : [ "sample-client-role" ]
-            }
-        } ]
+        ]
+    },
+    "clientProfiles" : {
+        "profiles": [
+          {
+            "name": "fapi-1-0-advanced-final-profile",
+            "description": "The profile for FAPI 1.0 advanced security profile Final version",
+            "builtin": false,
+            "executors": [
+              {
+                "secure-responsetype-executor": {}
+              },
+              {
+                "secure-reqobj-executor": {}
+              }
+            ]
+          }
+        ]
+    },
+    "clientPolicies" : {
+        "policies": [
+          {
+            "name": "fapi-1-0-advanced-final-policy",
+            "description": "The policy for FAPI 1.0 advanced security profile Final version",
+            "builtin": false,
+            "enable": true,
+            "conditions": [
+              {
+                "clientroles-condition": {"roles" : [ "sample-client-role" ]}
+              }
+            ],
+            "profiles": [
+              "fapi-1-0-advanced-final-profile"
+            ]
+          }
+        ]
     },
     "roles" : {
         "realm" : [ {
