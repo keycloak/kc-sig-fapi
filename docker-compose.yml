@@ -34,7 +34,7 @@ services:
      - ./https/server.pem:/etc/x509/https/tls.crt
      - ./https/server-key.pem:/etc/x509/https/tls.key
      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
-#     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
+     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
     command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug -Dkeycloak.profile=preview"
   api_gateway_nginx:
     build:
