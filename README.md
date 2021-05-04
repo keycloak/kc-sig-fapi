@@ -256,6 +256,25 @@ the following lines in ./docker-compose.yml
 ```
 
 
+## Run FAPI-CIBA-ID1 Conformance test
+
+To run  FAPI-CIBA-ID1 Conformance test, specify `TEST_PLAN` env var as follows.
+
+```
+TEST_PLAN=--ciba-tests-only docker-compose -p keycloak-fapi up --build
+```
+
+### Notes
+
+The current keycloak has not yet supported FAPI-CIBA (poll) completely so that a lot of tests fails. Especially, the following two tests cannot be passed automatically. However, these can be passed manually with modifying `auth_entity_server`'s  `main.go`.
+
+  * fapi-ciba-id1-user-rejects-authentication :
+ The mock auth entity server (`auth_entity_server`) for user authentication by AD cannot tell whether the specified test requires user authentication success or failure."
+ To pass conformance test, `auth_entity_server`'s  `main.go` needs to be modified to return an error response.
+
+  * fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message :
+ This always become `reviewed` status in automated tests if the server supports binding messages containing emoji etc - it requires uploading a picture of the consumption device to conformance test server.
+
 
 ## Custom files in the conformance suite
 

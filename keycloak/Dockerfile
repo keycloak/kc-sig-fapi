@@ -14,3 +14,6 @@ COPY ${KEYCLOAK_SPI_0} /opt/jboss/keycloak/standalone/deployments/
 
 ENV KEYCLOAK_IMPORT=/opt/jboss/${KEYCLOAK_REALM_IMPORT_FILENAME}
 ENV X509_CA_BUNDLE=/etc/x509/https/client-ca.crt
+
+COPY ciba.cli /opt/jboss/keycloak/bin/
+RUN /opt/jboss/keycloak/bin/jboss-cli.sh --file=/opt/jboss/keycloak/bin/ciba.cli
