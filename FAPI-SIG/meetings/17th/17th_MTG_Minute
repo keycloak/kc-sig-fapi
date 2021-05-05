@@ -1,0 +1,97 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 17th Meeting
+
+Date :
+ Wed 28 Apr 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Dmytro Mishchuk (Adorsys)
+ Eder Jorge
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ Hryhorii Hevorkian (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 17th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/17th/presentations/FAPI-SIG_17th_MTG_agenda.pdf
+
+Recording :
+ https://zoom.us/rec/share/MpT89ozHtOka4-xpo4ftCP2AstUsN8JCb_TYhIVUYOVskcjLgniLgdG_j_zoLhPR.OOseXqBZ5LRijFhT
+
+Summary :
+
+ * Updates : FAPI 1.0​
+   PRs supporting additional security features for FAPI 1.0 final have been merged. ​
+   Confirmed keycloak passed conformance tests for FAPI 1.0 final.​
+
+ * Updates : FAPI 2.0​
+   Review of PR for PAR design document is in progress.​
+   https://github.com/keycloak/keycloak-community/pull/255
+
+   Review of PR for RAR design document is in progress.​
+   https://github.com/keycloak/keycloak-community/pull/266
+
+   Review of PR for Grant Management API design document is in progress.​
+   https://github.com/keycloak/keycloak-community/pull/265
+
+ * Updates : FAPI-CIBA​
+   Review of PR supporting OIDC CIBA is still in progress.
+   https://github.com/keycloak/keycloak/pull/7679
+
+ * Updates : Common Security Features​
+   PR for OIDC Client’s Public Key Management 1st phase has been submitted.​
+   https://github.com/keycloak/keycloak/pull/7874
+
+ * Updates : Client Policies​
+   PRs revising existing client policies for JSON representation have been merged.​
+   https://github.com/keycloak/keycloak/pull/7780
+
+ * Updates : SPA/Native App​
+   Review of PR for DPoP design document is in progress.​
+   https://github.com/keycloak/keycloak-community/pull/254
+
+ * Updates : PSD2​
+   Review of PR for MTLS validation extension design document is in progress.
+   https://github.com/keycloak/keycloak-community/pull/267
+
+ * Other Discussion Topics
+   - RHSSO 7.5 might be based on keycloak 14.
+   - keycloak 14 might include OIDC CIBA and FAPI 1.0 (with Client Policies).
+   - keycloak 14 might not include FAPI-CIBA.
+   - keycloak 14 might not include new admin console UI.
+   - The discussion on what should be included into pre-set profiles is ongoing on keycloak dev-ml.
+   - The latest tag version of FAPI conformance suite v4.1.10 does not include FAPI 1.0 final specific part (ex. request object's exp and its expiration data check).
+
+ * Next Web Meeting
+   Wed 12 May 2021 11:00 - 12:00 UTC in 1 hour
+
+ 
