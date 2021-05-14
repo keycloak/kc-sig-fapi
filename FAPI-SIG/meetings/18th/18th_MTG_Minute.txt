@@ -1,0 +1,89 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 18th Meeting
+
+Date :
+ Wed 12 May 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Independent) (absent)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ (I've missed)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 18th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/18th/presentations/FAPI-SIG_18th_MTG_agenda.pdf
+
+Recording :
+ https://zoom.us/rec/share/iM0Fb8wh2jsXfkRn2A5SyWNFHs7e7HFDiwLUJYleWsMYbykLMP1tcxTpjTw5Dkxm.QLDleTzMkbVA6hSS
+
+Summary :
+
+ * Updates : FAPI 1.0​
+   KC13 has supported FAPI 1.0 Advanced Final while the latest release version of FAPI conformance test only supported FAPI-RW ID2.
+   KC14 will support both FAPI 1.0 Advanced Final and FAPI-RW ID2 so that it can pass the latest version of conformance tests.
+
+ * Updates : FAPI 2.0​
+   Review of PR for PAR design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/255
+
+   Review of PR for its prototype implementation has started.
+   https://github.com/tnorimat/keycloak/pull/20
+
+   Review of PR for RAR design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/266
+
+   Review of PR for Grant Management API design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/265
+
+ * Updates : FAPI-CIBA​
+   KC13 has supported OIDC CIBA.
+   https://github.com/keycloak/keycloak/pull/7679
+   
+   PR for one of the features needed to support FAPI-CIBA has been submitted, waiting for its review.
+   https://github.com/keycloak/keycloak/pull/8006
+
+ * Updates : Common Security Features​
+   PR for OIDC Client’s Public Key Management 1st phase has been submitted., waiting for its review.
+   https://github.com/keycloak/keycloak/pull/7874
+
+ * Updates : Client Policies​
+   Revising client policies to KC14 is ongoing by mainly RH keycloak development team.
+   https://github.com/keycloak/keycloak/pull/7969
+
+ * Updates : SPA/Native App​
+   Review of PR for DPoP design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/254
+
+ * Updates : PSD2​
+   Review of PR for MTLS validation extension design document is still in progress.
+   https://github.com/keycloak/keycloak-community/pull/267
+
+ * Other Discussion Topics
+   - KC14 might be released soon and RH-SSO might be based on KC14.
+   - Banfico can help with FAPI-CIBA support that Hitachi has been trying currently.
+
+ * Next Web Meeting
+   Wed 26 May 2021 11:00 - 12:00 UTC in 1 hour
+
+ 
