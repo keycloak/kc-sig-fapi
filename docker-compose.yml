@@ -5,6 +5,7 @@ services:
       context: ./load-balancer
     ports:
      - "443:443"
+     - "543:543"
     environment:
      - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
      - RESOURCE_FQDN=${RESOURCE_FQDN}
@@ -35,7 +36,7 @@ services:
      - ./https/server-key.pem:/etc/x509/https/tls.key
      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
 #     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
-    command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug -Dkeycloak.profile=preview"
+    command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug *:8787 -Dkeycloak.profile=preview -Dkeycloak.frontendUrl=${KEYCLOAK_FRONTEND_URL}"
   api_gateway_nginx:
     build:
       context: ./api-gateway-nginx
@@ -46,7 +47,7 @@ services:
      - ./https/ca.pem:/usr/local/share/ca-certificates/keycloak-fapi-ca.pem
     environment:
      - SERVER_NAME=${RESOURCE_FQDN}
-     - INTROSPECTION_ENDPOINT_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/protocol/openid-connect/token/introspect
+     - INTROSPECTION_ENDPOINT_URL=${KEYCLOAK_INTROSPECTION_ENDPOINT_FROM_API_GATEWAY}
      # JWT access token veirfication can't pass reuse-authorisation-code case
      # - DISCOVERY_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration
      - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
