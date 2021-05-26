@@ -14,6 +14,8 @@ local res, err = nil
 if opts.introspection_endpoint ~= nil then
   opts.introspection_interval = 0
 
+  ngx.log(ngx.INFO, "Calling introspection endpoint on address: " .. opts.introspection_endpoint)
+
   -- call introspect for OAuth 2.0 Bearer Access Token validation
   res, err = openidc.introspect(opts)
 
@@ -39,7 +41,7 @@ end
 
 if res.cnf == nil or res.cnf["x5t#S256"] == nil then
   ngx.status = 401
-  ngx.say("no cnf.x5t#256 provided in access_token")
+  ngx.say("no cnf.x5t#S256 provided in access_token")
   ngx.exit(ngx.HTTP_UNAUTHORIZED)
 end
 
@@ -63,7 +65,7 @@ local b64 = require("ngx.base64")
 local encoded = b64.encode_base64url(digest)
 
 if encoded ~= res.cnf["x5t#S256"] then
-  ngx.log(ngx.ERR, "unmatch request client certificate and cnf.x5t#256 in access_token: " .. encoded .. " != " .. res.cnf["x5t#S256"])
+  ngx.log(ngx.ERR, "unmatch request client certificate and cnf.x5t#S256 in access_token: " .. encoded .. " != " .. res.cnf["x5t#S256"])
   ngx.exit(ngx.HTTP_UNAUTHORIZED)
 end
 

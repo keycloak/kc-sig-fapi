@@ -105,6 +105,10 @@ To stop and remove all containers, run the following:
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
+Instead of this, if you want also to remove all the images and the volumes created by the docker-compose in addition to containers, you run this:
+```
+docker-compose -p keycloak-fapi down --rmi local -v
+```
 
 ### Test Reports
 
@@ -125,15 +129,76 @@ To access to Keycloak and Resource server with FQDN, modify your `hosts` file in
 1. Run this project with `AUTOMATE_TESTS=false` environment variable set
 2. Open https://conformance-suite.keycloak-fapi.org
 3. Click `Create a new test plan` button.
-4. Choose `FAPI-RW-ID2 (and OpenBankingUK): Authorization server test (latest version)` as Test Plan.
+4. Choose `FAPI1-Advanced-Final: Authorization server test` or `FAPI-RW-ID2 (and OpenBankingUK): Authorization server test (latest version)` as Test Plan.
+The `FAPI1-Advanced-Final` is currently recommended as it tests against the Final version of the FAPI specification
 5. Choose `Client Authentication Type` you want to test.
 6. Choose `plain_fapi` as FAPI Profile.
 7. Choose `plain_response` as FAPI Response Mode.
 8. Click `JSON` tab and paste content of the configuration.
   * If you want to use private_key_jwt client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json).
   * If you want to use mtls client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json).
-9. Click `Create Test Plan` button and follow the instructions. To proceed with the tests, You can authenticate using `john` account with password `john`. When rejecting authentication scenario, you can use `mike` account with password `mike`. In this case, you need to click `No` button to cancel the authentication in the consent screen.
+9. Click `Create Test Plan` button and follow the instructions.
+10. If you used `FAPI1-Advanced-Final`, it is recommended to use Keycloak global builtin client profile `fapi-1-advanced` instead of the
+`fapi-1-rw-ID2`, which is suitable for the `FAPI-RW-ID2` test profile. To do this, you can login to Keycloak admin console (should be available
+usually under `https://as.keycloak-fapi.org/auth`) as admin/admin. Then go to Realm  `Test` -> `Client Policies` -> `Policies` -> `fapi-1-0-policy`. Then delete `fapi-1-rw-ID2` client profile
+from this policy and add `fapi-1-advanced` instead of it. 
+11. To proceed with the tests, you can authenticate using `john` account with password `john`.
+12. When rejecting authentication scenario, you can use `mike` account with password `mike`. In this case, you need to click `No` button to cancel the authentication in the consent screen.
+Before running this reject authentication test (Usually 3rd test in the conformance testsuite called something like `fapi1-advanced-final-user-rejects-authentication`),
+it is recommended to login to Keycloak admin console as admin/admin and remove the existing session of user `john`. Alternative is to run this test in different browser
+or clear cookies for Keycloak server.
 
+### Run FAPI Conformance test plan manually against the online conformance testsuite
+
+To obtain the certification, it is needed to run the conformance testsuite against the online production instance available on
+https://www.certification.openid.net/ . You can still use the Keycloak server, Resource server and other utilities provided by this project
+to help setup the environment needed for the conformance testsuite.
+
+The configuration assumes that your laptop, where you are running the instance, is accessible through the internet, so that clients used
+by conformance testsuite can connect to it. Simple setup assumes that your server is accessible for example on `85-244-72-90.nip.io` and
+you have 2 ports opened:
+  * Port 543 where Keycloak server will listen. So URL of Keycloak might be like https://85-244-72-90.nip.io:543/auth
+  * Port 443 where Resource server will listen. So URL of Resource server might be like https://85-244-72-90.nip.io:443
+If you use different ports, please adjust your haproxy configuration for the frontends under `load-balancer/haproxy_two-frontends.cfg`.  
+
+The setup for this scenario is like:
+
+1. Setup environment variables something like this. It assumes that 85.244.72.90 is your public IP and the 192.168.0.101 is the IP
+of your laptop in the private local network. The introspection endpoint, which is triggered by the resource server, needs to call
+Keycloak server under this private network. At least in my environment the access through public network did not work. But this 
+can be environment specific. During troubles with calling introspection endpoint, you can later try to connect to api-gateway-nginx
+docker container and verify with `curl` command what servers are accessible from this container.
+So adjust your configuration according your environment if needed:
+```
+export AUTOMATE_TESTS=false
+export KEYCLOAK_FQDN=85-244-72-90.nip.io
+export KEYCLOAK_FRONTEND_URL=https://85-244-72-90.nip.io:543/auth
+export KEYCLOAK_INTROSPECTION_ENDPOINT_FROM_API_GATEWAY=https://192-168-0-101.nip.io:543/auth/realms/test/protocol/openid-connect/token/introspect
+export RESOURCE_FQDN=84-244-72-90.nip.io
+```    
+2. Re-generate server certificates to match the hostnames of your environment. You can use command like this: `https/generate-server.sh $KEYCLOAK_FQDN *.nip.io`
+3. In case you use local built Keycloak instance as described below, it is recommended to delete the Keycloak directory and unzip new directory
+to make sure that certificates from previous step will be correctly copied to the server.
+4. It is needed to comment the RESOURCE_FQDN in the `docker-compose.yml` file in the load_balancer network section. Something like this:
+```
+networks:
+  default:
+    aliases:
+     - ${KEYCLOAK_FQDN}
+     #  - ${RESOURCE_FQDN}
+     - ${CONFORMANCE_SUITE_FQDN}
+```
+5. In the `loadbalancer/Dockerfile`, it may be needed to switch the configuration file of the loadbalancer. Something like this:
+```
+# RUN /bin/sh -c "cp /tmp/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg"
+RUN /bin/sh -c "cp /tmp/haproxy_two-frontends.cfg /usr/local/etc/haproxy/haproxy.cfg"
+```
+6. Rebuild and restart whole docker-compose environment as described above.
+7. Follow the steps for the `Run FAPI Conformance test plan manually` described above. With the exception, that:
+  * You need to use online instance of the conformance testsuite from https://www.certification.openid.net/
+  * After importing the client configurations from the `fapi-conformance-suite-configs` directory, you may need to replace the URLs of
+  the keycloak server like using `as.keycloak-fapi.org` with your publicly available Keycloak instance like `https://85-244-72-90.nip.io:543/auth/...`.
+  Same applies for the resource server URL, which is `rs.keycloak-fapi.org` in the configuration files by default, and needs to be replaced with your publicly available one.
 
 ## For Developers
 
