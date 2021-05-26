@@ -36,7 +36,7 @@ generateConfig() {
     cat << EOS
 {
     "alias": "$FCSS_ALIAS",
-    "description": "FAPI-RW-ID2: Keycloak test with ${CLIENT_AUTH_TYPE} client authentication (RequestObject:${ROS_ALG}/IDToken:${TOKEN_ALG})",
+    "description": "FAPI1-Advanced-Final: Keycloak test with ${CLIENT_AUTH_TYPE} client authentication (RequestObject:${ROS_ALG}/IDToken:${TOKEN_ALG})",
     "server": {
         "discoveryUrl": "https://$KC_HOST/auth/realms/$REALM/.well-known/openid-configuration"
     },
@@ -110,11 +110,11 @@ EOS
 
 echo "Generating FAPI Conformance suite config json..."
 
-generateConfig private_key_jwt PS256 PS256 > fapi-rw-id2-with-private-key-PS256-PS256.json
-generateConfig private_key_jwt ES256 ES256 > fapi-rw-id2-with-private-key-ES256-ES256.json
-generateConfig private_key_jwt RS256 PS256 > fapi-rw-id2-with-private-key-RS256-PS256.json
+generateConfig private_key_jwt PS256 PS256 > fapi1-advanced-final-with-private-key-PS256-PS256.json
+generateConfig private_key_jwt ES256 ES256 > fapi1-advanced-final-with-private-key-ES256-ES256.json
+generateConfig private_key_jwt RS256 PS256 > fapi1-advanced-final-with-private-key-RS256-PS256.json
 
-generateConfig mtls PS256 PS256 > fapi-rw-id2-with-mtls-PS256-PS256.json
-generateConfig mtls ES256 ES256 > fapi-rw-id2-with-mtls-ES256-ES256.json
-generateConfig mtls RS256 PS256 > fapi-rw-id2-with-mtls-RS256-PS256.json
+generateConfig mtls PS256 PS256 > fapi1-advanced-final-with-mtls-PS256-PS256.json
+generateConfig mtls ES256 ES256 > fapi1-advanced-final-with-mtls-ES256-ES256.json
+generateConfig mtls RS256 PS256 > fapi1-advanced-final-with-mtls-RS256-PS256.json
 

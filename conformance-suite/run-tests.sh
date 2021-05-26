@@ -35,13 +35,13 @@ makeClientTest() {
     . node-client-setup.sh
     . node-core-client-setup.sh
 
-    # client FAPI-RW-ID2
-    TESTS="${TESTS} fapi-rw-id2-client-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi] automated-ob-client-test.json"
-    TESTS="${TESTS} fapi-rw-id2-client-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi] automated-ob-client-test.json"
+    # client FAPI1-ADVANCED-FINAL
+    TESTS="${TESTS} fapi1-advanced-final-client-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi] automated-ob-client-test.json"
+    TESTS="${TESTS} fapi1-advanced-final-client-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi] automated-ob-client-test.json"
 
-    # client FAPI-RW-ID2-OB
-    TESTS="${TESTS} fapi-rw-id2-client-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk] automated-ob-client-test.json"
-    TESTS="${TESTS} fapi-rw-id2-client-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk] automated-ob-client-test.json"
+    # client FAPI1-ADVANCED-FINAL-OB
+    TESTS="${TESTS} fapi1-advanced-final-client-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk] automated-ob-client-test.json"
+    TESTS="${TESTS} fapi1-advanced-final-client-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk] automated-ob-client-test.json"
 
 	# client OpenID Connect Core Client Tests
     TESTS="${TESTS} oidcc-client-test-plan(../conformance-suite/.gitlab-ci/oidcc-rp-tests-config.json) automated-oidcc-client-test.json"
@@ -149,14 +149,14 @@ makeServerTest() {
 
 
     # authlete openbanking
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][fapi_response_mode=plain_response] authlete-fapi-rw-id2-ob-mtls.json"
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][fapi_response_mode=plain_response] authlete-fapi-rw-id2-ob-privatekey.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][fapi_response_mode=plain_response] authlete-fapi1-advanced-final-ob-mtls.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][fapi_response_mode=plain_response] authlete-fapi1-advanced-final-ob-privatekey.json"
 
     # authlete FAPI
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi-rw-id2-mtls.json"
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi-rw-id2-privatekey.json"
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm] authlete-fapi-rw-id2-mtls-jarm.json"
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm] authlete-fapi-rw-id2-privatekey-jarm.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi1-advanced-final-mtls.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi1-advanced-final-privatekey.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm] authlete-fapi1-advanced-final-mtls-jarm.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm] authlete-fapi1-advanced-final-privatekey-jarm.json"
 #    TESTS="${TESTS} fapi-r-test-plan[fapir_client_auth_type=mtls] authlete-fapi-r-mtls.json"
 #    TESTS="${TESTS} fapi-r-test-plan[fapir_client_auth_type=private_key_jwt] authlete-fapi-r-private-key.json"
 #    TESTS="${TESTS} fapi-r-test-plan[fapir_client_auth_type=client_secret_jwt] authlete-fapi-r-client-secret.json"
@@ -165,11 +165,11 @@ makeServerTest() {
     # This is the configuration used in the instructions as an example.
     # We keep it here as we want to be sure code changes don't break the example in the instructions, but the downside is there
     # is a chance that users may be using the alias at the same time our tests are running
-#    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi-rw-id2-privatekey-for-instructions.json"
-    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256-automated.json"
-    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256-automated.json"
-    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256-automated.json"
-    TESTS="${TESTS} fapi-rw-id2-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256-automated.json"
+#    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response] authlete-fapi1-advanced-final-privatekey-for-instructions.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256-automated.json"
 }
 
 makeCIBATest() {

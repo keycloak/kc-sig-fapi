@@ -135,15 +135,15 @@ The `FAPI1-Advanced-Final` is currently recommended as it tests against the Fina
 6. Choose `plain_fapi` as FAPI Profile.
 7. Choose `plain_response` as FAPI Response Mode.
 8. Click `JSON` tab and paste content of the configuration.
-  * If you want to use private_key_jwt client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-private-key-ES256-ES256.json).
-  * If you want to use mtls client authentication, use [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json](./fapi-conformance-suite-configs/fapi-rw-id2-with-mtls-ES256-ES256.json).
+  * If you want to use private_key_jwt client authentication, use [fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256.json).
+  * If you want to use mtls client authentication, use [fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256.json) or [fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256.json](./fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256.json).
 9. Click `Create Test Plan` button and follow the instructions.
 10. If you used `FAPI1-Advanced-Final`, it is recommended to use Keycloak global builtin client profile `fapi-1-advanced` instead of the
 `fapi-1-rw-ID2`, which is suitable for the `FAPI-RW-ID2` test profile. To do this, you can login to Keycloak admin console (should be available
 usually under `https://as.keycloak-fapi.org/auth`) as admin/admin. Then go to Realm  `Test` -> `Client Policies` -> `Policies` -> `fapi-1-0-policy`. Then delete `fapi-1-rw-ID2` client profile
 from this policy and add `fapi-1-advanced` instead of it. 
-11. To proceed with the tests, you can authenticate using `john` account with password `john`.
-12. When rejecting authentication scenario, you can use `mike` account with password `mike`. In this case, you need to click `No` button to cancel the authentication in the consent screen.
+1.  To proceed with the tests, you can authenticate using `john` account with password `john`.
+2.  When rejecting authentication scenario, you can use `mike` account with password `mike`. In this case, you need to click `No` button to cancel the authentication in the consent screen.
 Before running this reject authentication test (Usually 3rd test in the conformance testsuite called something like `fapi1-advanced-final-user-rejects-authentication`),
 it is recommended to login to Keycloak admin console as admin/admin and remove the existing session of user `john`. Alternative is to run this test in different browser
 or clear cookies for Keycloak server.

@@ -219,7 +219,7 @@ def run_test_plan(test_plan, config_file, output_dir):
 
             if state == "WAITING":
                 # If it's a client test, we need to run the client
-                if re.match(r'(fapi-rw-id2(-ob)?-client-.*)', module):
+                if re.match(r'(fapi1-advanced-final(-ob)?-client-.*)', module):
                     profile = variant['fapi_profile']
                     os.putenv('CLIENTTESTMODE', 'fapi-ob' if re.match(r'openbanking', profile) else 'fapi-rw')
                     os.environ['ISSUER'] = os.environ["CONFORMANCE_SERVER"] + os.environ["TEST_CONFIG_ALIAS"]
@@ -1041,7 +1041,7 @@ if __name__ == '__main__':
 
         if show_untested == 'client':
             # Only run client test, therefore ignore all server test
-            if not ( re.match(r'(fapi-rw-id2-client-.*)', m) or re.match(r'(fapi-rw-id2-ob-client-.*)', m)  or re.match(r'(oidcc-client-.*)', m) ):
+            if not ( re.match(r'(fapi1-advanced-final-client-.*)', m) or re.match(r'(fapi1-advanced-final-ob-client-.*)', m)  or re.match(r'(oidcc-client-.*)', m) ):
                 untested_test_modules.remove(m)
                 continue
         elif show_untested == 'server-oidc-provider':
@@ -1051,7 +1051,7 @@ if __name__ == '__main__':
                 continue
         elif show_untested == 'server-authlete':
             # ignore all client/CIBA test, plus we don't run the rp initiated logout tests against Authlete
-            if re.match(r'(fapi-rw-id2-client-.*)', m) or re.match(r'(fapi-ciba-id1.*)', m) or re.match(r'(oidcc-client-.*)', m) or re.match(r'(oidcc-.*-logout.*)', m):
+            if re.match(r'(fapi1-advanced-final-client-.*)', m) or re.match(r'(fapi-ciba-id1.*)', m) or re.match(r'(oidcc-client-.*)', m) or re.match(r'(oidcc-.*-logout.*)', m):
                 untested_test_modules.remove(m)
                 continue
         elif show_untested == 'all-except-logout':
