@@ -1174,37 +1174,72 @@
                     ]
                 }
             }
-        ],
-        "org.keycloak.services.clientpolicy.ClientPolicyProvider" : [ {
-            "name" : "MyPolicy",
-            "providerId" : "client-policy-provider",
-            "subComponents" : { },
-            "config" : {
-                "client-policy-executor-ids" : [ "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf", "47e818e3-f0d8-4a90-ace7-1a8b2362cec7" ],
-                "client-policy-condition-ids" : [ "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146" ]
-            }
-        } ],
-        "org.keycloak.services.clientpolicy.executor.ClientPolicyExecutorProvider" : [ {
-            "id" : "47e818e3-f0d8-4a90-ace7-1a8b2362cec7",
-            "name" : "SecureRequestObjectExecutor",
-            "providerId" : "secure-reqobj-executor",
-            "subComponents" : { },
-            "config" : { }
-        }, {
-            "id" : "abad6ee9-6f4b-4e12-bc23-a5da2fdb6abf",
-            "name" : "SecureResponseTypeExecutor",
-            "providerId" : "secure-responsetype-executor",
-            "subComponents" : { },
-            "config" : { }
-        } ],
-        "org.keycloak.services.clientpolicy.condition.ClientPolicyConditionProvider" : [ {
-            "id" : "047eb7c3-ba5f-45bc-9e27-9ca0d3ae5146",
-            "name" : "ClientRolesCondition",
-            "providerId" : "clientroles-condition",
-            "subComponents" : { },
-            "config" : {
-                "roles" : [ "sample-client-role" ]
-            }
+        ]
+    },
+    "clientProfiles" : {
+        "profiles" : [ {
+            "name" : "fapi-1-advanced-ID2",
+            "description" : "Client profile, which enforce clients to conform 'Financial-grade API Security Profile 1.0 - Part 2: Advanced' specification. It has some modifications to pass the FAPI testsuite, which is based on the ID2 specification draft",
+            "executors" : [ {
+                "executor" : "secure-session",
+                "configuration" : { }
+            }, {
+                "executor" : "confidential-client",
+                "configuration" : { }
+            }, {
+                "executor" : "secure-client-authenticator",
+                "configuration" : {
+                    "allowed-client-authenticators" : [ "client-jwt", "client-x509" ],
+                    "default-client-authenticator" : "client-jwt"
+                }
+            }, {
+                "executor" : "secure-client-uris",
+                "configuration" : { }
+            }, {
+                "executor" : "secure-request-object",
+                "configuration" : {
+                    "available-period" : "3600",
+                    "verify-nbf" : false
+                }
+            }, {
+                "executor" : "secure-response-type",
+                "configuration" : {
+                    "auto-configure" : true,
+                    "allow-token-response-type" : false
+                }
+            }, {
+                "executor" : "secure-signature-algorithm",
+                "configuration" : {
+                    "default-algorithm" : "PS256"
+                }
+            }, {
+                "executor" : "secure-signature-algorithm-signed-jwt",
+                "configuration" : {
+                    "require-client-assertion" : false
+                }
+            }, {
+                "executor" : "consent-required",
+                "configuration" : { }
+            }, {
+                "executor" : "holder-of-key-enforcer",
+                "configuration" : {
+                    "auto-configure" : true
+                }
+            } ]
+        } ]
+    },
+    "clientPolicies" : {
+        "policies" : [ {
+            "name" : "fapi-1-0-advanced-final-policy",
+            "description" : "The policy for FAPI 1.0 advanced security profile Final version",
+            "enabled" : true,
+            "conditions" : [ {
+                "condition" : "client-roles",
+                "configuration" : {
+                    "roles" : [ "sample-client-role" ]
+                }
+            } ],
+            "profiles" : [ "fapi-1-advanced-ID2" ]
         } ]
     },
     "roles" : {
