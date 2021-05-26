@@ -1242,7 +1242,7 @@
                     "roles" : [ "sample-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-rw-ID2" ]
+            "profiles" : [ "fapi-1-advanced" ]
         } ]
     },
     "roles" : {
