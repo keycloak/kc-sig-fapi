@@ -10,17 +10,23 @@ If you think some information is outdated, either provide a pull request or send
 |Adorsys
 |https://github.com/andriimurashkin[Andrii Murashkin], https://github.com/DmitryMishchuk[Dmytro Mishchuk], Dmytro Storozhyk, https://github.com/francis-pouatcha[Francis Pouatcha], https://github.com/HryhoriiHevorkian[Hryhorii], https://github.com/valb3r[Valentyn Berezin]
 
+|ANS
+|Charlène Sophie 
+
 |Backbase
 |Etienne Koekemoer, Gareth Filer, Jonathan Meyler
 
 |BANFICO
 |https://github.com/arunganesh-a[Arun Ganesh], https://github.com/kannan-ra[Kannan Rasappan], https://github.com/pritish-nitb[Pritish Joshi], https://github.com/ansari-haseb[Haseb Ansari] 
 
+|Citi
+|Vinod Anandan
+
 |Hitachi
 |Yuichi Nakamura, https://github.com/tnorimat[Takashi Norimatsu]
 
 |Independent
-|Vinod, Vishnu Prakash
+|Vishnu Prakash
 
 |Integral Technology Solutions
 |https://github.com/brothwellIntegral[Brendan Rothwell], Cameron Locke
@@ -33,8 +39,5 @@ If you think some information is outdated, either provide a pull request or send
 
 |Temenos
 |James Holland 
-
-|ANS
-|Charlène Sophie 
 
 |===
