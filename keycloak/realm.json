@@ -1221,6 +1221,9 @@
                 "executor" : "consent-required",
                 "configuration" : { }
             }, {
+                "executor" : "full-scope-disabled",
+                "configuration" : { }
+            }, {
                 "executor" : "holder-of-key-enforcer",
                 "configuration" : {
                     "auto-configure" : true
