@@ -1,0 +1,93 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 20th Meeting
+
+Date :
+ Wed 9 Jun 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Charlène Sophie (ANS)
+ Dmitry Telegin (Backbase)
+ Dmytro Mishchuk (Adorsys)
+ Guy Moyo (Adorsys)
+ Hryhorii Hevorkian (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 20th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/20th/presentations/FAPI-SIG_20th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Updates : FAPI 1.0​
+   FAPI 1.0 Baseline/Advanced support are available as default client profile.
+
+ * Updates : FAPI 2.0​
+   Ready for sending PAR support PR to keycloak upstream.
+
+   Review of PR for RAR design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/266
+
+   Review of PR for Grant Management API design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/265
+
+ * Updates : FAPI-CIBA​  
+   PR for one of the features needed to support FAPI-CIBA has been submitted, waiting for its review.
+   https://github.com/keycloak/keycloak/pull/8006
+
+   Constructing automated test run environment for FAPI-CIBA conformance test has started.
+   https://github.com/keycloak/kc-sig-fapi/issues/65
+
+ * Updates : Common Security Features​
+   PR for OIDC Client’s Public Key Management 2nd phase has been submitted., waiting for its review.
+   https://github.com/keycloak/keycloak/pull/8123
+
+ * Updates : Client Policies​
+   Changed from preview feature to default feature.
+
+ * Updates : SPA/Native App​
+   Review of PR for DPoP design document is still in progress.​
+   https://github.com/keycloak/keycloak-community/pull/254
+
+ * Updates : PSD2​
+   Review of PR for MTLS validation extension design document is still in progress.
+   https://github.com/keycloak/keycloak-community/pull/267
+
+ * Other Discussion Topics
+   - keycloak 14 might be released in a few weeks.
+   - On PAR support contribution, its PR will be submitted soon.
+     -> submitted. https://github.com/keycloak/keycloak/pull/8144
+   - On DPoP support contribution, it might be better to split this contribution into server part and client adapter part separately.
+
+ * Next Web Meeting
+   Wed 23 Jun 2021 11:00 - 12:00 UTC in 1 hour
+
