@@ -1,0 +1,83 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 21st Meeting
+
+Date :
+ Wed 23 Jun 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Dmytro Mishchuk (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Artur Baltabayev
+ Christophe Lannoy
+ Charlène Sophie (ANS)
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ James Conners
+ Jon Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Leandro
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 21st Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/21st/presentations/FAPI-SIG_21st_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Updates : keycloak
+   Keycloak 14 has been released.
+   https://www.keycloak.org/2021/06/keycloak-1400-released.html
+
+ * Updates : FAPI 1.0​
+   Keycloak 14 officially supported FAPI 1.0 Baseline/Advanced support as default client profile.​
+   FAPI-SIG’s automated conformance test run environment provided FAPI1 Advanced Final conformance tests against keycloak 14 as default.
+
+ * Updates : FAPI 2.0​
+   PR for OAuth 2.0 Rich Authorization Requests (RAR) has been sent to keycloak upstream, waiting for its review.
+   https://github.com/keycloak/keycloak/pull/8006
+
+ * Updates : Client Policies​
+   Keycloak 14 officially supported Client Policies.
+
+ * New item : FAPI-JARM
+   PR for FAPI JWT Authorization Response Mode (FAPI-JARM) has been sent to keycloak upstream, waiting for its review.
+   https://github.com/keycloak/keycloak/pull/8158
+
+ * Updates : SPA/Native App​
+   There is a progress on frontend side (js).
+
+ * Other Discussion Topics
+   - keycloak 14 might try to get the certificates for "FAPI Adv. OP w/ MTLS" and "FAPI Adv. OP w/ Private Key" within about two weeks or so.
+   - Which security profiles we try to support after FAPI 1.0 support is completed.
+     -> For the time being, PRs for PAR, FAPI-CIBA and FAPI-JARM could be hopefully reviewed by keycloak development team.
+   - Proposal : apply for CfP to DevConf.cz 2022 for presenting FAPI-SIG activities and achievements to OSS developer’s community.
+
+ * Next Web Meeting
+   Wed 7 Jul 2021 11:00 - 12:00 UTC in 1 hour
