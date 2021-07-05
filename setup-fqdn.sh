@@ -3,14 +3,16 @@
 # ARG1: Hostname of FAPI Conformance suite server
 # ARG2: Hostname of Keycloak server
 # ARG3: Hostname of Resource server
+# ARG4: Hostname of Consent server (FAPI-BR)
 CONFORMANCE_SUITE_FQDN=${1:-conformance-suite.keycloak-fapi.org}
 KEYCLOAK_FQDN=${2:-as.keycloak-fapi.org}
 RESOURCE_FQDN=${3:-rs.keycloak-fapi.org}
+CONSENT_FQDN=${4:-cs.keycloak-fapi.org}
 
 DIR=$(cd $(dirname $0); pwd)
 cd $DIR
 
-./https/generate-server.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
+./https/generate-server.sh $KEYCLOAK_FQDN $RESOURCE_FQDN $CONSENT_FQDN
 ./keycloak/generate-realm.sh $CONFORMANCE_SUITE_FQDN
 ./fapi-conformance-suite-configs/generate-fapi-conformance-suite-configs.sh $KEYCLOAK_FQDN $RESOURCE_FQDN
 

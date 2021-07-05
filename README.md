@@ -121,7 +121,7 @@ Once `test_runner` service has finished and exited, test reports will be copied 
 To access to Keycloak and Resource server with FQDN, modify your `hosts` file in your local machine as follows.
 
 ```
-127.0.0.1 as.keycloak-fapi.org rs.keycloak-fapi.org conformance-suite.keycloak-fapi.org
+127.0.0.1 as.keycloak-fapi.org rs.keycloak-fapi.org cs.keycloak-fapi.org conformance-suite.keycloak-fapi.org
 ```
 
 ### Run FAPI Conformance test plan manually

@@ -9,5 +9,8 @@ USER root
 # Realm config
 ADD --chown=jboss:jboss ${KEYCLOAK_REALM_IMPORT_FILENAME} /opt/jboss/
 
+# Custom SPIs
+COPY ${KEYCLOAK_SPI_0} /opt/jboss/keycloak/standalone/deployments/
+
 ENV KEYCLOAK_IMPORT=/opt/jboss/${KEYCLOAK_REALM_IMPORT_FILENAME}
 ENV X509_CA_BUNDLE=/etc/x509/https/client-ca.crt
