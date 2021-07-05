@@ -80,6 +80,11 @@ http {
 
                 proxy_pass http://resource_server:3000;
         }
+
+        location /consents {
+            proxy_pass http://consent_server:3000;
+        }
+
     }
 
     #gzip  on;

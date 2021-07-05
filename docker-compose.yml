@@ -9,6 +9,7 @@ services:
     environment:
      - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
      - RESOURCE_FQDN=${RESOURCE_FQDN}
+     - CONSENT_FQDN=${CONSENT_FQDN}
      - CONFORMANCE_SUITE_FQDN=${CONFORMANCE_SUITE_FQDN}
     depends_on:
      - keycloak
@@ -19,6 +20,7 @@ services:
         aliases:
          - ${KEYCLOAK_FQDN}
          - ${RESOURCE_FQDN}
+         - ${CONSENT_FQDN}
          - ${CONFORMANCE_SUITE_FQDN}
   keycloak:
     build:
@@ -53,10 +55,14 @@ services:
      - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
     depends_on:
      - resource_server
+     - consent_server
      - keycloak
   resource_server:
     build:
       context: ./resource-server
+  consent_server:
+    build:
+      context: ./consent-server
   client_jwks_server:
     build:
       context: ./client_private_keys
