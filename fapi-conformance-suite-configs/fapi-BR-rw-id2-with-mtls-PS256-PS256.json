@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "FAPI-RW-ID2: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "FAPI1-Advanced-Final: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256) - openbanking_brazil",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
