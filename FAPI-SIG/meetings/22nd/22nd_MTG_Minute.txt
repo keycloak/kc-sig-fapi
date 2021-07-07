@@ -1,0 +1,85 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 22nd Meeting
+
+Date :
+ Wed 7 Jun 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Charlène Sophie (ANS)
+ Dmitry Telegin (Backbase)
+ Dmytro Mishchuk (Adorsys)
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+ Christophe Lannoy
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 22nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/22nd/presentations/FAPI-SIG_22nd_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Updates : FAPI 2.0​
+   PR for OAuth 2.0 Pushed Authorization Requests (PAR)​ has been merged.
+   https://github.com/keycloak/keycloak/pull/8144
+
+ * Updates : FAPI-CIBA​
+   PR for supporting signed authentication request has been merged.
+   https://github.com/keycloak/keycloak/pull/8006
+  
+   To comply with FAPI-CIBA, the following 2 additional PRs has been submitted, waiting their review.
+   Client Policy - Endpoint : support Token Request by CIBA Backchannel Authentication
+   https://github.com/keycloak/keycloak/pull/8242
+   Client Policy - Executor : Enforce Backchannel Authentication Request satisfying high security level​
+   https://github.com/keycloak/keycloak/pull/8238
+
+ * Updates : FAPI-JARM
+   PR for FAPI JWT Authorization Response Mode (FAPI-JARM) has been merged.
+   https://github.com/keycloak/keycloak/pull/8158
+
+ * New item : Open Banking Brasil
+   keycloak development team itself deals with this support so that some coordination is needed if FAPI-SIG also helps with it.
+    -> We can use the following JIRA ticket : https://issues.redhat.com/browse/KEYCLOAK-18629
+    
+   Keycloak has already satisfied some requirements by Open Banking Brasil. However, some requirements has not yet been satisfied by keycloak.
+
+   PR sent to kc-sig-fapi to support automated conformance test run.
+   https://github.com/keycloak/kc-sig-fapi/pull/192
+   -> Hopefully, someone add instructions (README.md might be appropriate) to run it.
+
+ * Other Discussion Topics
+   - Blocker for QWAC Verification in PSD2/eIDAS : how to control MTLS per endpoint
+     It seems that wildfly only controls MTLS on whole application, not per endpoint.
+     -> Need help to resolve this issue. Hopefully, someone could help with it.
+
+ * Next Web Meeting
+   Wed 21 Jul 2021 11:00 - 12:00 UTC in 1 hour
