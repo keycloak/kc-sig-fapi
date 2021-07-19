@@ -1265,19 +1265,6 @@
                     "auto-configure" : true
                 }
             } ]
-        },
-        {
-            "name" : "fapi-ciba-ID1",
-            "description" : "Client profile, which enforce clients to conform FAPI CIBA ID1 specification draft (fapi-ciba-id1-test-plan)",
-            "executors" : [ {
-                "executor" : "secure-ciba-session",
-                "configuration" : { }
-            }, {
-                "executor" : "secure-ciba-signed-authn-req",
-                "configuration" : {
-                    "available-period" : "3600"
-                }
-            } ]
         } ]
     },
     "clientPolicies" : {
@@ -1291,7 +1278,7 @@
                     "roles" : [ "sample-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced", "fapi-ciba-ID1" ]
+            "profiles" : [ "fapi-1-advanced" ]
         } ]
     },
     "roles" : {
