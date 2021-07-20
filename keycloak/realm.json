@@ -78,6 +78,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
+                "ciba.backchannel.auth.request.signing.alg": "PS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
@@ -166,6 +169,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "PS256",
+                "ciba.backchannel.auth.request.signing.alg": "PS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
@@ -254,6 +260,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
+                "ciba.backchannel.auth.request.signing.alg": "ES256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
@@ -342,6 +351,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "ES256",
+                "ciba.backchannel.auth.request.signing.alg": "ES256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
@@ -430,6 +442,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "PS256",
+                "ciba.backchannel.auth.request.signing.alg": "PS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
@@ -518,6 +533,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "PS256",
+                "ciba.backchannel.auth.request.signing.alg": "PS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-PS256",
                 "jwt.credential.kid": "client2-PS256",
                 "access.token.signed.response.alg": "RS256",
@@ -606,6 +624,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "ES256",
+                "ciba.backchannel.auth.request.signing.alg": "ES256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-ES256",
                 "jwt.credential.kid": "client1-ES256",
                 "access.token.signed.response.alg": "RS256",
@@ -694,6 +715,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "ES256",
+                "ciba.backchannel.auth.request.signing.alg": "ES256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-ES256",
                 "jwt.credential.kid": "client2-ES256",
                 "access.token.signed.response.alg": "RS256",
@@ -781,6 +805,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client1, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
+                "ciba.backchannel.auth.request.signing.alg": "RS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
@@ -868,6 +895,9 @@
             "attributes": {
                 "x509.subjectdn": "CN=client2, OU=Keycloak-fapi, O=Secure OSS Sig, ST=Client, C=JP",
                 "request.object.signature.alg": "RS256",
+                "ciba.backchannel.auth.request.signing.alg": "RS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",
@@ -955,6 +985,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "RS256",
+                "ciba.backchannel.auth.request.signing.alg": "RS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client1-RS256",
                 "jwt.credential.kid": "client1-RS256",
                 "access.token.signed.response.alg": "RS256",
@@ -1042,6 +1075,9 @@
             "attributes": {
 
                 "request.object.signature.alg": "RS256",
+                "ciba.backchannel.auth.request.signing.alg": "RS256",
+                "oidc.ciba.grant.enabled": "true",
+                "ciba.backchannel.token.delivery.mode": "poll",
                 "jwks.url": "http://client_jwks_server:3000/?kid=client2-RS256",
                 "jwt.credential.kid": "client2-RS256",
                 "access.token.signed.response.alg": "RS256",

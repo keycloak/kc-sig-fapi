@@ -1,0 +1,64 @@
+{
+    "alias": "keycloak",
+    "description": "FAPI-CIBA-ID1: Keycloak test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "server": {
+        "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
+    },
+    "client": {
+        "client_id": "client1-private_key_jwt-PS256-PS256",
+        "scope": "openid email",
+        "jwks": {
+            "keys": [
+                {
+                    "use": "sig",
+                    "kty": "RSA",
+                    "kid": "client1-PS256",
+                    "alg": "PS256",
+                    "n": "0J5vAPXfZS755gaBYn2PEakdHLtAmZc0cKA5wTL89V4uz9sdkiub-S91cJUTqfxqFFwFe-acTKW7-HKOusJREq3oWNyv394-2OXSDz15Lso6GEATorSRTWzfqUjogjOOBxrvxrcMyxS2RM_NjaNPw2PDWO6u0_BHPWbzyKdKbzzGsuqpd4bZ85-xzDXhXRe0n23GCnGxpPM0SvsW9CAme23-ET_F6VdfPKkX0GSU_vxdwEwGUrk5sbBmtoLcj-pfpJKaA7ZbtLsngrIVIPRNUdcP3eCPiYHrDltsi1wnWlnRj2OBcqfM6bVOQfIiVLv-UC2PgY9gmzzw-Q86GPBQOw",
+                    "e": "AQAB",
+                    "d": "rCYQ83nxHk3laSt1GREDPk-O9maOqC9d1pJhFkw88T0G4_6sKDJUQwwmnQBneZ4Q6zwESnnCAH3C3wGpRfOTcxaO5MU3XETJF7KN5IWVukamKdy2V00pmfp9lfPT6Z0hVjukIRZsOCifP6k6teZNq65nRLuxCLL-Fm0ePjXN9nty_T0XBzNeHs961zxLfc_QQFMJ46ppuLl5nBpmMErNhBwtY30y1s6cXWAhEDRvefYyhOPySCjbmUWSel7swuGxZKQIYkJS1QJ-g_e4DyVgybsY0mbaL2wNnZYW_rkVEtmII9L4tGfzcYBYd7084OXvTlh8YVuJfgxqCrIYlOQQAQ",
+                    "p": "7DcHbBqFXG6UTxX6nfI4KISyhKhAhe47H3QjBRZN03EFR0-Lpx6ncY5kiMMx_8ePPzlO_U8InG6PzhAgZFdtqJYt2lcUL50HnfPWv1KoGFe8bCNp7iYSmKT_0SjFTzBZnmoAoFcbEAzXHggWMnbMrpSLBEH64dF2GqgXXVXGEds",
+                    "q": "4hevCO5gcVC4QOZxoapdgvB0AwSiHGZEuAghrYld_6gNl42yMmOsqBhR5XgKSngUv2vrM9NkGXcURVYrcukLKT3bS5yGp5bXzMjEodDijOo33Oxz_uWtcUSH5JpB7BpUS2UuoqnJJA0YnLj_vW7jHczd33__PJ9CQSa5STA--SE",
+                    "dp": "lEuX5U5hGz5w7ZWm2TIP_6APUykuGOcPRxfqRG9UPMJfxf0yd6DPDoOOqi2hXisyy0Z3SKAtj8f5kCyfqV8aARUHhGPW0G2NMqS61TJXRbEPIfS5tEFCu4Ia-HzYIncATGvQKNmGq_TjuH7rMJNUvOWUwP-LOen-c43D3VzUFLE",
+                    "dq": "XSY21i4oC-ee0hZfcKTZPA5HLcsl4x97ZnrrLS0wThl16B_X8AzC4MqMS0dmrgHFQox67fJFBnzaHCsBYamEEKzMgd1uWPO720JISQbfoAELnPjKXZVRHR6IAnZPfK_oVNvOF_Rty22d20wZCXn7FpcGPoPkq5xN1rvWkMHQ4CE",
+                    "qi": "5d84bsBKb6u0YspU9hpc9o8F5PcJxqlwsfyOof80tUwA3NTk985cvaiXM5kQwM21q7bCyMoNfTi681MzlK1gt9GYRAHV4NJhw410mGDdnmGYFtsJwJIZbnwttYJsI0RIrk7Irom8HD2AnTvV5aI05Dxhv_-nCfn-bhy1Qqwce98"
+                }
+            ]
+        },
+        "hint_type": "login_hint",
+        "hint_value": "john"
+    },
+    "mtls": {
+        "cert": "-----BEGIN CERTIFICATE-----\nMIIDKDCCAs6gAwIBAgIUXl6GT8Ex1EENFSPveDA8fUoqHAwwCgYIKoZIzj0EAwIw\ndjELMAkGA1UEBhMCSlAxEzARBgNVBAgTClByaXZhdGUgQ0ExFzAVBgNVBAoTDlNl\nY3VyZSBPU1MgU2lnMRYwFAYDVQQLEw1LZXljbG9hay1mYXBpMSEwHwYDVQQDExhL\nZXljbG9hay1mYXBpIFByaXZhdGUgQ0EwHhcNMTkwNTIxMDIwNDAwWhcNMjQwNTE5\nMDIwNDAwWjBhMQswCQYDVQQGEwJKUDEPMA0GA1UECBMGQ2xpZW50MRcwFQYDVQQK\nEw5TZWN1cmUgT1NTIFNpZzEWMBQGA1UECxMNS2V5Y2xvYWstZmFwaTEQMA4GA1UE\nAxMHY2xpZW50MTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM74QUE+\nRfLtdHCKj1QXRQkj30AtveZa/7jbBpHYJCoSGA4bzuNE04HTK02hwtBO0J0bvbRy\n14BYHimwhUY6n7gtZKex3JQ39QC2UHbIOtIQXvCgbn6K4iU6WrUbCK4I8p77gIk4\nMXQmsCQokAtxsF1eq/RyLhRJXo/aTwcHDWcb5n8jFGmpOJyhmPEXwtzqMZwO9Y+a\nI3d5P/xHXnb84zrgRJH2YMzTKOfGt72I8Ag34ITTQUxox5RUMMGwqlzN6bEYIF9l\nyCcd3kCSgyp4b4wNBc5h5g3GPDBTCUx3z07oQ50LR7AAICevHvWGlUxXtX+MYc6+\nMvjb3l/e+EEldb0CAwEAAaOBgzCBgDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAww\nCgYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQURPpQRYqk1GU0v615\n9IJV4fo7s8YwHwYDVR0jBBgwFoAUJmT6o2FQqWh2KBGYB3nfWHkAtEgwCwYDVR0R\nBAQwAoIAMAoGCCqGSM49BAMCA0gAMEUCIHImOqdaMfLN1M7i4wfXKIGnJHDlEv8B\n3jASpdlMb35IAiEA5oj7fyh0KxGG9Z4kUGusBUYidOemP81CtyOPzg1A64w=\n-----END CERTIFICATE-----",
+        "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEAzvhBQT5F8u10cIqPVBdFCSPfQC295lr/uNsGkdgkKhIYDhvO\n40TTgdMrTaHC0E7QnRu9tHLXgFgeKbCFRjqfuC1kp7HclDf1ALZQdsg60hBe8KBu\nforiJTpatRsIrgjynvuAiTgxdCawJCiQC3GwXV6r9HIuFElej9pPBwcNZxvmfyMU\naak4nKGY8RfC3OoxnA71j5ojd3k//EdedvzjOuBEkfZgzNMo58a3vYjwCDfghNNB\nTGjHlFQwwbCqXM3psRggX2XIJx3eQJKDKnhvjA0FzmHmDcY8MFMJTHfPTuhDnQtH\nsAAgJ68e9YaVTFe1f4xhzr4y+NveX974QSV1vQIDAQABAoIBAQCbyK7NXgMmi+b2\nAsVJZU54R8D1vLhQWDRdPrceNdNau03R6Mp7tEWDVaAlidlqE7jgWI4c8cgVeb4S\nYSSfrOalqb02oCDIi6nlRFUiYyorDVl4wzkIFJ+Np/O4l8WbwW5ljia8okhPBgPU\n45cwlf1K+kRx9TOL34HGw2pyfrNu5G1NWs3a30qHVc5FnKBgJq4PZgxtTC15DoQ4\nU8IF7M9XYlXOkx3zSOjk2mpQaOPDeRWBwoFsoxqOl+x3/u9rhiGW+9OXEltq+AKA\nlsZ4QVfvmjIZ65c5SJwrV+OhLIKOoA8TzheBGKZ4vkKt17GxWsm7KP1afh1fqc5C\nd1lE0e1BAoGBAPI5SKi+HKuMsWY6YLv0c6j/FHJ/ZnSLLYc6/edfXso0djuz7BOf\nmLjgnntDrWTf6jWJ14DMDZVaohFr69eham8N9H9bQl7tpdtswRL0IVfOZYbEBbQk\n57/l5yADZcxvOMne/yh8K8LARYdFe5WDHCijgLhqmENenRHhHUjAuPVxAoGBANq9\nrnqQ6j4n2GEx+YhIKOflCUWwUe9XQ8pdQwniDQkQ3imOsOLn/nMXUO1oUMbaH0cb\nQ0+e5QGW74alTaFkQxBeSTbvZplMtwgaKDl2GzlYFPUxSLkAf5crChjT0z5t74Rv\nChCvoLLxXXD+PmkC1Hpub78bfEwqit54fVGMJW8NAoGBAMzk8fZzYnMmvwU3io5T\nOOcSZqx34iXheTC0EQT/4oHvILhd+OucjCaPMuAYHnt/AXIqWJYFhdP557AO91/e\nlda9Gj4E5z6/jhXvh97Njcrlt3HpLN32fecQxZKJ7TmiN4pjzLjlWGsUE3xapTCS\nyGYD8KWO3Z/XT8xI/WmGRK6xAoGBAMBmaUr7nl4vk/7iAzehKQHYDpDSpy8bldAw\nuh++SnL3+EGbdfEP2FsJXjCEOdC+2RYlX85v18TPKz5GtgLIesix9jow1xDuTmv8\n/faU8Rs+Y6jLwcigLJodzFLMNxnJfw0A0lyc7n+XF/akWubpC1XpP7dcCLfCD8Xh\nO3F4EREdAoGAQRNaIHonLPVg+cZAVR6DAKj7l20tE1THRfHrkJDoM661hl7EnPL3\n0SoLJyKYh3uil+/XAMtdegE5nrumg25FKdDY+JvSSvqEI0dLqKZzc6PBRau3+KVU\nVAYQtvtH7E2uJ7oFzFepTp2mq1I7+BYEmTIaPDJvf/l5gz+vy+voLrs=\n-----END RSA PRIVATE KEY-----"
+    },
+    "client2": {
+        "client_id": "client2-private_key_jwt-PS256-PS256",
+        "scope": "openid email",
+        "jwks": {
+            "keys": [
+                {
+                    "use": "sig",
+                    "kty": "RSA",
+                    "kid": "client2-PS256",
+                    "alg": "PS256",
+                    "n": "6DHkboNmEegAyz9N6ux6UwEyI7a2pB3Dv-EOalRuvtqhh6jPsUd6TQZk385DzofNgYZaO1kC9wmYqD4mmQO7N6ZMvZQAbMmCat72-vHKxvZYzjcURMHTK-GDtvOUjbXzC3C0yboOS8qnO5etwho5PXETe3xdgjnERSekgAXdqzGxJEKincPWzcpoaPTpWROf4D9wNnS-rgwyd0CKp20NzoByhUtxMOKJn2t6wmBqgp7SEVOOgwRPEKMiD8u14jY-9xNfG3kOdAHMArSFb5HJN6USyFmFXROczEXOwJgvoCkY0p0hg2NCzImkPgbDmdj_otzLGjB9m3gtIoAa7THzKQ",
+                    "e": "AQAB",
+                    "d": "q9gY_q1iwkfZJpMQYJhpo7rT19im7WlV8VFn8MvSNo_qUlNeew6ydgUQbQ7j4hthvcWoTBoBdsF0aLeuqzo2ueXrD7dUZS7xxZSEZ47Bi2TQrrXW21gzqFs7txAo1oRdfw8HzfBUGkW-ZP1JzMjJqi5gw9h0ACgumRvQxCsTNlmkgKpInsBYqzASeVWFKQ5RTMHGoMoNfPJwgn1LuTi5sPKqT3n079R3M3iMKIUrzu-CWMNgtsDM9bSYAaAl6foySQS81DL_mMBuNfedOAnZcQSSjgwjI0S7GIAm4laf7692hfUk2XgqQTS5UpKRMZmsO81_1ErriSNMJI2wjKqW3Q",
+                    "p": "7P97DuHNQ9JWrtSZpIi-0fawFBVy1CpXlVeagF3Nud56VzokBTrNUNxrff04QfgMSH-cK7_DWVptBXZBeUDuxWzj82P1ms_jHNTsG87IPOOm5vWua086cvRK29INH_GHEl7reVL_VTiJlpI9NM-0sSC0DeIo5IfRuCJd9FwAXPs",
+                    "q": "-s_TXd8vASsxcf3VJButhVFo9dEVhGaKH43118DILiS1C5yfyO3z3qZ9SMtgv2L8TV3bHusVk3K35lyT93dS1505Ezh2OIX0r-_Qg23Lwyw5Dhlefty59o-o035JmgyYcHANy-WbHy3VZ3hDi3FFaqX6KvSSlG0wADhBaW687ys",
+                    "dp": "br2GI9MQ1fMP_Atta3tWJsftSMUo7ciHOko_8GFkgshZRC7vq93pGDKWq71Jr1GXc7zlHXAyeKsPLDEwsNbNe0TBUvZPSjJ_ffZkCS5bVFBPqbX89TmFJzfNTt_csCNsqQHfZ8aHdqu_ZrMYlHfFh8qvN5mI4Bgyv6aXXloq9Uc",
+                    "dq": "HsXrECR3FvSev3a-dQy0UJw5fZemxTTzk4WOeWdc6FR2pjMUY8nWVyYkTw8tEq5peHCglv2PCyVTLP-E5CMO1gejXhlaX_sHl6Kb-dQ54PuHEJTKRFR-uKLNuw1OqIkNFxaYisDkNIIiIezelLhUJQ6yUBzr8ywmbJB6bh45Ljs",
+                    "qi": "kAh6uR9qNCv9v-9vrEyqy3dnLVeW5MUtyEH1KLegrsjVlrtBTsMQGSpmXE5oMHvyiqz9e4f0FAQItQjNfIfINMNNFlukmiXFdmqUnKqVGx65cw3Yvzk-KeF8ZiEwQ_QULj7roDOZH8-XbcMjVPCOMEDM2FCMvtIxJqUr4fFJ7_E"
+                }
+            ]
+        }
+    },
+    "mtls2": {
+        "cert": "-----BEGIN CERTIFICATE-----\nMIIDJjCCAs6gAwIBAgIUKHCTpsodVknyAZC7gFy3hZZqTtEwCgYIKoZIzj0EAwIw\ndjELMAkGA1UEBhMCSlAxEzARBgNVBAgTClByaXZhdGUgQ0ExFzAVBgNVBAoTDlNl\nY3VyZSBPU1MgU2lnMRYwFAYDVQQLEw1LZXljbG9hay1mYXBpMSEwHwYDVQQDExhL\nZXljbG9hay1mYXBpIFByaXZhdGUgQ0EwHhcNMTkwNTIxMDIwNDAwWhcNMjQwNTE5\nMDIwNDAwWjBhMQswCQYDVQQGEwJKUDEPMA0GA1UECBMGQ2xpZW50MRcwFQYDVQQK\nEw5TZWN1cmUgT1NTIFNpZzEWMBQGA1UECxMNS2V5Y2xvYWstZmFwaTEQMA4GA1UE\nAxMHY2xpZW50MjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMlwHpEQ\nVCrBo1yRmKACefdDiGLunW+REQHmTWUTEokWdVCsMGjqns1E4h68nmXVApXtyuGL\nF3IVzJrUQ6DQXCKdPpmoFplD6aC0CdFVouY8XULyny8d1aNl+1nrFFaiamW2JxD9\nPbtUKfE/TVMM+bums+gHW63KrJo7OnfEC0wvuEwY4vVDvL5DhxoURTU8YhBUxDvA\nnfQfD4TJEVqEiIt/0vTwrdEoRlHTwaJadcyKdUKvNVG1O1RGlsPm63qS2XkG4Qvw\nasIuhoxuUZbr74S9mlDQV33k/XCWj/nOr+58xCaXNKGOI9TlFA4+YUclJxy/GeBZ\nB0OmSitP5swqpCkCAwEAAaOBgzCBgDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAww\nCgYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUT8nMrrlLi/LQTlb3\nk6QnqLwpGT0wHwYDVR0jBBgwFoAUJmT6o2FQqWh2KBGYB3nfWHkAtEgwCwYDVR0R\nBAQwAoIAMAoGCCqGSM49BAMCA0YAMEMCID4FMD7NJZFeO4X26GifL4ODr/vK+Nje\noAcnXdYo5WX7Ah8OifloGxnCplM7doLaG+LaE8r9VEi6QyD29NAIPUPe\n-----END CERTIFICATE-----",
+        "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAyXAekRBUKsGjXJGYoAJ590OIYu6db5ERAeZNZRMSiRZ1UKww\naOqezUTiHryeZdUCle3K4YsXchXMmtRDoNBcIp0+magWmUPpoLQJ0VWi5jxdQvKf\nLx3Vo2X7WesUVqJqZbYnEP09u1Qp8T9NUwz5u6az6Adbrcqsmjs6d8QLTC+4TBji\n9UO8vkOHGhRFNTxiEFTEO8Cd9B8PhMkRWoSIi3/S9PCt0ShGUdPBolp1zIp1Qq81\nUbU7VEaWw+brepLZeQbhC/Bqwi6GjG5RluvvhL2aUNBXfeT9cJaP+c6v7nzEJpc0\noY4j1OUUDj5hRyUnHL8Z4FkHQ6ZKK0/mzCqkKQIDAQABAoIBAC6BHe1rkaLVVXuX\neV7nc3TsOF5urBYHrZ98pb2B67OOZcMcHYj7MXI+Rt3FuePUi2ZFoaL0U5NZCQVt\nn7dOoxayqrMapSz5CsS5C9MyLAtvQDCmhq1/+8RfVOnrZaSilmGo7df0Pv4ybgRu\nEtHrmvQBhmM436d9tN9ecR8ZOWp66Luy1GVM6rwH6ceOc46ZHUwoumN0kQt/G72G\n0QRbt7iGle/s11TzEKh3YaR9gkS+KPm5K+iPzSP1FxDiwSrKLRQJSjANrzTKEkuQ\nyDm7MSYm23guxosA/4Oyaa+7SDEqk9509yiDp51HK9fFJWnuBoDt7iduz0VJVqHg\nq0lE9wECgYEA08hkjl9PKMTX8vN9cOX+0W4en3K10Jjonw4d2gS2dIyb8o7B4ulb\nfGpleMAmcyGuG+k8fC8nSjqYSx4YHPunbmK1O4PCGTi8r6BtD9zW8opJVi+ImMsa\nn8l8bUASOuOFrHhvnB/JZS3yoOZVE8ey6/5QtSjwbn6I7dAvXXgT5pkCgYEA837O\nFMLfbWoYvdEa9LXmXGWagQe7Ta09BGbJ1Qs1hpuZJl8qK0kVWTDURtr5yu24r7YQ\n3S3cqKcg3FB3XO+vjreYKl2Cww/v8Wy/glGgqkAhd0dP9K1Q8F8XeQPlrPkNANrG\njIlNFYmg163EDwLJ+IoRr+t43KbIoGvsb9kTdBECgYEAh1keys6mrIuA58gtdyXG\nQNp7v7Nz9yiCIoTHFzrD0KC8WbxatUYmLdFhoFZNPG9d8oCRI1yPY6UnB3roNj2u\nt6Fl6e8+8ReNn0CL8wNUbBVs4SPnzJ6hGVWPq9Ky0+fs2ljuG31FHODMm4AZB1ct\nRh12PxE296buo+3VF4tSTKECgYEA4dUW73x52rHPNqWs+Y+HkuSNMuTn3DgzYlSv\nFw+pWioQFd2nb7P9v9Yg24KWsJZgd19GLs0tXaJ8QLnEqwaGbbhrwccu0xmB8glp\naUWp3J1ULJuQVZ81dWrMi2mI6C+o1sUR5yAkxTf7XG4Ga+GrTv9HPkEHvKZXZyoR\nhP7xIvECgYB6S0i6ruOAFq2iMyGoX83RlWjo+WrGqSVWfzRZ43rFQ3MBEIlkQD3K\n6+Y+v0MMlgrN3VQTi31IW42ftgOIiy7ZndMvBaQd2Zp4POtNISsRysQJcewPwbL0\nVXsalNqW+Rl8PDzrd6s13wYogMuWrwmbPphC04LdBhZb6nX6KVkn0A==\n-----END RSA PRIVATE KEY-----"
+    },
+    "resource": {
+        "resourceUrl": "https://rs.keycloak-fapi.org/"
+    }
+}
