@@ -1,0 +1,76 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 23rd Meeting
+
+Date :
+ Wed 21 Jun 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Pritish Joshi (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 23rd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/23rd/presentations/FAPI-SIG_23rd_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/-DDToqA0HSVnf2pet6R8NPW4EI_YAikWcyOJK8e8qy1WE_zj4yuIcbRmFdCyb55j.II08mOZ7VRRHHdEc
+
+Summary :
+
+ * Demonstration : how to run conformance tests by FAPI-SIG's automated conformance testing environment
+
+ * Updates : FAPI-CIBA​
+   To comply with FAPI-CIBA, the following 2 additional PRs have been merged.
+   Client Policy - Endpoint : support Token Request by CIBA Backchannel Authentication
+   https://github.com/keycloak/keycloak/pull/8242
+   Client Policy - Executor : Enforce Backchannel Authentication Request satisfying high security level​
+   https://github.com/keycloak/keycloak/pull/8238
+
+   Ran conformance tests against KC14 and listed up what need to be done to pass tests.
+   7 mandatory issues -> all corresponding PRs have been merged.
+   1 follow-up (global profile for FAPI-CIBA) -> In progress
+   2 optional issues -> Open
+
+   Experimentally, automated FAPI-CIBA's conformance testing has been added to FAPI-SIG's automated conformance testing environment.
+
+ * New item : Open Banking Brasil
+   keycloak development team itself deals with this support.
+   Its status can be found on the JIRA ticket (Epic) : https://issues.redhat.com/browse/KEYCLOAK-18629
+
+ * Other Discussion Topics
+   - keycloak 15 will support Open Banking Brasil FAPI, OAuth 2.0 Pushed Authorization Request (PAR) and FAPI-CIBA officially.
+   - keycloak 15 tries to pass conformance tests of Open Banking Brasil FAPI, FAPI-CIBA and FAPI 1.0 Advanced.
+   - It has been confirmed that keycloak 14 could pass conformance tests for FAPI 1.0 Advanced.
+
+ * Next Web Meeting
+   Wed 4 Aug 2021 11:00 - 12:00 UTC in 1 hour
