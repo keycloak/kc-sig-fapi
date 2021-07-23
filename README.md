@@ -82,7 +82,7 @@ docker-compose -p keycloak-fapi up --build --exit-code-from test_runner
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:12.0.1)
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:14.0.0)
     * The keycloak image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
@@ -91,7 +91,7 @@ The following options can be set as environment variables before the above comma
     * Set to false to stop conformance-suite tests automatically running
 * `MVN_HOME` (default: ~/.m2)
     * Set to use a custom maven home path
-* `OPENID_GIT_TAG` (default: release-v4.1.4)
+* `OPENID_GIT_TAG` (default: release-v4.1.19)
     * The OpenID Conformance Suite Git Tag to be cloned    
 
 
@@ -267,27 +267,6 @@ the following lines in ./docker-compose.yml
 #  mongodata:
 ```
 
-
-## Run FAPI-CIBA-ID1 Conformance test
-
-To run  FAPI-CIBA-ID1 Conformance test, specify `TEST_PLAN` env var as follows.
-
-```
-TEST_PLAN=--ciba-tests-only docker-compose -p keycloak-fapi up --build
-```
-
-### Notes
-
-The current keycloak has not yet supported FAPI-CIBA (poll) completely so that a lot of tests fails. Especially, the following two tests cannot be passed automatically. However, these can be passed manually with modifying `auth_entity_server`'s  `main.go`.
-
-  * fapi-ciba-id1-user-rejects-authentication :
- The mock auth entity server (`auth_entity_server`) for user authentication by AD cannot tell whether the specified test requires user authentication success or failure."
- To pass conformance test, `auth_entity_server`'s  `main.go` needs to be modified to return an error response.
-
-  * fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message :
- This always become `reviewed` status in automated tests if the server supports binding messages containing emoji etc - it requires uploading a picture of the consumption device to conformance test server.
-
-
 ## Custom files in the conformance suite
 
 The conformance-suite folder within this repository is a local copy of OpenIds FAPI conformance suite (https://gitlab.com/openid/conformance-suite/).
@@ -301,6 +280,75 @@ Below is a list of the custom files currently used by the base conformance-suite
   * Script for building the project with maven
 * /conformance-suite/scripts/run-test-plan.py
   * Existing file within the base conformance-suite repo that has been slightly modified to output test results to the file system.
+
+## Run specified FAPI Conformance test
+
+You can choose and run automatically several types of FAPI conformance test against both released keycloak container from quay.io or one you've installed on your local environment.
+
+To do so, you need to set to the environment variable `TEST_PLAN` the value shown in the following table.
+
+**Certified Financial-grade API (FAPI) OpenID Providers**
+**Financial-grade API (FAPI) 1.0 Final**
+**FAPI 1 Advanced Final (Generic)**
+
+|Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
+|-------------------|---------|----------------|------------|------------------|------------------------|---------|
+|FAPI Adv. OP w/ Private Key|fapi1-advanced-final-test-plan|private_key_jwt|plain_fapi|plain_response|by_value|--fapi1-advanced|
+|FAPI Adv. OP w/ MTLS|fapi1-advanced-final-test-plan|mtls|plain_fapi|plain_response|by_value|--fapi1-advanced|
+|FAPI Adv. OP w/ Private Key, PAR|fapi1-advanced-final-test-plan|private_key_jwt|plain_fapi|plain_response|pushed|--fapi1-advanced-par|
+|FAPI Adv. OP w/ MTLS, PAR|fapi1-advanced-final-test-plan|mtls|plain_fapi|plain_response|pushed|--fapi1-advanced-par|
+|FAPI Adv. OP w/ Private Key, JARM|fapi1-advanced-final-test-plan|private_key_jwt|plain_fapi|jarm|by_value|--fapi1-advanced-jarm|
+|FAPI Adv. OP w/ MTLS, JARM|fapi1-advanced-final-test-plan|mtls|plain_fapi|jarm|by_value|--fapi1-advanced-jarm|
+|FAPI Adv. OP w/ Private Key, PAR, JARM|fapi1-advanced-final-test-plan|private_key_jwt|plain_fapi|jarm|pushed|--fapi1-advanced-par-jarm|
+|FAPI Adv. OP w/ MTLS, PAR, JARM|fapi1-advanced-final-test-plan|mtls|plain_fapi|jarm|pushed|--fapi1-advanced-par-jarm|
+
+
+**Certified Financial-grade API Client Initiated Backchannel Authentication Profile (FAPI-CIBA) OpenID Providers**
+
+|Conformance Profile|Test Plan|client_auth_type|fapi_profile|ciba_mode|client_registration|TEST_PLAN|
+|-------------------|---------|----------------|------------|---------|-------------------|---------|
+|FAPI-CIBA OP poll w/ Private Key|fapi-ciba-id1-test-plan|private_key_jwt|plain_fapi|poll|static_client|--fapi-ciba-poll-id1|
+|FAPI-CIBA OP poll w/ MTLS|fapi-ciba-id1-test-plan|mtls|plain_fapi|poll|static_client|--fapi-ciba-poll-id1|
+|FAPI-CIBA OP ping w/ Private Key|fapi-ciba-id1-test-plan|private_key_jwt|plain_fapi|ping|static_client|--fapi-ciba-ping-id1|
+|FAPI-CIBA OP ping w/ MTLS|fapi-ciba-id1-test-plan|mtls|plain_fapi|ping|static_client|--fapi-ciba-ping-id1|
+
+Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
+```
+TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi up --build
+```
+
+If you set `--server-tests-only` to `TEST_PLAN`, it runs all types of FAPI conformance tests shown above the table automatically.
+
+If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced`.
+
+### Notes
+
+#### Overlay with locally installed keycloak
+
+On building container image of keycloak, CIBA settings are applied to keycloak (standalone-ha.xml). It means that these CIBA settings do not work when using locally build keycloak because these CIBA settings are applied to containerized keycloak, not locally installed keycloak.
+
+To get around this issue, modules and themes of containerized keycloak are overlaid with ones of locally built keycloak by modifying docker-compose.yml as follows.
+
+```
+@@ -28,6 +28,7 @@ services:
+      - ./https/server.pem:/etc/x509/https/tls.crt
+      - ./https/server-key.pem:/etc/x509/https/tls.key
+      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
++     - <top directory path to locally built keycloak>/modules:/opt/jboss/keycloak/modules
++     - <top directory path to locally built keycloak>/modules:/opt/jboss/keycloak/themes:/opt/jboss/keycloak/themes
+     ports:
+      - "8787:8787"
+     environment:
+```
+
+#### Not passed tests automatically
+
+Due to the nature of conformance suite, the following tests cannot be passed automatically. After completion of automatic tests, you can run them manually and confirm they are passed.
+
+  * fapi1-advanced-final-par-attempt-reuse-request_uri
+  * fapi1-advanced-final-par-pushed-authorization-url-as-audience-in-request-object
+  * fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message :
+ This always become `reviewed` status in automated tests if the server supports binding messages containing emoji etc - it requires uploading a picture of the consumption device to conformance test server.
 
 
 **Running different test plans**

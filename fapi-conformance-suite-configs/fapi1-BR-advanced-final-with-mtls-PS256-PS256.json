@@ -58,7 +58,6 @@
     },
     "resource": {
         "resourceUrl": "https://rs.keycloak-fapi.org/",
-        "institution_id": "xxx",
         "consentUrl": "https://cs.keycloak-fapi.org/consents",
         "brazilCpf": "09045137003"
     },
