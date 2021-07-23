@@ -30,6 +30,7 @@ cat << EOS > server-csr.json
         "*.secureoss.jp",
         "keycloak.org",
         "*.keycloak.org",
+        "*.nip.io",
         "$KC_HOST",
         "$RS_HOST"
     ],

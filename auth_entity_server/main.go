@@ -44,7 +44,7 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 	bearerToken := r.Header.Get("Authorization")
 	log.Printf("Bearer Token on Authorization Header = %s", bearerToken)
 
-	time.AfterFunc(time.Second*15, func() {
+	time.AfterFunc(time.Second*30, func() {
 		log.Printf("Callback : Outgoing request.")
 
 		u := "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/ext/ciba/auth/callback/"
