@@ -176,7 +176,10 @@ export KEYCLOAK_FRONTEND_URL=https://85-244-72-90.nip.io:543/auth
 export KEYCLOAK_INTROSPECTION_ENDPOINT_FROM_API_GATEWAY=https://192-168-0-101.nip.io:543/auth/realms/test/protocol/openid-connect/token/introspect
 export RESOURCE_FQDN=84-244-72-90.nip.io
 ```    
-2. Re-generate server certificates to match the hostnames of your environment. You can use command like this: `https/generate-server.sh $KEYCLOAK_FQDN *.nip.io`
+2. Re-generate server certificates to match the hostnames of your environment. You can use command like this and possibly change the second host according your laptop address:
+```
+https/generate-server.sh $KEYCLOAK_FQDN 192-168-0-101.nip.io
+```
 3. In case you use local built Keycloak instance as described below, it is recommended to delete the Keycloak directory and unzip new directory
 to make sure that certificates from previous step will be correctly copied to the server.
 4. It is needed to comment the RESOURCE_FQDN in the `docker-compose.yml` file in the load_balancer network section. Something like this:
@@ -193,8 +196,17 @@ networks:
 # RUN /bin/sh -c "cp /tmp/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg"
 RUN /bin/sh -c "cp /tmp/haproxy_two-frontends.cfg /usr/local/etc/haproxy/haproxy.cfg"
 ```
-6. Rebuild and restart whole docker-compose environment as described above.
-7. Follow the steps for the `Run FAPI Conformance test plan manually` described above. With the exception, that:
+6. If you manually run CIBA tests, some manual changes are needed in the `auth_entity_server/main.go` to change the server name.
+Especially it is needed to change the ServerName in TLS Client Config to use IP of your laptop, which can be accessed from the local network. Something like this:
+```
+ServerName:         "192-168-0-101.nip.io",
+```
+Same applies for the URL of the Keycloak Backchannel Authentication Callback Endpoint, which may also need to be changed to something like this:
+```
+u := "https://192-168-0-101.nip.io:543/auth/realms/test/protocol/openid-connect/ext/ciba/auth/callback/"
+```
+7. Rebuild and restart whole docker-compose environment as described above.
+8. Follow the steps for the `Run FAPI Conformance test plan manually` described above. With the exception, that:
   * You need to use online instance of the conformance testsuite from https://www.certification.openid.net/
   * After importing the client configurations from the `fapi-conformance-suite-configs` directory, you may need to replace the URLs of
   the keycloak server like using `as.keycloak-fapi.org` with your publicly available Keycloak instance like `https://85-244-72-90.nip.io:543/auth/...`.
