@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "FAPI-RW-ID2: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "FAPI1-Advanced-Final, OBB: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-mtls-PS256-PS256",
+        "client_id": "client1-mtls-PS256-PS256-OBB-fapi1-advanced",
         "scope": "openid email",
         "jwks": {
     "keys": [
@@ -27,7 +27,7 @@
 } 
     },
     "client2": {
-        "client_id": "client2-mtls-PS256-PS256",
+        "client_id": "client2-mtls-PS256-PS256-OBB-fapi1-advanced",
         "scope": "openid email",
         "jwks": {
     "keys": [
@@ -58,7 +58,9 @@
     },
     "resource": {
         "resourceUrl": "https://rs.keycloak-fapi.org/",
-        "institution_id": "xxx"
+        "consentUrl": "https://cs.keycloak-fapi.org/consents",
+        "brazilCpf": "09045137003",
+        "brazilCnpj": "09045137003" 
     },
     "browser": [
         {
@@ -116,7 +118,7 @@
         }
     ],
     "override": {
-        "fapi-rw-id2": {
+        "fapi1-advanced-final": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -174,7 +176,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-user-rejects-authentication": {
+        "fapi1-advanced-final-user-rejects-authentication": {
             "browser": [
                 {
                     "comment": "Expect user to deny consent after initial login",
@@ -230,7 +232,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-with-multiple-aud-succeeds": {
+        "fapi1-advanced-final-ensure-request-object-with-multiple-aud-succeeds": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -276,7 +278,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-authorization-request-without-state-success": {
+        "fapi1-advanced-final-ensure-authorization-request-without-state-success": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -322,7 +324,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-valid-pkce-succeeds": {
+        "fapi1-advanced-final-ensure-valid-pkce-succeeds": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -368,7 +370,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-other-scope-order-succeeds": {
+        "fapi1-advanced-final-ensure-other-scope-order-succeeds": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -414,7 +416,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-response-mode-query": {
+        "fapi1-advanced-final-ensure-response-mode-query": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -436,7 +438,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-different-nonce-inside-and-outside-request-object": {
+        "fapi1-advanced-final-ensure-different-nonce-inside-and-outside-request-object": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -458,7 +460,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-registered-redirect-uri": {
+        "fapi1-advanced-final-ensure-registered-redirect-uri": {
             "browser": [
                 {
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
@@ -481,7 +483,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-with-long-nonce": {
+        "fapi1-advanced-final-ensure-request-object-with-long-nonce": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -527,7 +529,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-with-long-state": {
+        "fapi1-advanced-final-ensure-request-object-with-long-state": {
             "browser": [
                 {
                     "comment": "Must grant consent to user attributes being shared in first browser login for user john",
@@ -573,7 +575,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-without-exp-fails": {
+        "fapi1-advanced-final-ensure-request-object-without-exp-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -595,7 +597,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-without-scope-fails": {
+        "fapi1-advanced-final-ensure-request-object-without-nbf-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -617,7 +619,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-state-only-outside-request-object-not-used": {
+        "fapi1-advanced-final-ensure-request-object-without-scope-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -639,7 +641,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-without-nonce-fails": {
+        "fapi1-advanced-final-state-only-outside-request-object-not-used": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -661,7 +663,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-without-redirect-uri-fails": {
+        "fapi1-advanced-final-ensure-request-object-without-nonce-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -683,7 +685,31 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-expired-request-object-fails": {
+        "fapi1-advanced-final-ensure-request-object-without-redirect-uri-fails": {
+            "browser": [
+                {
+                    "comment": "expect an immediate redirect back to the conformance suite with an error",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Expect redirect invalid uri error page",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//*",
+                                    10,
+                                    ".*Invalid parameter: redirect_uri.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi1-advanced-final-ensure-expired-request-object-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -705,7 +731,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-with-bad-aud-fails": {
+        "fapi1-advanced-final-ensure-request-object-with-exp-over-60-fails": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -727,7 +753,51 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-signed-request-object-with-RS256-fails": {
+        "fapi1-advanced-final-ensure-request-object-with-nbf-over-60-fails": {
+            "browser": [
+                {
+                    "comment": "expect an immediate redirect back to the conformance suite with an error",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi1-advanced-final-ensure-request-object-with-bad-aud-fails": {
+            "browser": [
+                {
+                    "comment": "expect an immediate redirect back to the conformance suite with an error",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi1-advanced-final-ensure-signed-request-object-with-RS256-fails": {
             "browser": [
                 {
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
@@ -750,7 +820,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-signature-algorithm-is-not-none": {
+        "fapi1-advanced-final-ensure-request-object-signature-algorithm-is-not-none": {
             "browser": [
                 {
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
@@ -773,7 +843,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-request-object-with-invalid-signature-fails": {
+        "fapi1-advanced-final-ensure-request-object-with-invalid-signature-fails": {
             "browser": [
                 {
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
@@ -796,7 +866,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-matching-key-in-authorization-request": {
+        "fapi1-advanced-final-ensure-matching-key-in-authorization-request": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -820,7 +890,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-authorization-request-without-request-object-fails": {
+        "fapi1-advanced-final-ensure-authorization-request-without-request-object-fails": {
             "browser": [
                 {
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
@@ -843,7 +913,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-redirect-uri-in-authorization-request": {
+        "fapi1-advanced-final-ensure-redirect-uri-in-authorization-request": {
             "browser": [
                 {
                     "comment": "expect an immediate error page",
@@ -867,7 +937,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-ensure-response-type-code-fails": {
+        "fapi1-advanced-final-ensure-response-type-code-fails": {
            "browser": [
                {
                    "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -889,7 +959,7 @@
                }
            ]
        },
-       "fapi-rw-id2-ensure-client-id-in-token-endpoint": {
+       "fapi1-advanced-final-ensure-client-id-in-token-endpoint": {
            "browser": [
                {
                    "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -934,7 +1004,7 @@
                }
            ]
        },
-       "fapi-rw-id2-ensure-mtls-holder-of-key-required": {
+       "fapi1-advanced-final-ensure-mtls-holder-of-key-required": {
            "browser": [
                {
                    "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -979,7 +1049,7 @@
                }
            ]
         },
-        "fapi-rw-id2-ensure-authorization-code-is-bound-to-client": {
+        "fapi1-advanced-final-ensure-authorization-code-is-bound-to-client": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -1024,7 +1094,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-refresh-token": {
+        "fapi1-advanced-final-refresh-token": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -1082,7 +1152,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-attempt-reuse-authorisation-code-after-30seconds": {
+        "fapi1-advanced-final-attempt-reuse-authorisation-code-after-30seconds": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",
@@ -1127,7 +1197,7 @@
                 }
             ]
         },
-        "fapi-rw-id2-attempt-reuse-authorisation-code-after-one-second": {
+        "fapi1-advanced-final-attempt-reuse-authorisation-code-after-one-second": {
             "browser": [
                 {
                     "comment": "expect an immediate redirect back to the conformance suite with an error",

@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "FAPI-CIBA-ID1: Keycloak test with private_key_jwt client authentication (RequestObject:ES256/IDToken:ES256)",
+    "description": "FAPI-CIBA-ID1 Poll: Keycloak test with private_key_jwt client authentication (RequestObject:ES256/IDToken:ES256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-private_key_jwt-ES256-ES256",
+        "client_id": "client1-private_key_jwt-ES256-ES256-fapi-ciba-poll-id1",
         "scope": "openid email",
         "jwks": {
             "keys": [
@@ -25,7 +25,7 @@
         "hint_value": "john"
     },
     "client2": {
-        "client_id": "client2-private_key_jwt-ES256-ES256",
+        "client_id": "client2-private_key_jwt-ES256-ES256-fapi-ciba-poll-id1",
         "scope": "openid email",
         "jwks": {
             "keys": [
@@ -52,5 +52,6 @@
     },
     "resource": {
         "resourceUrl": "https://rs.keycloak-fapi.org/"
-    }
+    },
+    "automated_ciba_approval_url": "https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id={auth_req_id}&action={action}"
 }

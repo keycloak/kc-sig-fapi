@@ -29,7 +29,13 @@ type AuthenticationResultNotification struct {
 	Status string `json:"status"`
 }
 
-func accountsHandler(w http.ResponseWriter, r *http.Request) {
+type ClientNotification struct {
+	AuthReqId string `json:"auth_req_id"`
+}
+
+var isAllowed bool = true
+
+func delegatedAuthnHandler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Incoming request from %s, %s.", r.Host, r.RemoteAddr)
 
 	// receive json and Authorization header for bearer token for token authentication afterwards
@@ -49,8 +55,13 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 
 		u := "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/ext/ciba/auth/callback/"
 		notification := new(AuthenticationResultNotification)
-		notification.Status = "SUCCEED"
-		//notification.Status = "CANCELLED"
+
+		if isAllowed {
+			notification.Status = "SUCCEED"
+		} else {
+			notification.Status = "CANCELLED"
+		}
+
 		k, _ := json.Marshal(notification)
 		req, _ := http.NewRequest("POST", u, bytes.NewBuffer(k))
 		req.Header.Set("Authorization", bearerToken)
@@ -72,6 +83,8 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			log.Printf("Success : " + res.Status)
 		}
+		// revert status
+		isAllowed = true
 		defer res.Body.Close()
 	})
 
@@ -80,8 +93,29 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 	log.Printf("Outgoing response.")
 }
 
+func automatedCibaApprovalHandler(w http.ResponseWriter, r *http.Request) {
+	log.Printf("CIBA Ping : Automated CIBA Approval for test automation : Incoming request from %s, %s.", r.Host, r.RemoteAddr)
+
+	var auth_req_id string = r.URL.Query().Get("auth_req_id")
+	var action string = r.URL.Query().Get("action")
+	log.Printf("    auth_req_id : %s", auth_req_id)
+	log.Printf("    action : %s", action)
+
+	// action=allow or action=deny
+	if action == "allow" {
+		isAllowed = true
+	} else {
+		isAllowed = false
+	}
+
+	w.WriteHeader(http.StatusNoContent)
+
+	log.Printf("CIBA Ping : Automated CIBA Approval for test automation : Client Notification : Outgoing response.")
+}
+
 func main() {
 	log.Println("Auth Entity Server booted.")
-	http.HandleFunc("/", accountsHandler)
+	http.HandleFunc("/", delegatedAuthnHandler)
+	http.HandleFunc("/automated/ciba/approval", automatedCibaApprovalHandler)
 	http.ListenAndServe(":3001", nil)
 }

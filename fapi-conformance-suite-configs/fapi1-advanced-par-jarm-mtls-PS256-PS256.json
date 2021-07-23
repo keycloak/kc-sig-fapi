@@ -1,49 +1,49 @@
 {
     "alias": "keycloak",
-    "description": "FAPI1-Advanced-Final: Keycloak test with private_key_jwt client authentication (RequestObject:RS256/IDToken:PS256)",
+    "description": "FAPI1-Advanced-Final,PAR,JARM: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-private_key_jwt-RS256-PS256",
+        "client_id": "client1-mtls-PS256-PS256-fapi1-advanced-par-jarm",
         "scope": "openid email",
         "jwks": {
     "keys": [
         {
             "use": "sig",
             "kty": "RSA",
-            "kid": "client1-RS256",
-            "alg": "RS256",
-            "n": "o6Jz6e3tDkfOTuzPlCgK2ljVCVmOdkchusOMFF6DHTsBEv4GWo_ReNV7GggY_0NRUzZWKRDBNe09rBeC5Oc6ympHVD2mozJjfRDj8vpN2f8k2bhI2f6YXy1FMDb83SmfU6AEhmWV_kRAwZS32xExO70lvptjGoINM2YPFkuYVySQ1jeRUSGmC-XIV9-K6-zNhL8QHDTm-5Nza69AehffW2rfuggOoYZ772QxiEOYqdLyNPzegLjIfwXFZdEdRGX6OmNWaCXWzP4oLPut52-HC_2pYmgiixAVkKbIYIgKomzrXMhzi6tutyWMzcW3GPn1OMcWBdXPEebH6Hp-rEJ_7Q",
+            "kid": "client1-PS256",
+            "alg": "PS256",
+            "n": "0J5vAPXfZS755gaBYn2PEakdHLtAmZc0cKA5wTL89V4uz9sdkiub-S91cJUTqfxqFFwFe-acTKW7-HKOusJREq3oWNyv394-2OXSDz15Lso6GEATorSRTWzfqUjogjOOBxrvxrcMyxS2RM_NjaNPw2PDWO6u0_BHPWbzyKdKbzzGsuqpd4bZ85-xzDXhXRe0n23GCnGxpPM0SvsW9CAme23-ET_F6VdfPKkX0GSU_vxdwEwGUrk5sbBmtoLcj-pfpJKaA7ZbtLsngrIVIPRNUdcP3eCPiYHrDltsi1wnWlnRj2OBcqfM6bVOQfIiVLv-UC2PgY9gmzzw-Q86GPBQOw",
             "e": "AQAB",
-            "d": "PRzC5a7yRc8Tge53aAG8a-eZSLClwA64ziOSAVl65kPPFuTAQrpLpTE1lHdJvqvJh6ZXb2bOgfFkgw0U2aByGH6wvQl5XqHG_kJ8n5ZT1QKxJI7qxl-LUKB7opImxgJxeq3cgsUVy6x58tI0CCDXnlP58MHftVq0y2lmYRFCh-iLKFUkFkvWznUSh5phg_eniyQrKf64XCTQvEDNTD36uunsYQ5ilKNWsE6smm5c2Uvzw-Rxz8dz8mcD7HiTHCg3zGVFi56ndcFOt2XGrM81g4ZFg5lmYfP3YdPpcq0zFgH6O2dQ9m15Il2DufQab7LZUEby1j0t2IA2WdyFyzSygQ",
-            "p": "xfKkQoxO_2CIoOoQkAmX7Ieb-ieoirTsZPukdmGJXkq0EpEaxLKywjPKDLxPnIzp5YBHrauP61yO7GSFk8-8JNnRj29aoHBIMYUqBobdOtEeTP_AEqZ7ilmmRq8pHjN6KIInMt5lNAxx0Fj5NiBwVELDhsTSJ6-Coiu1UZaLZDk",
-            "q": "05-rxyO1sDnclDKkQLon6Mh3p-bOWr1qTM4ounrWzx-knBiKLlSuCZppRMpVDdBBu5X0mQETPKuzPF-BraMRS-_EFjOdSPmswSOGiO9MnXLaPvRYDJg0Dc-WqrUxLWoVhm1V8UCOfG-kfFNqLtjah940uiqMNWcuULlZ86VGAVU",
-            "dp": "QNRvJ7x8QveCx_Dg68u4jib71roWYRdQNOKVwo-_RbqBr3MGqVU9Zo0_p1wlVshv8lJJJ4AA6rytso5ZkUd__zG3iJqXu-QKQO20Dd8tpY3HtsAsT-9mlrE13ACSHuoNICdAX1CnJJzOycXaGPgW0gHrt7_OdGDvD93wzH_Zt0E",
-            "dq": "HB2TkeKBqgcV8i6EOgFBeiDgHNOCSPXvYILnUFcvoNcAZKix-xPPB4GXSMdk42_uu8Bhfc5xwtbA-l1p-iq3CpKxR43V8LMTK5nPrvO0BxsSOdj2tb2m9MrGpqlp_jGg6HowN9wu0gN3I_llGxI-flycPruWYyXxNlJZzBACK_0",
-            "qi": "NR0jBrkIFjuKelNRz1ezNzWcmRS1IGH9L_mBKVt8byGqbvY9V5YUL_-eG0XjpOGSRDF7sF7333do24DEIWkTq7GxKJ3mFdzxQkeyF70UvWznaMatcO-9eK6rohd36Eb-KH2NC-0MUFCi9KsOhu341JGL8dL0PBZGk1Cqnc-AiUw"
+            "d": "rCYQ83nxHk3laSt1GREDPk-O9maOqC9d1pJhFkw88T0G4_6sKDJUQwwmnQBneZ4Q6zwESnnCAH3C3wGpRfOTcxaO5MU3XETJF7KN5IWVukamKdy2V00pmfp9lfPT6Z0hVjukIRZsOCifP6k6teZNq65nRLuxCLL-Fm0ePjXN9nty_T0XBzNeHs961zxLfc_QQFMJ46ppuLl5nBpmMErNhBwtY30y1s6cXWAhEDRvefYyhOPySCjbmUWSel7swuGxZKQIYkJS1QJ-g_e4DyVgybsY0mbaL2wNnZYW_rkVEtmII9L4tGfzcYBYd7084OXvTlh8YVuJfgxqCrIYlOQQAQ",
+            "p": "7DcHbBqFXG6UTxX6nfI4KISyhKhAhe47H3QjBRZN03EFR0-Lpx6ncY5kiMMx_8ePPzlO_U8InG6PzhAgZFdtqJYt2lcUL50HnfPWv1KoGFe8bCNp7iYSmKT_0SjFTzBZnmoAoFcbEAzXHggWMnbMrpSLBEH64dF2GqgXXVXGEds",
+            "q": "4hevCO5gcVC4QOZxoapdgvB0AwSiHGZEuAghrYld_6gNl42yMmOsqBhR5XgKSngUv2vrM9NkGXcURVYrcukLKT3bS5yGp5bXzMjEodDijOo33Oxz_uWtcUSH5JpB7BpUS2UuoqnJJA0YnLj_vW7jHczd33__PJ9CQSa5STA--SE",
+            "dp": "lEuX5U5hGz5w7ZWm2TIP_6APUykuGOcPRxfqRG9UPMJfxf0yd6DPDoOOqi2hXisyy0Z3SKAtj8f5kCyfqV8aARUHhGPW0G2NMqS61TJXRbEPIfS5tEFCu4Ia-HzYIncATGvQKNmGq_TjuH7rMJNUvOWUwP-LOen-c43D3VzUFLE",
+            "dq": "XSY21i4oC-ee0hZfcKTZPA5HLcsl4x97ZnrrLS0wThl16B_X8AzC4MqMS0dmrgHFQox67fJFBnzaHCsBYamEEKzMgd1uWPO720JISQbfoAELnPjKXZVRHR6IAnZPfK_oVNvOF_Rty22d20wZCXn7FpcGPoPkq5xN1rvWkMHQ4CE",
+            "qi": "5d84bsBKb6u0YspU9hpc9o8F5PcJxqlwsfyOof80tUwA3NTk985cvaiXM5kQwM21q7bCyMoNfTi681MzlK1gt9GYRAHV4NJhw410mGDdnmGYFtsJwJIZbnwttYJsI0RIrk7Irom8HD2AnTvV5aI05Dxhv_-nCfn-bhy1Qqwce98"
         }
     ]
 } 
     },
     "client2": {
-        "client_id": "client2-private_key_jwt-RS256-PS256",
+        "client_id": "client2-mtls-PS256-PS256-fapi1-advanced-par-jarm",
         "scope": "openid email",
         "jwks": {
     "keys": [
         {
             "use": "sig",
             "kty": "RSA",
-            "kid": "client2-RS256",
-            "alg": "RS256",
-            "n": "74Zcnrnyq-d6NuhVvkqgbK2pqVz5arlap5G1qUx8EJAwaQ5zE6thUgt_vho_VqsdI-AsNq4-QiWvodTfZlQJY1jMsu3BD-TaY00V4qR3mJm4ToIQYpu81e8zAfSJtL_7CksMpjb_o7N6xanaAYqo-CKvhqIBBi_gOCiMWilo2ucbzmBtv5Rmzue0kkbCcj2zG4JBgwHLi-o_m2E4R0eNUrs26lDlrBAR4VR8ZWfwLv2UI7PMOEV1hvCKppD2x_Z-QFmVBaHkM1gXLTlunrkuiK4aJ0CrKpWcVFfgorjYCQYr8esq8OAd3sLf-FxbOuzZ-yIK5uJ83Z_0LsfYfX8g0Q",
+            "kid": "client2-PS256",
+            "alg": "PS256",
+            "n": "6DHkboNmEegAyz9N6ux6UwEyI7a2pB3Dv-EOalRuvtqhh6jPsUd6TQZk385DzofNgYZaO1kC9wmYqD4mmQO7N6ZMvZQAbMmCat72-vHKxvZYzjcURMHTK-GDtvOUjbXzC3C0yboOS8qnO5etwho5PXETe3xdgjnERSekgAXdqzGxJEKincPWzcpoaPTpWROf4D9wNnS-rgwyd0CKp20NzoByhUtxMOKJn2t6wmBqgp7SEVOOgwRPEKMiD8u14jY-9xNfG3kOdAHMArSFb5HJN6USyFmFXROczEXOwJgvoCkY0p0hg2NCzImkPgbDmdj_otzLGjB9m3gtIoAa7THzKQ",
             "e": "AQAB",
-            "d": "5NAH_qFHzywrtfQwpL4Jjog_gUkOAwPaNCWf0oD8K55ygImLKQkYyRWvDF1qkFKaXcEyu3Gsi-gQZZpDZy90YHFd6rfxLEvEzAPBmmbe0OpYBLd_C5QWyo_cvEtsmTykhmq3RLlZcHpuGBFv7vUVASWxY_2y2MQ3f65MlXzla-Ztq25_8l1t1sMzD1ZYTJdc41Bp4Kjk3cdRmI83bhrEMm6ZKiDDXRblQp-LBpvKMD8KDShXXBTU2DXDD4FSDQjkVCQwFsDcTf-Gx-2vUfI-u_dKSmqmLK4yZVf63IpbdggNlp6aTLV9UW9MhiVEx1XBjl_dFw8PIz6g67Z7cjFW2Q",
-            "p": "9YnJEovIB2oPBFmYV7b5ypzSur33w5CQn4HAYpAaOIFC3th9seaWtMTYzkCRMU9Y5gDw8K4-FgPl-Fp0dZjC0J7A2iJzGH6osqI7w5Pcveh_MMKBAMGgF1ww2iz77hTSyFZ-P3AoTVweUpnjF2G9ozdbWK8ZLvMStQfPsTjeCps",
-            "q": "-br8PoSiLkqp-9m-bEopwbQGuZelvI1clqN1ijOS5O_AHe-_PdKqEjv5TDn-CcsWLNKIN-BwKfL03qSlbtCaAW-9mJnSMthJBAbhJVkN0RPlQA7ytgza_ks1PwSKGmhhmNoovC_cmYAc-8jEBH1scrfUjVbFzaYxFBfNJeZKkwM",
-            "dp": "JuOn4TQafnIh5sJ6CoqEjb7A8arc7zCad2kJm5LPVFvEx57qaZ7oB8GVxTUcyf6TSfqkLrqqQrpjVi6de3KyiHBcgzApopuNBJ4FcTieIcYNPx_PZttEC-8iHaw6Sr8pk2l_nXSaLYaFlvegrDdi3dMKuMUi6_i74chW8O7c3Dk",
-            "dq": "kEggBF7M9MHeg8vB4P7YMTm5yPB8qPtjSwUVm8tAS1TZQnKJo0ZbTD2qQwgeZboYDb11RhM9un7MSvYFPoj28W2FtOzqLMYZKWJwIgvZl7pO8Tuxrsyumc0J7mbJA4jbGlywvElKwsTp-e58kbuFNKJRA3fmwHIMWPeHZyYuX9E",
-            "qi": "4l60JigLXFOYq6SL42j3voYLdItg2dlz2tlJvrA1vbH-kId6XK4WOKaGGqAZ3FP1OEgXhiuqdTDb1Nrtrvx_lybJzFqdMIu7WDOvx6Ce6O16Tuv-Gi2ftVUME7oFYvcWk4ICXDmStjr1OK4mBbVXw24DPtl3Grc0QyqzsiGcD_4"
+            "d": "q9gY_q1iwkfZJpMQYJhpo7rT19im7WlV8VFn8MvSNo_qUlNeew6ydgUQbQ7j4hthvcWoTBoBdsF0aLeuqzo2ueXrD7dUZS7xxZSEZ47Bi2TQrrXW21gzqFs7txAo1oRdfw8HzfBUGkW-ZP1JzMjJqi5gw9h0ACgumRvQxCsTNlmkgKpInsBYqzASeVWFKQ5RTMHGoMoNfPJwgn1LuTi5sPKqT3n079R3M3iMKIUrzu-CWMNgtsDM9bSYAaAl6foySQS81DL_mMBuNfedOAnZcQSSjgwjI0S7GIAm4laf7692hfUk2XgqQTS5UpKRMZmsO81_1ErriSNMJI2wjKqW3Q",
+            "p": "7P97DuHNQ9JWrtSZpIi-0fawFBVy1CpXlVeagF3Nud56VzokBTrNUNxrff04QfgMSH-cK7_DWVptBXZBeUDuxWzj82P1ms_jHNTsG87IPOOm5vWua086cvRK29INH_GHEl7reVL_VTiJlpI9NM-0sSC0DeIo5IfRuCJd9FwAXPs",
+            "q": "-s_TXd8vASsxcf3VJButhVFo9dEVhGaKH43118DILiS1C5yfyO3z3qZ9SMtgv2L8TV3bHusVk3K35lyT93dS1505Ezh2OIX0r-_Qg23Lwyw5Dhlefty59o-o035JmgyYcHANy-WbHy3VZ3hDi3FFaqX6KvSSlG0wADhBaW687ys",
+            "dp": "br2GI9MQ1fMP_Atta3tWJsftSMUo7ciHOko_8GFkgshZRC7vq93pGDKWq71Jr1GXc7zlHXAyeKsPLDEwsNbNe0TBUvZPSjJ_ffZkCS5bVFBPqbX89TmFJzfNTt_csCNsqQHfZ8aHdqu_ZrMYlHfFh8qvN5mI4Bgyv6aXXloq9Uc",
+            "dq": "HsXrECR3FvSev3a-dQy0UJw5fZemxTTzk4WOeWdc6FR2pjMUY8nWVyYkTw8tEq5peHCglv2PCyVTLP-E5CMO1gejXhlaX_sHl6Kb-dQ54PuHEJTKRFR-uKLNuw1OqIkNFxaYisDkNIIiIezelLhUJQ6yUBzr8ywmbJB6bh45Ljs",
+            "qi": "kAh6uR9qNCv9v-9vrEyqy3dnLVeW5MUtyEH1KLegrsjVlrtBTsMQGSpmXE5oMHvyiqz9e4f0FAQItQjNfIfINMNNFlukmiXFdmqUnKqVGx65cw3Yvzk-KeF8ZiEwQ_QULj7roDOZH8-XbcMjVPCOMEDM2FCMvtIxJqUr4fFJ7_E"
         }
     ]
 } 
@@ -57,49 +57,6 @@
         "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAyXAekRBUKsGjXJGYoAJ590OIYu6db5ERAeZNZRMSiRZ1UKww\naOqezUTiHryeZdUCle3K4YsXchXMmtRDoNBcIp0+magWmUPpoLQJ0VWi5jxdQvKf\nLx3Vo2X7WesUVqJqZbYnEP09u1Qp8T9NUwz5u6az6Adbrcqsmjs6d8QLTC+4TBji\n9UO8vkOHGhRFNTxiEFTEO8Cd9B8PhMkRWoSIi3/S9PCt0ShGUdPBolp1zIp1Qq81\nUbU7VEaWw+brepLZeQbhC/Bqwi6GjG5RluvvhL2aUNBXfeT9cJaP+c6v7nzEJpc0\noY4j1OUUDj5hRyUnHL8Z4FkHQ6ZKK0/mzCqkKQIDAQABAoIBAC6BHe1rkaLVVXuX\neV7nc3TsOF5urBYHrZ98pb2B67OOZcMcHYj7MXI+Rt3FuePUi2ZFoaL0U5NZCQVt\nn7dOoxayqrMapSz5CsS5C9MyLAtvQDCmhq1/+8RfVOnrZaSilmGo7df0Pv4ybgRu\nEtHrmvQBhmM436d9tN9ecR8ZOWp66Luy1GVM6rwH6ceOc46ZHUwoumN0kQt/G72G\n0QRbt7iGle/s11TzEKh3YaR9gkS+KPm5K+iPzSP1FxDiwSrKLRQJSjANrzTKEkuQ\nyDm7MSYm23guxosA/4Oyaa+7SDEqk9509yiDp51HK9fFJWnuBoDt7iduz0VJVqHg\nq0lE9wECgYEA08hkjl9PKMTX8vN9cOX+0W4en3K10Jjonw4d2gS2dIyb8o7B4ulb\nfGpleMAmcyGuG+k8fC8nSjqYSx4YHPunbmK1O4PCGTi8r6BtD9zW8opJVi+ImMsa\nn8l8bUASOuOFrHhvnB/JZS3yoOZVE8ey6/5QtSjwbn6I7dAvXXgT5pkCgYEA837O\nFMLfbWoYvdEa9LXmXGWagQe7Ta09BGbJ1Qs1hpuZJl8qK0kVWTDURtr5yu24r7YQ\n3S3cqKcg3FB3XO+vjreYKl2Cww/v8Wy/glGgqkAhd0dP9K1Q8F8XeQPlrPkNANrG\njIlNFYmg163EDwLJ+IoRr+t43KbIoGvsb9kTdBECgYEAh1keys6mrIuA58gtdyXG\nQNp7v7Nz9yiCIoTHFzrD0KC8WbxatUYmLdFhoFZNPG9d8oCRI1yPY6UnB3roNj2u\nt6Fl6e8+8ReNn0CL8wNUbBVs4SPnzJ6hGVWPq9Ky0+fs2ljuG31FHODMm4AZB1ct\nRh12PxE296buo+3VF4tSTKECgYEA4dUW73x52rHPNqWs+Y+HkuSNMuTn3DgzYlSv\nFw+pWioQFd2nb7P9v9Yg24KWsJZgd19GLs0tXaJ8QLnEqwaGbbhrwccu0xmB8glp\naUWp3J1ULJuQVZ81dWrMi2mI6C+o1sUR5yAkxTf7XG4Ga+GrTv9HPkEHvKZXZyoR\nhP7xIvECgYB6S0i6ruOAFq2iMyGoX83RlWjo+WrGqSVWfzRZ43rFQ3MBEIlkQD3K\n6+Y+v0MMlgrN3VQTi31IW42ftgOIiy7ZndMvBaQd2Zp4POtNISsRysQJcewPwbL0\nVXsalNqW+Rl8PDzrd6s13wYogMuWrwmbPphC04LdBhZb6nX6KVkn0A==\n-----END RSA PRIVATE KEY-----\n"
     },
     "resource": {
-        "resourceUrl": "https://rs.keycloak-fapi.org/",
-        "institution_id": "xxx"
-    },
-    "browser": [
-        {
-            "match": "https://as.keycloak-fapi.org/auth/realms/test/openid-connect/auth*",
-            "tasks": [
-                {
-                    "task": "Initial Login",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/openid-connect/auth*",
-                    "commands": [
-                        [
-                            "text",
-                            "name",
-                            "username",
-                            "john"
-                        ],
-                        [
-                            "text",
-                            "name",
-                            "password",
-                            "john"
-                        ],
-                        [
-                            "click",
-                            "name",
-                            "login"
-                        ]
-                    ]
-                },
-                {
-                    "task": "Verify Complete",
-                    "match": "https://*/test/a/keycloak/callback*",
-                    "commands": [
-                        [
-                            "wait",
-                            "id",
-                            "submission_complete",
-                            10
-                        ]
-                    ]
-                }
-            ]
-        }
-    ]
+        "resourceUrl": "https://rs.keycloak-fapi.org/"
+    }
 }

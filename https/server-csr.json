@@ -6,8 +6,10 @@
         "*.secureoss.jp",
         "keycloak.org",
         "*.keycloak.org",
+        "*.nip.io",
         "as.keycloak-fapi.org",
-        "rs.keycloak-fapi.org"
+        "rs.keycloak-fapi.org",
+        "conformance-suite.keycloak-fapi.org"
     ],
     "key": {
         "algo": "rsa",

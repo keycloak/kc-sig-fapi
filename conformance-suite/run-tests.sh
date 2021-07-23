@@ -172,32 +172,89 @@ makeServerTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256-automated.json"
 }
 
-makeCIBATest() {
-    # ciba
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] authlete-fapi-ciba-id1-mtls-poll.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] authlete-fapi-ciba-id1-privatekey-poll.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][ciba_mode=poll][client_registration=static_client] authlete-fapi-ciba-id1-mtls-poll.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][ciba_mode=poll][client_registration=static_client] authlete-fapi-ciba-id1-privatekey-poll.json"
+makeFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256-automated.json"    
+}
+
+makeManualFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-final-with-mtls-ES256-ES256.json"    
+}
+
+makeFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-mtls-ES256-ES256-automated.json"
+}
+
+makeManualFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-mtls-ES256-ES256.json"
+}
+
+makeFAPI1AdvancedJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-mtls-ES256-ES256-automated.json"    
+}
+
+makeManualFAPI1AdvancedJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-jarm-mtls-ES256-ES256.json"    
+}
+
+makeFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-mtls-ES256-ES256-automated.json"
+}
+
+makeManualFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-mtls-ES256-ES256.json"
+}
+
+
+makeCIBAPollTest() {
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-PS256-PS256-automated.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-mtls-PS256-PS256-automated.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-mtls-ES256-ES256-automated.json"
+}
 
-    # ciba poll DCR
-    #TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][ciba_mode=poll][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-    #TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][ciba_mode=poll][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
+makeManualCIBAPollTest() {
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-mtls-ES256-ES256.json"
+}
 
-    # ciba ping DCR
-    # only one backchannel notification endpoint is allowed in CIBA so DCR must be used for ping testing
-    # see https://gitlab.com/openid/conformance-suite/issues/389
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-    #TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-    #TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][ciba_mode=ping][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-#    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][ciba_mode=ping][client_registration=dynamic_client] authlete-fapi-ciba-id1-dcr.json"
-    # push isn't allowed in FAPI-CIBA profile
-    #TESTS="${TESTS} fapi-ciba-id1-push-with-mtls-test-plan authlete-fapi-ciba-id1-mtls-push.json"
+makeCIBAPingTest() {
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-private-key-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-ES256-ES256-automated.json"
+}
+
+makeManualCIBAPingTest() {
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-private-key-ES256-ES256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-PS256-PS256.json"
+    TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-ES256-ES256.json"
 }
 
 makeLocalProviderTests() {
@@ -256,8 +313,15 @@ if [ "$#" -eq 0 ]; then
     TESTS="${TESTS} --show-untested-test-modules all"
     echo "Run all tests"
     makeServerTest
-    makeCIBATest
     makeClientTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--server-tests-only" ]; then
+    echo "Run all tests"
+    makeFAPI1AdvancedTest
+    makeFAPI1AdvancedPARTest
+    makeFAPI1AdvancedJARMTest
+    makeFAPI1AdvancedPARJARMTest
+    makeCIBAPollTest
+    makeCIBAPingTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -266,22 +330,57 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     TESTS="${TESTS} --show-untested-test-modules client"
     echo "Run client tests"
     makeClientTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--server-tests-only" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi1-advanced" ]; then
 #    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-server.json"
 #    EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-server.json"
 #    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
 #    TESTS="${TESTS} --expected-skips-file ${EXPECTED_SKIPS_FILE}"
 #    TESTS="${TESTS} --show-untested-test-modules server"
-    echo "Run server tests"
-    makeServerTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--ciba-tests-only" ]; then
-#    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-ciba.json"
+    echo "Run fapi1-advanced tests"
+    makeFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi1-advanced" ]; then
+    echo "Run fapi1-advanced tests manually"
+    makeManualFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi1-advanced-par" ]; then
+    echo "Run fapi1-advanced PAR tests"
+    makeFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi1-advanced-par" ]; then
+    echo "Run fapi1-advanced PAR tests manually"
+    makeManualFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi1-advanced-jarm" ]; then
+    echo "Run fapi1-advanced JARM tests"
+    makeFAPI1AdvancedJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi1-advanced-jarm" ]; then
+    echo "Run fapi1-advanced JARM tests manually"
+    makeManualFAPI1AdvancedJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi1-advanced-par-jarm" ]; then
+    echo "Run fapi1-advanced PAR JARM tests"
+    makeFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi1-advanced-par-jarm" ]; then
+    echo "Run fapi1-advanced PAR JARM tests manually"
+    makeManualFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-poll-id1" ]; then
+    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/expected-failures-ciba.json"
 #    EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-ciba.json"
-#    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
+    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
 #    TESTS="${TESTS} --expected-skips-file ${EXPECTED_SKIPS_FILE}"
-#    TESTS="${TESTS} --show-untested-test-modules ciba"
-    echo "Run ciba tests"
-    makeCIBATest
+    TESTS="${TESTS} --show-untested-test-modules ciba"
+    echo "Run fapi-ciba poll mode tests"
+    makeCIBAPollTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-ciba-poll-id1" ]; then
+    echo "Run fapi-ciba poll mode tests manually"
+    makeManualCIBAPollTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-ping-id1" ]; then
+    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/expected-failures-ciba.json"
+#    EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-ciba.json"
+    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
+#    TESTS="${TESTS} --expected-skips-file ${EXPECTED_SKIPS_FILE}"
+    TESTS="${TESTS} --show-untested-test-modules ciba"
+    echo "Run fapi-ciba ping mode tests"
+    makeCIBAPingTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-ciba-ping-id1" ]; then
+    echo "Run fapi-ciba ping mode tests manually"
+    makeManualCIBAPingTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
@@ -290,7 +389,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--client-tests-only|--server-tests-only|--ciba-tests-only|--local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--local-provider-tests]"
     exit 1
 fi
 
