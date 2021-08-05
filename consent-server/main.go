@@ -50,7 +50,7 @@ func consentHandler(w http.ResponseWriter, r *http.Request) {
 			Creation: now.Format(time.RFC3339),
 			Status: "AWAITING_AUTHORISATION",
 			StatusUpdate: now.Format(time.RFC3339),
-			Permissions: []string {"ACCOUNTS_READ", "ACCOUNTS_OVERDRAFT_LIMITS_READ", "RESOURCES_READ"},
+			Permissions: []string {"ACCOUNTS_READ", "ACCOUNTS_BALANCES_READ", "RESOURCES_READ"},
 			Exp: exp.Format(time.RFC3339),
 			TransactionFrom: now.Format(time.RFC3339),
 			TransactionTo: exp.Format(time.RFC3339),
