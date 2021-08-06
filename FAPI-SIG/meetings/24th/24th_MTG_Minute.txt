@@ -1,0 +1,70 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 24th Meeting
+
+Date :
+ Wed 4 Aug 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Guy Moyo (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Matthew Conners
+ Pritish Joshi (Banfico)
+ Thomas Darimont
+
+Presentation Materials :
+ [1] FAPI-SIG Community 24th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/24th/presentations/FAPI-SIG_24th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * keycloak 15 has been released that has newly supported FAPI-CIBA (ping, poll) and Open Banking Brasil FAPI 1.0.​
+
+ * update : FAPI-CIBA
+   The current status can be found in JIRA Ticket [Epic] :  https://issues.redhat.com/browse/KEYCLOAK-18457
+
+ * update : Open Banking Brasil
+   The current status can be found in JIRA Ticket [Epic] :  https://issues.redhat.com/browse/KEYCLOAK-18629​
+
+ * proposal : Joint presentation on Devconf.cz 2022
+
+ * Other Discussion Topics
+   - keycloak 15 will supported Open Banking Brasil FAPI but need have some tweak. 
+   - Keycloak 15.0.1 will be released for fixing bugs and RH-SSO 7.5 might be based on it.
+   - Some Brazil's banks get certified as Open Banking Brasil FAPI by using and customizing keycloak.
+   - keycloak 15 might get certified as FAPI OP in Aug or Sep.
+
+ * Next Web Meeting
+   Wed 18 Aug 2021 11:00 - 12:00 UTC in 1 hour
