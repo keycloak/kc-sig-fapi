@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI1-Advanced-Final, OBB: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "FAPI1-Advanced-Final, OB-BR, PAR, JARM: Keycloak test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-mtls-PS256-PS256-OBB-fapi1-advanced",
+        "client_id": "client1-mtls-PS256-PS256-OB-BR-fapi1-advanced-par-jarm",
         "scope": "openid email",
         "jwks": {
     "keys": [
@@ -27,7 +27,7 @@
 } 
     },
     "client2": {
-        "client_id": "client2-mtls-PS256-PS256-OBB-fapi1-advanced",
+        "client_id": "client2-mtls-PS256-PS256-OB-BR-fapi1-advanced-par-jarm",
         "scope": "openid email",
         "jwks": {
     "keys": [
@@ -59,7 +59,7 @@
     "resource": {
         "resourceUrl": "https://rs.keycloak-fapi.org/",
         "consentUrl": "https://cs.keycloak-fapi.org/consents",
-        "brazilCpf": "09045137003",
-        "brazilCnpj": "09045137003" 
+        "brazilCpf": "12345678901",
+        "brazilCnpj": "12345678901234"
     }
 }

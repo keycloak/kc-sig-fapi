@@ -288,7 +288,9 @@ You can choose and run automatically several types of FAPI conformance test agai
 To do so, you need to set to the environment variable `TEST_PLAN` the value shown in the following table.
 
 **Certified Financial-grade API (FAPI) OpenID Providers**
+
 **Financial-grade API (FAPI) 1.0 Final**
+
 **FAPI 1 Advanced Final (Generic)**
 
 |Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
@@ -312,6 +314,19 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |FAPI-CIBA OP ping w/ Private Key|fapi-ciba-id1-test-plan|private_key_jwt|plain_fapi|ping|static_client|--fapi-ciba-ping-id1|
 |FAPI-CIBA OP ping w/ MTLS|fapi-ciba-id1-test-plan|mtls|plain_fapi|ping|static_client|--fapi-ciba-ping-id1|
 
+**Brazil Open Banking (Based on FAPI 1 Advanced Final)**
+
+|Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
+|-------------------|---------|----------------|------------|------------------|------------------------|---------|
+|BR-OB Adv. OP w/ Private Key|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|plain_response|by_value|--ob-br-fapi1-advanced|
+|BR-OB Adv. OP w/ MTLS|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|plain_response|by_value|--ob-br-fapi1-advanced|
+|BR-OB Adv. OP w/ Private Key, PAR|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|plain_response|pushed|--ob-br-fapi1-advanced-par|
+|BR-OB Adv. OP w/ MTLS, PAR|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|plain_response|pushed|--ob-br-fapi1-advanced-par|
+|BR-OB Adv. OP w/ Private Key, JARM|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|jarm|by_value|--ob-br-fapi1-advanced-jarm|
+|BR-OB Adv. OP w/ MTLS, JARM|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|jarm|by_value|--ob-br-fapi1-advanced-jarm|
+|BR-OB Adv. OP w/ Private Key, PAR, JARM|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|jarm|pushed|--ob-br-fapi1-advanced-par-jarm|
+|BR-OB Adv. OP w/ MTLS, PAR, JARM|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|jarm|pushed|--ob-br-fapi1-advanced-par-jarm|
+
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
 TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi up --build
@@ -319,7 +334,13 @@ TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi up --build
 
 If you set `--server-tests-only` to `TEST_PLAN`, it runs all types of FAPI conformance tests shown above the table automatically.
 
-If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced`.
+If you set `--fapi1-advanced-all` to `TEST_PLAN`, it runs all types of FAPI 1 Advanced Final (Generic) conformance tests shown above the table automatically.
+
+If you set `--fapi-ciba-all` to `TEST_PLAN`, it runs all types of FAPI-CIBA OpenID Providers conformance tests shown above the table automatically.
+
+If you set `--ob-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Brazil Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
+
+If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 
 ### Notes
 

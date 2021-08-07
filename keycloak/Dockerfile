@@ -17,3 +17,7 @@ ENV X509_CA_BUNDLE="/etc/x509/https/client-ca.crt /etc/x509/https/server.crt"
 
 COPY ciba.cli /opt/jboss/keycloak/bin/
 RUN /opt/jboss/keycloak/bin/jboss-cli.sh --file=/opt/jboss/keycloak/bin/ciba.cli
+
+COPY oidf.json /opt/jboss/keycloak/standalone/configuration
+COPY well-known.cli /opt/jboss/keycloak/bin/
+RUN /opt/jboss/keycloak/bin/jboss-cli.sh --file=/opt/jboss/keycloak/bin/well-known.cli
