@@ -228,7 +228,6 @@ makeManualFAPI1AdvancedPARJARMTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi1-advanced-par-jarm-mtls-ES256-ES256.json"
 }
 
-
 makeCIBAPollTest() {
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-PS256-PS256-automated.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=poll][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-poll-private-key-ES256-ES256-automated.json"
@@ -255,6 +254,46 @@ makeManualCIBAPingTest() {
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=private_key_jwt][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-private-key-ES256-ES256.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-PS256-PS256.json"
     TESTS="${TESTS} fapi-ciba-id1-test-plan[client_auth_type=mtls][fapi_profile=plain_fapi][ciba_mode=ping][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-ciba-id1-ping-mtls-ES256-ES256.json"
+}
+
+makeOBBRFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-final-with-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-final-with-mtls-PS256-PS256-automated.json"   
+}
+
+makeManualOBBRFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-final-with-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-final-with-mtls-PS256-PS256.json"
+}
+
+makeOBBRFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-mtls-PS256-PS256-automated.json"   
+}
+
+makeManualOBBRFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-mtls-PS256-PS256.json"   
+}
+
+makeOBBRFAPI1AdvancedJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-jarm-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-jarm-mtls-PS256-PS256-automated.json" 
+}
+
+makeManualOBBRFAPI1AdvancedJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-jarm-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-jarm-mtls-PS256-PS256.json"  
+}
+
+makeOBBRFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-mtls-PS256-PS256-automated.json" 
+}
+
+makeManualOBBRFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-private-key-PS256-PS256.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-mtls-PS256-PS256.json"  
 }
 
 makeLocalProviderTests() {
@@ -322,6 +361,26 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--server-tests-only" ]; then
     makeFAPI1AdvancedPARJARMTest
     makeCIBAPollTest
     makeCIBAPingTest
+    makeOBBRFAPI1AdvancedTest
+    makeOBBRFAPI1AdvancedPARTest
+    makeOBBRFAPI1AdvancedJARMTest
+    makeOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi1-advanced-all" ]; then
+    echo "Run fapi1-advanced all tests"
+    makeFAPI1AdvancedTest
+    makeFAPI1AdvancedPARTest
+    makeFAPI1AdvancedJARMTest
+    makeFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-all" ]; then
+    echo "Run fapi-ciba all tests"
+    makeCIBAPollTest
+    makeCIBAPingTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-ally" ]; then
+    echo "Run ob-br-fapi1-advanced all tests"
+    makeOBBRFAPI1AdvancedTest
+    makeOBBRFAPI1AdvancedPARTest
+    makeOBBRFAPI1AdvancedJARMTest
+    makeOBBRFAPI1AdvancedPARJARMTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -381,6 +440,30 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-ping-id1" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-ciba-ping-id1" ]; then
     echo "Run fapi-ciba ping mode tests manually"
     makeManualCIBAPingTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced tests"
+    makeOBBRFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced tests manually"
+    makeManualOBBRFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-par" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-par tests"
+    makeOBBRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced-par" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-par tests manually"
+    makeManualOBBRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-jarm" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-jarm tests"
+    makeOBBRFAPI1AdvancedJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced-jarm" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-jarm tests manually"
+    makeManualOBBRFAPI1AdvancedJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-par-jarm" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-par-jarm tests"
+    makeOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced-par-jarm" ]; then
+    echo "Run Open Banking Brasil fapi1-advanced-par-jarm tests manually"
+    makeManualOBBRFAPI1AdvancedPARJARMTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
@@ -389,7 +472,8 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--server-tests-only|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|
+    --local-provider-tests]"
     exit 1
 fi
 

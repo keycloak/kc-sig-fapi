@@ -1,0 +1,6 @@
+embed-server --server-config=standalone-ha.xml
+/subsystem=keycloak-server/spi=well-known/:add
+/subsystem=keycloak-server/spi=well-known/provider=openid-configuration/:add(enabled=true)
+/subsystem=keycloak-server/spi=well-known/provider=openid-configuration/:map-put(name=properties,key=openid-configuration-override,value="${jboss.server.config.dir}/oidf.json")
+/subsystem=keycloak-server/spi=well-known/provider=openid-configuration/:map-put(name=properties,key=include-client-scopes,value="true")
+quit
