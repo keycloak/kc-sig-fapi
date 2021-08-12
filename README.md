@@ -6,21 +6,25 @@ FAPI-SIG is a group whose activity is mainly supporting [Financial-grade API (FA
 
 FAPI-SIG is open to everybody so that anyone can join it anytime. Nothing special need not to be done to join it. Who want to join it can only access to the communication channels shown below.  All of its activities and outputs are public so that anyone can access them.
 
-FAPI-SIG mainly treats FAPI and its related specifications but not limited to. E.g., Ecosystems employing FAPI for their API Security like UK OpenBanking and Australia Consumer Data Right (CDR).
+FAPI-SIG mainly treats FAPI and its related specifications but not limited to. E.g., Ecosystems employing FAPI for their API Security like UK OpenBanking, Open Banking Brasil and Australia Consumer Data Right (CDR).
 
 ## Goals
 
 Currently, proposed goals are as follows.
 
-- [Read and Write API Security Profile (FAPI-RW)](https://openid.net/specs/openid-financial-api-part-2-ID2.html)
-  - Implement and contribute necessary features
-  - Pass FAPI-RW conformance tests (both FAPI-RW OP w/ MTLS and FAPI-RW OP w/ Private Key)
-  - Get the certificates
+### Financial-grade API (FAPI) 2.0 related features
 
-- [Client Initiated Backchannel Authentication Profile (FAPI-CIBA)](https://openid.net/specs/openid-financial-api-ciba-ID1.html)
-  - Implement and contribute necessary features
-  - Pass FAPI-CIBA conformance tests (only both FAPI-CIBA OP poll w/ MTLS and FAPI-CIBA OP poll w/ Private Key)
-  - Get the certificates
+- [Financial-grade API (FAPI) 2.0 — Part 1: Baseline Security Profile](https://bitbucket.org/openid/fapi/src/master/FAPI_2_0_Baseline_Profile.md)
+
+- [Financial-grade API (FAPI) 2.0 — Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management-01.html)
+
+- [OAuth 2.0 Rich Authorization Requests (RAR)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rar)
+
+- [OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop)
+
+### Nation/Region/Market Specific Features
+
+- EU : PSD2/eIDAS - QWAC Verification Extension
 
 ## Open Works
 
@@ -28,13 +32,74 @@ Currently, proposed open works are as follows.
 
 - Integrating FAPI conformance tests run into keycloak’s CI/CD pipeline
 
-- Implement [JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)](https://openid.net/specs/openid-financial-api-jarm-ID1.html)
-
 - Implement security profiles for Apps run on mobile devices
   - [RFC 8252 OAuth 2.0 for Native Apps](https://tools.ietf.org/html/rfc8252)
   - [OAuth 2.0 for Browser-Based Apps](https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps-06)
 
-- Implement [FAPI-RW App2App](https://openid.net/2020/06/23/openid-foundation-announces-fapi-rw-app2app-certification-launched/)
+- [FAPI-RW App2App](https://openid.net/2020/06/23/openid-foundation-announces-fapi-rw-app2app-certification-launched/)
+
+## Results
+
+1 year past since 1st FAPI-SIG meeting had held on 4 Aug 2020.​
+
+FAPI related accomplishments by FAPI-SIG, other contributors and keycloak development team is as follows.​
+
+### Common Security Features
+
+#### keycloak 14
+ - [Client Policies](https://www.keycloak.org/docs/latest/release_notes/index.html#client-policies-and-financial-grade-api-fapi-support)​
+
+​
+### Nation/Region/Market Specific Features
+
+#### keycloak 15
+ - [Brazil : Open Banking Brasil Financial-grade API Security Profile](https://www.keycloak.org/docs/latest/release_notes/index.html#financial-grade-api-fapi-improvements-fapi-ciba-and-open-banking-brasil) 
+   
+   mainly by keycloak development team.
+
+### Standards​
+
+#### keycloak 13
+
+  - [Client Initiated Backchannel Authentication (CIBA) poll mode​](https://www.keycloak.org/docs/latest/release_notes/index.html#openid-connect-client-initiated-backchannel-authentication-ciba)
+
+#### keycloak 14
+
+  - [FAPI 1.0 Baseline Security Profile](https://www.keycloak.org/docs/latest/release_notes/index.html#client-policies-and-financial-grade-api-fapi-support)​
+  - [FAPI 1.0 Advanced Security Profile​](https://www.keycloak.org/docs/latest/release_notes/index.html#client-policies-and-financial-grade-api-fapi-support)
+
+#### keycloak 15
+
+  - [Client Initiated Backchannel Authentication (CIBA) ping mode​](https://www.keycloak.org/docs/latest/release_notes/index.html#financial-grade-api-fapi-improvements-fapi-ciba-and-open-banking-brasil)
+
+    mainly by keycloak development team.
+
+  - [FAPI JWT Secured Authorization Response Mode for OAuth 2.0 (JARM)​](https://www.keycloak.org/docs/latest/release_notes/index.html#highlights)
+
+    mainly by the contributor outside FAPI-SIG.
+
+  - [FAPI Client Initiated Backchannel Authentication Profile (FAPI-CIBA)​](https://www.keycloak.org/docs/latest/release_notes/index.html#financial-grade-api-fapi-improvements-fapi-ciba-and-open-banking-brasil)
+
+  - OAuth 2.0 Pushed Authorization Requests (PAR)
+
+### Automated Conformance Test Run Environment by this kc-fapi-sig repository
+
+#### FAPI 1.0 Advanced (Final)​
+  - Client Authentication Method : MTLS, private_key_jwt​
+  - Signature Algorithm : PS256, ES256​
+  - Request Object Method : plain, PAR​
+  - Response Mode : plain, JARM​
+
+#### FAPI-CIBA (Implementer’s Draft)​
+  - Client Authentication Method : MTLS, private_key_jwt​
+  - Signature Algorithm : PS256, ES256​
+  - Mode : Poll, Ping
+
+#### Open Banking Brasil FAPI 1.0
+  - Client Authentication Method : MTLS, private_key_jwt​
+  - Signature Algorithm : PS256
+  - Request Object Method : plain, PAR​
+  - Response Mode : plain, JARM​
 
 ## Communication Channels
 
