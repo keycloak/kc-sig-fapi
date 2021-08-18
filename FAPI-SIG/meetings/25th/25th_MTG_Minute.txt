@@ -1,0 +1,63 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 25th Meeting
+
+Date :
+ Wed 18 Aug 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Guy Moyo (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Dmitry Telegin (Backbase)
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Regis Mauget (ANS)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 25th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/25th/presentations/FAPI-SIG_25th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * kc-fapi-sig repository​ supported Open Banking Brasil FAPI 1.0 conformance tests automated run.​
+  - Client Authentication Method : MTLS, private_key_jwt​​
+  - Signature Algorithm : PS256​
+  - Request Object Method : plain, PAR​​
+  - Response Mode : plain, JARM​
+
+ * proposal : new working items
+  - Client Policies Revised
+  - FAPI 2.0 Baseline
+
+ * Other Discussion Topics
+   - RH-SSO 7.5 might be released in Sep or Oct.
+   - Some bug fixed version of keycloak 15 will be released that RH-SSO 7.5 is based on.
+   - keycloak might get certified as FAPI OP (FAPI1 Advanced Generic, FAPI-CIBA, Open Banking Brazil FAPI 1.0 except DCR).
+
+ * Next Web Meeting
+   Wed 1 Sep 2021 11:00 - 12:00 UTC in 1 hour
