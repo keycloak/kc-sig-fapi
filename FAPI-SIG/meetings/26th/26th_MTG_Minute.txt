@@ -1,0 +1,59 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 26th Meeting
+
+Date :
+ Wed 1 Sep 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Charlène Sophie (ANS)
+ Dmitry Telegin (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 26th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/26th/presentations/FAPI-SIG_26th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * release
+   keycloak 15.0.2 is released.
+
+ * proposal : new working items
+  - PII returned from Token Introspection Endpoint
+
+ * Other Discussion Topics
+   - RH-SSO 7.5 might be based on keycloak 15.0.2.
+   - For the proposal, it might be beneficial if we want to hide some sensitive information that should not be revealed to a client.
+   - For the proposal, it can be accomplished by encrypting an access token including PII or other sensitive information that should not be revealed to client by a resource server's public key in JWE.
+   - For the proposal, perhaps it can be accomplished by newly introduced Token Exchange SPI from keycloak 15.
+
+ * Next Web Meeting
+   Wed 15 Sep 2021 11:00 - 12:00 UTC in 1 hour
