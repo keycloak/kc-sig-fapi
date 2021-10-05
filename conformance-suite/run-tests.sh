@@ -375,7 +375,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-all" ]; then
     echo "Run fapi-ciba all tests"
     makeCIBAPollTest
     makeCIBAPingTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-ally" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-all" ]; then
     echo "Run ob-br-fapi1-advanced all tests"
     makeOBBRFAPI1AdvancedTest
     makeOBBRFAPI1AdvancedPARTest
