@@ -1,0 +1,70 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 28th Meeting
+
+Date :
+ Wed 13 Oct 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi) - absent
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 28th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/28th/presentations/FAPI-SIG_28th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Open Banking Brasil FAPI 1.0 Security Profile draft version up (ID2 -> ID3)
+
+ * Changing the way of contribution’s discussion​
+   need to use github's discussion instead of using keycloak-dev ML.
+ 
+ * Automated Conformance Test Run Environment has been updated.​
+   - Conformance Suite : v4.1.21 to v4.1.29​
+   - Keycloak : 15.0.1 to 15.0.2 (RH-SSO 7.5 based on)​
+   - All FAPI 1.0 Advanced, FAPI-CIBA and OBB-FAPI 1.0 tests has been passed.
+
+ * Other Discussion Topics
+   - Dynamic / Parameterized Client Scope discussion
+     https://github.com/keycloak/keycloak/discussions/8486​
+     RAR and Dynamic / Parameterized Scopes can be both treated.​
+     The following features need to be considered simultaneously.​
+     - FAPI 2.0 Grant Management API​
+       current keycloak can only manage static scopes (registered in advance)​
+     - Consent Screen Enhancement​
+       https://github.com/keycloak/keycloak/discussions/8495​
+       Enriching a scope by a resource owner​
+     - Namespaced Roles​
+       https://github.com/keycloak/keycloak/discussions/8516
+
+ * Next Web Meeting
+   Wed 27 Oct 2021 11:00 - 12:00 UTC in 1 hour
