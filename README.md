@@ -181,7 +181,7 @@ docker-compose -p keycloak-fapi up --build --exit-code-from test_runner
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:14.0.0)
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:15.0.2)
     * The keycloak image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
@@ -190,7 +190,7 @@ The following options can be set as environment variables before the above comma
     * Set to false to stop conformance-suite tests automatically running
 * `MVN_HOME` (default: ~/.m2)
     * Set to use a custom maven home path
-* `OPENID_GIT_TAG` (default: release-v4.1.19)
+* `OPENID_GIT_TAG` (default: release-v4.1.29)
     * The OpenID Conformance Suite Git Tag to be cloned    
 
 
