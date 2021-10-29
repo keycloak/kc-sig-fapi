@@ -1,0 +1,76 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 29th Meeting
+
+Date :
+ Wed 27 Oct 2021
+
+Time :
+ 11:00 - 12:00 UTC in 1 hour
+   7:00 -  8:00 EDT  (UTC-4)
+  12:00 - 13:00 BST  (UTC+1)
+  13:00 - 14:00 CEST (UTC+2)
+  14:00 - 15:00 EEST (UTC+3)
+  16:30 - 17:30 IST  (UTC+5:30)
+  20:00 - 21:00 JST  (UTC+9)
+  21:00 - 22:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi) - absent
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Charlène Sophie (ANS)
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Matthew Conners
+ Marek Posolda (Red Hat)
+ 
+Presentation Materials :
+ [1] FAPI-SIG Community 29th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/29th/presentations/FAPI-SIG_29th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+ 
+ * Automated Conformance Test Run Environment has been updated.​
+   - Self contained access token specification has been published​
+     RFC 9068 JSON Web Token (JWT) Profile for OAuth 2.0 Access Token​
+      https://datatracker.ietf.org/doc/html/rfc9068​
+     keycloak discussion :​
+      https://github.com/keycloak/keycloak/discussions/8646
+
+ * Other Discussion Topics
+   - FAPI Certificate
+     RH has already sent a request for FAPI Certificate and waited for its response from OpenID Foundation.​
+     Implementation : keycloak 15.0.2
+     FAPI 1 Advanced Final (Generic) :
+      - FAPI Adv. OP w/ MTLS
+      - FAPI Adv. OP w/ MTLS, PAR
+      - FAPI Adv. OP w/ Private Key
+      - FAPI Adv. OP w/ Private Key, PAR
+      - FAPI Adv. OP w/ MTLS, JARM
+      - FAPI Adv. OP w/ Private Key, JARM
+      - FAPI Adv. OP w/ MTLS, PAR, JARM
+      - FAPI Adv. OP w/ Private Key, PAR, JARM
+    After receiving this certificate, RH will send a request for the following FAPI Certificates.
+     - Brazil Open Banking (Based on FAPI 1 Advanced Final)
+     - Certified Financial-grade API Client Initiated Backchannel Authentication Profile (FAPI-CIBA) OpenID Providers
+   - DPoP
+     It seems to be good for the first its PR to implement DPoP with some client settings and without client policies support.
+     Its client policies support might be treated by the follow-up PRs.
+
+ * Next Web Meeting
+   Wed 10 Nov 2021 11:00 - 12:00 UTC in 1 hour
