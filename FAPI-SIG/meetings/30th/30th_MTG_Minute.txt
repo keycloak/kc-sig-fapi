@@ -1,0 +1,65 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 30th Meeting
+
+Date :
+ Wed 24 Nov 2021
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Guy Moyo (Adorsys)
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Matthew Conners
+ Marek Posolda (Red Hat)
+ Matthew Conners
+
+Presentation Materials :
+ [1] FAPI-SIG Community 30th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/30th/presentations/FAPI-SIG_30th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+ 
+ * New Meeting Schedule
+   We hold FAPI-SIG regular meeting monthly instead of every 2 weeks.
+   Vinod will re-send updated FAPI-SIG meeting invitations.
+
+ * FAPI Certificate
+   There might be an option that RH tries to receive certificates for RH-SSO instead of keycloak and some non-commercial OSS community tries to receive certificate for keycloak.
+
+ * RAR/Grant Management API
+   The blocker of RAR/Grant Management API, namely Dynamic Scope has been handled by RH developers but they are busy for other tasks so that the work of Dynamic Scope was stopped. It might be resumed soon.
+
+ * DPoP
+   The draft PR has been submitted. The issue of it is whether this PR includes Client Policies part instead of newly introducing DPoP related client settings.
+   Takashi can help with Client Policies part for DPoP.
+
+ * Next Web Meeting
+   Wed 8 Dec 2021 12:00 - 13:00 UTC in 1 hour
