@@ -1,0 +1,61 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 31st Meeting
+
+Date :
+ Wed 8 Dec 2021
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 31st Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/31st/presentations/FAPI-SIG_31sth_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * FAPI Certificate
+   It seems that some bureaucratic work might be resolved soon. 
+
+ * RAR/Grant Management API
+   It might be helpful if someone can help with the RH team working on Dynamic Scope.
+
+ * DPoP
+   UserInfo endpoint's error response issue is independent from DPoP itself.
+
+ * Issue : PAR + Kerberos
+   The issue has been reported in dev-ml when using PAR and Kerberos authentication.
+   https://groups.google.com/g/keycloak-dev/c/1dXkFhx137g
+   To handle this issue, creating corresponding github issue need to be done at first.
+
+ * Next Web Meeting
+   Wed 5 Jan 2022 12:00 - 13:00 UTC in 1 hour
