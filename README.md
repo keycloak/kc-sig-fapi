@@ -247,6 +247,31 @@ Before running this reject authentication test (Usually 3rd test in the conforma
 it is recommended to login to Keycloak admin console as admin/admin and remove the existing session of user `john`. Alternative is to run this test in different browser
 or clear cookies for Keycloak server.
 
+### Run FAPI CIBA Conformance test plan manually
+
+There are similar instructions like for the `FAPI1-Advanced-Final` described above, however you need to select
+different configurations during test setup. Besides that, there are two additional things needed when running manual test:
+
+1. If you want `fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message` to NOT fail, you need
+to skip automatic approval during the test. This means that you need to delete this line from the test JSON configuration
+before you submit the configuration:
+```
+"automated_ciba_approval_url": "https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id={auth_req_id}&action={action}"
+```
+2. Because of the point above, you need to "manually" tell the CIBA authentication server to reject requests at some point during the tests
+and then allow them back. More specifically:
+2.a) Before running 3rd test `fapi-ciba-id1-user-rejects-authentication` you need to manually visit this URL in your browser:
+```
+https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id=foo&action=deny
+```
+This tells CIBA authentication entity server that further authentication attempts should be denied, which is 
+expected by this test.
+2.b) After this test is executed, you need to visit back this URL:
+```
+https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id=foo&action=allow
+```
+to make sure that further requests to the CIBA authentication server will be allowed.
+
 ### Run FAPI Conformance test plan manually against the online conformance testsuite
 
 To obtain the certification, it is needed to run the conformance testsuite against the online production instance available on
@@ -280,7 +305,8 @@ export RESOURCE_FQDN=84-244-72-90.nip.io
 https/generate-server.sh $KEYCLOAK_FQDN 192-168-0-101.nip.io
 ```
 3. In case you use local built Keycloak instance as described below, it is recommended to delete the Keycloak directory and unzip new directory
-to make sure that certificates from previous step will be correctly copied to the server.
+to make sure that certificates from previous step will be correctly copied to the server. Also make sure that customizations for CIBA and
+well-known endpoint are manually done since you use your own Docker volume (See [Keycloak dockerfile](./keycloak/Dockerfile) for the details)
 4. It is needed to comment the RESOURCE_FQDN in the `docker-compose.yml` file in the load_balancer network section. Something like this:
 ```
 networks:
@@ -310,6 +336,20 @@ u := "https://192-168-0-101.nip.io:543/auth/realms/test/protocol/openid-connect/
   * After importing the client configurations from the `fapi-conformance-suite-configs` directory, you may need to replace the URLs of
   the keycloak server like using `as.keycloak-fapi.org` with your publicly available Keycloak instance like `https://85-244-72-90.nip.io:543/auth/...`.
   Same applies for the resource server URL, which is `rs.keycloak-fapi.org` in the configuration files by default, and needs to be replaced with your publicly available one.
+  And finally you need to remove the line with the URL of the CIBA approval endpoint (`automated_ciba_approval_url`) in case of the CIBA tests.
+  The automated approval does not work with automated tests due the test `fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message`,
+  which requires screenshot of the binding message being sent. Also you need to manually visit URLs during the test
+  as describe above in the section `Run FAPI CIBA Conformance test plan manually`
+9. In case you test with CIBA Ping mode, you need to login to Keycloak admin console before the test and manually change the
+property `CIBA Backchannel Client Notification Endpoint` of the following clients (in case you use PS256 algorithm):
+```
+client1-mtls-PS256-PS256-fapi-ciba-ping-id1
+client1-private_key_jwt-PS256-PS256-fapi-ciba-ping-id1
+client2-mtls-PS256-PS256-fapi-ciba-ping-id1
+client2-private_key_jwt-PS256-PS256-fapi-ciba-ping-id1
+```
+to the URL of certification testsuite itself, which is something like `https://www.certification.openid.net/test/a/keycloak/ciba-notification-endpoint`.
+See the instructions for additional details: https://openid.net/certification/fapi_ciba_op_testing/ 
 
 ## For Developers
 
