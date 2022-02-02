@@ -59,3 +59,5 @@ cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=serv
 openssl x509 -in ca.pem -text -noout
 openssl x509 -in server.pem -text -noout
 
+# Copy certs to keycloak folder for Keycloak.x
+cp server.pem $DIR/../keycloak

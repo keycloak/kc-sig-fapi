@@ -1,4 +1,3 @@
-version: '3.6'
 services:
   load_balancer:
     build:
@@ -24,26 +23,6 @@ services:
          - ${CONSENT_FQDN}
          - ${AUTH_ENTITY_FQDN}
          - ${CONFORMANCE_SUITE_FQDN}
-  keycloak:
-    build:
-      context: ./keycloak
-      args:
-        KEYCLOAK_BASE_IMAGE: ${KEYCLOAK_BASE_IMAGE}
-        KEYCLOAK_REALM_IMPORT_FILENAME: ${KEYCLOAK_REALM_IMPORT_FILENAME}
-    ports:
-     - "8787:8787"
-    environment:
-     - KEYCLOAK_USER=${KEYCLOAK_USER}
-     - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
-    volumes:
-     - ./https/server.pem:/etc/x509/https/tls.crt
-     - ./https/server-key.pem:/etc/x509/https/tls.key
-     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
-     - ./https/server.pem:/etc/x509/https/server.crt
-#     - ../bin/keycloak-conformance-test:/opt/jboss/keycloak
-#     - ../bin/keycloak-conformance-test/modules:/opt/jboss/keycloak/modules
-#     - ../bin/keycloak-conformance-test/themes:/opt/jboss/keycloak/themes
-    command: "-b 0.0.0.0 -Djboss.socket.binding.port-offset=1000 --debug *:8787 -Dkeycloak.profile=preview -Dkeycloak.frontendUrl=${KEYCLOAK_FRONTEND_URL}"
   api_gateway_nginx:
     build:
       context: ./api-gateway-nginx

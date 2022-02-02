@@ -26,3 +26,5 @@ openssl x509 -in client-ca.pem -text -noout
 openssl x509 -in client1.pem -text -noout
 openssl x509 -in client2.pem -text -noout
 
+# Copy certs to keycloak folder for Keycloak.x
+cp client-ca.pem $DIR/../keycloak
