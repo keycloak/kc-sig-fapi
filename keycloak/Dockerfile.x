@@ -28,6 +28,6 @@ COPY oidf.json /opt/keycloak/conf
 
 # SPI Customizations
 COPY keycloakx-custom.properties /opt/keycloak/conf
-RUN cat /opt/keycloak/conf/keycloakx-custom.properties >> /opt/keycloak/conf/keycloak.properties
+RUN cat /opt/keycloak/conf/keycloakx-custom.properties >> /opt/keycloak/conf/keycloak.conf
 
 USER keycloak

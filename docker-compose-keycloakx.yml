@@ -6,8 +6,7 @@ services:
       args:
         KEYCLOAKX_BASE_IMAGE: ${KEYCLOAKX_BASE_IMAGE}
     ports:
-#     - "8787:8787"
-     - "9443:9443"
+     - "8787:8787"
     environment:
      - DEBUG=true
      - DEBUG_PORT=*:8787
@@ -32,11 +31,12 @@ services:
       - "--verbose"
       - "start"
       - "--auto-build"
-      - "--hostname=${KEYCLOAK_FQDN}:9443" # bug in 16.1.1 requires port
+      - "--hostname=${KEYCLOAK_FQDN}"
       - "--http-enabled=true"
       - "--http-relative-path=/auth" # requires --auto-build
       - "--https-certificate-file=/etc/x509/https/server.crt"
       - "--https-certificate-key-file=/etc/x509/https/tls.key"
+      - "--https-client-auth=request"
 
   keycloak-import:
     image: ${KEYCLOAKX_BASE_IMAGE}
