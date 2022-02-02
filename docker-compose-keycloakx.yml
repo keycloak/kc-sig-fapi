@@ -1,0 +1,57 @@
+services:
+  keycloak:
+    build:
+      context: ./keycloak
+      dockerfile: "./Dockerfile.x"
+      args:
+        KEYCLOAKX_BASE_IMAGE: ${KEYCLOAKX_BASE_IMAGE}
+    ports:
+#     - "8787:8787"
+     - "9443:9443"
+    environment:
+     - DEBUG=true
+     - DEBUG_PORT=*:8787
+     - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+     - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+    volumes:
+      # Need to add server.pem to the image at build-time for cacerts import
+#     - ./https/server.pem:/etc/x509/https/tls.crt
+     - ./https/server-key.pem:/etc/x509/https/tls.key
+      # Need to add client-ca.pem to the image at build-time for cacerts import
+#     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+     - ./https/server.pem:/etc/x509/https/server.crt
+#     - ../bin/keycloak-conformance-test:/opt/keycloak
+#     - ../bin/keycloak-conformance-test/modules:/opt/keycloak/providers
+#     - ../bin/keycloak-conformance-test/themes:/opt/keycloak/themes
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/auth/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command:
+      - "--verbose"
+      - "start"
+      - "--auto-build"
+      - "--hostname=${KEYCLOAK_FQDN}:9443" # bug in 16.1.1 requires port
+      - "--http-enabled=true"
+      - "--http-relative-path=/auth" # requires --auto-build
+      - "--https-certificate-file=/etc/x509/https/server.crt"
+      - "--https-certificate-key-file=/etc/x509/https/tls.key"
+
+  keycloak-import:
+    image: ${KEYCLOAKX_BASE_IMAGE}
+    environment:
+      - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+      - KEYCLOAK_REALM_IMPORT_FILENAME=${KEYCLOAK_REALM_IMPORT_FILENAME}
+    volumes:
+      - ./keycloak:/opt/keycloak/import:z
+    depends_on:
+      keycloak:
+        condition: service_healthy
+    entrypoint: /usr/bin/bash
+    command: >
+      -c "echo Connecting to Keycloak...
+      && /opt/keycloak/bin/kcadm.sh config credentials --server http://keycloak:8080/auth --realm master --user $$KEYCLOAK_ADMIN --password $$KEYCLOAK_ADMIN_PASSWORD 
+      && echo Importing realm from $$KEYCLOAK_REALM_IMPORT_FILENAME to Keycloak...
+      && /opt/keycloak/bin/kcadm.sh create realms -f /opt/keycloak/import/$$KEYCLOAK_REALM_IMPORT_FILENAME"

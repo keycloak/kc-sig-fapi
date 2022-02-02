@@ -174,7 +174,7 @@ If you would like to use the configurations as it is, you only need to build and
 Run the following command from the project basedir to start the test suite
 
 ```
-docker-compose -p keycloak-fapi up --build
+docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 The OpenID FAPI Conformance test interface will then be reachable at [https://localhost:8443](https://localhost:8443).
 See instructions in [Run FAPI Conformance test plan](#Run-FAPI-Conformance-test-plan) 
@@ -183,13 +183,18 @@ section for running the tests manually in your browser.
 To stop all containers after the automated tests have run:
 
 ```
-docker-compose -p keycloak-fapi up --build --exit-code-from test_runner
+docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build --exit-code-from test_runner
 ```
+
+Note: To run the Conformance test suite with Keycloak-X instead of Keycloak, just replace
+`docker-compose-keycloak.yml` with `docker-compose-keycloak.yml` in the previous above.
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:15.0.2)
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0-legacy)
     * The keycloak image version used in the test suite
+* `KEYCLOAKX_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0)
+    * The keycloak-x image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
     against a local build of keycloak.
@@ -203,7 +208,7 @@ The following options can be set as environment variables before the above comma
 
 **Example:**
 ```
-KEYCLOAK_BASE_IMAGE=jboss/keycloak:6.0.1 docker-compose -p keycloak-fapi up --build
+KEYCLOAK_BASE_IMAGE=jboss/keycloak:16.1.1 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
 To stop and remove all containers, run the following:
@@ -213,7 +218,7 @@ docker rm $(docker ps -a -q)
 ```
 Instead of this, if you want also to remove all the images and the volumes created by the docker-compose in addition to containers, you run this:
 ```
-docker-compose -p keycloak-fapi down --rmi local -v
+docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml  down --rmi local -v
 ```
 
 ### Test Reports

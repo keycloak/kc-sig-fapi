@@ -1,2 +1,4 @@
 *.json
 
+server.pem
+client-ca.pem
