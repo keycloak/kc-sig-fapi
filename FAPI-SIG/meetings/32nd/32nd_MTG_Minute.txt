@@ -1,0 +1,70 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 32nd Meeting
+
+Date :
+ Wed 2 Feb 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Thomas Darimont
+
+Presentation Materials :
+ [1] FAPI-SIG Community 32nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/32nd/presentations/FAPI-SIG_32nd_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * FAPI Certificate
+   Keycloak 15 has achieved certificates for FAPI 1.0 Advanced (all 8 conformance profiles), FAPI-CIBA (all 4 conformance profiles) and Open Banking Brazil FAPI 1.0 (8 of 9 conformance profiles).
+
+ * OIDC Certificate 
+   Keycloak will re-acquire OIDC OP certificate. It will also acquire OIDC Logout proflie certificate.
+
+ * Automated conformance test environment for OIDC and its Logout profile certificate
+   It is helpful if someone support automated conformance test environment in FAPI-SIG repository for OIDC and its Logout profile certificate.
+
+ * Automated conformance test environment against keycloak-x
+   It is helpful if someone support automated conformance test environment in FAPI-SIG repository against quarkus based keycloak-x.
+   Currently conformance test run against keycloak based on wildfly.
+
+ * RAR/Grant Management API
+   It is good if a red hat's developer working on dynamic scopes could participate FAPI-SIG meeting. We might help him.
+
+ * DPoP
+   The draft version PR for DPoP is in progress.
+
+ * Keycloak 17
+   Keycloak 17 based on quarkus may be released in Feb or Mar.
+
+ * Next Web Meeting
+   Wed 2 Mar 2022 12:00 - 13:00 UTC in 1 hour
