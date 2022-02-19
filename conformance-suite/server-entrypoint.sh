@@ -1,7 +1,6 @@
 #!/bin/sh
 cd conformance-suite
 mv -f run-tests.sh ./.gitlab-ci
-mv -f run-test-plan.py ./scripts
 mvn package -DskipTests
 java -Xdebug -Xrunjdwp:transport=dt_socket,address=*:9999,server=y,suspend=n \
     -jar target/fapi-test-suite.jar \
