@@ -84,6 +84,10 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
+The current environment uses the following software version.
+- Keycloak version : 17.0.0
+- Conformance-suite version : release-v4.1.41
+
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
   - Signature Algorithm : PS256, ES256​
@@ -117,8 +121,6 @@ Not only FAPI-SIG member but others can communicate with each other by the follo
 - Meeting : Web meeting on a regular basis
 
 ## Working Repository
-
-All of FAPI-SIG's activity outputs can be stored on [jsoss-sig/keycloak-fapi](https://github.com/jsoss-sig/keycloak-fapi/tree/master/FAPI-SIG) repository in github.
 
 Who want to submit the output needs to send the pull-request to this repository.
 
@@ -186,15 +188,15 @@ To stop all containers after the automated tests have run:
 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build --exit-code-from test_runner
 ```
 
-Note: To run the Conformance test suite with Keycloak-X instead of Keycloak, just replace
-`docker-compose-keycloak.yml` with `docker-compose-keycloak.yml` in the previous above.
+Note: To run the Conformance test suite with wildfly based legacy Keycloak instead of quarkus based Keycloak, just replace
+`docker-compose-keycloak.yml` with `docker-compose-keycloak-legacy.yml` in the previous above.
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0-legacy)
+* `KEYCLOAK_LEGACY_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0-legacy)
+    * The wildfly based keycloak image version used in the test suite
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0)
     * The keycloak image version used in the test suite
-* `KEYCLOAKX_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0)
-    * The keycloak-x image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
     against a local build of keycloak.
@@ -202,13 +204,13 @@ The following options can be set as environment variables before the above comma
     * Set to false to stop conformance-suite tests automatically running
 * `MVN_HOME` (default: ~/.m2)
     * Set to use a custom maven home path
-* `OPENID_GIT_TAG` (default: release-v4.1.29)
+* `OPENID_GIT_TAG` (default: release-v4.1.41)
     * The OpenID Conformance Suite Git Tag to be cloned    
 
 
 **Example:**
 ```
-KEYCLOAK_BASE_IMAGE=jboss/keycloak:16.1.1 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+KEYCLOAK_BASE_IMAGE=jboss/keycloak:17.0.0 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
 To stop and remove all containers, run the following:
@@ -218,7 +220,7 @@ docker rm $(docker ps -a -q)
 ```
 Instead of this, if you want also to remove all the images and the volumes created by the docker-compose in addition to containers, you run this:
 ```
-docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml  down --rmi local -v
+docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml down --rmi local -v
 ```
 
 ### Modify your `hosts` file
@@ -370,7 +372,7 @@ Run `generate-all.sh` script simply to generate self-signed certificates for HTT
 Now, you can boot a Keycloak server with new configurations.
 
 ```
-docker-compose -p keycloak-fapi up --force-recreate
+docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --force-recreate
 ```
 
 ## Run FAPI Conformance test against local built keycloak
@@ -393,7 +395,7 @@ It overrides the keycloak of the base image with the one built on the local mach
 Then run the FAPI Conformance Suite with KEYCLOAK_REALM_IMPORT_FILENAME env var:
 
 ```
-KEYCLOAK_REALM_IMPORT_FILENAME=realm-local.json docker-compose -p keycloak-fapi up --build
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-local.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
 ## Run FAPI Conformance test with persistent OpenID Server DB volume
@@ -472,7 +474,7 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
-TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi up --build
+TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
 If you set `--server-tests-only` to `TEST_PLAN`, it runs all types of FAPI conformance tests shown above the table automatically.

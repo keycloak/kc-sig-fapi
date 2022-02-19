@@ -1,23 +1,33 @@
 ARG KEYCLOAK_BASE_IMAGE
 FROM ${KEYCLOAK_BASE_IMAGE}
-ARG KEYCLOAK_REALM_IMPORT_FILENAME
+
 # For FAPI-1-Final-Advanced, section 8.5
-RUN sed -i -e "s/(key-manager=kcKeyManager)/(key-manager=kcKeyManager,protocols=[\"TLSv1.2\"],cipher-suite-filter=\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384\")/" /opt/jboss/tools/cli/x509-keystore.cli
+# see org.keycloak.quarkus.runtime.configuration.mappers.HttpPropertyMappers
+ENV KC_HTTPS_PROTOCOLS=TLSv1.2
+ENV KC_HTTPS_CIPHER_SUITES=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+ENV KC_HTTPS_PORT=9443
 
 USER root
 
-# Realm config
-ADD --chown=jboss:jboss ${KEYCLOAK_REALM_IMPORT_FILENAME} /opt/jboss/
+# Add certificates
+COPY server.pem /etc/x509/https/server.crt
+COPY client-ca.pem /etc/x509/https/client-ca.crt
+
+RUN \
+  echo "Importing certificates into truststore" && \
+  keytool -import -cacerts -storepass changeit -noprompt -file /etc/x509/https/server.crt -alias myservercrt && \
+  keytool -import -cacerts -storepass changeit -noprompt -file /etc/x509/https/client-ca.crt  -alias myclientcacrt && \
+  echo "Certificates imported"
+
 
 # Custom SPIs
-COPY ${KEYCLOAK_SPI_0} /opt/jboss/keycloak/standalone/deployments/
+COPY ${KEYCLOAK_SPI_0} /opt/keycloak/providers/
 
-ENV KEYCLOAK_IMPORT=/opt/jboss/${KEYCLOAK_REALM_IMPORT_FILENAME}
-ENV X509_CA_BUNDLE="/etc/x509/https/client-ca.crt /etc/x509/https/server.crt"
+# Custom OIDC metadata
+COPY oidf.json /opt/keycloak/conf
 
-COPY ciba.cli /opt/jboss/keycloak/bin/
-RUN /opt/jboss/keycloak/bin/jboss-cli.sh --file=/opt/jboss/keycloak/bin/ciba.cli
+# SPI Customizations
+COPY keycloak-custom.properties /opt/keycloak/conf
+RUN cat /opt/keycloak/conf/keycloak-custom.properties >> /opt/keycloak/conf/keycloak.conf
 
-COPY oidf.json /opt/jboss/keycloak/standalone/configuration
-COPY well-known.cli /opt/jboss/keycloak/bin/
-RUN /opt/jboss/keycloak/bin/jboss-cli.sh --file=/opt/jboss/keycloak/bin/well-known.cli
+USER keycloak
