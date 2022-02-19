@@ -221,12 +221,6 @@ Instead of this, if you want also to remove all the images and the volumes creat
 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml  down --rmi local -v
 ```
 
-### Test Reports
-
-Once `test_runner` service has finished and exited, test reports will be copied to the 
-[./conformance-suite/report](./report) directory.
-
-
 ### Modify your `hosts` file
 
 To access to Keycloak and Resource server with FQDN, modify your `hosts` file in your local machine as follows.
@@ -429,8 +423,6 @@ Below is a list of the custom files currently used by the base conformance-suite
   * Dockerfile which installs python dependencies, exposes ports and kicks off building the project via the server-entrypoint script 
 * /conformance-suite/server-entrypoint.sh
   * Script for building the project with maven
-* /conformance-suite/scripts/run-test-plan.py
-  * Existing file within the base conformance-suite repo that has been slightly modified to output test results to the file system.
 
 ## Run specified FAPI Conformance test
 
