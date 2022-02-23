@@ -296,6 +296,14 @@ makeManualOBBRFAPI1AdvancedPARJARMTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-mtls-PS256-PS256.json"  
 }
 
+makeManualOIDCConfigTest() {
+    TESTS="${TESTS} oidcc-config-certification-test-plan ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-config.json"
+}
+
+makeOIDCConfigTest() {
+    TESTS="${TESTS} oidcc-config-certification-test-plan ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-config-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -464,6 +472,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-par-jarm" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced-par-jarm" ]; then
     echo "Run Open Banking Brasil fapi1-advanced-par-jarm tests manually"
     makeManualOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-config" ]; then
+    echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests"
+    makeOIDCConfigTest   
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-config" ]; then
+    echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests manually"
+    makeManualOIDCConfigTest 
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
