@@ -112,6 +112,8 @@ Keycloak 15.0.2 have achieved [certification for all 4 conformance profiles of F
 
 Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil Open Banking (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs) except for DCR (Dynamic Client Registration).
 
+#### OpenID Connect Core: Config Certification Profile
+
 ## Communication Channels
 
 Not only FAPI-SIG member but others can communicate with each other by the following ways.
@@ -471,6 +473,12 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |BR-OB Adv. OP w/ MTLS, JARM|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|jarm|by_value|--ob-br-fapi1-advanced-jarm|
 |BR-OB Adv. OP w/ Private Key, PAR, JARM|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|jarm|pushed|--ob-br-fapi1-advanced-par-jarm|
 |BR-OB Adv. OP w/ MTLS, PAR, JARM|fapi1-advanced-final-test-plan|mtls|openbanking_brazil|jarm|pushed|--ob-br-fapi1-advanced-par-jarm|
+
+**Certified OpenID Providers**
+
+|Conformance Profile|Test Plan|server_metadata|client_registration|response_type|TEST_PLAN|
+|-------------------|---------|---------------|-------------------|-------------|---------|
+|Config OP|oidcc-config-certification-test-plan|-|-|-|--oidcc-config|
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
