@@ -1,0 +1,20 @@
+{
+    "alias": "keycloak",
+    "description": "OpenID Connect Core: Basic Certification Profile (server_metadata:discovery/client_registration:static_client)",
+    "server": {
+        "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration",
+        "login_hint": "john"
+    },
+    "client": {
+        "client_id": "client1-oidcc-basic",
+        "client_secret": "TKPQpcXTbp7vvsoUkjlZXkx8QXwPTRkU"
+    },
+    "client_secret_post": {
+        "client_id": "client1-oidcc-basic-client_secret_post",
+        "client_secret": "IOxDgJWg4sMINzCngTT01rYAgRoHE5Qn"
+    },
+    "client2": {
+        "client_id": "client2-oidcc-basic",
+        "client_secret": "t9XCrOEAlk4H4FTNv96VbHaQhdlB2WHY"
+    }
+}

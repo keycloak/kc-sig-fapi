@@ -304,6 +304,14 @@ makeOIDCConfigTest() {
     TESTS="${TESTS} oidcc-config-certification-test-plan ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-config-automated.json"
 }
 
+makeManualOIDCBasicTest() {
+    TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic.json"
+}
+
+makeOIDCBasicTest() {
+    TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -389,6 +397,10 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-all" ]; then
     makeOBBRFAPI1AdvancedPARTest
     makeOBBRFAPI1AdvancedJARMTest
     makeOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
+    echo "Run oidc all tests"
+    makeOIDCConfigTest
+    makeOIDCBasicTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -478,6 +490,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-config" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-config" ]; then
     echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests manually"
     makeManualOIDCConfigTest 
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-basic" ]; then
+    echo "Run OpenID Connect Core: Basic Certification Profile Authorization server test"
+    makeOIDCBasicTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-basic" ]; then
+    echo "Run OpenID Connect Core: Basic Certification Profile Authorization server test manually"
+    makeManualOIDCBasicTest 
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
