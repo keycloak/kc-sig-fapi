@@ -6,16 +6,16 @@
         "login_hint": "john"
     },
     "client": {
-        "client_id": "client1-oidcc-basic",
-        "client_secret": "TKPQpcXTbp7vvsoUkjlZXkx8QXwPTRkU"
+        "client_id": "client1-oidcc-hybrid",
+        "client_secret": "ulvklGmELzpZqKiISkRmberNm4als3z3"
     },
     "client_secret_post": {
-        "client_id": "client1-oidcc-basic-client_secret_post",
-        "client_secret": "IOxDgJWg4sMINzCngTT01rYAgRoHE5Qn"
+        "client_id": "client1-oidcc-hybrid-client_secret_post",
+        "client_secret": "4gDNjUhBkki0gSuKlxtytGCTh4UlNc45"
     },
     "client2": {
-        "client_id": "client2-oidcc-basic",
-        "client_secret": "t9XCrOEAlk4H4FTNv96VbHaQhdlB2WHY"
+        "client_id": "client2-oidcc-hybrid",
+        "client_secret": "BAfJ8ugBegJ7JWdPVjcqGNFpYfNb6euL"
     },
     "browser": [
         {

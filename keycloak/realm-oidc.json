@@ -49,6 +49,261 @@
         }
     ],
     "clients": [
+      {
+        "id": "d2416f3d-6cd0-4b7d-aeb2-3a5e9b5a0575",
+        "clientId": "client1-oidcc-hybrid",
+        "bearerOnly": false,
+        "consentRequired": true,
+        "standardFlowEnabled": true,
+        "implicitFlowEnabled": true,
+        "directAccessGrantsEnabled": false,
+        "serviceAccountsEnabled": false,
+        "publicClient": false,
+        "enabled": true,
+        "clientAuthenticatorType": "client-secret",
+        "secret": "ulvklGmELzpZqKiISkRmberNm4als3z3",
+        "fullScopeAllowed": true,
+        "protocol": "openid-connect",
+        "redirectUris": [
+            "https://www.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback",
+            "https://demo.certification.openid.net/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://www.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://demo.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
+        ],
+        "attributes": {
+            "access.token.signed.response.alg": "PS256",
+            "exclude.session.state.from.auth.response": "false",
+            "id.token.signed.response.alg": "ES256",
+            "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
+        },
+        "protocolMappers": [
+            {
+              "name": "aud",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-audience-mapper",
+              "consentRequired": false,
+              "config": {
+                  "included.client.audience": "resource-server",
+                  "id.token.claim": "false",
+                  "access.token.claim": "true"
+              }
+            }
+        ],
+        "defaultClientScopes": [
+            "name_claims",
+            "web-origins",
+            "roles"
+        ],
+        "optionalClientScopes": [
+            "profile",
+            "email",
+            "address",
+            "phone",
+            "consent:1",
+            "offline_access",
+            "consents",
+            "resources",
+            "microprofile-jwt"
+        ]
+      },
+      {
+        "id": "b25d2d79-eec4-4b02-bd10-14b77392f0c9",
+        "clientId": "client1-oidcc-hybrid-client_secret_post",
+        "bearerOnly": false,
+        "consentRequired": true,
+        "standardFlowEnabled": true,
+        "implicitFlowEnabled": true,
+        "directAccessGrantsEnabled": false,
+        "serviceAccountsEnabled": false,
+        "publicClient": false,
+        "enabled": true,
+        "clientAuthenticatorType": "client-secret",
+        "secret": "4gDNjUhBkki0gSuKlxtytGCTh4UlNc45",
+        "fullScopeAllowed": true,
+        "protocol": "openid-connect",
+        "redirectUris": [
+            "https://www.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback",
+            "https://demo.certification.openid.net/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://www.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://demo.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
+        ],
+        "attributes": {
+            "access.token.signed.response.alg": "PS256",
+            "exclude.session.state.from.auth.response": "false",
+            "id.token.signed.response.alg": "ES256",
+            "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
+        },
+        "protocolMappers": [
+            {
+              "name": "aud",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-audience-mapper",
+              "consentRequired": false,
+              "config": {
+                  "included.client.audience": "resource-server",
+                  "id.token.claim": "false",
+                  "access.token.claim": "true"
+              }
+            }
+        ],
+        "defaultClientScopes": [
+            "name_claims",
+            "web-origins",
+            "roles"
+        ],
+        "optionalClientScopes": [
+            "profile",
+            "email",
+            "address",
+            "phone",
+            "consent:1",
+            "offline_access",
+            "consents",
+            "resources",
+            "microprofile-jwt"
+        ]
+      },
+      {
+        "id": "71d6dd19-b935-432f-a06b-3f804c8eb2e0",
+        "clientId": "client2-oidcc-hybrid",
+        "bearerOnly": false,
+        "consentRequired": true,
+        "standardFlowEnabled": true,
+        "implicitFlowEnabled": true,
+        "directAccessGrantsEnabled": false,
+        "serviceAccountsEnabled": false,
+        "publicClient": false,
+        "enabled": true,
+        "clientAuthenticatorType": "client-secret",
+        "secret": "BAfJ8ugBegJ7JWdPVjcqGNFpYfNb6euL",
+        "fullScopeAllowed": true,
+        "protocol": "openid-connect",
+        "redirectUris": [
+            "https://www.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback",
+            "https://demo.certification.openid.net/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://www.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://demo.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
+        ],
+        "attributes": {
+          "access.token.signed.response.alg": "PS256",
+          "exclude.session.state.from.auth.response": "false",
+          "id.token.signed.response.alg": "ES256",
+          "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
+        },
+        "protocolMappers": [
+            {
+              "name": "aud",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-audience-mapper",
+              "consentRequired": false,
+              "config": {
+                  "included.client.audience": "resource-server",
+                  "id.token.claim": "false",
+                  "access.token.claim": "true"
+              }
+            }
+        ],
+        "defaultClientScopes": [
+            "name_claims",
+            "web-origins",
+            "roles"
+        ],
+        "optionalClientScopes": [
+            "profile",
+            "email",
+            "address",
+            "phone",
+            "consent:1",
+            "offline_access",
+            "consents",
+            "resources",
+            "microprofile-jwt"
+        ]
+      },
         {
           "id" : "7554f8fe-68f9-47e3-a9db-4efe72aa1731",
           "clientId": "client1-oidcc-implicit",
