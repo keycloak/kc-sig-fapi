@@ -480,6 +480,7 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |-------------------|---------|---------------|-------------------|-------------|---------|
 |Config OP|oidcc-config-certification-test-plan|-|-|-|--oidcc-config|
 |Basic OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-basic|
+|Implicit OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-implicit|
 
 Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json` realm setting file like:
 ```

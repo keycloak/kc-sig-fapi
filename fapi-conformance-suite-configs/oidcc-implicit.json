@@ -1,0 +1,12 @@
+{
+    "alias": "keycloak",
+    "description": "OpenID Connect Core: Implicit Certification Profile (server_metadata:discovery/client_registration:static_client)",
+    "server": {
+        "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration",
+        "login_hint": "john"
+    },
+    "client": {
+        "client_id": "client1-oidcc-implicit",
+        "client_secret": "ZzO5JvO1PQU1kVxG3S6gEIX05uF2f11s"
+    }
+}
