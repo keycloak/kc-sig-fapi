@@ -479,6 +479,12 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Conformance Profile|Test Plan|server_metadata|client_registration|response_type|TEST_PLAN|
 |-------------------|---------|---------------|-------------------|-------------|---------|
 |Config OP|oidcc-config-certification-test-plan|-|-|-|--oidcc-config|
+|Basic OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-basic|
+
+Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+```
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
@@ -492,6 +498,8 @@ If you set `--fapi1-advanced-all` to `TEST_PLAN`, it runs all types of FAPI 1 Ad
 If you set `--fapi-ciba-all` to `TEST_PLAN`, it runs all types of FAPI-CIBA OpenID Providers conformance tests shown above the table automatically.
 
 If you set `--ob-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Brazil Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
+
+If you set `--oidcc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 
