@@ -312,6 +312,14 @@ makeOIDCBasicTest() {
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic-automated.json"
 }
 
+makeManualOIDCImplicitTest() {
+    TESTS="${TESTS} oidcc-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-implicit.json"
+}
+
+makeOIDCImplicitTest() {
+    TESTS="${TESTS} oidcc-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-implicit-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -401,6 +409,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     echo "Run oidc all tests"
     makeOIDCConfigTest
     makeOIDCBasicTest
+    makeOIDCImplicitTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -495,7 +504,13 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-basic" ]; then
     makeOIDCBasicTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-basic" ]; then
     echo "Run OpenID Connect Core: Basic Certification Profile Authorization server test manually"
-    makeManualOIDCBasicTest 
+    makeManualOIDCBasicTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-implicit" ]; then
+    echo "Run OpenID Connect Core: Implicit Certification Profile Authorization server test"
+    makeOIDCImplicitTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-implicit" ]; then
+    echo "Run OpenID Connect Core: Implicit Certification Profile Authorization server test manually"
+    makeManualOIDCImplicitTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
