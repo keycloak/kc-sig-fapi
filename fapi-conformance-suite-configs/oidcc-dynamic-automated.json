@@ -1,0 +1,281 @@
+{
+    "alias": "keycloak",
+    "description": "OpenID Connect Core: Dynamic Certification Profile (response_type:code id_token)",
+    "server": {
+        "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
+    },
+    "browser": [
+        {
+            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+            "tasks": [
+                {
+                    "task": "Initial Login",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "optional": true,
+                    "commands": [
+                        [
+                            "text",
+                            "name",
+                            "username",
+                            "john"
+                        ],
+                        [
+                            "text",
+                            "name",
+                            "password",
+                            "john"
+                        ],
+                        [
+                            "click",
+                            "name",
+                            "login"
+                        ]
+                    ]
+                },
+                {
+                    "task": "Authorize Client",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action*",
+                    "optional": true,
+                    "commands": [
+                        [
+                            "click",
+                            "name",
+                            "accept"
+                        ]
+                    ]
+                },
+                {
+                    "task": "Verify Complete",
+                    "match": "https://*/test/a/keycloak/callback*",
+                    "optional": true,
+                    "commands": [
+                        [
+                            "wait",
+                            "id",
+                            "submission_complete",
+                            10
+                        ]
+                    ]
+                }
+            ]
+        }
+    ],
+    "override": {
+        "oidcc-ensure-redirect-uri-in-authorization-request": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login without redirect_uri",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[@class='instruction']",
+                                    10,
+                                    ".*Invalid parameter: redirect_uri.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "oidcc-redirect-uri-query-mismatch": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login mismatching redirect_uri",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[@class='instruction']",
+                                    10,
+                                    ".*Invalid parameter: redirect_uri.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "oidcc-redirect-uri-query-added": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login with additional query parameter to redirect_uri",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[@class='instruction']",
+                                    10,
+                                    ".*Invalid parameter: redirect_uri.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "oidcc-registration-logo-uri": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "text",
+                                    "name",
+                                    "username",
+                                    "john"
+                                ],
+                                [
+                                    "text",
+                                    "name",
+                                    "password",
+                                    "john"
+                                ],
+                                [
+                                    "click",
+                                    "name",
+                                    "login"
+                                ]
+                            ]
+                        },
+                        {
+                            "task": "Consent screen with logo",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action?execution=OAUTH_GRANT*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//div[@id='kc-oauth']/h3",
+                                    10,
+                                    ".*Do you grant these access privileges?.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "oidcc-registration-policy-uri": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "text",
+                                    "name",
+                                    "username",
+                                    "john"
+                                ],
+                                [
+                                    "text",
+                                    "name",
+                                    "password",
+                                    "john"
+                                ],
+                                [
+                                    "click",
+                                    "name",
+                                    "login"
+                                ]
+                            ]
+                        },
+                        {
+                            "task": "Consent screen with policy url",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action?execution=OAUTH_GRANT*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//div[@id='kc-oauth']/h3",
+                                    10,
+                                    ".*Do you grant these access privileges?.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "oidcc-registration-tos-uri": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/*",
+                    "tasks": [
+                        {
+                            "task": "Initial Login",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "text",
+                                    "name",
+                                    "username",
+                                    "john"
+                                ],
+                                [
+                                    "text",
+                                    "name",
+                                    "password",
+                                    "john"
+                                ],
+                                [
+                                    "click",
+                                    "name",
+                                    "login"
+                                ]
+                            ]
+                        },
+                        {
+                            "task": "Consent screen with tos url",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action?execution=OAUTH_GRANT*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//div[@id='kc-oauth']/h3",
+                                    10,
+                                    ".*Do you grant these access privileges?.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

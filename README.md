@@ -486,6 +486,7 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost-implicit|
 |Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-formpost-hybrid|
 |Form Post OP|oidcc-[basic, implicit, hybrid]-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code idtoken|--oidcc-dynamic|
 
 Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json` realm setting file like:
 ```
@@ -538,6 +539,8 @@ Due to the nature of conformance suite, the following tests cannot be passed aut
   * fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message :
  This always become `reviewed` status in automated tests if the server supports binding messages containing emoji etc - it requires uploading a picture of the consumption device to conformance test server.
 
+  * oidcc-server-rotate-keys
+ This always become `failure` status in automated tests. However, we can pass this test manually by createing a new key in sigature and disabling the exsiting key (RS256) in signature on an admin console.
 
 **Running different test plans**
 
