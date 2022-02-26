@@ -330,6 +330,8 @@ makeManualOIDCHybridTest() {
 
 makeOIDCHybridTest() {
     TESTS="${TESTS} oidcc-hybrid-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-hybrid-automated.json"
+    TESTS="${TESTS} oidcc-hybrid-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-hybrid-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-hybrid-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-hybrid-static-static-automated.json"
 }
 
 makeManualOIDCFormPostBasicTest() {
