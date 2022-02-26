@@ -352,6 +352,14 @@ makeOIDCFormPostImplicitTest() {
     TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit-automated.json"
 }
 
+makeManualOIDCDynamicTest() {
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code\ id_token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic.json"
+}
+
+makeOIDCDynamicTest() {
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code\ id_token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -446,6 +454,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     makeOIDCFormPostBasicTest
     makeOIDCFormPostImplicitTest
     makeOIDCFormPostHybridTest
+    makeOIDCDynamicTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -571,6 +580,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-implicit" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-implicit" ]; then
     echo "Run OpenID Connect Core: Form Post Implicit Certification Profile Authorization server test manually"
     makeManualOIDCFormPostImplicitTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-dynamic" ]; then
+    echo "Run OpenID Connect Core: Dynamic Certification Profile Authorization server test"
+    makeOIDCDynamicTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-dynamic" ]; then
+    echo "Run OpenID Connect Core: Dynamic Certification Profile Authorization server test manually"
+    makeManualOIDCDynamicTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost" ]; then
     echo "Run OpenID Connect Core: Form Post Certification Profile Authorization server test"
     makeOIDCFormPostBasicTest
