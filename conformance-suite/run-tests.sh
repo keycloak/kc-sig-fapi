@@ -320,6 +320,8 @@ makeManualOIDCImplicitTest() {
 
 makeOIDCImplicitTest() {
     TESTS="${TESTS} oidcc-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-implicit-automated.json"
+    TESTS="${TESTS} oidcc-implicit-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-implicit-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-implicit-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-implicit-static-static-automated.json"
 }
 
 makeManualOIDCHybridTest() {
