@@ -328,6 +328,30 @@ makeOIDCHybridTest() {
     TESTS="${TESTS} oidcc-hybrid-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-hybrid-automated.json"
 }
 
+makeManualOIDCFormPostBasicTest() {
+    TESTS="${TESTS} oidcc-formpost-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-basic.json"
+}
+
+makeOIDCFormPostBasicTest() {
+    TESTS="${TESTS} oidcc-formpost-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-basic-automated.json"
+}
+
+makeManualOIDCFormPostHybridTest() {
+    TESTS="${TESTS} oidcc-formpost-hybrid-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-hybrid.json"
+}
+
+makeOIDCFormPostHybridTest() {
+    TESTS="${TESTS} oidcc-formpost-hybrid-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-hybrid-automated.json"
+}
+
+makeManualOIDCFormPostImplicitTest() {
+    TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit.json"
+}
+
+makeOIDCFormPostImplicitTest() {
+    TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -419,6 +443,9 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     makeOIDCBasicTest
     makeOIDCImplicitTest
     makeOIDCHybridTest
+    makeOIDCFormPostBasicTest
+    makeOIDCFormPostImplicitTest
+    makeOIDCFormPostHybridTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -526,6 +553,29 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-hybrid" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-hybrid" ]; then
     echo "Run OpenID Connect Core: Hybrid Certification Profile Authorization server test manually"
     makeManualOIDCHybridTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-basic" ]; then
+    echo "Run OpenID Connect Core: Form Post Basic Certification Profile Authorization server test"
+    makeOIDCFormPostBasicTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-basic" ]; then
+    echo "Run OpenID Connect Core: Form Post Basic Certification Profile Authorization server test manually"
+    makeManualOIDCFormPostBasicTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-hybrid" ]; then
+    echo "Run OpenID Connect Core: Form Post Hybrid Certification Profile Authorization server test"
+    makeOIDCFormPostHybridTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-hybrid" ]; then
+    echo "Run OpenID Connect Core: Form Post Hybrid Certification Profile Authorization server test manually"
+    makeManualOIDCFormPostHybridTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-implicit" ]; then
+    echo "Run OpenID Connect Core: Form Post Implicit Certification Profile Authorization server test"
+    makeOIDCFormPostImplicitTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-implicit" ]; then
+    echo "Run OpenID Connect Core: Form Post Implicit Certification Profile Authorization server test manually"
+    makeManualOIDCFormPostImplicitTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost" ]; then
+    echo "Run OpenID Connect Core: Form Post Certification Profile Authorization server test"
+    makeOIDCFormPostBasicTest
+    makeOIDCFormPostImplicitTest
+    makeOIDCFormPostHybridTest    
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"
