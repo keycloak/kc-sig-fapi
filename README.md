@@ -498,6 +498,11 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Form Post OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
 |Form Post OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidcc-formpost|
 |Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code idtoken|--oidcc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code id_token token|--oidcc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code|--oidcc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|idtoken|--oidcc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|id_token token|--oidcc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code token|--oidcc-dynamic|
 |3rd Party-Init OP|oidcc-3rdparty-init-login-certification-test-plan|-|-|code idtoken|--oidcc-3rdparty-init-login|
 
 Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json` realm setting file like:

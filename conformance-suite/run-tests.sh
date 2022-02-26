@@ -370,6 +370,11 @@ makeManualOIDCDynamicTest() {
 
 makeOIDCDynamicTest() {
     TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code\ id_token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code\ id_token\ token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=id_token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=id_token\ token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-dynamic-certification-test-plan[response_type=code\ token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-dynamic-automated.json"
 }
 
 makeManualOIDC3rdpartyInitLoginTest() {
