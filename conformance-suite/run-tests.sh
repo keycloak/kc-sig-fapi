@@ -310,6 +310,8 @@ makeManualOIDCBasicTest() {
 
 makeOIDCBasicTest() {
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic-automated.json"
+    TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-basic-static-static-automated.json"
 }
 
 makeManualOIDCImplicitTest() {
