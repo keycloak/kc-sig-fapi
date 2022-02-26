@@ -340,6 +340,8 @@ makeManualOIDCFormPostBasicTest() {
 
 makeOIDCFormPostBasicTest() {
     TESTS="${TESTS} oidcc-formpost-basic-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-basic-automated.json"
+    TESTS="${TESTS} oidcc-formpost-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-basic-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-formpost-basic-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-basic-static-static-automated.json"
 }
 
 makeManualOIDCFormPostHybridTest() {
@@ -348,6 +350,8 @@ makeManualOIDCFormPostHybridTest() {
 
 makeOIDCFormPostHybridTest() {
     TESTS="${TESTS} oidcc-formpost-hybrid-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-hybrid-automated.json"
+    TESTS="${TESTS} oidcc-formpost-hybrid-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-hybrid-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-formpost-hybrid-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-hybrid-static-static-automated.json"
 }
 
 makeManualOIDCFormPostImplicitTest() {
@@ -356,6 +360,8 @@ makeManualOIDCFormPostImplicitTest() {
 
 makeOIDCFormPostImplicitTest() {
     TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=discovery][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit-automated.json"
+    TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit-discovery-dynamic-automated.json"
+    TESTS="${TESTS} oidcc-formpost-implicit-certification-test-plan[server_metadata=static][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-formpost-implicit-static-static-automated.json"
 }
 
 makeManualOIDCDynamicTest() {

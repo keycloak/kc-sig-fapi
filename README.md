@@ -488,10 +488,15 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-hybrid|
 |Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidcc-hybrid|
 |Hybrid OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidcc-hybrid|
-|Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-formpost-basic|
-|Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost-implicit|
-|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-formpost-hybrid|
-|Form Post OP|oidcc-[basic, implicit, hybrid]-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidcc-formpost|
 |Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code idtoken|--oidcc-dynamic|
 |3rd Party-Init OP|oidcc-3rdparty-init-login-certification-test-plan|-|-|code idtoken|--oidcc-3rdparty-init-login|
 
