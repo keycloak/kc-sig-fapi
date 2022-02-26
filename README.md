@@ -483,6 +483,8 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Basic OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidcc-basic|
 |Basic OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidcc-basic|
 |Implicit OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-implicit|
+|Implicit OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidcc-implicit|
+|Implicit OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidcc-implicit|
 |Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-hybrid|
 |Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-formpost-basic|
 |Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost-implicit|
