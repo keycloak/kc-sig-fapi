@@ -482,6 +482,10 @@ To do so, you need to set to the environment variable `TEST_PLAN` the value show
 |Basic OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-basic|
 |Implicit OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-implicit|
 |Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-hybrid|
+|Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-formpost-basic|
+|Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost-implicit|
+|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-formpost-hybrid|
+|Form Post OP|oidcc-[basic, implicit, hybrid]-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
 
 Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json` realm setting file like:
 ```
