@@ -1,0 +1,69 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 33rd Meeting
+
+Date :
+ Wed 2 Mar 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Guy Moyo (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 32nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/33rd/presentations/FAPI-SIG_33rd_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * OIDC Certificate 
+   Keycloak will re-acquire OIDC OP certificate for the following conformance profile:
+   - Config OP
+   - Basic OP
+   - Implicit OP
+   - Hybrid OP
+   - Dynamic OP
+   - FORM POST OP
+   Currently, the remaining 3rd Party-Init OP conformance profile is out of scope.
+   
+ * OIDC Certificate for logout profiles
+   Keycloak will newly acquire OIDC OP certificate for the following conformance profile:
+   - RP-Initiated OP
+   - Session OP
+   - Front-Channel OP	
+   - Back-Channel OP
+
+ * Automated conformance test environment for OIDC
+   It has supported by the current FAPI-SIG's automated conformance test environment.
+ 
+ * Automated conformance test environment for OIDC Logout profile certificate
+   It has not yet supported by the current FAPI-SIG's automated conformance test environment.
+
+ * Automated conformance test environment against quarkus based keycloak
+   It has supported by the current FAPI-SIG's automated conformance test environment.
+
+ * Next Web Meeting
+   Wed 6 Apr 2022 12:00 - 13:00 UTC in 1 hour
