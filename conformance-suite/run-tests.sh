@@ -296,6 +296,22 @@ makeManualOBBRFAPI1AdvancedPARJARMTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced-par-jarm-mtls-PS256-PS256.json"  
 }
 
+makeCDRFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr-private-key-PS256-PS256-automated.json"
+}
+
+makeManualCDRFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr-private-key-PS256-PS256.json"
+}
+
+makeCDRFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr-private-key-par-PS256-PS256-automated.json"
+}
+
+makeManualCDRFAPI1AdvancedPARTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr-private-key-par-PS256-PS256.json"
+}
+
 makeManualOIDCConfigTest() {
     TESTS="${TESTS} oidcc-config-certification-test-plan ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-config.json"
 }
@@ -564,6 +580,22 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-par-jarm" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-ob-br-fapi1-advanced-par-jarm" ]; then
     echo "Run Open Banking Brasil fapi1-advanced-par-jarm tests manually"
     makeManualOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr" ]; then
+    echo "Run Australia CDR fapi1-advanced tests"
+    makeCDRFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-aus-cdr" ]; then
+    echo "Run Australia CDR fapi1-advanced tests manually"
+    makeManualCDRFAPI1AdvancedTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-par" ]; then
+    echo "Run Australia CDR PAR fapi1-advanced tests"
+    makeCDRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-aus-cdr-par" ]; then
+    echo "Run Australia CDR PAR fapi1-advanced tests manually"
+    makeManualCDRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-all" ]; then
+    echo "Run Australia CDR fapi1-advanced tests"
+    makeCDRFAPI1AdvancedTest
+    makeCDRFAPI1AdvancedPARTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-config" ]; then
     echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests"
     makeOIDCConfigTest   
@@ -631,8 +663,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|
-    --local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
     exit 1
 fi
 

@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI-AUS-CDR: Australian CDR test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Manual]FAPI-AUS-CDR,PAR: Australian CDR test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-private_key_jwt-PS256-PS256-fapi-aus-cdr",
+        "client_id": "client1-private_key_jwt-PS256-PS256-fapi-aus-cdr-par",
         "scope": "openid email",
         "jwks": {
             "keys": [
@@ -41,7 +41,7 @@
         }
     },
     "client2": {
-        "client_id": "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr",
+        "client_id": "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr-par",
         "scope": "openid email",
         "jwks": {
             "keys": [
