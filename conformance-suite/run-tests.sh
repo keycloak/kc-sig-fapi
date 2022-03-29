@@ -312,6 +312,11 @@ makeManualCDRFAPI1AdvancedPARTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr-private-key-par-PS256-PS256.json"
 }
 
+makeUKOBFAPI1AdvancedTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-uk-ob-private-key-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-uk-ob-mtls-PS256-PS256-automated.json"
+}
+
 makeManualOIDCConfigTest() {
     TESTS="${TESTS} oidcc-config-certification-test-plan ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-config.json"
 }
@@ -673,6 +678,9 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-all" ]; then
     echo "Run Australia CDR fapi1-advanced tests"
     makeCDRFAPI1AdvancedTest
     makeCDRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-uk-ob-all" ]; then
+    echo "Run UK OpenBanking fapi1-advanced tests"
+    makeUKOBFAPI1AdvancedTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-config" ]; then
     echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests"
     makeOIDCConfigTest   
@@ -756,7 +764,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
     exit 1
 fi
 

@@ -18,8 +18,8 @@ services:
       # Need to add client-ca.pem to the image at build-time for cacerts import
 #     - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
      - ./https/server.pem:/etc/x509/https/server.crt
-#     - ../bin/keycloak-conformance-test:/opt/keycloak
-#     - ../bin/keycloak-conformance-test/modules:/opt/keycloak/providers
+#     - ../bin/keycloak-conformance-test/providers:/opt/keycloak/providers
+#     - ../bin/keycloak-conformance-test/lib:/opt/keycloak/lib
 #     - ../bin/keycloak-conformance-test/themes:/opt/keycloak/themes
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/auth/"]
