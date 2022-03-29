@@ -122,6 +122,12 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles of Brazi
 
 Keycloak 15.0.2 have achieved [certification for all 2 conformance profiles of Australia CDR (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs).
 
+#### UK Open Banking
+  - Client Authentication Method : MTLS, private_key_jwt​
+  - Signature Algorithm : PS256
+  - Request Object Method : plain, PAR​
+  - Response Mode : plain
+
 #### OpenID Connect: OpenID Providers
   - Basic OP
   - Implicit OP
@@ -516,6 +522,18 @@ Note: If you run Australia CDR conformance tests, please use `realm-cdr.json` re
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-cdr.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
+**UK Open Banking (Based on FAPI 1 Advanced Final)**
+
+|Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
+|-------------------|---------|----------------|------------|------------------|------------------------|---------|
+|UK-OB Adv. OP w/ MTLS|fapi1-advanced-final-test-plan|mtls|openbanking_uk|plain_response|by_value|--fapi-aus-cdr|
+|UK-OB Adv. OP w/ Private Key|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_uk|plain_response|by_value|--fapi-aus-cdr-par|
+
+Note: If you run UK Open Banking conformance tests, please use `realm-ukob.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-ukob.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+```
+
 **OpenID Connect OpenID Providers**
 
 |Conformance Profile|Test Plan|server_metadata|client_registration|response_type|TEST_PLAN|
@@ -602,6 +620,8 @@ If you set `--fapi-ciba-all` to `TEST_PLAN`, it runs all types of FAPI-CIBA Open
 If you set `--ob-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Brazil Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
 If you set `--fapi-aus-cdr-all` to `TEST_PLAN`, it runs all types of Australia CDR (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
+
+If you set `--fapi-uk-ob-all` to `TEST_PLAN`, it runs all types of UK Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
 If you set `--oidcc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
 
