@@ -1,0 +1,81 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 34th Meeting
+
+Date :
+ Wed 6 Apr 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Jonathan Meyler (Backbase)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 34th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/34th/presentations/FAPI-SIG_34th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Automated conformance test environment for Australia CDR
+   Due to the contribution by Australia's contributor, it has been supported by the current FAPI-SIG's automated conformance test environment.
+   It was confirmed that both Keycloak 17 and Keycloak 15.0.2 can pass conformance tests of both AU-CDR Adv. OP w/ Private Key, and AU-CDR Adv. OP w/ Private Key, PAR comformance profiles.
+
+ * OID-F Certificate for Australia CDR
+   Keycloak 15.0.2 may achive a certificate for Australia CDR of both AU-CDR Adv. OP w/ Private Key, and AU-CDR Adv. OP w/ Private Key, PAR comformance profiles.
+   Keycloak 15.0.2 has already achieved FAPI 1.0 Advanced, FAPI-CIBA, and Open Banking Braliz FAPI 1.0.
+
+ * Keycloak 18
+   Keycloak 18 may be released after Easter.
+
+ * OIDC Certificate 
+   Keycloak will re-acquire OIDC OP certificate for the following conformance profile:
+   - Config OP
+   - Basic OP
+   - Implicit OP
+   - Hybrid OP
+   - Dynamic OP
+   - FORM POST OP
+   Currently, the remaining 3rd Party-Init OP conformance profile is out of scope.
+   
+ * OIDC Certificate for logout profiles
+   Keycloak will newly acquire OIDC OP certificate for the following conformance profile:
+   - RP-Initiated OP
+   - Session OP
+   - Front-Channel OP	
+   - Back-Channel OP
+   Due to the following issue, those are conducted by statically registered clients.
+   https://github.com/keycloak/keycloak/issues/10135
+   However, this matter does not affect achieving a certificate.
+
+ * Keycloak's original features affected by deprecating client adapters
+   If client adapters are deprecated, not sure how keycloak's original features (eg. Autorization Service without permission ticket, pushing not before policy, backchannel logout) would be treated.
+   This matter will be discussed in github discussion of Keycloak's repository.
+
+ * Next Web Meeting
+   Wed 4 May 2022 12:00 - 13:00 UTC in 1 hour
