@@ -51,6 +51,10 @@ func createJWKS(dir string) ([]json.RawMessage, error) {
 func jwksHandler(w http.ResponseWriter, r *http.Request) {
 	kid := r.URL.Query().Get("kid")
 	clientKeys := []json.RawMessage{keyMaps[kid]}
+	kidEnc := r.URL.Query().Get("kid_enc")
+	if kidEnc != "" {
+		clientKeys = append(clientKeys, keyMaps[kidEnc])
+	}
 	clientJwks := JWKS{Keys: clientKeys}
 	k, err := json.Marshal(clientJwks)
 	if err != nil {

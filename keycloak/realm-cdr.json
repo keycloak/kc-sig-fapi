@@ -99,7 +99,6 @@
             ],
             "attributes": {
                 "request.object.signature.alg": "PS256",
-                "jwks.string": "{\"keys\": [\n    {\n        \"use\": \"sig\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client1-PS256\",\n        \"alg\": \"PS256\",\n        \"n\": \"0J5vAPXfZS755gaBYn2PEakdHLtAmZc0cKA5wTL89V4uz9sdkiub-S91cJUTqfxqFFwFe-acTKW7-HKOusJREq3oWNyv394-2OXSDz15Lso6GEATorSRTWzfqUjogjOOBxrvxrcMyxS2RM_NjaNPw2PDWO6u0_BHPWbzyKdKbzzGsuqpd4bZ85-xzDXhXRe0n23GCnGxpPM0SvsW9CAme23-ET_F6VdfPKkX0GSU_vxdwEwGUrk5sbBmtoLcj-pfpJKaA7ZbtLsngrIVIPRNUdcP3eCPiYHrDltsi1wnWlnRj2OBcqfM6bVOQfIiVLv-UC2PgY9gmzzw-Q86GPBQOw\",\n        \"e\": \"AQAB\"\n    },\n    {\n        \"use\": \"enc\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client1-OAEP\",\n        \"alg\": \"RSA-OAEP\",\n        \"n\": \"sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q\",\n        \"e\": \"AQAB\"\n    }]\n}",
                 "jwt.credential.kid": "client1-PS256",
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
@@ -108,8 +107,8 @@
                 "id.token.encrypted.response.enc": "A128GCM",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
-                "use.jwks.url": "false",
-                "use.jwks.string": "true",
+                "use.jwks.url": "true",
+                "jwks.url": "http://client_jwks_server:3000/?kid=client1-PS256&kid_enc=client1-OAEP",
                 "acr.loa.map": "{\"urn:cds.au:cdr:2\":\"1\"}"
             },
             "protocolMappers": [
