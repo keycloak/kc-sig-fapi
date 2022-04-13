@@ -1,0 +1,8 @@
+{
+    "use": "enc",
+    "kty": "RSA",
+    "kid": "client2-OAEP",
+    "alg": "RSA-OAEP",
+    "n": "qPNLdO3qcM4E4QU-bGiYaWSIY4tL52uDOz8o4oyFNBFAp7-W98ybc0Kww1FsguOfQqQq7w2x8NAcxX6W-roytufcn3o-o8gI_8y3gc130H-L7jjSt5pyfiI8xiiYkGuI5xwTHwAlr_WrbaEzm9EiMLoVyzmgZATYNfdLsCzlAq8HOdu0MSatBxoD8Xn05MrNwFlno8fkh8DE6hwqSKPcIBqNEccDqwiq2PZd3o8Gh85F9ISALSamsjKutjpIOsax-odOVCmUa1ae98HEgWZOg4MlU2hOsS4QKNSj54Pa766v-FlS99Tq8mSt2gjLVANeWKUOR5C29zPFcV7WrkKhWQ",
+    "e": "AQAB"
+}
