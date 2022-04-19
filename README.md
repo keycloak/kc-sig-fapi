@@ -270,30 +270,6 @@ Before running this reject authentication test (Usually 3rd test in the conforma
 it is recommended to login to Keycloak admin console as admin/admin and remove the existing session of user `john`. Alternative is to run this test in different browser
 or clear cookies for Keycloak server.
 
-### Run FAPI CIBA Conformance test plan manually
-
-There are similar instructions like for the `FAPI1-Advanced-Final` described above, however you need to select
-different configurations during test setup. Besides that, there are two additional things needed when running manual test:
-
-1. If you want `fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message` to NOT fail, you need
-to skip automatic approval during the test. This means that you need to delete this line from the test JSON configuration
-before you submit the configuration:
-```
-"automated_ciba_approval_url": "https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id={auth_req_id}&action={action}"
-```
-2. Because of the point above, you need to "manually" tell the CIBA authentication server to reject requests at some point during the tests
-and then allow them back. More specifically:
-2.a) Before running 3rd test `fapi-ciba-id1-user-rejects-authentication` you need to manually visit this URL in your browser:
-```
-https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id=foo&action=deny
-```
-This tells CIBA authentication entity server that further authentication attempts should be denied, which is 
-expected by this test.
-2.b) After this test is executed, you need to visit back this URL:
-```
-https://aes.keycloak-fapi.org/automated/ciba/approval?auth_req_id=foo&action=allow
-```
-to make sure that further requests to the CIBA authentication server will be allowed.
 
 ### Run FAPI Conformance test plan manually against the online conformance testsuite
 
@@ -358,11 +334,7 @@ u := "https://192-168-0-101.nip.io:543/auth/realms/test/protocol/openid-connect/
   * You need to use online instance of the conformance testsuite from https://www.certification.openid.net/
   * After importing the client configurations from the `fapi-conformance-suite-configs` directory, you may need to replace the URLs of
   the keycloak server like using `as.keycloak-fapi.org` with your publicly available Keycloak instance like `https://85-244-72-90.nip.io:543/auth/...`.
-  Same applies for the resource server URL, which is `rs.keycloak-fapi.org` in the configuration files by default, and needs to be replaced with your publicly available one.
-  And finally you need to remove the line with the URL of the CIBA approval endpoint (`automated_ciba_approval_url`) in case of the CIBA tests.
-  The automated approval does not work with automated tests due the test `fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message`,
-  which requires screenshot of the binding message being sent. Also you need to manually visit URLs during the test
-  as describe above in the section `Run FAPI CIBA Conformance test plan manually`
+  Same applies for the resource server URL, which is `rs.keycloak-fapi.org` and CIBA approval endpoint, which is `aes.keycloak-fapi.org` in the configuration files by default. These needs to be replaced with your publicly available one.
 9. In case you test with CIBA Ping mode, you need to login to Keycloak admin console before the test and manually change the
 property `CIBA Backchannel Client Notification Endpoint` of the following clients (in case you use PS256 algorithm):
 ```
@@ -580,8 +552,6 @@ Due to the nature of conformance suite, the following tests cannot be passed aut
 
   * fapi1-advanced-final-par-attempt-reuse-request_uri
   * fapi1-advanced-final-par-pushed-authorization-url-as-audience-in-request-object
-  * fapi-ciba-id1-ensure-authorization-request-with-potentially-bad-binding-message :
- This always become `reviewed` status in automated tests if the server supports binding messages containing emoji etc - it requires uploading a picture of the consumption device to conformance test server.
 
   * oidcc-server-rotate-keys
  This always become `failure` status in automated tests. However, we can pass this test manually by createing a new key in sigature and disabling the exsiting key (RS256) in signature on an admin console.

@@ -28,7 +28,7 @@ export ACCOUNTS='test-mtls/a/fintech-clienttest/open-banking/v1.1/accounts'
 export ACCOUNT_REQUEST='test/a/fintech-clienttest/open-banking/v1.1/account-requests'
 
 TESTS=""
-EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-server.json|../conformance-suite/.gitlab-ci/expected-failures-ciba.json|../conformance-suite/.gitlab-ci/expected-failures-client.json"
+EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-server.json|../conformance-suite/.gitlab-ci/expected-failures-client.json"
 EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-server.json|../conformance-suite/.gitlab-ci/expected-skips-ciba.json|../conformance-suite/.gitlab-ci/expected-skips-client.json"
 
 makeClientTest() {
@@ -535,22 +535,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi1-advanced-par-jarm" ]; then
     echo "Run fapi1-advanced PAR JARM tests manually"
     makeManualFAPI1AdvancedPARJARMTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-poll-id1" ]; then
-    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/expected-failures-ciba.json"
-#    EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-ciba.json"
-    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
-#    TESTS="${TESTS} --expected-skips-file ${EXPECTED_SKIPS_FILE}"
-    TESTS="${TESTS} --show-untested-test-modules ciba"
     echo "Run fapi-ciba poll mode tests"
     makeCIBAPollTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-ciba-poll-id1" ]; then
     echo "Run fapi-ciba poll mode tests manually"
     makeManualCIBAPollTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-ping-id1" ]; then
-    EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/expected-failures-ciba.json"
-#    EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-ciba.json"
-    TESTS="${TESTS} --expected-failures-file ${EXPECTED_FAILURES_FILE}"
-#    TESTS="${TESTS} --expected-skips-file ${EXPECTED_SKIPS_FILE}"
-    TESTS="${TESTS} --show-untested-test-modules ciba"
     echo "Run fapi-ciba ping mode tests"
     makeCIBAPingTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-ciba-ping-id1" ]; then
