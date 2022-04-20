@@ -85,7 +85,7 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 17.0.0
+- Keycloak version : 17.0.1
 - Conformance-suite version : release-v4.1.41
 
 #### FAPI 1.0 Advanced (Final)​
@@ -224,9 +224,9 @@ Note: To run the Conformance test suite with wildfly based legacy Keycloak inste
 
 The following options can be set as environment variables before the above command:
 
-* `KEYCLOAK_LEGACY_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0-legacy)
+* `KEYCLOAK_LEGACY_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.1-legacy)
     * The wildfly based keycloak image version used in the test suite
-* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.0)
+* `KEYCLOAK_BASE_IMAGE` (default: quay.io/keycloak/keycloak:17.0.1)
     * The keycloak image version used in the test suite
 * `KEYCLOAK_REALM_IMPORT_FILENAME` (default: realm.json)
     * The keycloak realm import filename. Set this to `realm.json` if you are running the tests
@@ -241,7 +241,7 @@ The following options can be set as environment variables before the above comma
 
 **Example:**
 ```
-KEYCLOAK_BASE_IMAGE=jboss/keycloak:17.0.0 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+KEYCLOAK_BASE_IMAGE=jboss/keycloak:17.0.1 docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
 To stop and remove all containers, run the following:
