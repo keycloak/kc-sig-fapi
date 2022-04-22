@@ -127,6 +127,22 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil O
   - Form Post OP
   - 3rd Party-Init OP
 
+### Passed Conformance Tests per Keycloak version
+
+To ensure that every keycloak version can pass conformance tests, we check if a new Keycloak version pass conformance tests that the older Keycloak version could pass whenever the new Keycloak version is released.
+
+We tagged the environment for every keycloak verion:
+|Tag|Keycloak version|Conformance-suite version|
+|---|----------------|-------------------------|
+|kc-15.0.2|15.0.2|release-v4.1.38|
+|kc-17.0.0|17.0.0|release-v4.1.41|
+
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|
+|-|-|-|-|-|
+|15.0.2|x|x|x|x|
+|17.0.0|x|x|x|x|
+|17.0.0-legacy|x|x|x|x|
+
 ## Communication Channels
 
 Not only FAPI-SIG member but others can communicate with each other by the following ways.
