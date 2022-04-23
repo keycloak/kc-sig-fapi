@@ -122,7 +122,17 @@
                         "id.token.claim": "false",
                         "access.token.claim": "true"
                     }
-                }
+                },
+                {
+                  "name": "ACR mapper",
+                  "protocol": "openid-connect",
+                  "protocolMapper": "oidc-acr-mapper",
+                  "consentRequired": false,
+                  "config": {
+                    "id.token.claim": "true",
+                    "access.token.claim": "true"
+                  }
+              }
             ],
             "defaultClientScopes": [
                 "name_claims",
@@ -215,7 +225,17 @@
                         "id.token.claim": "false",
                         "access.token.claim": "true"
                     }
-                }
+                },
+                {
+                  "name": "ACR mapper",
+                  "protocol": "openid-connect",
+                  "protocolMapper": "oidc-acr-mapper",
+                  "consentRequired": false,
+                  "config": {
+                    "id.token.claim": "true",
+                    "access.token.claim": "true"
+                  }
+              }
             ],
             "defaultClientScopes": [
                 "name_claims",
@@ -308,7 +328,17 @@
                       "id.token.claim": "false",
                       "access.token.claim": "true"
                   }
-              }
+              },
+              {
+                "name": "ACR mapper",
+                "protocol": "openid-connect",
+                "protocolMapper": "oidc-acr-mapper",
+                "consentRequired": false,
+                "config": {
+                  "id.token.claim": "true",
+                  "access.token.claim": "true"
+                }
+            }
           ],
           "defaultClientScopes": [
               "name_claims",
@@ -401,7 +431,17 @@
                     "id.token.claim": "false",
                     "access.token.claim": "true"
                 }
-            }
+            },
+            {
+              "name": "ACR mapper",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-acr-mapper",
+              "consentRequired": false,
+              "config": {
+                "id.token.claim": "true",
+                "access.token.claim": "true"
+              }
+          }
         ],
         "defaultClientScopes": [
             "name_claims",
