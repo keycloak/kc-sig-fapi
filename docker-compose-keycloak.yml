@@ -31,6 +31,7 @@ services:
       - "start"
       - "--auto-build"
       - "--hostname=${KEYCLOAK_FQDN}"
+      - "--proxy=passthrough"
       - "--http-enabled=true"
       - "--http-relative-path=/auth" # requires --auto-build
       - "--https-certificate-file=/etc/x509/https/server.crt"
