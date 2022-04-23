@@ -137,14 +137,18 @@ We tagged the environment for every keycloak verion:
 |kc-15.0.2|15.0.2|release-v4.1.38|
 |kc-17.0.0|17.0.0|release-v4.1.41|
 |kc-17.0.1|17.0.1|release-v4.1.41|
+|kc-18.0.0|18.0.0|release-v4.1.42|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|
-|-|-|-|-|-|
-|15.0.2|x|x|x|x|
-|17.0.0|x|x|x|x|
-|17.0.0-legacy|x|x|x|x|
-|17.0.1|x|x|x|x|
-|17.0.1-legacy|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|
+|-|-|-|-|-|-|
+|15.0.2|x|x|x|x|-|
+|17.0.0|x|x|x|x|-|
+|17.0.0-legacy|x|x|x|x|-|
+|17.0.1|x|x|x|x|-|
+|17.0.1-legacy|x|x|x|x|-|
+|18.0.0|x|x|x|x|x|
+|18.0.0-legacy|x|x|x|x|x|
+
 
 ## Communication Channels
 
