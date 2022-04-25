@@ -1,0 +1,12 @@
+{
+    "alias": "keycloak",
+    "description": "OpenID Connect Core: Session Management Certification Profile (client_registration:static_client)",
+    "server": {
+        "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration",
+        "login_hint": "john"
+    },
+    "client": {
+        "client_id": "client1-oidcc-session-management",
+        "client_secret": "omvnHtj4B8N0eL20vTzYzfXS4EkHo2VF"
+    }
+}
