@@ -401,6 +401,87 @@ makeOIDC3rdpartyInitLoginTest() {
     TESTS="${TESTS} oidcc-3rdparty-init-login-certification-test-plan[response_type=code\ id_token] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-3rdparty-init-login-automated.json"
 }
 
+makeManualOIDCFrontchannelRpInitiatedLogoutTest() {
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+}
+
+makeOIDCFrontchannelRpInitiatedLogoutTest() {
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout-automated.json"
+}
+
+makeManualOIDCFrontchannelRpInitiatedLogoutTest() {
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-frontchannel-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-frontchannel-rp-initiated-logout.json"
+}
+
+makeOIDCBackchannelRpInitiatedLogoutTest() {
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout-automated.json"
+}
+
+makeManualOIDCBackchannelRpInitiatedLogoutTest() {
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-backchannel-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-backchannel-rp-initiated-logout.json"
+}
+
+makeOIDCSessionManagementTest() {
+#    TESTS="${TESTS} oidcc-session-management-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+#    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+#    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+#    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+#    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+#    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management-automated.json"
+}
+
+makeManualOIDCSessionManagementTest() {
+    TESTS="${TESTS} oidcc-session-management-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+    TESTS="${TESTS} oidcc-session-management-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-session-management.json"
+}
+
+makeOIDCRpInitiatedLogoutTest() {
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+#    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout-automated.json"
+}
+
+makeManualOIDCRpInitiatedLogoutTest() {
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=id_token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=id_token\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+    TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -497,6 +578,10 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     makeOIDCFormPostHybridTest
     makeOIDCDynamicTest
     makeOIDC3rdpartyInitLoginTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-logout-all" ]; then
+    echo "Run oidc logout all tests"
+    makeOIDCFrontchannelRpInitiatedLogoutTest
+    makeOIDCBackchannelRpInitiatedLogoutTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -644,7 +729,23 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-3rdparty-init-login" ]; then
     makeOIDC3rdpartyInitLoginTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-3rdparty-init-login" ]; then
     echo "Run OpenID Connect Core: 3rd party initiated Certification Profile Authorization server test"
-    makeManualOIDC3rdpartyInitLoginTest   
+    makeManualOIDC3rdpartyInitLoginTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-frontchanel-rp-initiated-logout" ]; then
+    makeOIDCFrontchannelRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-frontchanel-rp-initiated-logout" ]; then
+    makeManualOIDCFrontchannelRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-backchanel-rp-initiated-logout" ]; then
+    makeOIDCBackchannelRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-backchanel-rp-initiated-logout" ]; then
+    makeManualOIDCBackchannelRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-session-management" ]; then
+    makeOIDCSessionManagementTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-session-management" ]; then
+    makeManualOIDCSessionManagementTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-rp-initiated-logout" ]; then
+    makeOIDCRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-rp-initiated-logout" ]; then
+    makeManualOIDCRpInitiatedLogoutTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-local.json"

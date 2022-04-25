@@ -40,8 +40,6 @@ Currently, proposed open works are as follows.
 
 ## Results
 
-1 year past since 1st FAPI-SIG meeting had held on 4 Aug 2020.​
-
 FAPI related accomplishments by FAPI-SIG, other contributors and keycloak development team is as follows.​
 
 ### Common Security Features
@@ -85,8 +83,8 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 17.0.1
-- Conformance-suite version : release-v4.1.41
+- Keycloak version : 18.0.0
+- Conformance-suite version : release-v4.1.42
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -127,6 +125,14 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil O
   - Form Post OP
   - 3rd Party-Init OP
 
+#### OpenID Connect: OpenID Providers for Logout Profile
+  - Front-Channel OP
+  - Back-Channel OP
+  - Session OP
+  - RP-Initiated OP
+
+Note: OpenID Provider for Logout Profile conformance tests have not yet been automated. These can be passed manually.
+
 ### Passed Conformance Tests per Keycloak version
 
 To ensure that every keycloak version can pass conformance tests, we check if a new Keycloak version pass conformance tests that the older Keycloak version could pass whenever the new Keycloak version is released.
@@ -139,15 +145,15 @@ We tagged the environment for every keycloak verion:
 |kc-17.0.1|17.0.1|release-v4.1.41|
 |kc-18.0.0|18.0.0|release-v4.1.42|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|
-|-|-|-|-|-|-|
-|15.0.2|x|x|x|x|-|
-|17.0.0|x|x|x|x|-|
-|17.0.0-legacy|x|x|x|x|-|
-|17.0.1|x|x|x|x|-|
-|17.0.1-legacy|x|x|x|x|-|
-|18.0.0|x|x|x|x|x|
-|18.0.0-legacy|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|OpenID Connect OP for Logout Profile|
+|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|x|-|-|
+|17.0.0|x|x|x|x|-|-|
+|17.0.0-legacy|x|x|x|x|-|-|
+|17.0.1|x|x|x|x|-|-|
+|17.0.1-legacy|x|x|x|x|-|-|
+|18.0.0|x|x|x|x|x|x|
+|18.0.0-legacy|x|x|x|x|x|x|
 
 
 ## Communication Channels
@@ -494,7 +500,7 @@ Note: If you run Australia CDR conformance tests, please use `realm-cdr.json` re
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-cdr.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
-**Certified OpenID Providers**
+**OpenID Connect OpenID Providers**
 
 |Conformance Profile|Test Plan|server_metadata|client_registration|response_type|TEST_PLAN|
 |-------------------|---------|---------------|-------------------|-------------|---------|
@@ -529,6 +535,42 @@ Note: If you run OpenID Provider conformance tests, please use `realm-oidc.json`
 ```
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
+
+**OpenID Connect OpenID Providers for Logout Profile**
+
+|Conformance Profile|Test Plan|client_registration|response_type|TEST_PLAN|
+|-------------------|---------|-------------------|-------------|---------|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-frontchanel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannelchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-backchannel-rp-initiated-logout|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code idtoken|--oidcc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code id_token token|--oidcc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code|--oidcc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|idtoken|--oidcc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|id_token token|--oidcc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code token|--oidcc-session-management|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-rp-initiated-logout|
+
+Note: If you run OpenID Provider for Logout Profile conformance tests, please use `realm-oidc.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+```
+
+Note: OpenID Provider for Logout Profile conformance tests have not yet been automated. These can be passed manually.
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
