@@ -580,7 +580,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     makeOIDC3rdpartyInitLoginTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-logout-all" ]; then
     echo "Run oidc logout all tests"
-#    makeOIDCRpInitiatedLogoutTest
+    makeOIDCRpInitiatedLogoutTest
 #    makeOIDCSessionManagementTest
 #    makeOIDCFrontchannelRpInitiatedLogoutTest
     makeOIDCBackchannelRpInitiatedLogoutTest
