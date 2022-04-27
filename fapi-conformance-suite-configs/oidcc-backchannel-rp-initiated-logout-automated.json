@@ -11,7 +11,7 @@
     },
     "browser": [
         {
-            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+            "match": "https://as.keycloak-fapi.org*",
             "tasks": [
                 {
                     "task": "Initial Login",
@@ -62,18 +62,6 @@
                         ]
                     ]
                 },
-                {
-                    "task": "Initial Login",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*prompt=none",
-                    "optional": true,
-                    "commands": [
-                    ]
-                }
-            ]
-        },
-        {
-            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/logout*",
-            "tasks": [
                 {
                     "task": "logout",
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/logout*",
