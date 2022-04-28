@@ -131,7 +131,7 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil O
   - Session OP
   - RP-Initiated OP
 
-Note: OpenID Provider for Logout Profile conformance tests have not yet been automated. These can be passed manually.
+Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conformance tests cannot be automated. These can be passed manually.
 
 ### Passed Conformance Tests per Keycloak version
 
@@ -570,7 +570,7 @@ Note: If you run OpenID Provider for Logout Profile conformance tests, please us
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
 ```
 
-Note: OpenID Provider for Logout Profile conformance tests have not yet been automated. These can be passed manually.
+Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conformance tests cannot be automated. These can be passed manually.
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
@@ -588,6 +588,8 @@ If you set `--ob-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Bra
 If you set `--fapi-aus-cdr-all` to `TEST_PLAN`, it runs all types of Australia CDR (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
 If you set `--oidcc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
+
+If you set `--oidcc-logout-all` to `TEST_PLAN`, it runs all types of OpenID Provider for Logout Profile conformance tests shown above the table automatically except for Session OP and Front-Channel OP.
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 
