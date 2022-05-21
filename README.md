@@ -108,13 +108,14 @@ Keycloak 15.0.2 have achieved [certification for all 4 conformance profiles of F
   - Request Object Method : plain, PAR​
   - Response Mode : plain, JARM​
 
-Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil Open Banking (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs) except for DCR (Dynamic Client Registration).
+Keycloak 15.0.2 have achieved [certification for 8 conformance profiles of Brazil Open Banking (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs) except for DCR (Dynamic Client Registration).
 
 #### Australia CDR
   - Client Authentication Method : private_key_jwt​
   - Signature Algorithm : PS256
   - Request Object Method : plain, PAR​
   - Response Mode : plain
+Keycloak 15.0.2 have achieved [certification for all 2 conformance profiles of Australia CDR (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs).
 
 #### OpenID Connect: OpenID Providers
   - Basic OP
@@ -130,6 +131,7 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles Brazil O
   - Back-Channel OP
   - Session OP
   - RP-Initiated OP
+Keycloak 18.0.0 have achieved [certification for all 4 conformance profiles of Certified OpenID Providers for Logout Profiles](https://openid.net/certification/#OPs).
 
 Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conformance tests cannot be automated. These can be passed manually.
 
