@@ -1288,7 +1288,8 @@
             "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
-            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect"
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect",
+            "https://www.certification.openid.net/test/a/keycloak/post_logout_redirect"
         ],
         "attributes": {
             "access.token.signed.response.alg": "PS256",
@@ -1377,7 +1378,8 @@
             "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
-            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect"
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect",
+            "https://www.certification.openid.net/test/a/keycloak/post_logout_redirect"
         ],
         "attributes": {
             "access.token.signed.response.alg": "PS256",
@@ -1467,7 +1469,8 @@
             "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
-            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect"
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect",
+            "https://www.certification.openid.net/test/a/keycloak/post_logout_redirect"
         ],
         "attributes": {
             "access.token.signed.response.alg": "PS256",
@@ -1556,7 +1559,8 @@
             "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
             "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
-            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect"
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/post_logout_redirect",
+            "https://www.certification.openid.net/test/a/keycloak/post_logout_redirect"
         ],
         "attributes": {
             "access.token.signed.response.alg": "PS256",
