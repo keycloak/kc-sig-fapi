@@ -8,6 +8,10 @@ FAPI-SIG is open to everybody so that anyone can join it anytime. Nothing specia
 
 FAPI-SIG mainly treats FAPI and its related specifications but not limited to. E.g., Ecosystems employing FAPI for their API Security like UK OpenBanking, Open Banking Brasil and Australia Consumer Data Right (CDR).
 
+## Scope
+
+Supporting FAPI is 1st priority. However, supporting specifications of OpenID Foundation other than FAPI can be also treated. Supporting OAuth 2.0/OIDC related security profile might be OK but low priority.
+
 ## Goals
 
 Currently, proposed goals are as follows.
