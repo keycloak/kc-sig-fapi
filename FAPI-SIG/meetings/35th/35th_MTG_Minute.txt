@@ -3,7 +3,7 @@ Title :
  FAPI-SIG(Special Interest Group) Community 35th Meeting
 
 Date :
- Wed 4 Apr 2022
+ Wed 4 May 2022
 
 Time :
   12:00 - 13:00 UTC in 1 hour
