@@ -1,0 +1,78 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 36th Meeting
+
+Date :
+ Wed 1 Jun 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Guy Moyo (Adorsys)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 36th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/36th/presentations/FAPI-SIG_36th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/RzemuDC9itHYcmNOeOXb0R0hFByFRgMDy27nhLDmYNVoelJqfiOnzYyfq_yfoT-u.r3S-1_8pRwyrutyg
+
+Summary :
+
+ * OID-F Certification: Australia Consumer Data Right (CDR)
+   Keycloak 15.0.2 got certified as FAPI OpenID Provider for Australia CDR.
+   https://openid.net/certification/#FAPI_OPs
+
+ * OID-F Certification: OpenID Connect
+   Keycloak 18.0.0 got re-certified as OpenID Provider.
+   https://openid.net/certification/#OPs
+
+ * OID-F Certification: OpenID Connect for Logout Profiles
+   Keycloak 18.0.0 got certified as OpenID Provider for Logout Profiles.
+   https://openid.net/certification/#OPs
+
+ * OID-F Certification: Summary of Certifications Keycloak has achieved
+   Keycloak has achieved 6 of 7 certifications:
+   - OpenID Provider
+   - OpenID Provider for Logout Profile
+   - FAPI OpenID Provider for FAPI 1 Advanced Final
+   - FAPI OpenID Provider for Australia CDR
+   - FAPI OpenID Provider for Brazil Open Banking
+   - FAPI-CIBA OpenID Provider
+   Keycloak has not yet achieved 1 remaining certification:
+   - FAPI OpenID Provider for UK Open Banking
+
+ * Presentations about keycloak, FAPI, and FAPI-SIG
+   Marek has FAPI presentation on DevConf mini in Brno, Czech Republic on 2 Jun.
+   "Secure digital transformation via keycloak's FAPI"
+   https://devconfczmini2022.sched.com/event/11l61/secure-digital-transformation-via-keycloaks-fapi
+   Takashi has also keycloak and FAPI presentation on Open Identity Summit 2022 in Lyngby, Denmark on 7 Jul.
+   "Flexible Method for Supporting OAuth 2.0 Based Security Profiles in Keycloak"
+   https://oid2022.compute.dtu.dk/prog.html
+   It might be good to gather these presentation materials and are stored in FAPI-SIG's repository as a knowledge base.
+
+ * Next Web Meeting
+   The July's meeting is skipped. The next meeting will be in August.
+   Wed 3 Aug 2022 12:00 - 13:00 UTC in 1 hour
