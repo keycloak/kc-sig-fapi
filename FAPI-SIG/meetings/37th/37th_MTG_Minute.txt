@@ -1,0 +1,59 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 37th Meeting
+
+Date :
+ Wed 3 Aug 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Christophe Lannoy
+ Dmitry Telegin (Backbase)
+ Guy Moyo (Adorsys)
+ Kannan Rasappan (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 37th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/37th/presentations/FAPI-SIG_37th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * PR for UK OpenBanking
+   Issue: https://github.com/keycloak/keycloak/issues/12883
+   PR: https://github.com/keycloak/keycloak/pull/13068
+   It was confirmed that keycloak incorporating PR can pass conformance tests of UK OpenBanking (all 2 conformance profiles).
+
+ * PR for Open Banking Brazil FAPI 1.0 Implementer's Draft 3 (ID3)
+   Issue: https://github.com/keycloak/keycloak/issues/12065
+   PR: https://github.com/keycloak/keycloak/pull/12551
+   ID2: When token refresh, an authorization server may return a refreshed refresh token.
+   ID3: When token refresh, an authorization server does not return a refresh token.
+   Keycloak does not pass the test checking this point.
+   It was confirmed that keycloak incorporating PR can pass conformance tests of Open Banking Brazil FAPI 1.0 ID3.
+
+ * Next Web Meeting
+   Wed 7 Sep 2022 12:00 - 13:00 UTC in 1 hour
