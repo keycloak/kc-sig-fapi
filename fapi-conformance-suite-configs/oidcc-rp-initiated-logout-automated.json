@@ -74,9 +74,12 @@
                     "optional": true,
                     "commands": [
                         [
-                            "click",
-                            "name",
-                            "confirmLogout"
+                            "wait",
+                            "xpath",
+                            "//p[text()='You are logged out']",
+                            10,
+                            ".*You are logged out.*",
+                            "update-image-placeholder"
                         ]
                     ]
                 }
@@ -443,20 +446,8 @@
                             ]
                         },
                         {
-                            "task": "logout",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/logout?id_token_hint=*",
-                            "optional": true,
-                            "commands": [
-                                [
-                                    "click",
-                                    "name",
-                                    "confirmLogout"
-                                ]
-                            ]
-                        },
-                        {
                             "task": "logout without redirect",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/logout/logout-confirm?client_id=*",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/logout?id_token_hint=*",
                             "optional": true,
                             "commands": [
                                 [

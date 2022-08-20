@@ -693,15 +693,13 @@
                     "tasks": [
                         {
                             "task": "Expect redirect invalid uri error page",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
                             "commands": [
                                 [
                                     "wait",
-                                    "xpath",
-                                    "//*",
-                                    10,
-                                    ".*Invalid parameter: redirect_uri.*",
-                                    "update-image-placeholder"
+                                    "id",
+                                    "submission_complete",
+                                    10
                                 ]
                             ]
                         }

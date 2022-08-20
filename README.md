@@ -87,8 +87,8 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 18.0.0
-- Conformance-suite version : release-v4.1.42
+- Keycloak version : 19.0.1
+- Conformance-suite version : release-v4.1.45
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -153,6 +153,7 @@ We tagged the environment for every keycloak verion:
 |kc-17.0.1|17.0.1|release-v4.1.41|
 |kc-18.0.0|18.0.0|release-v4.1.42|
 |kc-18.0.2|18.0.2|release-v4.1.42|
+|kc-19.0.1|18.0.1|release-v4.1.45|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|OpenID Connect OP for Logout Profile|
 |-|-|-|-|-|-|-|
@@ -165,6 +166,8 @@ We tagged the environment for every keycloak verion:
 |18.0.0-legacy|x|x|x|x|x|x|
 |18.0.2|x|x|x|x|x|x|
 |18.0.2-legacy|x|x|x|x|x|x|
+|19.0.1|x|x|x|x|x|x|
+|19.0.1-legacy|x|x|x|x|x|x|
 
 ## Communication Channels
 
