@@ -23,7 +23,7 @@
                 "phoneNumberVerified" : true,
                 "website": "https://john.example.com",
                 "zoneinfo": "Europe",
-                "birthdate": "1 Jan 2000",
+                "birthdate": "2000-10-12",
                 "gender": "Male",
                 "profile": "my profile",
                 "picture": "https://john.example.com/picture",
