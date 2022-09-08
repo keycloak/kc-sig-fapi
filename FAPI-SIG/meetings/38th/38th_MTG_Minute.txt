@@ -1,0 +1,57 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 38th Meeting
+
+Date :
+ Wed 7 Sep 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Jonathan Meyler (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 38th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/38th/presentations/FAPI-SIG_38th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Extending scopes of FAPI-SIG
+   In the 35th meeting, it was determined that FAPI-SIG's scope is extended to attract more contributors and have them get involved in FAPI-SIG. 
+   To determine how to extend FAPI-SIG's scope, there are several strategies: market driven (ex. Open Banking), standard driven, and both mixed.
+   In the next meeting, the extended scope will be discussed and priotization will be also discussed.
+
+ * Rename FAPI-SIG
+   We consider renaming FAPI-SIG to match the aim of extended FAPI-SIG's scope appropriately.
+   We will ask for the candidate of the new FAPI-SIG's name in keycloak-dev mailing list.
+   In the next meeting, we will disucuss the new FAPI-SIG's name.
+
+ * Next Web Meeting
+   Wed 5 Oct 2022 12:00 - 13:00 UTC in 1 hour
