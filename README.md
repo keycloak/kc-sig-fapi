@@ -154,6 +154,7 @@ We tagged the environment for every keycloak verion:
 |kc-18.0.0|18.0.0|release-v4.1.42|
 |kc-18.0.2|18.0.2|release-v4.1.42|
 |kc-19.0.1|19.0.1|release-v4.1.45|
+|kc-19.0.2|19.0.2|release-v5.0.3|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|OpenID Connect OP for Logout Profile|
 |-|-|-|-|-|-|-|
@@ -168,6 +169,8 @@ We tagged the environment for every keycloak verion:
 |18.0.2-legacy|x|x|x|x|x|x|
 |19.0.1|x|x|x|x|x|x|
 |19.0.1-legacy|x|x|x|x|x|x|
+|19.0.2|x|x|x|x|x|x|
+|19.0.2-legacy|x|x|x|x|x|x|
 
 ## Communication Channels
 
