@@ -1,0 +1,62 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 39th Meeting
+
+Date :
+ Wed 5 Oct 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Daniel Fesenmeyer
+ Dmitry Telegin (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 39th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/39th/presentations/FAPI-SIG_39th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * PR for UK OpenBanking​
+   Intent support before issuing tokens (UK OpenBanking)​
+   Issue: https://github.com/keycloak/keycloak/issues/12883​
+   PR: https://github.com/keycloak/keycloak/pull/13068​
+   The PR has been merged.​ It was confirmed that keycloak incorporating PR can pass conformance tests of UK OpenBanking (all 2 conformance profiles).
+   - UK-OB Adv. OP w/ MTLS​
+   - UK-OB Adv. OP w/ Private Key​
+
+ * Extending scopes of FAPI-SIG
+   It might be better that Stian, the project lead of keycloak, tells us the intention of extending scopes of FAPI-SIG.
+
+ * Rename FAPI-SIG
+   We continue gathering comments and discussions about it from keycloak's community.
+   Eventually, we have a plan to list up candidates of new name of FAPI-SIG and take a vote.
+   We agreed that we changes our activity from SIG (long-term) to WG (mid-term).
+
+ * Next Web Meeting
+   Wed 2 Nov 2022 12:00 - 13:00 UTC in 1 hour
