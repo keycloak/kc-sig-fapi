@@ -38,7 +38,7 @@ Presentation Materials :
      https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/39th/presentations/FAPI-SIG_39th_MTG_agenda.pdf
 
 Recording :
- TBD
+ https://us06web.zoom.us/rec/share/-os6gMyxbFO-65wwMYUaNLbm9KWxDUjVBAsZteMLII7gy9FVPkQc3ZXP2mD_Ezcb.DO1VuRoVuz1e7XaM
 
 Summary :
 
