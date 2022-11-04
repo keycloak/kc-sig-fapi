@@ -16,6 +16,12 @@ Supporting FAPI is 1st priority. However, supporting specifications of OpenID Fo
 
 Currently, proposed goals are as follows.
 
+## Latest Updates (7 Nov 2022)
+
+- Keycloak can pass conformance tests of UK Open Banking.
+- Keycloak can pass conformance tests of Open Finance Brazil FAPI 1.0 (Implemener's Draft 3).
+- Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
+
 ### Financial-grade API (FAPI) 2.0 related features
 
 - [Financial-grade API (FAPI) 2.0 — Part 1: Baseline Security Profile](https://bitbucket.org/openid/fapi/src/master/FAPI_2_0_Baseline_Profile.md)
@@ -82,13 +88,13 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 
   - [FAPI Client Initiated Backchannel Authentication Profile (FAPI-CIBA)​](https://www.keycloak.org/docs/latest/release_notes/index.html#financial-grade-api-fapi-improvements-fapi-ciba-and-open-banking-brasil)
 
-  - OAuth 2.0 Pushed Authorization Requests (PAR)
+  - [RFC 9126 OAuth 2.0 Pushed Authorization Requests (PAR)](https://datatracker.ietf.org/doc/html/rfc9126)
 
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 19.0.1
-- Conformance-suite version : release-v4.1.45
+- Keycloak version : 20.0.0
+- Conformance-suite version : release-v5.0.6
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -106,7 +112,7 @@ Keycloak 15.0.2 have achieved [certification for all 8 conformance profiles of F
 
 Keycloak 15.0.2 have achieved [certification for all 4 conformance profiles of Financial-grade API Client Initiated Backchannel Authentication Profile (FAPI-CIBA)](https://openid.net/certification/#FAPI-CIBA_OPs).
 
-#### Open Banking Brasil FAPI 1.0
+#### Open Finance Brasil FAPI 1.0 (Open Banking Brasil FAPI 1.0 was renamed)
   - Client Authentication Method : MTLS, private_key_jwt​
   - Signature Algorithm : PS256
   - Request Object Method : plain, PAR​
@@ -114,7 +120,7 @@ Keycloak 15.0.2 have achieved [certification for all 4 conformance profiles of F
 
 Keycloak 15.0.2 have achieved [certification for 8 conformance profiles of Brazil Open Banking (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs) except for DCR (Dynamic Client Registration).
 
-#### Australia CDR
+#### Australia Consumer Data Right (CDR)
   - Client Authentication Method : private_key_jwt​
   - Signature Algorithm : PS256
   - Request Object Method : plain, PAR​
@@ -136,6 +142,8 @@ Keycloak 15.0.2 have achieved [certification for all 2 conformance profiles of A
   - Dynamic OP
   - Form Post OP
   - 3rd Party-Init OP
+
+Keycloak 18.0.0 have re-achieved [certification for 6 conformance profiles of Certified OpenID Providers](https://openid.net/certification/#OPs) except for 3rd Party-Init OP.
 
 #### OpenID Connect: OpenID Providers for Logout Profile
   - Front-Channel OP
@@ -161,22 +169,34 @@ We tagged the environment for every keycloak verion:
 |kc-18.0.2|18.0.2|release-v4.1.42|
 |kc-19.0.1|19.0.1|release-v4.1.45|
 |kc-19.0.2|19.0.2|release-v5.0.3|
+|kc-20.0.0|20.0.0|release-v5.0.6|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (ID2, except for DCR)|Australia CDR|OpenID Connect OP (except for 3rd Party-Init OP)|OpenID Connect OP for Logout Profile|
-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|x|-|-|
-|17.0.0|x|x|x|x|-|-|
-|17.0.0-legacy|x|x|x|x|-|-|
-|17.0.1|x|x|x|x|-|-|
-|17.0.1-legacy|x|x|x|x|-|-|
-|18.0.0|x|x|x|x|x|x|
-|18.0.0-legacy|x|x|x|x|x|x|
-|18.0.2|x|x|x|x|x|x|
-|18.0.2-legacy|x|x|x|x|x|x|
-|19.0.1|x|x|x|x|x|x|
-|19.0.1-legacy|x|x|x|x|x|x|
-|19.0.2|x|x|x|x|x|x|
-|19.0.2-legacy|x|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1)|Open Finance Brasil FAPI 1.0 (\*2,\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|
+|-|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|-|x|-|-|-|
+|17.0.0|x|x|x|-|x|-|-|-|
+|17.0.0-legacy|x|x|x|-|x|-|-|-|
+|17.0.1|x|x|x|-|x|-|-|-|
+|17.0.1-legacy|x|x|x|-|x|-|-|-|
+|18.0.0|x|x|x|-|x|-|x|x|
+|18.0.0-legacy|x|x|x|-|x|-|x|x|
+|18.0.2|x|x|x|-|x|-|x|x|
+|18.0.2-legacy|x|x|x|-|x|-|x|x|
+|19.0.1|x|x|x|-|x|-|x|x|
+|19.0.1-legacy|x|x|x|-|x|-|x|x|
+|19.0.2|x|x|x|-|x|-|x|x|
+|19.0.2-legacy|x|x|x|-|x|-|x|x|
+|20.0.0|x|x|x|x|x|x|x|x|
+
+Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
+
+\*1 : Implementer's Draft version 2, except for Dynamic Client Registration (DCR) conformance profile.
+
+\*2 : Implementer's Draft version 3, except for Dynamic Client Registration (DCR) conformance profile.
+
+\*3 : Open Banking Brasil FAPI 1.0 was renamed.
+
+\*4 : Except for 3rd Party-Init OP conformance profile.
 
 ## Communication Channels
 

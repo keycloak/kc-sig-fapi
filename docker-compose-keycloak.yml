@@ -29,11 +29,10 @@ services:
     command:
       - "--verbose"
       - "start"
-      - "--auto-build"
       - "--hostname=${KEYCLOAK_FQDN}"
       - "--proxy=passthrough"
       - "--http-enabled=true"
-      - "--http-relative-path=/auth" # requires --auto-build
+      - "--http-relative-path=/auth"
       - "--https-certificate-file=/etc/x509/https/server.crt"
       - "--https-certificate-key-file=/etc/x509/https/tls.key"
       - "--https-client-auth=request"
