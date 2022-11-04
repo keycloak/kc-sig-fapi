@@ -1,3 +1,4 @@
+# keycloak legacy was not supported from keycloak 20
 services:
   keycloak:
     build:

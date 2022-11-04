@@ -4,6 +4,8 @@ ARG KEYCLOAK_REALM_IMPORT_FILENAME
 # For FAPI-1-Final-Advanced, section 8.5
 RUN sed -i -e "s/(key-manager=kcKeyManager)/(key-manager=kcKeyManager,protocols=[\"TLSv1.2\"],cipher-suite-filter=\"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384\")/" /opt/jboss/tools/cli/x509-keystore.cli
 
+# keycloak legacy was not supported from keycloak 20
+
 USER root
 
 # Realm config

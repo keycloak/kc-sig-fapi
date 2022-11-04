@@ -2143,6 +2143,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2228,6 +2229,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2313,6 +2315,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2398,6 +2401,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2482,6 +2486,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2566,6 +2571,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2650,6 +2656,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2734,6 +2741,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2819,6 +2827,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2905,6 +2914,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -2991,6 +3001,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -3077,6 +3088,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -3162,6 +3174,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -3247,6 +3260,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -3332,6 +3346,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -3417,6 +3432,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "ES256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5011,6 +5027,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5111,6 +5128,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5210,6 +5228,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5309,6 +5328,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5409,6 +5429,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5510,6 +5531,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5610,6 +5632,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -5710,6 +5733,7 @@
                 "access.token.signed.response.alg": "RS256",
                 "exclude.session.state.from.auth.response": "false",
                 "id.token.signed.response.alg": "PS256",
+                "authorization.signed.response.alg": "PS256",
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
@@ -6452,6 +6476,16 @@
                         }
                     }
                 ]
+            },
+            {
+                "name": "ob-br-fapi-1-advanced-id3",
+                "description": "Additional client profile, which enforce clients to conform Open Banking Brasil FAPI 1.0 ID3",
+                "executors": [
+                    {
+                        "executor" : "suppress-refresh-token-rotation",
+                        "configuration" : {}
+                    }
+                ]
             }
         ]
     },
@@ -6538,7 +6572,7 @@
                     "roles" : [ "ob-br-fapi1-advanced-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced", "ob-br-fapi-1-advanced" ]
+            "profiles" : [ "fapi-1-advanced", "ob-br-fapi-1-advanced", "ob-br-fapi-1-advanced-id3" ]
         },
         {
             "name" : "ob-br-fapi1-advanced-par-policy",
@@ -6550,7 +6584,7 @@
                     "roles" : [ "ob-br-fapi1-advanced-par-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced", "fapi-1-advanced-par" ]
+            "profiles" : [ "fapi-1-advanced", "fapi-1-advanced-par", "ob-br-fapi-1-advanced-id3" ]
         },
         {
             "name" : "ob-br-fapi1-advanced-jarm-policy",
@@ -6562,7 +6596,7 @@
                     "roles" : [ "ob-br-fapi1-advanced-jarm-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced", "ob-br-fapi-1-advanced" ]
+            "profiles" : [ "fapi-1-advanced", "ob-br-fapi-1-advanced", "ob-br-fapi-1-advanced-id3" ]
         },
         {
             "name" : "ob-br-fapi1-advanced-par-jarm-policy",
@@ -6574,7 +6608,7 @@
                     "roles" : [ "ob-br-fapi1-advanced-par-jarm-client-role" ]
                 }
             } ],
-            "profiles" : [ "fapi-1-advanced", "fapi-1-advanced-par" ]
+            "profiles" : [ "fapi-1-advanced", "fapi-1-advanced-par", "ob-br-fapi-1-advanced-id3" ]
         } ]
     },
     "roles" : {
