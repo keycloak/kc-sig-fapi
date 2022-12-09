@@ -1,0 +1,62 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 40th Meeting
+
+Date :
+ Wed 7 Dec 2022
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Justin Bingham (Janeiro Digital)
+ Jamie Fiedler (Janeiro Digital)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster
+
+Presentation Materials :
+ [1] FAPI-SIG Community 40th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/40th/presentations/FAPI-SIG_40th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/RfiVj4GlgG4fa2Ngqso6ednNVdKoKtBzmHPzXN1VL5HvkbxjiUM5JI-TMTDdNTxk.o2Uui380eJS0J2Lb
+
+Summary :
+
+ * EdDSA Support
+   Discussion: https://github.com/keycloak/keycloak/discussions/15713
+   Issue: https://github.com/keycloak/keycloak/issues/15714
+
+ * Keycloak Adopters Questionnaire
+   keycloak-dev mailing list: https://groups.google.com/g/keycloak-dev/c/w6AeQiGy4r4
+   Questionnaire form: https://forms.gle/hnucQ89MTjE5dzzf9
+   Answering the questionnaire is important for keycloak's application to CNCF incubation project.
+
+ * Keycloak support for Solid-OIDC
+   Dmitry and Janeiro Digital explained Solid-OIDC and its support to keycloak.
+   It might be preferable to support it as one of profiles by client policies.
+
+ * Next Web Meeting
+   Wed 4 Jan 2023 12:00 - 13:00 UTC in 1 hour
