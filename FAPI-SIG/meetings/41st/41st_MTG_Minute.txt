@@ -1,0 +1,74 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 41st Meeting
+
+Date :
+ Wed 4 Jan 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Dmitry Telegin (Backbase)
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Gilbert Fernandes
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster
+ Thomas Darimont (codecentric AG)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 41st Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/41st/presentations/FAPI-SIG_41st_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/8Mni6-tGEfowCt1Nj8eOUSIeds97efRU5s1mmPJg7388P_QBiEa1xgfafMmmkOAo.4NS2b_1fLX0cVcEX
+
+Summary :
+
+ * EdDSA Support
+   Discussion: https://github.com/keycloak/keycloak/discussions/15713
+   Issue: https://github.com/keycloak/keycloak/issues/15714
+   An ideal solution:
+   - Use JDK standard defining interface (EdECPoint, EdECKey, EdECPublicKey, EdECPrivateKey, EdECPublicKeySpec, EdECPrivateKeySpec).
+   - Use BoucyCastle defining concrete classes for these interfaces.
+   Waiting for Keycloak dropping JDK11 and supporting JDK17, and apply the ideal solution.
+   Keycloak 22 (might be released in this spring) will drop JDK11 support and support JDK17.
+   https://www.keycloak.org/2022/11/keycloak-2000-released.html
+
+ * Enlarging FAPI-SIG's scope and renaming FAPI-SIG
+   WG is appropriate instead of SIG.
+   New name candidates:
+    Security WG, IAM Security WG, API Security WG, Secure Digital Identity WG,
+    OIDC WG, OpenID WG, OAuth WG, Identity standards WG,
+    Keycloak Governance WG, Keycloak Alignment WG, Keycloak Community WG, Keycloak Authorization WG, Keycloak Identity WG
+   This discussion continues in the next FAPI-SIG meeting.
+
+ * KeyConf'23
+   Sponsors are welcomed.
+   Venue: If considering small number of participants (about 20-30 peoples), a venue could be used in Cardiff, London, Manchester in UK.
+   Date: It might be preferable to hold the meeting after some other community meeting about identity, security, etc.
+         The participants can attend not only KeyConf'23 but this community meeting.
+   Topic: 
+   This discussion continues in the next FAPI-SIG meeting.
+
+ * Next Web Meeting
+   Wed 1 Feb 2023 12:00 - 13:00 UTC in 1 hour
