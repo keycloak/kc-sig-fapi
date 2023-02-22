@@ -1,0 +1,75 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 42nd Meeting
+
+Date :
+ Wed 1 Feb 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Dmitry Telegin (Backbase)
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Bertrand Carlier
+ elf Pavlik
+ Justin Bingham
+ Kannan Rasappan (Banfico)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 42nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/42nd/presentations/FAPI-SIG_42nd_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/fB2JnnxV8yueg8QqvJYYSnpTrig9AIVCfUItN84IG4b6gSpT3dm6DOpyBFBVmw7p.s8b4fuJE4ZNN09hi
+
+Summary :
+
+ * Enlarging FAPI-SIG's scope and renaming FAPI-SIG
+   Schedule:
+    - Continue proposing new scope and new name on 42nd meeting (1 Feb).
+    - Vote new scope and new name on 43rd meeting (1 Mar)
+    - Change scope and name from 44th meeting.
+   Determined issues:
+    - Change SIG to WG
+
+ * KeyConf'23
+   Current candidate:
+   Scale of the conference: the same as Keyconf’ 19 (small size, ~50 participants?)
+   Venue: London, UK
+   Date: run along side a major identity event/conference in London
+   Such major event/conference:
+     [1] IDM Identity Management
+         15 June 2023
+         Victoria Park Plaza Hotel, London
+         https://whitehallmedia.co.uk/idmjun2023/
+     [2] Gartner Identity & Access Management Summit 2023
+         6 - 7 July 2023
+         Intercontinental London - The O2 | London, United Kingdom
+         https://www.gartner.com/en/conferences/na/identity-access-management-us/agenda
+     [3] OAuth Security Workshop 2023
+         22 - 24 August 2023
+         Royal Holloway, Egham Hill, London, England, United Kingdom
+         https://oauth.secworkshop.events/
+
+ * Next Web Meeting
+   Wed 1 Mar 2023 12:00 - 13:00 UTC in 1 hour
