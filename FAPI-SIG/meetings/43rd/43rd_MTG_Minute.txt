@@ -1,0 +1,62 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 43rd Meeting
+
+Date :
+ Wed 1 Mar 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster
+ Thomas Darimont (codecentric AG)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 43rd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/43rd/presentations/FAPI-SIG_43rd_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/PLMcoFJpHOkF2DrS1TCJoAmRQtaTzu4KRwxT6xX_fROUKxAlzS6C9P6NZzN4UV4.sJ9g2Bx7fJfiNatd
+
+Summary :
+
+ * Enlarging FAPI-SIG's scope and renaming FAPI-SIG
+   In the meeting, it is determined that Digital Idenity WG is the best name.
+   Marek asks keycloak maintainers for comments on the name.
+
+ * KeyConf'23
+   Venue: Level39, 1 Canada Square, Canary Wharf, London, UK
+   - Banfico takes over coordination of the conference by sharing the meeting material [1] with Human Management team.
+   - It seems that there is no restriction by Red Hat to the meeting because keycloak is community project.
+   - It is expected that the number of participants is at most 50.
+   - Hybrid (In person + online) style is also an option.
+   - The budget is estimated at first. If the budget is estimated, we can request sponsorship to companies.
+   - To discuss the conference, discord is used as communication channel.
+
+ * Next Web Meeting
+   Wed 5 Apr 2023 12:00 - 13:00 UTC in 1 hour
