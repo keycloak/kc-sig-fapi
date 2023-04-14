@@ -1,0 +1,70 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 44th Meeting
+
+Date :
+ Wed 12 Apr 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 44th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/44th/presentations/FAPI-SIG_44th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Keycloak joins CNCF as an incubating project
+   CNCF announced that Keycloak joins CNCF as an incubating project
+   https://www.cncf.io/blog/2023/04/11/keycloak-joins-cncf-as-an-incubating-project/
+
+   Red Hat and Hitachi have a talk jointly about keycloak in Maintainer Track in KubeCon/CloudNativeCon Europe 2023 (Apr 18-21, Amsterdam, The Netherlands)
+   https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/
+   https://kccnceu2023.sched.com/event/1LQDS?iframe=no
+
+ * KeyConf'23
+   It is determined that KeyConf'23 will be held as follows:
+   Date: Fri 16 June, 2023
+   Venue: Level39, 1 Canada Square, Canary Wharf, London, UK
+          Sandbox 2 (48 people cabaret style, 60 theatre)
+   Banfico bares the venue costs.
+   EventBride is used as its event management system.
+   (https://www.eventbrite.com/)
+   From RH, Marek will attend the conference.
+   From Hitachi, Takashi will attend the conference.
+
+ * Enlarging FAPI-SIG's scope and renaming FAPI-SIG
+   Considering the feedback from Keycloak maintainsers, we re-consider the following candidates:
+   - Identity Standard SIG
+   - OAuth SIG
+   Marek will asks Keycloak maintainsers for comments on them.
+
+ * Next Web Meeting
+   Wed 3 May 2023 12:00 - 13:00 UTC in 1 hour
