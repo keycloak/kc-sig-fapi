@@ -1,0 +1,62 @@
+  
+Title :
+ FAPI-SIG(Special Interest Group) Community 45th Meeting
+
+Date :
+ Wed 3 May 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Dmitry Telegin (Backbase)
+ Hryhorii Hevorkian (Adorsys)
+ Julien P (ANS)
+ Kannan Rasappan (Banfico)
+ Sebastian Schuster (Bosch Software Innovations)
+ Thomas Darimont (codecentric AG)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] FAPI-SIG Community 45th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/45th/presentations/FAPI-SIG_45th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Keycloak use case presentation by ANS, France.
+
+ * KeyConf 23
+   Date and Time: 10 AM - 4 PM, June 16, 2023 
+   Venue: Level39, 1 Canada Square, Canary Wharf, London, UK 
+   Web page: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
+   Marek will post the announcement of Keyconf 23 to keycloak-user and keycloak-dev mailing list, and keycloak's official site's blog.
+
+ * Enlarging FAPI-SIG's scope and renaming FAPI-SIG
+   OAuth SIG is adopted as the successor of FAPI-SIG.
+   From the next meeting, OAuth SIG instead of FAPI-SIG.
+
+ * Next Web Meeting
+   Wed 7 June 2023 12:00 - 13:00 UTC in 1 hour
