@@ -1,4 +1,6 @@
-# FAPI-SIG (Financial-grade API Security : Special Interest Group)
+# OAuth SIG (OAuth : Special Interest Group)
+
+Ex FAPI-SIG (Financial-grade API Security : Special Interest Group)
 
 ## Overview
 
@@ -8,19 +10,15 @@ FAPI-SIG is open to everybody so that anyone can join it anytime. Nothing specia
 
 FAPI-SIG mainly treats FAPI and its related specifications but not limited to. E.g., Ecosystems employing FAPI for their API Security like UK OpenBanking, Open Banking Brasil and Australia Consumer Data Right (CDR).
 
+Since June 2023, FAPI-SIG is evolved into OAuth SIG. OAuth SIG will mainly treats OAuth/OIDC and its related security features like FAPI 2.0 to Keycloak.
+
 ## Scope
 
-Supporting FAPI is 1st priority. However, supporting specifications of OpenID Foundation other than FAPI can be also treated. Supporting OAuth 2.0/OIDC related security profile might be OK but low priority.
+Supporting OAuth/OIDC and its related security features to Keycloak.
 
 ## Goals
 
 Currently, proposed goals are as follows.
-
-## Latest Updates (7 Nov 2022)
-
-- Keycloak can pass conformance tests of UK Open Banking.
-- Keycloak can pass conformance tests of Open Finance Brazil FAPI 1.0 (Implemener's Draft 3).
-- Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
 ### Financial-grade API (FAPI) 2.0 related features
 
