@@ -1,5 +1,12 @@
 ARG KEYCLOAK_BASE_IMAGE
+
+FROM registry.access.redhat.com/ubi9 AS ubi-micro-build
+RUN mkdir -p /mnt/rootfs
+RUN dnf install --installroot /mnt/rootfs curl --releasever 9 --setopt install_weak_deps=false --nodocs -y; dnf --installroot /mnt/rootfs clean all
+
 FROM ${KEYCLOAK_BASE_IMAGE}
+
+COPY --from=ubi-micro-build /mnt/rootfs /
 
 # For FAPI-1-Final-Advanced, section 8.5
 # see org.keycloak.quarkus.runtime.configuration.mappers.HttpPropertyMappers
@@ -30,4 +37,4 @@ COPY oidf.json /opt/keycloak/conf
 COPY keycloak-custom.properties /opt/keycloak/conf
 RUN cat /opt/keycloak/conf/keycloak-custom.properties >> /opt/keycloak/conf/keycloak.conf
 
-USER keycloak
+USER 1001
