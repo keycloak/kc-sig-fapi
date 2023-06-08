@@ -1,0 +1,56 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 1st Meeting
+ (Ex FAPI-SIG)
+
+Date :
+ Wed 7 June 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Dmitry Telegin (Backbase)
+ Sebastian Schuster (Bosch Software Innovations)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] OAuth SIG Community 1st Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/1st/presentations/OAuth-SIG_1st_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * KeyConf 23
+   Date and Time: 10 AM - 4 PM, June 16, 2023 
+   Venue: Level39, 1 Canada Square, Canary Wharf, London, UK 
+   Web page: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
+   Tickets have been sold out.
+
+ * PR of DPoP
+   The main issue need to be resolved is to how to handle DPoP on UserInfo endpoint.
+   It is preferable to make multiple phases and send PRs per phase.
+
+ * Next Web Meeting
+   Wed 5 July 2023 12:00 - 13:00 UTC in 1 hour
