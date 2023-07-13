@@ -205,6 +205,7 @@ We tagged the environment for every keycloak verion:
 |21.1.0|x|x|x|x|x|x|x|x|
 |21.1.1|x|x|x|x|x|x|x|x|
 |21.1.2|x|x|x|x|x|x|x|x|
+|22.0.0|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
