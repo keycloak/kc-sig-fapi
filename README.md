@@ -98,6 +98,11 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 
   - UK OpenBanking​ Security Profile
 
+#### keycloak 23
+
+  - [FAPI 2.0 Security Profile Second Implementer’s Draft](https://openid.net/specs/fapi-2_0-security-profile-ID2.html)
+  - [FAPI 2.0 Message Signing First Implementer’s Draft](https://openid.bitbucket.io/fapi/fapi-2_0-message-signing.html)
+
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
@@ -163,6 +168,39 @@ Keycloak 18.0.0 have achieved [certification for all 4 conformance profiles of C
 
 Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conformance tests cannot be automated. These can be passed manually.
 
+#### FAPI 2.0 Security Profile Second Implementer’s Draft
+  - FAPI2SP MTLS + MTLS
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP private key + MTLS
+    - Client Authentication Method : private_key_jwt
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP OpenID Connect
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : openid
+    - FAPI Profile : plain​
+
+#### FAPI 2.0 Message Signing First Implementer’s Draft
+  - FAPI2MS JAR
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : plain_response
+  - FAPI2MS JARM
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : jarm
+
 ### Passed Conformance Tests per Keycloak version
 
 To ensure that every keycloak version can pass conformance tests, we check if a new Keycloak version pass conformance tests that the older Keycloak version could pass whenever the new Keycloak version is released.
@@ -198,39 +236,39 @@ We tagged the environment for every keycloak verion:
 
 \* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|
-|-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|x|-|-|-|
-|17.0.0|x|x|x|x|-|-|-|
-|17.0.0-legacy|x|x|x|x|-|-|-|
-|17.0.1|x|x|x|x|-|-|-|
-|17.0.1-legacy|x|x|x|x|-|-|-|
-|18.0.0|x|x|x|x|-|x|x|
-|18.0.0-legacy|x|x|x|x|-|x|x|
-|18.0.2|x|x|x|x|-|x|x|
-|18.0.2-legacy|x|x|x|x|-|x|x|
-|19.0.1|x|x|x|x|-|x|x|
-|19.0.1-legacy|x|x|x|x|-|x|x|
-|19.0.2|x|x|x|x|-|x|x|
-|19.0.2-legacy|x|x|x|x|-|x|x|
-|20.0.0|x|x|x|x|x|x|x|
-|20.0.1|x|x|x|x|x|x|x|
-|20.0.2|x|x|x|x|x|x|x|
-|20.0.3|x|x|x|x|x|x|x|
-|20.0.5|x|x|x|x|x|x|x|
-|21.0.0|x|x|x|x|x|x|x|
-|21.0.1|x|x|x|x|x|x|x|
-|21.0.2|x|x|x|x|x|x|x|
-|21.1.0|x|x|x|x|x|x|x|
-|21.1.1|x|x|x|x|x|x|x|
-|21.1.2|x|x|x|x|x|x|x|
-|22.0.0|x|x|x|x|x|x|x|
-|22.0.1|x|x|x|x|x|x|x|
-|22.0.2|x|x|x|x|x|x|x|
-|22.0.3|x|x|x|x|x|x|x|
-|22.0.4|x|x|x|x|x|x|x|
-|22.0.5|x|x|x|x|x|x|x|
-|23.0.0|x|x|-(*4)|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile & Message Signing Implementer’s Draft|
+|-|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|x|-|-|-|-|
+|17.0.0|x|x|x|x|-|-|-|-|
+|17.0.0-legacy|x|x|x|x|-|-|-|-|
+|17.0.1|x|x|x|x|-|-|-|-|
+|17.0.1-legacy|x|x|x|x|-|-|-|-|
+|18.0.0|x|x|x|x|-|x|x|-|
+|18.0.0-legacy|x|x|x|x|-|x|x|-|
+|18.0.2|x|x|x|x|-|x|x|-|
+|18.0.2-legacy|x|x|x|x|-|x|x|-|
+|19.0.1|x|x|x|x|-|x|x|-|
+|19.0.1-legacy|x|x|x|x|-|x|x|-|
+|19.0.2|x|x|x|x|-|x|x|-|
+|19.0.2-legacy|x|x|x|x|-|x|x|-|
+|20.0.0|x|x|x|x|x|x|x|-|
+|20.0.1|x|x|x|x|x|x|x|-|
+|20.0.2|x|x|x|x|x|x|x|-|
+|20.0.3|x|x|x|x|x|x|x|-|
+|20.0.5|x|x|x|x|x|x|x|-|
+|21.0.0|x|x|x|x|x|x|x|-|
+|21.0.1|x|x|x|x|x|x|x|-|
+|21.0.2|x|x|x|x|x|x|x|-|
+|21.1.0|x|x|x|x|x|x|x|-|
+|21.1.1|x|x|x|x|x|x|x|-|
+|21.1.2|x|x|x|x|x|x|x|-|
+|22.0.0|x|x|x|x|x|x|x|-|
+|22.0.1|x|x|x|x|x|x|x|-|
+|22.0.2|x|x|x|x|x|x|x|-|
+|22.0.3|x|x|x|x|x|x|x|-|
+|22.0.4|x|x|x|x|x|x|x|-|
+|22.0.5|x|x|x|x|x|x|x|-|
+|23.0.0|x|x|-(*4)|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -670,6 +708,31 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -
 
 Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conformance tests cannot be automated. These can be passed manually.
 
+**FAPI 2.0 Security Profile Second Implementer’s Draft**
+
+|Conformance Profile|Test Plan|sender_constrain|client_auth_type|openid|fapi_profile|TEST_PLAN|
+|-|-|-|-|-|-|-|
+|FAPI2SP MTLS + MTLS|fapi2-security-profile-id2-test-plan|mtls|mtls|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP private key + MTLS|fapi2-security-profile-id2-test-plan|mtls|private_key_jwt|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP OpenID Connect|fapi2-security-profile-id2-test-plan|mtls|mtls|openid_connect|plain_fapi|--fapi2-sp-id2-all|
+
+Note: If you run Australia CDR conformance tests, please use `realm-fapi2-sp.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-sp.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+```
+
+**FAPI 2.0 Message Signing First Implementer’s Draft**
+
+|Conformance Profile|Test Plan|sender_constrain|client_auth_type|openid|fapi_request_method|fapi_profile|fapi_response_mode|TEST_PLAN|
+|-|-|-|-|-|-|-|-|-|
+|FAPI2MS JAR|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id2-all|
+|FAPI2MS JARM|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id2-all|
+
+Note: If you run Australia CDR conformance tests, please use `realm-fapi2-ms.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-ms.json docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
+```
+
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
 ```
 TEST_PLAN=--fapi1-advanced-par-jarm docker-compose -p keycloak-fapi -f docker-compose.yml -f docker-compose-keycloak.yml up --build
@@ -690,6 +753,10 @@ If you set `--fapi-uk-ob-all` to `TEST_PLAN`, it runs all types of UK Open Banki
 If you set `--oidcc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
 
 If you set `--oidcc-logout-all` to `TEST_PLAN`, it runs all types of OpenID Provider for Logout Profile conformance tests shown above the table automatically except for Session OP and Front-Channel OP.
+
+If you set `--fapi2-sp-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Security Profile Second Implementer’s Draft conformance tests shown above the table automatically.
+
+If you set `--fapi2-ms-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Message Signing First Implementer’s Draft conformance tests shown above the table automatically.
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 

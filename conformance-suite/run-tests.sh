@@ -487,6 +487,17 @@ makeManualOIDCRpInitiatedLogoutTest() {
     TESTS="${TESTS} oidcc-rp-initiated-logout-certification-test-plan[response_type=code\ token][client_registration=static_client] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/oidcc-rp-initiated-logout.json"
 }
 
+makeFAPI2SPTest() {
+    TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ID2-FAPI2SP-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=private_key_jwt][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ID2-FAPI2SP-private-key-MTLS-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=openid_connect][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ID2-FAPI2SP-OpenID-Connect-ES256-ES256-automated.json"
+}
+
+makeFAPI2MSTest() {
+    TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=plain_response] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ID2-FAPI2MS-JAR-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ID2-FAPI2MS-JARM-MTLS-MTLS-ES256-ES256-automated.json"
+}
+
 makeLocalProviderTests() {
     # OIDCC certification tests - server supports discovery, using dcr
     TESTS="${TESTS} oidcc-basic-certification-test-plan[server_metadata=discovery][client_registration=dynamic_client] ../conformance-suite/.gitlab-ci/local-provider-oidcc.plan"
@@ -589,6 +600,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-logout-all" ]; then
 #    makeOIDCSessionManagementTest
 #    makeOIDCFrontchannelRpInitiatedLogoutTest
     makeOIDCBackchannelRpInitiatedLogoutTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-sp-id2-all" ]; then
+    echo "Run fapi2-sp-id2 all tests"
+    makeFAPI2SPTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-ms-id2-all" ]; then
+    echo "Run fapi2-ms-id2 all tests"
+    makeFAPI2MSTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -764,7 +781,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--fapi2-sp-id2-all|--fapi2-ms-id1-all|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
     exit 1
 fi
 

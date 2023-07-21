@@ -28,7 +28,7 @@ services:
       retries: 5
     command:
       - "--verbose"
-      - "start"
+      - "start-dev"
       - "--hostname=${KEYCLOAK_FQDN}"
       - "--proxy=passthrough"
       - "--http-enabled=true"
@@ -45,9 +45,6 @@ services:
       - KEYCLOAK_REALM_IMPORT_FILENAME=${KEYCLOAK_REALM_IMPORT_FILENAME}
     volumes:
       - ./keycloak:/opt/keycloak/import:z
-    depends_on:
-      keycloak:
-        condition: service_healthy
     entrypoint: /usr/bin/bash
     command: >
       -c "echo Connecting to Keycloak...
