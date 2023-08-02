@@ -177,6 +177,9 @@ We tagged the environment for every keycloak verion:
 |kc-21.0.2|21.0.2|release-v5.1.2|
 |kc-21.1.0|21.1.0|release-v5.1.2|
 |kc-21.1.1|21.1.1|release-v5.1.2|
+|kc-21.1.2|21.1.2|release-v5.1.5|
+|kc-22.0.0|22.0.0|release-v5.1.5|
+|kc-22.0.1|22.0.1|release-v5.1.5|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1)|Open Finance Brasil FAPI 1.0 (\*2,\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|
 |-|-|-|-|-|-|-|-|-|
@@ -203,6 +206,9 @@ We tagged the environment for every keycloak verion:
 |21.0.2|x|x|x|x|x|x|x|x|
 |21.1.0|x|x|x|x|x|x|x|x|
 |21.1.1|x|x|x|x|x|x|x|x|
+|21.1.2|x|x|x|x|x|x|x|x|
+|22.0.0|x|x|x|x|x|x|x|x|
+|22.0.1|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
