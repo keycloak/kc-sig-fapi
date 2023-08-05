@@ -1,0 +1,86 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 2nd Meeting
+ (47th Ex FAPI-SIG)
+
+Date :
+ Wed 2 August 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (Citi)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Dhiraj
+ Dominik Schlosser
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster (Bosch Software Innovations)
+ Thomas Darimont (codecentric AG)
+
+Presentation Materials :
+ [1] OAuth SIG Community 2nd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/2nd/presentations/OAuth-SIG_2nd_MTG_agenda.pdf
+
+Recording :
+ https://drive.google.com/file/d/1uJezFG-lt9UfHRnF2ubHAUAOkY6zY-JS/view?usp=drive_link
+
+Summary :
+
+ * Keycloak 23
+   Presentation materials in Keycloak 23 can be posted to https://github.com/keycloak/kc-sig-fapi/tree/main/KeyConf/Keyconf%2023
+
+ * Examples and demos for security features
+   These are useful when we demonstrate Keycloak's security features to clients and present them in conferences.
+   Contributions of these examples and demos are welcomed, but we did not determine where these are contributed (e.g., OAuth SIG's repository).
+
+ * FAPI 2.0 (Implementer's Draft)
+   Epic issue: https://github.com/keycloak/keycloak/issues/20708
+   All 9 tasks have completed. It was confirmed that Keycloak ccan pass following all 5 conformance profiles of comformance tests: 
+     - FAPI2SP MTLS + MTLS​
+     - FAPI2SP private key + MTLS​
+     - FAPI2SP OpenID Connect​
+     - FAPI2MS JAR​
+     - FAPI2MS JARM
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/21916
+   In all 8 tasks, 4 tasks have completed. 2 PRs were submitted for resolving 2 tasks.
+
+ * EdDSA
+   PR: https://github.com/keycloak/keycloak/issues/15714​
+   It can pass all CI tests due to completion of Keycloak's Java 17 support.
+   Its "hold" status for merge was purged.
+
+ * Reference Token​
+   The PR was closed because the out-of-box way is preferred instead of using an external store that a user need to prepare.
+
+ * Lightweight Token​
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/22148​
+   A lot of discussions are welcomed.
+
+ * OpenID connect for Identity Assurance (OIDC4IDA)
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/21309
+   A lot of discussions are welcomed.
+
+ * Next Web Meeting
+   Wed 6 September 2023 12:00 - 13:00 UTC in 1 hour
