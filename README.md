@@ -181,44 +181,42 @@ We tagged the environment for every keycloak verion:
 |kc-22.0.0|22.0.0|release-v5.1.5|
 |kc-22.0.1|22.0.1|release-v5.1.5|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1)|Open Finance Brasil FAPI 1.0 (\*2,\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|
-|-|-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|-|x|-|-|-|
-|17.0.0|x|x|x|-|x|-|-|-|
-|17.0.0-legacy|x|x|x|-|x|-|-|-|
-|17.0.1|x|x|x|-|x|-|-|-|
-|17.0.1-legacy|x|x|x|-|x|-|-|-|
-|18.0.0|x|x|x|-|x|-|x|x|
-|18.0.0-legacy|x|x|x|-|x|-|x|x|
-|18.0.2|x|x|x|-|x|-|x|x|
-|18.0.2-legacy|x|x|x|-|x|-|x|x|
-|19.0.1|x|x|x|-|x|-|x|x|
-|19.0.1-legacy|x|x|x|-|x|-|x|x|
-|19.0.2|x|x|x|-|x|-|x|x|
-|19.0.2-legacy|x|x|x|-|x|-|x|x|
-|20.0.0|x|x|x|x|x|x|x|x|
-|20.0.1|x|x|x|x|x|x|x|x|
-|20.0.2|x|x|x|x|x|x|x|x|
-|20.0.3|x|x|x|x|x|x|x|x|
-|20.0.5|x|x|x|x|x|x|x|x|
-|21.0.0|x|x|x|x|x|x|x|x|
-|21.0.1|x|x|x|x|x|x|x|x|
-|21.0.2|x|x|x|x|x|x|x|x|
-|21.1.0|x|x|x|x|x|x|x|x|
-|21.1.1|x|x|x|x|x|x|x|x|
-|21.1.2|x|x|x|x|x|x|x|x|
-|22.0.0|x|x|x|x|x|x|x|x|
-|22.0.1|x|x|x|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|
+|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|x|-|-|-|
+|17.0.0|x|x|x|x|-|-|-|
+|17.0.0-legacy|x|x|x|x|-|-|-|
+|17.0.1|x|x|x|x|-|-|-|
+|17.0.1-legacy|x|x|x|x|-|-|-|
+|18.0.0|x|x|x|x|-|x|x|
+|18.0.0-legacy|x|x|x|x|-|x|x|
+|18.0.2|x|x|x|x|-|x|x|
+|18.0.2-legacy|x|x|x|x|-|x|x|
+|19.0.1|x|x|x|x|-|x|x|
+|19.0.1-legacy|x|x|x|x|-|x|x|
+|19.0.2|x|x|x|x|-|x|x|
+|19.0.2-legacy|x|x|x|x|-|x|x|
+|20.0.0|x|x|x|x|x|x|x|
+|20.0.1|x|x|x|x|x|x|x|
+|20.0.2|x|x|x|x|x|x|x|
+|20.0.3|x|x|x|x|x|x|x|
+|20.0.5|x|x|x|x|x|x|x|
+|21.0.0|x|x|x|x|x|x|x|
+|21.0.1|x|x|x|x|x|x|x|
+|21.0.2|x|x|x|x|x|x|x|
+|21.1.0|x|x|x|x|x|x|x|
+|21.1.1|x|x|x|x|x|x|x|
+|21.1.2|x|x|x|x|x|x|x|
+|22.0.0|x|x|x|x|x|x|x|
+|22.0.1|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
-\*1 : Implementer's Draft version 2, except for Dynamic Client Registration (DCR) conformance profile.
+\*1 : Up to Implementer's Draft version 2, Open Banking Brazil Security Profile. From Implementer's Draft version 3, Open Finance Brazil Security Profile.
 
-\*2 : Implementer's Draft version 3, except for Dynamic Client Registration (DCR) conformance profile.
+\*2 : Except for Dynamic Client Registration (DCR) conformance profile.
 
-\*3 : Open Banking Brasil FAPI 1.0 was renamed.
-
-\*4 : Except for 3rd Party-Init OP conformance profile.
+\*3 : Except for 3rd Party-Init OP conformance profile.
 
 ## Communication Channels
 
