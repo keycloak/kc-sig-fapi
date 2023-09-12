@@ -1,0 +1,91 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 3rd Meeting
+ (48th Ex FAPI-SIG)
+
+Date :
+ Wed 6 Septemer 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Presenter 
+ Dmitry Telegin (Backbase):
+ Takashi Norimatsu (Hitachi)
+ Thomas Darimont (codecentric AG)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Costas Georgilakis (GRNET)
+ grigorii
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Maurice Quaedackers (Planon)
+ Mostapha
+ Sebastian Schuster (Bosch Software Innovations)
+
+Presentation Materials :
+ [1] OAuth SIG Community 3rd Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/3rd/presentations/OAuth-SIG_3rd_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/7oYlpyvBlBdh_0YpZuTV4-gAAbpD81miT8UzeOAnRHG8p3VI5OcVu4fwF6Z3AUL7.RsVUXgQ67QArOrxW
+
+Summary :
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/21916
+   All 8 tasks have been completed.
+
+ * EdDSA
+   PR: https://github.com/keycloak/keycloak/issues/15714​
+   It can pass all CI tests due to completion of Keycloak's Java 17 support.
+   Waiting for review.
+
+ * Lightweight Token​
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/22148​
+   A lot of discussions are welcomed.
+
+ * OpenID connect for Identity Assurance (OIDC4IDA)
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/21309
+   A lot of discussions are welcomed.
+
+ * Presentations in KubeCon + CloudNativeCon North America 2023 (6-9 November, Chicago, USA)
+   https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
+   Alexander and Takashi will have a talk about keycloak in maintainer-track.
+
+ * Interesting topics in OAuth Security Workshop 2023 (22-24 August, London, UK) (Dmitry and Thomas joined)
+   https://oauth.secworkshop.events/osw2023
+   - OpenID Connect Federation 1.0
+     https://openid.net/specs/openid-connect-federation-1_0.html
+     https://github.com/keycloak/keycloak-community/pull/201
+   - OAuth 2.0 for First-Party Native Applications
+     https://www.ietf.org/archive/id/draft-parecki-oauth-first-party-native-apps-00.html
+
+ * Other interesting topics
+  - OpenID4VCI and SD-JWT in the context of EU digital identity wallet
+  - OpenID4VCI implementation by Curity
+    https://curity.io/
+    https://oauth.tools/
+    https://curity.io/resources/learn/pre-authorized-code/
+  - Global Assured Identity Network (GAIN) PoC
+    https://bitbucket.org/openid/gain-poc/wiki/VC-Prototype
+  - Keycloak's passkey implementation by inventage
+    https://keycloak.ch/keycloak-tutorials/tutorial-passkey/
+    https://github.com/inventage/keycloak-custom/tree/tutorial-passkey/extensions/extension-passkey
+
+ * Next Web Meeting
+   Wed 4 October 2023 12:00 - 13:00 UTC in 1 hour
