@@ -39,7 +39,10 @@ type Meta struct {
 }
 
 func consentHandler(w http.ResponseWriter, r *http.Request) {
-	var FapiInteractionId string = uuid.New().String()
+	var FapiInteractionId string = r.Header.Get("x-fapi-interaction-id")
+	if FapiInteractionId == "" {
+		FapiInteractionId = uuid.New().String()
+	}
 
 	var now = time.Now()
 	var exp = now.Add(5*time.Minute)
