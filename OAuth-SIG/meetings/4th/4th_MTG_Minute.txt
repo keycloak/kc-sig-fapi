@@ -1,0 +1,87 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 4th Meeting
+ (49th Ex FAPI-SIG)
+
+Date :
+ Wed 4 October 2023
+
+Time (summer time) :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  16:30 - 17:30 IST  (UTC+4:30)
+  20:00 - 21:00 JST  (UTC+8)
+  21:00 - 22:00 AEST (UTC+9)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Presenter :
+ Francis Pouatcha (Adorsys)
+ Paul Templeman
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Adel
+ Ammad Arshad
+ Chris Cox (Integral)
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ grigorii
+ Pritish Joshi (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster (Bosch)
+ Stefan Wiedemann (FIWARE)
+ Tanya Vlasenko
+ Thomas Darimont (codecentric AG)
+ Tom Kersting
+
+Presentation Materials :
+ [1] OAuth SIG Community 4th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/4th/presentations/OAuth-SIG_4th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/w-4IpALy0z1v6zkef4qSUlqgrLWDaRCZZ_bpAyv-EVdj_lBSl5Mli-4ncnpgYe0P.Y1uLSnS0362bAxii
+
+Summary :
+
+ * EdDSA
+   PR: https://github.com/keycloak/keycloak/issues/15714​
+   It can pass all CI tests due to completion of Keycloak's Java 17 support.
+   Waiting for review.
+
+ * Lightweight Token​
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/22148​
+   A lot of discussions are welcomed.
+
+ * OpenID connect for Identity Assurance (OIDC4IDA)
+   A Draft PR was submitted: https://github.com/keycloak/keycloak/pull/21309
+   A lot of discussions are welcomed.
+
+ * Presentations in KubeCon + CloudNativeCon North America 2023 (6-9 November, Chicago, USA)
+   https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/
+   Alexander and Takashi will have a talk about keycloak in maintainer-track.
+
+ * New topics
+   - Passkeys
+     Epic issue: https://github.com/keycloak/keycloak/issues/23656
+     It seems that a few work might be needed for keycloak to support passkeys.
+
+   - OpenID4VC High Assurance Interoperability Profile with SD-JWT VC (by Francis, Paul)
+     Discussion: https://github.com/keycloak/keycloak/discussions/17616?sort=top#discussioncomment-7188675
+     Some participants are interested in supporting it onto keycloak.
+     It seems that some discussion is needed to determine how to work on it.
+
+ * Other topics
+   - Move the Device Flow Support behind a dedicated feature flag
+     https://github.com/keycloak/keycloak/discussions/23700
+   - Issues in UK OpenBanking
+
+ * Next Web Meeting
+   Wed 1 November 2023 12:00 - 13:00 UTC in 1 hour
