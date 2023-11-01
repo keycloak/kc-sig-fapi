@@ -1,0 +1,121 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 5th Meeting
+ (50th Ex FAPI-SIG)
+
+Date :
+ Wed 4 October 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Presenter :
+ Dmitry Telegin (Backbase)
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Chris Cox (Integral)
+ Costas Georgilakis (GRNET)
+ Kannan Rasappan (Banfico)
+ Maaten van Hulsentop
+ Marek Posolda (Red Hat)
+ Mark Verstege
+ Martin Besozzi
+ mostapha
+ Paul Templeman
+ Pritish Joshi (Banfico)
+ Sebastian Schuster (Bosch)
+ Stefan Wiedemann (FIWARE)
+
+Presentation Materials :
+ [1] OAuth SIG Community 5th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/5th/presentations/OAuth-SIG_5th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/Up-l0rHiGLdlql31TqNFKMlzsihWhU40OCQ_a4seI8p4CJkHqF4aeOad8ROUbT2C.BpYw-XhQkSxQtBWK
+
+Summary :
+
+ * Lightweight Token
+   Epic topic: https://github.com/keycloak/keycloak/issues/21186
+   The core issue was resolved. Keycloak supported Lightweight Token.
+   Two related tasks are newly added:
+    [1] Enhance error logs and error events during UserInfo endpoint and Token Introspection failure
+    https://github.com/keycloak/keycloak/issues/24344
+    https://github.com/keycloak/keycloak/pull/24346
+    [2] Look if checks in IntrospectionEndpoint can be simplified
+    https://github.com/keycloak/keycloak/issues/24466
+
+ * Passkeys
+   Keycloak supported passkey authentication by utilizing WebAuthn, but it is treated as Technology Preview.
+
+ * OID4VCI
+   Discussion: https://github.com/keycloak/keycloak-community/pull/351
+   The 2nd breakout meeting would be planned to discuss the topic.
+   Also continue its discussion in CNCF keycloak's slack or feedback comments on the discussion.
+   The three point we need to notice when using FIWARE's implementation on OID4VCI that imports walt.id's package:
+     waltid-ssikit : https://github.com/walt-id/waltid-ssikit
+   [1] Acceptability
+       Is it acceptable to keycloak?
+       Keycloak tends to avoid including external packages (maybe to reduce maintainance costs for these packages)
+   [2] Licence Compatibility
+       It might be no problem, but not 100% sure:
+       keycloak : Apache License 2.0
+       waltid-ssikit : Apache License 2.0
+   [3] Technology
+       The walt.id's library is written in Kotlin, which can be run on JVM.
+       Not sure whether maintainers are familier with Kotlin to understand and  maintain the library.
+   [4] Avaiablity
+       Could we use full features of the walt.is's library without any costs and contract?
+       (some open source need to make contract with its vendor if users want to use full features of the open source.)
+
+ * Token Exchange - What could we do to move its status of technology preview to official supported
+   Pedro, the keycloak maintainer needs to be included in this discussion. However, he might have little time to deal with this topic now.
+   A breakout session for this topic is ideal.
+   One related tasks is newly added:
+    [1] Scope parameter in Oauth 2.0 token exchange
+      https://github.com/keycloak/keycloak/issues/21578
+      https://github.com/keycloak/keycloak/pull/21638
+
+ * Best current practice on customizing Admin Console
+   The following might be helpful:
+     https://github.com/keycloak/keycloak/blob/main/js/CODING_GUIDELINES.md
+
+ * Solid-OIDC
+   https://solid.github.io/solid-oidc/
+   PoC implementation: https://github.com/CarrettiPro/keycloak-solid/
+   It might be good if it can be implemented as pluggable client profiles like FAPI.
+   - Token Format - JSON-LD or pure JSON?
+     Solid-OIDC uses JSON-LD, but pure JSON is also OK in Solid community.
+     Candidate library for JSON-LD : Titanium JSON-LD 1.1 Processor & API
+       https://github.com/filip26/titanium-json-ld
+       Apache License 2.0
+     SD-JWT VC also adopted JSON-LD, so JSON-LD might be preferable for OID4VCI support work.
+
+ * OAuth 2.0 Grant Type SPI
+   Codes for the current keycloak's token endpoint exceeds 1k LoC, which may cause difficulties about its maintainance and customization.
+   Moreover, it covers 8 grant types.
+   It is better to support each grant by a SPI provider instead of a single endpoint class.
+   By doing so, use-case specific tweaking customization on existing grant could become easy.
+
+ * Ideas for slides for OAth-SIG meetings
+   Current format : power point
+   Proposal :
+    google slides (Prezi?)
+    Reveal.JS (Impress.JS + github)
+
+ * Next Web Meeting
+   Wed 6 December 2023 12:00 - 13:00 UTC in 1 hour
