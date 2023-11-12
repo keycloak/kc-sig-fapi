@@ -88,11 +88,21 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 
   - [RFC 9126 OAuth 2.0 Pushed Authorization Requests (PAR)](https://datatracker.ietf.org/doc/html/rfc9126)
 
+#### keycloak 18
+
+  - [OpenID Connect Logout 1.0 for Logout Profiles](https://www.keycloak.org/docs/latest/release_notes/index.html#openid-connect-logout-improvements)
+
+    mainly by keycloak development team and the contributor outside FAPI-SIG.
+
+#### keycloak 20
+
+  - UK OpenBanking​ Security Profile
+
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 20.0.0
-- Conformance-suite version : release-v5.0.6
+- Keycloak version : 22.0.5
+- Conformance-suite version : release-v5.1.9
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -184,6 +194,9 @@ We tagged the environment for every keycloak verion:
 |kc-22.0.3|22.0.3|release-v5.1.7|
 |kc-22.0.4|22.0.4|release-v5.1.8|
 |kc-22.0.5|22.0.5|release-v5.1.9|
+|kc-23.0.0|23.0.0|release-v5.1.7(*)|
+
+\* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|
 |-|-|-|-|-|-|-|-|
@@ -217,6 +230,7 @@ We tagged the environment for every keycloak verion:
 |22.0.3|x|x|x|x|x|x|x|
 |22.0.4|x|x|x|x|x|x|x|
 |22.0.5|x|x|x|x|x|x|x|
+|23.0.0|x|x|-(*4)|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -225,6 +239,8 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 \*2 : Except for Dynamic Client Registration (DCR) conformance profile.
 
 \*3 : Except for 3rd Party-Init OP conformance profile.
+
+\*4 : [ISSUE-25022](https://github.com/keycloak/keycloak/issues/25022)
 
 ## Communication Channels
 
