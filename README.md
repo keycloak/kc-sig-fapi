@@ -88,11 +88,21 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 
   - [RFC 9126 OAuth 2.0 Pushed Authorization Requests (PAR)](https://datatracker.ietf.org/doc/html/rfc9126)
 
+#### keycloak 18
+
+  - [OpenID Connect Logout 1.0 for Logout Profiles](https://www.keycloak.org/docs/latest/release_notes/index.html#openid-connect-logout-improvements)
+
+    mainly by keycloak development team and the contributor outside FAPI-SIG.
+
+#### keycloak 20
+
+  - UK OpenBanking​ Security Profile
+
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 20.0.0
-- Conformance-suite version : release-v5.0.6
+- Keycloak version : 22.0.5
+- Conformance-suite version : release-v5.1.9
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
