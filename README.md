@@ -101,8 +101,8 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 22.0.5
-- Conformance-suite version : release-v5.1.9
+- Keycloak version : 23.0.0
+- Conformance-suite version : release-v5.1.7
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
