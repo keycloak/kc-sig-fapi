@@ -1,0 +1,62 @@
+  
+Title :
+ OAuth SIG - OID4VCs 2nd Breakout Session
+
+Date :
+ Fri 24 November 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Participants :
+ Chris Cox (Integral)
+ Dmitry Telegin (Backbase)
+ Marek Posolda (Red Hat)
+ Paul Templeman
+ Pritish Joshi (Banfico)
+ Stefan Wiedemann (FIWARE)
+ Takashi Norimatsu (Hitachi)
+ Thomas Diesler (Red Hat)
+
+Recording :
+ https://us06web.zoom.us/rec/share/r0JyBWW5QgAktAeQhxbt8Fzo7uDdSCqOqKBGjaDgHBFLXsPfWZjiMrnnd4ZI0AbI.Byc2bXcZpO5z_wvj
+Summary :
+
+ * SD-JWT support
+   Walt.it might have an SD JWT lib. Need to clarify whether walt.it supports SD-JWT (by FIWARE's side?).
+
+ * OID4VCI Keycloak integration
+   Stefan updated keycloak integration with FIWARE/keycloak-vc-issuer .
+     https://github.com/wistefan/keycloak/tree/add-vci
+   Hitachi evaluated FIWARE/keycloak-vc-issuer and tries to modify it to support a VC issurance by Authorization Code flow by the end of Dec.
+
+ * SIOPv2
+   Paul tries to implement a SIOPv2 with Keycloak.
+
+ * Working repository
+   We use Stefan's forked repository for sharing our work:
+     https://github.com/wistefan/keycloak
+   It would be nice to directly push the work into the Keycloak upstream step by step.
+
+ * OAuth 2.0 Grant Type SPI
+   Dmitry tries to support each grant by a SPI provider instead of a single endpoint class. Hope for some preview in Feb. 24
+   By doing so, use-case specific tweaking customization on existing grant could become easy.
+
+ * 1st stage of GAIN POC Credential Exchange Profile
+   https://gist.github.com/javereec/48007399d9876d71f523145da307a7a3
+
+ * Next Web Meeting (planned)
+   Wed 13 December 2023 12:00 - 13:00 UTC in 1 hour
