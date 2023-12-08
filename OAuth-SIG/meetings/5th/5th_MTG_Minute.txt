@@ -4,7 +4,7 @@ Title :
  (50th Ex FAPI-SIG)
 
 Date :
- Wed 4 October 2023
+ Wed 1 November 2023
 
 Time :
   12:00 - 13:00 UTC in 1 hour

@@ -1,0 +1,76 @@
+  
+Title :
+ OAuth SIG(Special Interest Group) Community 6th Meeting
+ (51st Ex FAPI-SIG)
+
+Date :
+ Wed 6 December 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Presenter :
+ Dmitry Telegin (Backbase)
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Maaten van Hulsentop
+ Marek Posolda (Red Hat)
+ Maurice Quaedackers (Planon)
+ Paul Templeman
+ Phil Potisk (walt.id)
+ Pritish Joshi (Banfico)
+ Sebastian Schuster (Bosch)
+ Stefan Wiedemann (FIWARE)
+ Thomas Darimont (codecentric)
+ Vinod Anandan (Citi)
+
+Presentation Materials :
+ [1] OAuth SIG Community 6th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/6th/presentations/OAuth-SIG_6th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/fKEHIPyUFvD7hggf7zRzEiNrGLkND_X6R2q1gHnUpvFLYHP4JGLhTGaQUzQcFWth.-nyb6FcqL-dZORC1
+
+Summary :
+
+ * Token Exchange
+   To move its status of technology preview to official supported, we arrange its breakout session with Pedro, the keycloak maintainer.
+   Spec: https://www.rfc-editor.org/rfc/rfc8693
+   - What Keycloak already supported, and not supported.
+   - What we need to cover them to move its status of technology preview to official supported.
+
+ * OID4VCs
+   The 2nd breakout session minute is available in https://github.com/keycloak/kc-sig-fapi/blob/main/OAuth-SIG/Breakouts/OID4VCs/2nd/2nd_breakout_session_minute.txt
+   The 3rd breakout sessoin will be held on Wed 13 Dec.
+
+ * CORS SPI
+   Issue: https://github.com/keycloak/keycloak/issues/12682
+   Proposal for using SPI provider for customizing CORS headers.
+   Need to reduce or even avoid a breaking change for the "Legacy" Cors API.
+
+ * Community event annoucement: Keycloak DevDay 2024
+   Feb 22 2024, Frankfurt, Germany
+   https://www.keycloak-day.dev/
+   A ticket is availabe.
+
+ * Community event proposal: Keyconf 24
+   We held Keyconf 23 on Jun, London, UK. How about the same meeting in the next year?
+   We will discuss it in the next meeting. Day, Venue, Sponsor, Program, and so on.
+
+ * Next Web Meeting
+   Wed 3 January 2024 12:00 - 13:00 UTC in 1 hour
