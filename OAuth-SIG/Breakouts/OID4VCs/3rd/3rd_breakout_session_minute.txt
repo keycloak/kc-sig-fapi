@@ -1,0 +1,72 @@
+  
+Title :
+ OAuth SIG - OID4VCs 3rd Breakout Session
+
+Date :
+ Wed 13 November 2023
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+Participants :
+ Chris Cox (Integral)
+ Dmitry Telegin (Backbase)
+ Kevin (walt.id)
+ Marek Posolda (Red Hat)
+ Paul Templeman
+ Phil Potisk (walt.id)
+ Stefan Wiedemann (FIWARE)
+ Takashi Norimatsu (Hitachi)
+
+Recording :
+ https://us06web.zoom.us/rec/share/RPmzMlybCzyaCWGob8z7KST6nj0_-aU6hTBtO3ikCRBVIHmrLg1qTUMiIPoLuxU.Opw9F0x0jdwcSCDZ
+
+Summary :
+
+ * Discussion
+   We discuss issues in [Keycloak's discussion tab](https://github.com/keycloak/keycloak/discussions).
+   We add "area/oid4vc" label for the issues.
+
+ * Work in Hitachi
+ 	The summary of the work is as follows:
+	- Only modified FIWARE’s extension. (https://github.com/FIWARE/keycloak-vc-issuer)
+	- Supported Authorization Code Flow for OID4VCI.
+	- Used static scopes (ex. response_type=code&scope= types_packetdeliveryservice format_jwt_vc_json& ... )
+	- Authenticated a user registered in Keycloak and put their information onto a VC instead of using DID.
+	- Defined and used several custom VC types.
+	- Demonstrated issuing a VC by using VCWallet, Walt.id sever, and Keycloak with customized keycloak-vc-issuer.
+	We would like to contribute our work as follows:
+	- clone and checkout a branch https://github.com/wistefan/keycloak/tree/add-vci
+	- port codes of our customized keycloak-vc-issuer to the branch.
+	- push the PR.
+
+ * Package naming
+   We discussed how to name packages and continue discussing it.
+   Discussion: https://github.com/keycloak/keycloak/discussions/25536
+
+ * EdDSA
+   Some Verifiable Credential (VC) data formats (vcdm, jwt-vc) requre Edwards-curve Digital Signature Algorithm (EdDSA).
+   Discussion: https://github.com/keycloak/keycloak/discussions/25536
+   Supporting EdDSA is in progress.
+   PR: https://github.com/keycloak/keycloak/pull/17215
+
+ * OAuth 2.0 Grant Type SPI (Discussed in 5th OAuth SIG meeting)
+   It is better to support each grant by a SPI provider instead of a single endpoint class.
+   Dmitry is working on it.
+   Branch: https://github.com/CarrettiPro/keycloak/tree/feature/OAuth2.0-Grant-Type-SPI
+
+ * Next Web Meeting
+   Wed 20 December 2023 12:00 - 13:00 UTC in 1 hour
