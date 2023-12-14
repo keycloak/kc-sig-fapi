@@ -285,8 +285,9 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ## Communication Channels
 
-Not only FAPI-SIG member but others can communicate with each other by the following ways.
+Not only OAuth SIG member but others can communicate with each other by the following ways.
 
+- Slack : Cloud Native Computing Foundation (CNCF) slack's channel #keycloak-oauth-sig
 - Mail : Google Group [keycloak developer mailing list](https://groups.google.com/forum/#!topic/keycloak-dev/Ck_1i5LHFrE)
 - Chat : Zulip Chat stream ([#dev-sig-fapi](https://keycloak.zulipchat.com/#narrow/stream/248413-dev-sig-fapi))
 - Meeting : Web meeting on a regular basis
