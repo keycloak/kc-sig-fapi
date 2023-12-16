@@ -107,7 +107,7 @@ FAPI related accomplishments by FAPI-SIG, other contributors and keycloak develo
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 23.0.1
+- Keycloak version : 23.0.2
 - Conformance-suite version : release-v5.1.7
 
 #### FAPI 1.0 Advanced (Final)​
@@ -234,44 +234,46 @@ We tagged the environment for every keycloak verion:
 |kc-22.0.4|22.0.4|release-v5.1.8|
 |kc-22.0.5|22.0.5|release-v5.1.9|
 |kc-23.0.0|23.0.0|release-v5.1.7(*)|
-|kc-23.0.1|23.0.1|release-v5.1.7|
+|kc-23.0.1|23.0.1|release-v5.1.7(*)|
+|kc-23.0.2|23.0.2|release-v5.1.7(*)|
 
 \* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile & Message Signing Implementer’s Draft|
-|-|-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|x|-|-|-|-|
-|17.0.0|x|x|x|x|-|-|-|-|
-|17.0.0-legacy|x|x|x|x|-|-|-|-|
-|17.0.1|x|x|x|x|-|-|-|-|
-|17.0.1-legacy|x|x|x|x|-|-|-|-|
-|18.0.0|x|x|x|x|-|x|x|-|
-|18.0.0-legacy|x|x|x|x|-|x|x|-|
-|18.0.2|x|x|x|x|-|x|x|-|
-|18.0.2-legacy|x|x|x|x|-|x|x|-|
-|19.0.1|x|x|x|x|-|x|x|-|
-|19.0.1-legacy|x|x|x|x|-|x|x|-|
-|19.0.2|x|x|x|x|-|x|x|-|
-|19.0.2-legacy|x|x|x|x|-|x|x|-|
-|20.0.0|x|x|x|x|x|x|x|-|
-|20.0.1|x|x|x|x|x|x|x|-|
-|20.0.2|x|x|x|x|x|x|x|-|
-|20.0.3|x|x|x|x|x|x|x|-|
-|20.0.5|x|x|x|x|x|x|x|-|
-|21.0.0|x|x|x|x|x|x|x|-|
-|21.0.1|x|x|x|x|x|x|x|-|
-|21.0.2|x|x|x|x|x|x|x|-|
-|21.1.0|x|x|x|x|x|x|x|-|
-|21.1.1|x|x|x|x|x|x|x|-|
-|21.1.2|x|x|x|x|x|x|x|-|
-|22.0.0|x|x|x|x|x|x|x|-|
-|22.0.1|x|x|x|x|x|x|x|-|
-|22.0.2|x|x|x|x|x|x|x|-|
-|22.0.3|x|x|x|x|x|x|x|-|
-|22.0.4|x|x|x|x|x|x|x|-|
-|22.0.5|x|x|x|x|x|x|x|-|
-|23.0.0|x|x|-(*4)|x|x|x|x|x|
-|23.0.1|x|x|x|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft|FAPI 2.0 Message Signing Implementer’s Draft|
+|-|-|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|x|-|-|-|-|-|
+|17.0.0|x|x|x|x|-|-|-|-|-|
+|17.0.0-legacy|x|x|x|x|-|-|-|-|-|
+|17.0.1|x|x|x|x|-|-|-|-|-|
+|17.0.1-legacy|x|x|x|x|-|-|-|-|-|
+|18.0.0|x|x|x|x|-|x|x|-|-|
+|18.0.0-legacy|x|x|x|x|-|x|x|-|-|
+|18.0.2|x|x|x|x|-|x|x|-|-|
+|18.0.2-legacy|x|x|x|x|-|x|x|-|-|
+|19.0.1|x|x|x|x|-|x|x|-|-|
+|19.0.1-legacy|x|x|x|x|-|x|x|-|-|
+|19.0.2|x|x|x|x|-|x|x|-|-|
+|19.0.2-legacy|x|x|x|x|-|x|x|-|-|
+|20.0.0|x|x|x|x|x|x|x|-|-|
+|20.0.1|x|x|x|x|x|x|x|-|-|
+|20.0.2|x|x|x|x|x|x|x|-|-|
+|20.0.3|x|x|x|x|x|x|x|-|-|
+|20.0.5|x|x|x|x|x|x|x|-|-|
+|21.0.0|x|x|x|x|x|x|x|-|-|
+|21.0.1|x|x|x|x|x|x|x|-|-|
+|21.0.2|x|x|x|x|x|x|x|-|-|
+|21.1.0|x|x|x|x|x|x|x|-|-|
+|21.1.1|x|x|x|x|x|x|x|-|-|
+|21.1.2|x|x|x|x|x|x|x|-|-|
+|22.0.0|x|x|x|x|x|x|x|-|-|
+|22.0.1|x|x|x|x|x|x|x|-|-|
+|22.0.2|x|x|x|x|x|x|x|-|-|
+|22.0.3|x|x|x|x|x|x|x|-|-|
+|22.0.4|x|x|x|x|x|x|x|-|-|
+|22.0.5|x|x|x|x|x|x|x|-|-|
+|23.0.0|x|x|-(*4)|x|x|x|x|x|x|
+|23.0.1|x|x|x|x|x|x|x|x|x|
+|23.0.2|x|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
