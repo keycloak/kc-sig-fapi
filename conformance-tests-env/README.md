@@ -222,9 +222,9 @@ If you would like to run FAPI Conformance test against local built keycloak, mod
 
 ```
 @@ -28,6 +28,7 @@ services:
-      - ./https/server.pem:/etc/x509/https/tls.crt
-      - ./https/server-key.pem:/etc/x509/https/tls.key
-      - ./https/client-ca.pem:/etc/x509/https/client-ca.crt
+      - ./common/https/server.pem:/etc/x509/https/tls.crt
+      - ./common/https/server-key.pem:/etc/x509/https/tls.key
+      - ./common/https/client-ca.pem:/etc/x509/https/client-ca.crt
 +     - <path to locally built keycloak>:/opt/jboss/keycloak
      ports:
       - "8787:8787"
