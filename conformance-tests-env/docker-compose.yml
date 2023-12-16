@@ -1,0 +1,226 @@
+services:
+
+#
+# Common Entities
+#
+
+# Load Balancer
+
+  load_balancer:
+    build:
+      context: ./common/load-balancer
+    ports:
+     - "443:443"
+     - "543:543"
+    environment:
+     - KEYCLOAK_FQDN=${KEYCLOAK_FQDN}
+     - RESOURCE_FQDN=${RESOURCE_FQDN}
+     - CONSENT_FQDN=${CONSENT_FQDN}
+     - AUTH_ENTITY_FQDN=${AUTH_ENTITY_FQDN}
+     - CONFORMANCE_SUITE_FQDN=${CONFORMANCE_SUITE_FQDN}
+    depends_on:
+     - keycloak
+     - api_gateway_nginx
+     - httpd
+    networks:
+      default:
+        aliases:
+         - ${KEYCLOAK_FQDN}
+         - ${RESOURCE_FQDN}
+         - ${CONSENT_FQDN}
+         - ${AUTH_ENTITY_FQDN}
+         - ${CONFORMANCE_SUITE_FQDN}
+
+# API Gateway
+
+  api_gateway_nginx:
+    build:
+      context: ./common/api-gateway-nginx
+    volumes:
+     - ./common/https/server.pem:/etc/x509/https/tls.crt
+     - ./common/https/server-key.pem:/etc/x509/https/tls.key
+     - ./common/https/client-ca.pem:/etc/x509/https/client-ca.crt
+     - ./common/https/ca.pem:/usr/local/share/ca-certificates/keycloak-fapi-ca.pem
+    environment:
+     - SERVER_NAME=${RESOURCE_FQDN}
+     - SERVER2_NAME=${AUTH_ENTITY_FQDN}
+     - INTROSPECTION_ENDPOINT_URL=${KEYCLOAK_INTROSPECTION_ENDPOINT_FROM_API_GATEWAY}
+     # JWT access token veirfication can't pass reuse-authorisation-code case
+     # - DISCOVERY_URL=https://${KEYCLOAK_FQDN}/auth/realms/${KEYCLOAK_REALM}/.well-known/openid-configuration
+     - CLIENT_SECRET=2ef90464-b0fc-4e06-965d-19ef671a3e22
+    depends_on:
+     - resource_server
+     - consent_server
+     - auth_entity_server
+     - keycloak
+
+#
+# Specification Entities
+#
+
+# Resource Server
+
+  resource_server:
+    build:
+      context: ./spec/entities/resource-server
+
+# Consent Management Server
+
+  consent_server:
+    build:
+      context: ./spec/entities/consent-server
+
+#
+# Conformance Suite
+#
+
+# Test Runner
+
+  test_runner:
+    build:
+      context: ./conformance-suite/test-runner
+    environment:
+     - AUTOMATE_TESTS=${AUTOMATE_TESTS}
+     - TEST_PLAN=${TEST_PLAN}
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - ./conformance-suite/fapi-conformance-suite-configs:/json-config
+    depends_on:
+     - load_balancer
+     - keycloak
+     - server
+
+# Test Database
+
+  mongodb:
+    image: mongo
+#    volumes:
+#     - mongodata:/data/db
+
+# Reverse Proxy
+
+  httpd:
+    build:
+      context: ${OPENID_GIT_URL}#${OPENID_GIT_TAG}:httpd
+    ports:
+      - "8443:8443"
+    volumes:
+      # to pass FAPI CIBA tests automatically, use generated certificate instead of original certificate
+      - ./common/https/server.pem:/etc/ssl/certs/ssl-cert-snakeoil.pem
+      - ./common/https/server-key.pem:/etc/ssl/private/ssl-cert-snakeoil.key
+    depends_on:
+      - server
+
+# Test Server
+
+  server:
+    build:
+      context: ./conformance-suite/conformance-suite
+      args:
+        OPENID_GIT_URL: ${OPENID_GIT_URL}
+        OPENID_GIT_TAG: ${OPENID_GIT_TAG}
+    ports:
+      - "9999:9999"
+    volumes:
+      - ${MVN_HOME}:/root/.m2
+      - ./report:/conformance-suite/report
+      - ./conformance-suite/fapi-conformance-suite-configs/:/conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/
+    environment:
+      - CONFORMANCE_SERVER=https://${CONFORMANCE_SUITE_FQDN}
+      - CONFORMANCE_DEV_MODE=1
+      - MONGODB_HOST=mongodb
+    links:
+      - mongodb:mongodb
+    depends_on:
+      - mongodb
+      - keycloak
+    logging:
+      # limit logs retained on host
+      driver: "json-file"
+      options:
+        max-size: "500k"
+        max-file: "5"
+#volumes:
+#  mongodata:
+
+
+#
+# Test Target
+# 
+
+# Keycloak
+
+  keycloak:
+    build:
+      context: ./test-target/keycloak/keycloak
+      args:
+        KEYCLOAK_BASE_IMAGE: ${KEYCLOAK_BASE_IMAGE}
+    ports:
+     - "8787:8787"
+    environment:
+     - DEBUG=true
+     - DEBUG_PORT=*:8787
+     - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+     - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+    volumes:
+      # Need to add server.pem to the image at build-time for cacerts import
+#     - ./common/https/server.pem:/etc/x509/https/tls.crt
+     - ./common/https/server-key.pem:/etc/x509/https/tls.key
+      # Need to add client-ca.pem to the image at build-time for cacerts import
+#     - ./common/https/client-ca.pem:/etc/x509/https/client-ca.crt
+     - ./common/https/server.pem:/etc/x509/https/server.crt
+#     - ../../bin/keycloak-conformance-test/providers:/opt/keycloak/providers
+#     - ../../bin/keycloak-conformance-test/lib:/opt/keycloak/lib
+#     - ../../bin/keycloak-conformance-test/themes:/opt/keycloak/themes
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/auth/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command:
+      - "--verbose"
+      - "start-dev"
+      - "--hostname=${KEYCLOAK_FQDN}"
+      - "--proxy=passthrough"
+      - "--http-enabled=true"
+      - "--http-relative-path=/auth"
+      - "--https-certificate-file=/etc/x509/https/server.crt"
+      - "--https-certificate-key-file=/etc/x509/https/tls.key"
+      - "--https-client-auth=request"
+
+# Keycloak Realm Setting Importer
+
+  keycloak-import:
+    image: ${KEYCLOAK_BASE_IMAGE}
+    environment:
+      - KEYCLOAK_ADMIN=${KEYCLOAK_USER}
+      - KEYCLOAK_ADMIN_PASSWORD=${KEYCLOAK_PASSWORD}
+      - KEYCLOAK_REALM_IMPORT_FILENAME=${KEYCLOAK_REALM_IMPORT_FILENAME}
+    volumes:
+      - ./test-target/keycloak/keycloak/realms:/opt/keycloak/import:z
+    entrypoint: /usr/bin/bash
+    command: >
+      -c "sleep 60; echo Connecting to Keycloak...
+      && /opt/keycloak/bin/kcadm.sh config credentials --server http://keycloak:8080/auth --realm master --user $$KEYCLOAK_ADMIN --password $$KEYCLOAK_ADMIN_PASSWORD 
+      && echo Importing realm from $$KEYCLOAK_REALM_IMPORT_FILENAME to Keycloak...
+      && /opt/keycloak/bin/kcadm.sh create realms -f /opt/keycloak/import/$$KEYCLOAK_REALM_IMPORT_FILENAME"
+
+#
+# Test Target Specific Entities
+#
+
+# Client Public Key Hosting Server
+
+  client_jwks_server:
+    build:
+      context: ./test-target/keycloak/entities/client_private_keys
+    volumes:
+      - ./test-target/keycloak/entities/client_private_keys:/keys
+    command: /keys
+
+# Authentication Entity Server for Client-initiated Backchannel Authentication (CIBA)
+
+  auth_entity_server:
+    build:
+      context: ./test-target/keycloak/entities/auth_entity_server
+
