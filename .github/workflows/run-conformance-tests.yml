@@ -1,0 +1,10 @@
+name: run-conformance-tests
+run-name: ${{ github.actor }} is running GitHub Actions for automatic conformance tests run
+on:
+  workflow_dispatch:
+jobs:
+  dummy:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: ""
