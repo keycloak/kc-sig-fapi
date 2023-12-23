@@ -46,9 +46,9 @@ Currently, proposed open works are as follows.
 
 - [FAPI-RW App2App](https://openid.net/2020/06/23/openid-foundation-announces-fapi-rw-app2app-certification-launched/)
 
-## Results
+## Contributions
 
-FAPI related accomplishments by FAPI-SIG, other contributors and keycloak development team is as follows.​
+FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and keycloak development team is as follows.​
 
 ### Common Security Features
 
@@ -286,6 +286,42 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 \*3 : Except for 3rd Party-Init OP conformance profile.
 
 \*4 : [ISSUE-25022](https://github.com/keycloak/keycloak/issues/25022)
+
+## Other Contributions
+
+### Conferences
+
+#### KubeCon + CloudNativeCon North America 2023 (McCormick Place West, Chicago, Illinois, United States of America, November 7, 2023)
+- Title: 10 Years of Keycloak - What's Next for Cloud-Native Authentication and OIDC?
+- URL: https://kccncna2023.sched.com/event/1R2mH/10-years-of-keycloak-whats-next-for-cloud-native-authentication-and-oidc-alexander-schwartz-red-hat-takashi-norimatsu-hitachi-ltd
+
+#### Keyconf 23 (Level39, London, United Kingdom, June 16, 2023)
+
+please see [keyconf 23](./KeyConf/Keyconf%2023).
+
+#### Apidays Paris 2022 (Cité des sciences et de l'industrie, Paris, France, December 6, 2022)
+- Title: Securing APIs in Open Banking - Financial-grade API security profile implementation to open-source software
+- URL: https://speakerdeck.com/apidays/apidays-paris-2022-securing-apis-in-open-banking-takashi-norimatsu-hitachi
+
+#### OAuth Security Workshop 2021 (Virtual Event, December 1, 2021)
+- Title: Consideration on how to apply multiple FAPI and its related security profiles dynamically
+- URL: https://www.youtube.com/watch?app=desktop&v=_ei7e8aOfkY
+
+### Referred academic paper
+
+#### Policy-Based Method for Applying OAuth 2.0-Based Security Profiles
+- Journal: IEICE Transactions on Information and Systems, Volume E106.D-9, pp.1364-1379, Institute of Electronics, Information and Communications Engineers (IEICE), Septempber 1, 2023.
+- DOI: https://doi.org/10.1587/transinf.2022icp0004 
+- URL: https://www.jstage.jst.go.jp/article/transinf/E106.D/9/E106.D_2022ICP0004/_pdf
+
+### Oral presentation of refereed international conference paper
+
+#### Flexible Method for Supporting OAuth 2.0 Based Security Profiles in Keycloak
+- Proceedings: Lecture Notes in Informatics (LNI) Proceedings of Open Identity Summit 2022, P-325, pp.87-98, DTU Compute, Lyngby, Denmark, July 7-8, 2022.
+- DOI: https://doi.org/10.18420/OID2022_07
+- DBLP: https://dblp.uni-trier.de/rec/conf/openidentity/NorimatsuNY22
+- URL: https://dblp.uni-trier.de/rec/conf/openidentity/2022
+- URL: https://dblp.uni-trier.de/db/conf/openidentity/openidentity2022.html#NorimatsuNY22
 
 ## Communication Channels
 
