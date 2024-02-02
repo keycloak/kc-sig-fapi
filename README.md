@@ -295,6 +295,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### OpenID Summit Tokyo 2024 (Shibuya Stream Hall, Tokyo, Japan, January 19, 2024)
+- Title: Implementing OAuth 2.0-based Security Profiles on Open-source Software
+- URL: https://www.openid.or.jp/summit/2024/en/
+
 #### KubeCon + CloudNativeCon North America 2023 (McCormick Place West, Chicago, Illinois, United States of America, November 7, 2023)
 - Title: 10 Years of Keycloak - What's Next for Cloud-Native Authentication and OIDC?
 - URL: https://kccncna2023.sched.com/event/1R2mH/10-years-of-keycloak-whats-next-for-cloud-native-authentication-and-oidc-alexander-schwartz-red-hat-takashi-norimatsu-hitachi-ltd
