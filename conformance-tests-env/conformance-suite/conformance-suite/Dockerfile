@@ -1,4 +1,4 @@
-FROM maven:3.6.3-openjdk-11-slim as builder
+FROM maven:3.8.3-openjdk-17-slim as builder
 ARG OPENID_GIT_URL
 ARG OPENID_GIT_TAG
 
