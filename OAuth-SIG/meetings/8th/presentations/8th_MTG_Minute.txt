@@ -1,0 +1,95 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 8th Meeting
+ (53rd Ex FAPI-SIG)
+
+Date :
+ Wed 7 February 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Dylane Bengono (Adorsys)
+ Gilbert Fernandes (Groupements des Mousquetaires)
+ Ingrid Kamga
+ Jorge Sanchez (Banfico)
+ Kannan Rasappan (Banfico)
+ Marco
+ Sebastian Schuster (Bosch)
+ Stefan Wiedemann (FIWARE)
+ Tchakoumi Lorrain Kouatchoua
+ Thomas Darimont (codecentric)
+ Tom Kersting
+
+Presentation Materials :
+ [1] OAuth SIG Community 8th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/8th/presentations/OAuth-SIG_8th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/BtMG9VT0bJotX5udsp-YrfS7cySo7t5A-1QqkYRoI9asP8VBO3lbi7irZrBs4DhC.IfZ9xZv678PgyPuF
+
+Summary :
+
+ * Lightweight Token
+   It is not clear when Lightweight token is beneficial. It is better to describe its use case.
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   2 issues of 8 issues in total were resolved. The PR was submitted to support SD-JWT.
+   https://github.com/keycloak/keycloak/pull/25829
+   This SD-JWT support is core and major feature, so we need a lot of review for its PR.
+   It is helpful for a lot of people review the PR.
+ 
+   The PR for Pre-Authz Code Flow VC Issuance[1] under the assumption that OAuth 2.0 Grant Type SPI[2] be merged onto Keycloak upstream have been prepared.
+
+   [1] Support Credentials Issuance through the OID4VCI Protocol
+     Issue: https://github.com/keycloak/keycloak/issues/25940
+
+   [2] OAuth 2.0 Grant Type SPI
+     Issue: https://github.com/keycloak/keycloak/issues/26250
+     PR: https://github.com/keycloak/keycloak/pull/26251
+
+    After the PR for [1] is merged, then start working on the PR for [3] Authz Code Flow VC Issuance.
+   [3] Support Authorization Code Flow for VC Issuance
+     Issue: https://github.com/keycloak/keycloak/issues/26328
+
+ * OID4IDA
+   One use case is for e-Know Your Customer (eKYC).
+   One of other use cases is the Global Assured Identity Network (GAIN) PoC. The requirements of some level of this PoC requires OID4VCI.
+
+ * Meeting minute
+   One option is that the meeting minute follows other CNCF project's meeting minute style.
+
+ * Community event proposal: Keyconf 24
+   We will hold the conference in Germany. Frankfurt is the first option. Berlin can be also a candidate of the venue of this conference.
+   Some members of this SIG can pay sponsorship fee that is enough for us to set up the conference.
+   The event could take Hybrid style, but we have not determined on-site event or hybrid-event.
+   We have not yet determined the date of the conference.
+
+ * Next Web Meeting
+   Wed 6 March 2024 12:00 - 13:00 UTC in 1 hour
+
+
