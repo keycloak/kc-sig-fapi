@@ -107,7 +107,7 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak version : 23.0.5
+- Keycloak version : 23.0.6
 - Conformance-suite version : release-v5.1.7(JARM) / release-v5.1.15(non-JARM)
 
 #### FAPI 1.0 Advanced (Final)​
@@ -239,6 +239,7 @@ We tagged the environment for every keycloak verion:
 |kc-23.0.3|23.0.3|release-v5.1.7(*)|
 |kc-23.0.4|23.0.4|release-v5.1.7(*)|
 |kc-23.0.5|23.0.5|release-v5.1.7(JARM)(*)/release-v5.1.15(non-JARM)|
+|kc-23.0.6|23.0.6|release-v5.1.7(JARM)(*)/release-v5.1.15(non-JARM)|
 
 \* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
@@ -280,6 +281,7 @@ We tagged the environment for every keycloak verion:
 |23.0.3|x|x|x|x|x|x|x|x|x|
 |23.0.4|x|x|x|x|x|x|x|x|x|
 |23.0.5|x|x|x|x|x|x|x|x|x|
+|23.0.6|x|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
