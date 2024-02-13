@@ -2147,6 +2147,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2233,6 +2234,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2319,6 +2321,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2405,6 +2408,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2490,6 +2494,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2575,6 +2580,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2660,6 +2666,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2745,6 +2752,7 @@
                 "request.object.required": "request or request_uri",
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2832,6 +2840,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -2919,6 +2928,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3006,6 +3016,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3093,6 +3104,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3179,6 +3191,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3265,6 +3278,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3351,6 +3365,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
@@ -3437,6 +3452,7 @@
                 "tls.client.certificate.bound.access.tokens": "true",
                 "use.jwks.url": "true",
                 "pkce.code.challenge.method": "S256",
+                "exclude.issuer.from.auth.response": "true",
                 "acr.loa.map": "{\"urn:mace:incommon:iap:silver\":\"1\"}"
             },
             "protocolMappers": [
