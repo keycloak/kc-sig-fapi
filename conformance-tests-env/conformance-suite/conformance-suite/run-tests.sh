@@ -296,6 +296,11 @@ makeManualOBBRFAPI1AdvancedPARJARMTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_brazil][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/ob-br-fapi1-advanced/ob-br-fapi1-advanced-par-jarm-mtls-PS256-PS256.json"  
 }
 
+makeOFBRFAPI1AdvancedTest() {
+    # for FAPI OP - Brazil Open Finance (FAPI-BR v2)
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_brazil][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/of-br-fapi1-advanced/of-br-fapi1-advanced-par-private-key-PS256-PS256-automated.json"
+}
+
 makeCDRFAPI1AdvancedTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr/fapi-aus-cdr-private-key-PS256-PS256-automated.json"
 }
@@ -579,10 +584,16 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-ciba-all" ]; then
     makeCIBAPingTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--ob-br-fapi1-advanced-all" ]; then
     echo "Run ob-br-fapi1-advanced all tests"
+    # obsoleted from conformance suite version 5.1.15
+    # Open Banking Brasil specifications were replaced with Open Finance Brazil
     makeOBBRFAPI1AdvancedTest
     makeOBBRFAPI1AdvancedPARTest
     makeOBBRFAPI1AdvancedJARMTest
     makeOBBRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--of-br-fapi1-advanced-all" ]; then
+    echo "Run of-br-fapi1-advanced all tests"
+    # for FAPI OP - Brazil Open Finance (FAPI-BR v2)
+    makeOFBRFAPI1AdvancedTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     echo "Run oidc all tests"
     makeOIDCConfigTest
