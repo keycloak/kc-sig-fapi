@@ -126,13 +126,20 @@ Keycloak 15.0.2 have achieved [certification for all 8 conformance profiles of F
 
 Keycloak 15.0.2 have achieved [certification for all 4 conformance profiles of Financial-grade API Client Initiated Backchannel Authentication Profile (FAPI-CIBA)](https://openid.net/certification/#FAPI-CIBA_OPs).
 
-#### Open Finance Brasil FAPI 1.0 (Open Banking Brasil FAPI 1.0 was renamed)
+#### Open Banking Brasil FAPI 1.0
   - Client Authentication Method : MTLS, private_key_jwt​
   - Signature Algorithm : PS256
   - Request Object Method : plain, PAR​
   - Response Mode : plain, JARM​
 
 Keycloak 15.0.2 have achieved [certification for 8 conformance profiles of Brazil Open Banking (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs) except for DCR (Dynamic Client Registration).
+
+#### Open Finance Brasil FAPI 1.0 (Open Banking Brasil FAPI 1.0 was evolved)
+  - Client Authentication Method : private_key_jwt​
+  - Signature Algorithm : PS256
+  - Request Object Method : PAR​
+  - Response Mode : plain
+  - ID token encryption : required
 
 #### Australia Consumer Data Right (CDR)
   - Client Authentication Method : private_key_jwt​
