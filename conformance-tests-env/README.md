@@ -327,6 +327,19 @@ Note: If you run this tests, please use `realm-ob-br-fapi1-advanced.json` realm 
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-ob-br-fapi1-advanced.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
 ```
 
+Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.15. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
+
+**Brazil Open Finance (Based on FAPI 1 Advanced Final)**
+
+|Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
+|-------------------|---------|----------------|------------|------------------|------------------------|---------|
+|BR-OF Adv. OP w/ Private Key, PAR (FAPI-BR v2)|fapi1-advanced-final-test-plan|private_key_jwt|openbanking_brazil|plain_response|pushed|--of-br-fapi1-advanced|
+
+Note: If you run this tests, please use `realm-of-br-fapi1-advanced.json` realm setting file like:
+```
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-of-br-fapi1-advanced.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
+```
+
 **Australia CDR (Based on FAPI 1 Advanced Final)**
 
 |Conformance Profile|Test Plan|client_auth_type|fapi_profile|fapi_response_mode|fapi_auth_request_method|TEST_PLAN|
@@ -461,6 +474,8 @@ If you set `--fapi-ciba-all` to `TEST_PLAN`, it runs all types of FAPI-CIBA Open
 
 If you set `--ob-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Brazil Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
+If you set `--of-br-fapi1-advanced-all` to `TEST_PLAN`, it runs all types of Brazil Open Finance (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
+
 If you set `--fapi-aus-cdr-all` to `TEST_PLAN`, it runs all types of Australia CDR (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
 If you set `--fapi-uk-ob-all` to `TEST_PLAN`, it runs all types of UK Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
@@ -474,6 +489,8 @@ If you set `--fapi2-sp-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Se
 If you set `--fapi2-ms-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Message Signing First Implementer’s Draft conformance tests shown above the table automatically.
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
+
+Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.15. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
 
 ### Notes
 

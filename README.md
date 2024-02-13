@@ -239,59 +239,61 @@ We tagged the environment for every keycloak verion:
 |kc-23.0.3|23.0.3|release-v5.1.7(*)|
 |kc-23.0.4|23.0.4|release-v5.1.7(*)|
 |kc-23.0.5|23.0.5|release-v5.1.7(JARM)(*)/release-v5.1.15(non-JARM)|
-|kc-23.0.6|23.0.6|release-v5.1.7(JARM)(*)/release-v5.1.15(non-JARM)|
+|kc-23.0.6|23.0.6|release-v5.1.15|
 
 \* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking/Finance Brasil FAPI 1.0 (\*1,\*2)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*3)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft|FAPI 2.0 Message Signing Implementer’s Draft|
-|-|-|-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|x|-|-|-|-|-|
-|17.0.0|x|x|x|x|-|-|-|-|-|
-|17.0.0-legacy|x|x|x|x|-|-|-|-|-|
-|17.0.1|x|x|x|x|-|-|-|-|-|
-|17.0.1-legacy|x|x|x|x|-|-|-|-|-|
-|18.0.0|x|x|x|x|-|x|x|-|-|
-|18.0.0-legacy|x|x|x|x|-|x|x|-|-|
-|18.0.2|x|x|x|x|-|x|x|-|-|
-|18.0.2-legacy|x|x|x|x|-|x|x|-|-|
-|19.0.1|x|x|x|x|-|x|x|-|-|
-|19.0.1-legacy|x|x|x|x|-|x|x|-|-|
-|19.0.2|x|x|x|x|-|x|x|-|-|
-|19.0.2-legacy|x|x|x|x|-|x|x|-|-|
-|20.0.0|x|x|x|x|x|x|x|-|-|
-|20.0.1|x|x|x|x|x|x|x|-|-|
-|20.0.2|x|x|x|x|x|x|x|-|-|
-|20.0.3|x|x|x|x|x|x|x|-|-|
-|20.0.5|x|x|x|x|x|x|x|-|-|
-|21.0.0|x|x|x|x|x|x|x|-|-|
-|21.0.1|x|x|x|x|x|x|x|-|-|
-|21.0.2|x|x|x|x|x|x|x|-|-|
-|21.1.0|x|x|x|x|x|x|x|-|-|
-|21.1.1|x|x|x|x|x|x|x|-|-|
-|21.1.2|x|x|x|x|x|x|x|-|-|
-|22.0.0|x|x|x|x|x|x|x|-|-|
-|22.0.1|x|x|x|x|x|x|x|-|-|
-|22.0.2|x|x|x|x|x|x|x|-|-|
-|22.0.3|x|x|x|x|x|x|x|-|-|
-|22.0.4|x|x|x|x|x|x|x|-|-|
-|22.0.5|x|x|x|x|x|x|x|-|-|
-|23.0.0|x|x|-(*4)|x|x|x|x|x|x|
-|23.0.1|x|x|x|x|x|x|x|x|x|
-|23.0.2|x|x|x|x|x|x|x|x|x|
-|23.0.3|x|x|x|x|x|x|x|x|x|
-|23.0.4|x|x|x|x|x|x|x|x|x|
-|23.0.5|x|x|x|x|x|x|x|x|x|
-|23.0.6|x|x|x|x|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft|FAPI 2.0 Message Signing Implementer’s Draft|
+|-|-|-|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|-|x|-|-|-|-|-|
+|17.0.0|x|x|x|-|x|-|-|-|-|-|
+|17.0.0-legacy|x|x|x|-|x|-|-|-|-|-|
+|17.0.1|x|x|x|-|x|-|-|-|-|-|
+|17.0.1-legacy|x|x|x|-|x|-|-|-|-|-|
+|18.0.0|x|x|x|-|x|-|x|x|-|-|
+|18.0.0-legacy|x|x|x|-|x|-|x|x|-|-|
+|18.0.2|x|x|x|-|x|-|x|x|-|-|
+|18.0.2-legacy|x|x|x|-|x|-|x|x|-|-|
+|19.0.1|x|x|x|-|x|-|x|x|-|-|
+|19.0.1-legacy|x|x|x|-|x|-|x|x|-|-|
+|19.0.2|x|x|x|-|x|-|x|x|-|-|
+|19.0.2-legacy|x|x|x|-|x|-|x|x|-|-|
+|20.0.0|x|x|x|-|x|x|x|x|-|-|
+|20.0.1|x|x|x|-|x|x|x|x|-|-|
+|20.0.2|x|x|x|-|x|x|x|x|-|-|
+|20.0.3|x|x|x|-|x|x|x|x|-|-|
+|20.0.5|x|x|x|-|x|x|x|x|-|-|
+|21.0.0|x|x|x|-|x|x|x|x|-|-|
+|21.0.1|x|x|x|-|x|x|x|x|-|-|
+|21.0.2|x|x|x|-|x|x|x|x|-|-|
+|21.1.0|x|x|x|-|x|x|x|x|-|-|
+|21.1.1|x|x|x|-|x|x|x|x|-|-|
+|21.1.2|x|x|x|-|x|x|x|x|-|-|
+|22.0.0|x|x|x|-|x|x|x|x|-|-|
+|22.0.1|x|x|x|-|x|x|x|x|-|-|
+|22.0.2|x|x|x|-|x|x|x|x|-|-|
+|22.0.3|x|x|x|-|x|x|x|x|-|-|
+|22.0.4|x|x|x|-|x|x|x|x|-|-|
+|22.0.5|x|x|x|-|x|x|x|x|-|-|
+|23.0.0|x|x|-(*5)|-|x|x|x|x|x|x|
+|23.0.1|x|x|x|-|x|x|x|x|x|x|
+|23.0.2|x|x|x|-|x|x|x|x|x|x|
+|23.0.3|x|x|x|-|x|x|x|x|x|x|
+|23.0.4|x|x|x|-|x|x|x|x|x|x|
+|23.0.5|x|x|x|-|x|x|x|x|x|x|
+|23.0.6|x|x|-|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
-\*1 : Up to Implementer's Draft version 2, Open Banking Brazil Security Profile. From Implementer's Draft version 3, Open Finance Brazil Security Profile.
+\*1 : Up to Implementer's Draft version 2, Open Banking Brazil Security Profile. From Implementer's Draft version 3, Open Finance Brazil Security Profile. Its conformance test is no longer supported since conformance suite version 5.1.15.
 
-\*2 : Except for Dynamic Client Registration (DCR) conformance profile.
+\*2 : Its conformance test is supported by conformance suite version 5.1.15.
 
-\*3 : Except for 3rd Party-Init OP conformance profile.
+\*3 : Except for Dynamic Client Registration (DCR) conformance profile.
 
-\*4 : [ISSUE-25022](https://github.com/keycloak/keycloak/issues/25022)
+\*4 : Except for 3rd Party-Init OP conformance profile.
+
+\*5 : [ISSUE-25022](https://github.com/keycloak/keycloak/issues/25022)
 
 ## Other Contributions
 
