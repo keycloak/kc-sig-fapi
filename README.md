@@ -108,8 +108,7 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 
 The current environment uses the following software version.
 - Keycloak version : 23.0.6
-- Conformance-suite version : release-v5.1.7(JARM) / release-v5.1.15(non-JARM)
-
+- Conformance-suite version : release-v5.1.15
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
   - Signature Algorithm : PS256, ES256​
@@ -240,15 +239,13 @@ We tagged the environment for every keycloak verion:
 |kc-22.0.3|22.0.3|release-v5.1.7|
 |kc-22.0.4|22.0.4|release-v5.1.8|
 |kc-22.0.5|22.0.5|release-v5.1.9|
-|kc-23.0.0|23.0.0|release-v5.1.7(*)|
-|kc-23.0.1|23.0.1|release-v5.1.7(*)|
-|kc-23.0.2|23.0.2|release-v5.1.7(*)|
-|kc-23.0.3|23.0.3|release-v5.1.7(*)|
-|kc-23.0.4|23.0.4|release-v5.1.7(*)|
-|kc-23.0.5|23.0.5|release-v5.1.7(JARM)(*)/release-v5.1.15(non-JARM)|
+|kc-23.0.0|23.0.0|release-v5.1.15|
+|kc-23.0.1|23.0.1|release-v5.1.15|
+|kc-23.0.2|23.0.2|release-v5.1.15|
+|kc-23.0.3|23.0.3|release-v5.1.15|
+|kc-23.0.4|23.0.4|release-v5.1.15|
+|kc-23.0.5|23.0.5|release-v5.1.15|
 |kc-23.0.6|23.0.6|release-v5.1.15|
-
-\* : [Issue-455](https://github.com/keycloak/kc-sig-fapi/issues/455)
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft|FAPI 2.0 Message Signing Implementer’s Draft|
 |-|-|-|-|-|-|-|-|-|-|-|
@@ -282,19 +279,19 @@ We tagged the environment for every keycloak verion:
 |22.0.3|x|x|x|-|x|x|x|x|-|-|
 |22.0.4|x|x|x|-|x|x|x|x|-|-|
 |22.0.5|x|x|x|-|x|x|x|x|-|-|
-|23.0.0|x|x|-(*5)|-|x|x|x|x|x|x|
-|23.0.1|x|x|x|-|x|x|x|x|x|x|
-|23.0.2|x|x|x|-|x|x|x|x|x|x|
-|23.0.3|x|x|x|-|x|x|x|x|x|x|
-|23.0.4|x|x|x|-|x|x|x|x|x|x|
-|23.0.5|x|x|x|-|x|x|x|x|x|x|
-|23.0.6|x|x|-|x|x|x|x|x|x|x|
+|23.0.0|x|x|-(*5)|-(*5)|x|x|x|x|x|x|
+|23.0.1|x|x|x|x|x|x|x|x|x|x|
+|23.0.2|x|x|x|x|x|x|x|x|x|x|
+|23.0.3|x|x|x|x|x|x|x|x|x|x|
+|23.0.4|x|x|x|x|x|x|x|x|x|x|
+|23.0.5|x|x|x|x|x|x|x|x|x|x|
+|23.0.6|x|x|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
-\*1 : Up to Implementer's Draft version 2, Open Banking Brazil Security Profile. From Implementer's Draft version 3, Open Finance Brazil Security Profile. Its conformance test is no longer supported since conformance suite version 5.1.15.
+\*1 : Up to Implementer's Draft version 2, Open Banking Brazil Security Profile. From Implementer's Draft version 3, Open Finance Brazil Security Profile. Its conformance test is no longer supported since conformance suite version 5.1.11. Therefore, its conformance test is conducted by the conformance suite version 5.1.10.
 
-\*2 : Its conformance test is supported by conformance suite version 5.1.15.
+\*2 : Its conformance test is supported by conformance suite version 5.1.11.
 
 \*3 : Except for Dynamic Client Registration (DCR) conformance profile.
 

@@ -327,7 +327,7 @@ Note: If you run this tests, please use `realm-ob-br-fapi1-advanced.json` realm 
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-ob-br-fapi1-advanced.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
 ```
 
-Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.15. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
+Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.11. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
 
 **Brazil Open Finance (Based on FAPI 1 Advanced Final)**
 
@@ -490,7 +490,7 @@ If you set `--fapi2-ms-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Me
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 
-Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.15. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
+Note: Open Banking Brazil was evolved into Open Finance Brazil. Conformance tests of Open Banking Brazil were no longer supported since conformance suite version 5.1.11. Conformance tests of Open Finance Brazil is provided since conformance suite version 5.1.15.
 
 ### Notes
 
