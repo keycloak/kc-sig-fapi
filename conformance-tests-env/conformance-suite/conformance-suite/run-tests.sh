@@ -594,7 +594,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--of-br-fapi1-advanced-all" ]; then
     echo "Run of-br-fapi1-advanced all tests"
     # for FAPI OP - Brazil Open Finance (FAPI-BR v2)
     makeOFBRFAPI1AdvancedTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-all" ]; then
     echo "Run oidc all tests"
     makeOIDCConfigTest
     makeOIDCBasicTest
@@ -605,7 +605,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-all" ]; then
     makeOIDCFormPostHybridTest
     makeOIDCDynamicTest
     makeOIDC3rdpartyInitLoginTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-logout-all" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-logout-all" ]; then
     echo "Run oidc logout all tests"
     makeOIDCRpInitiatedLogoutTest
 #    makeOIDCSessionManagementTest
@@ -709,49 +709,49 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-all" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-uk-ob-all" ]; then
     echo "Run UK OpenBanking fapi1-advanced tests"
     makeUKOBFAPI1AdvancedTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-config" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-config" ]; then
     echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests"
     makeOIDCConfigTest   
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-config" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-config" ]; then
     echo "Run OpenID Connect Core: Config Certification Profile Authorization server tests manually"
     makeManualOIDCConfigTest 
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-basic" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-basic" ]; then
     echo "Run OpenID Connect Core: Basic Certification Profile Authorization server test"
     makeOIDCBasicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-basic" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-basic" ]; then
     echo "Run OpenID Connect Core: Basic Certification Profile Authorization server test manually"
     makeManualOIDCBasicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-implicit" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-implicit" ]; then
     echo "Run OpenID Connect Core: Implicit Certification Profile Authorization server test"
     makeOIDCImplicitTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-implicit" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-implicit" ]; then
     echo "Run OpenID Connect Core: Implicit Certification Profile Authorization server test manually"
     makeManualOIDCImplicitTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-hybrid" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-hybrid" ]; then
     echo "Run OpenID Connect Core: Hybrid Certification Profile Authorization server test"
     makeOIDCHybridTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-hybrid" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-hybrid" ]; then
     echo "Run OpenID Connect Core: Hybrid Certification Profile Authorization server test manually"
     makeManualOIDCHybridTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-basic" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-formpost-basic" ]; then
     echo "Run OpenID Connect Core: Form Post Basic Certification Profile Authorization server test"
     makeOIDCFormPostBasicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-basic" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-formpost-basic" ]; then
     echo "Run OpenID Connect Core: Form Post Basic Certification Profile Authorization server test manually"
     makeManualOIDCFormPostBasicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-hybrid" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-formpost-hybrid" ]; then
     echo "Run OpenID Connect Core: Form Post Hybrid Certification Profile Authorization server test"
     makeOIDCFormPostHybridTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-hybrid" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-formpost-hybrid" ]; then
     echo "Run OpenID Connect Core: Form Post Hybrid Certification Profile Authorization server test manually"
     makeManualOIDCFormPostHybridTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost-implicit" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-formpost-implicit" ]; then
     echo "Run OpenID Connect Core: Form Post Implicit Certification Profile Authorization server test"
     makeOIDCFormPostImplicitTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-formpost-implicit" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-formpost-implicit" ]; then
     echo "Run OpenID Connect Core: Form Post Implicit Certification Profile Authorization server test manually"
     makeManualOIDCFormPostImplicitTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oic-formpost" ]; then
     echo "Run OpenID Connect Core: Form Post Certification Profile Authorization server test"
     makeOIDCFormPostBasicTest
     makeOIDCFormPostImplicitTest
@@ -759,30 +759,30 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-formpost" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-dynamic" ]; then
     echo "Run OpenID Connect Core: Dynamic Certification Profile Authorization server test"
     makeOIDCDynamicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-dynamic" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-dynamic" ]; then
     echo "Run OpenID Connect Core: Dynamic Certification Profile Authorization server test manually"
     makeManualOIDCDynamicTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-3rdparty-init-login" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-3rdparty-init-login" ]; then
     echo "Run OpenID Connect Core: 3rd party initiated Certification Profile Authorization server test"
     makeOIDC3rdpartyInitLoginTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-3rdparty-init-login" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-3rdparty-init-login" ]; then
     echo "Run OpenID Connect Core: 3rd party initiated Certification Profile Authorization server test"
     makeManualOIDC3rdpartyInitLoginTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-frontchanel-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-frontchanel-rp-initiated-logout" ]; then
     makeOIDCFrontchannelRpInitiatedLogoutTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-frontchanel-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-frontchanel-rp-initiated-logout" ]; then
     makeManualOIDCFrontchannelRpInitiatedLogoutTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-backchanel-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-backchanel-rp-initiated-logout" ]; then
     makeOIDCBackchannelRpInitiatedLogoutTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-backchanel-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-backchanel-rp-initiated-logout" ]; then
     makeManualOIDCBackchannelRpInitiatedLogoutTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-session-management" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-session-management" ]; then
     makeOIDCSessionManagementTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-session-management" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-session-management" ]; then
     makeManualOIDCSessionManagementTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--oidcc-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-rp-initiated-logout" ]; then
     makeOIDCRpInitiatedLogoutTest
-elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidcc-rp-initiated-logout" ]; then
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-rp-initiated-logout" ]; then
     makeManualOIDCRpInitiatedLogoutTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-local.json"
@@ -792,7 +792,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--local-provider-tests" ]; then
     echo "Run local provider tests"
     makeLocalProviderTests
 else
-    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidcc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--fapi2-sp-id2-all|--fapi2-ms-id1-all|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidcc-config|--oidcc-basic|--oidcc-implicit|--oidcc-hybrid|--oidcc-formpost|--oidcc-dynamic|--oidcc-3rdparty-init-login|--local-provider-tests]"
+    echo "Syntax: run-tests.sh [--server-tests-only|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--fapi2-sp-id2-all|--fapi2-ms-id1-all|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidc-config|--oidc-basic|--oidc-implicit|--oidc-hybrid|--oidc-formpost|--oidc-dynamic|--oidc-3rdparty-init-login|--local-provider-tests]"
     exit 1
 fi
 
