@@ -368,32 +368,32 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi-uk-ob.json docker-compose -p keycloak-
 
 |Conformance Profile|Test Plan|server_metadata|client_registration|response_type|TEST_PLAN|
 |-------------------|---------|---------------|-------------------|-------------|---------|
-|Config OP|oidcc-config-certification-test-plan|-|-|-|--oidcc-config|
-|Basic OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-basic|
-|Basic OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidcc-basic|
-|Basic OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidcc-basic|
-|Implicit OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-implicit|
-|Implicit OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidcc-implicit|
-|Implicit OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidcc-implicit|
-|Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-hybrid|
-|Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidcc-hybrid|
-|Hybrid OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidcc-hybrid|
-|Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidcc-formpost|
-|Form Post OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidcc-formpost|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code idtoken|--oidcc-dynamic|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code id_token token|--oidcc-dynamic|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code|--oidcc-dynamic|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|idtoken|--oidcc-dynamic|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|id_token token|--oidcc-dynamic|
-|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code token|--oidcc-dynamic|
-|3rd Party-Init OP|oidcc-3rdparty-init-login-certification-test-plan|-|-|code idtoken|--oidcc-3rdparty-init-login|
+|Config OP|oidcc-config-certification-test-plan|-|-|-|--oidc-config|
+|Basic OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidc-basic|
+|Basic OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidc-basic|
+|Basic OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidc-basic|
+|Implicit OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidc-implicit|
+|Implicit OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidc-implicit|
+|Implicit OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidc-implicit|
+|Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidc-hybrid|
+|Hybrid OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidc-hybrid|
+|Hybrid OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidc-hybrid|
+|Form Post OP|oidcc-basic-certification-test-plan|discovery|static_client|-|--oidc-formpost|
+|Form Post OP|oidcc-basic-certification-test-plan|discovery|dynamic_client|-|--oidc-formpost|
+|Form Post OP|oidcc-basic-certification-test-plan|static|static_client|-|--oidc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|discovery|static_client|-|--oidc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|discovery|dynamic_client|-|--oidc-formpost|
+|Form Post OP|oidcc-implicit-certification-test-plan|static|static_client|-|--oidc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|static_client|-|--oidc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|discovery|dynamic_client|-|--oidc-formpost|
+|Form Post OP|oidcc-hybrid-certification-test-plan|static|static_client|-|--oidc-formpost|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code idtoken|--oidc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code id_token token|--oidc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code|--oidc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|idtoken|--oidc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|id_token token|--oidc-dynamic|
+|Dynamic OP|oidcc-dynamic-certification-test-plan|-|-|code token|--oidc-dynamic|
+|3rd Party-Init OP|oidcc-3rdparty-init-login-certification-test-plan|-|-|code idtoken|--oidc-3rdparty-init-login|
 
 Note: If you run this tests, please use `realm-oidc.json` realm setting file like:
 ```
@@ -404,30 +404,30 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-oidc.json docker-compose -p keycloak-fapi -
 
 |Conformance Profile|Test Plan|client_registration|response_type|TEST_PLAN|
 |-------------------|---------|-------------------|-------------|---------|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-frontchanel-rp-initiated-logout|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-frontchanel-rp-initiated-logout|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-frontchanel-rp-initiated-logout|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-frontchanel-rp-initiated-logout|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-frontchanel-rp-initiated-logout|
-|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-frontchanel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-backchannel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-backchannel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannelchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-backchannel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-backchannel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-backchannel-rp-initiated-logout|
-|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-backchannel-rp-initiated-logout|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|code idtoken|--oidcc-session-management|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|code id_token token|--oidcc-session-management|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|code|--oidcc-session-management|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|idtoken|--oidcc-session-management|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|id_token token|--oidcc-session-management|
-|Session OP|oidcc-session-management-certification-test-plan|static_client|code token|--oidcc-session-management|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidcc-rp-initiated-logout|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidcc-rp-initiated-logout|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code|--oidcc-rp-initiated-logout|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidcc-rp-initiated-logout|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidcc-rp-initiated-logout|
-|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code token|--oidcc-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidc-frontchanel-rp-initiated-logout|
+|Front-Channel OP|oidcc-frontchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidc-frontchanel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannelchannel-rp-initiated-logout-certification-test-plan|static_client|code|--oidc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidc-backchannel-rp-initiated-logout|
+|Back-Channel OP|oidcc-backchannel-rp-initiated-logout-certification-test-plan|static_client|code token|--oidc-backchannel-rp-initiated-logout|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code idtoken|--oidc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code id_token token|--oidc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code|--oidc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|idtoken|--oidc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|id_token token|--oidc-session-management|
+|Session OP|oidcc-session-management-certification-test-plan|static_client|code token|--oidc-session-management|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code idtoken|--oidc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code id_token token|--oidc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code|--oidc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|idtoken|--oidc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|id_token token|--oidc-rp-initiated-logout|
+|RP-Initiated OP|oidcc-rp-initiated-logout-certification-test-plan|static_client|code token|--oidc-rp-initiated-logout|
 
 Note: If you run this tests, please use `realm-oidc-logout.json` realm setting file like:
 ```
@@ -480,9 +480,9 @@ If you set `--fapi-aus-cdr-all` to `TEST_PLAN`, it runs all types of Australia C
 
 If you set `--fapi-uk-ob-all` to `TEST_PLAN`, it runs all types of UK Open Banking (Based on FAPI 1 Advanced Final) conformance tests shown above the table automatically.
 
-If you set `--oidcc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
+If you set `--oidc-all` to `TEST_PLAN`, it runs all types of OpenID Provider conformance tests shown above the table automatically.
 
-If you set `--oidcc-logout-all` to `TEST_PLAN`, it runs all types of OpenID Provider for Logout Profile conformance tests shown above the table automatically except for Session OP and Front-Channel OP.
+If you set `--oidc-logout-all` to `TEST_PLAN`, it runs all types of OpenID Provider for Logout Profile conformance tests shown above the table automatically except for Session OP and Front-Channel OP.
 
 If you set `--fapi2-sp-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Security Profile Second Implementer’s Draft conformance tests shown above the table automatically.
 
