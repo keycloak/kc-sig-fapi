@@ -1,0 +1,119 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 9th Meeting
+ (54th Ex FAPI-SIG)
+
+Date :
+ Wed 6 March 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Arnaud Bourhis (ANS)
+ Ahmet Soormally
+ Charalampos Savvaidis (walt.id)
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes (Groupements des Mousquetaires)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Sebastian Schuster (Bosch)
+ Tom Kersting
+
+Presentation Materials :
+ [1] OAuth SIG Community 9th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/9th/presentations/OAuth-SIG_9th_MTG_agenda.pdf
+
+Recording :
+ TBA
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   4 issues of 9 issues in total were resolved (2 issues were newly resolved). The PR was submitted to support VC formats of SD-JWT-VC and VCDM.
+   https://github.com/keycloak/keycloak/pull/25829
+ 
+   The PR for Pre-Authz Code Flow VC Issuance[1] would be ready because OAuth 2.0 Grant Type SPI[2] was merged onto Keycloak upstream have been prepared.
+
+   [1] Support Credentials Issuance through the OID4VCI Protocol
+     Issue: https://github.com/keycloak/keycloak/issues/25940
+
+   [2] OAuth 2.0 Grant Type SPI
+     Issue: https://github.com/keycloak/keycloak/issues/26250
+     PR: https://github.com/keycloak/keycloak/pull/26251
+
+    After the PR for [1] is merged, then start working on the PR for [3] Authz Code Flow VC Issuance.
+   [3] Support Authorization Code Flow for VC Issuance
+     Issue: https://github.com/keycloak/keycloak/issues/26328
+
+ * Token Excnahge
+   The offcial support for Token Exchange is not so high priority by the Keycloak development team.
+   The following discussion gathers use-cases of Token Exchange.
+   https://github.com/keycloak/keycloak/discussions/26502
+
+ * Other topics
+   Keycloak does not support custom headers. The following tries to support them.
+   [1] [CORS] Allow Access-Control-Allow-Headers customization
+     https://github.com/keycloak/keycloak/issues/12682
+     https://github.com/keycloak/keycloak/pull/27334
+
+   The Keycloak development team consider default profiles of client policies.
+   https://github.com/keycloak/keycloak/discussions/27171
+   
+ * Community event proposal: Keyconf 24
+   Holding the conference just before or after the other major conference
+   The most promising candidate is as follows:
+   [1] Tech Show Frankfurt​
+       https://www.techshowfrankfurt.de/​
+       May Wed 22 - Thr 23, 2024, Frankfurt, Germany
+       Candidate venue: Frankfurt/Germany​
+       Candidate date: May Tur 21
+
+   The other candidates are as follows:
+   [2] Open Source Summit Europe 2024​
+       https://events.linuxfoundation.org/open-source-summit-europe/​
+       Sep Mon 16 - Wed 18, 2024, Vienna, Austria
+       <1> holding Keyconf 24 as co-hosted events of OSS Summit EU​
+         Candidate venue: Vienna/Austria (the same as OSS Summit EU)
+         Candidate date: Thr 19 or Fri 20​
+       <2> holding Keyconf 24 as not co-hosted events of OSS Summit EU​
+         Candidate venue: Germany? Austria?
+         Candidate date: Thr 19 or Fri 20​
+    For <1>, we need not prepare its venue, AV systems, etc by ourselves. These will be prepared by OSS Summit EU.
+    However, it requires at least three sponsors for the event.
+    Also the deadline of the appplication of this co-hosted event is April 30.
+
+    [3] JavaZone 2024
+        https://2024.javazone.no/
+        September 4th-5th 2024 in Oslo Spektrum, Norway
+        Candidate venue: Oslo/Norway?
+        Candidate date: September 3 or 6
+
+    we will continue discussing this matter.
+    It might be good if we would vote for the candidate (in slack?).
+
+ * Next Web Meeting
+   Wed 3 April 2024 12:00 - 13:00 UTC in 1 hour
+
+
