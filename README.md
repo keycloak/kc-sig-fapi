@@ -51,7 +51,11 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 #### keycloak 14
  - [Client Policies](https://www.keycloak.org/docs/latest/release_notes/index.html#client-policies-and-financial-grade-api-fapi-support)​
 
-​
+#### keycloak 24
+
+ - [Lightweight Access Token](https://www.keycloak.org/docs/latest/release_notes/index.html#lightweight-access-tokens-support)
+ - [OAuth Grant Type SPI](https://www.keycloak.org/docs/latest/release_notes/index.html#oauth-grant-type-spi)
+
 ### Nation/Region/Market Specific Features
 
 #### keycloak 15
@@ -120,11 +124,16 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 
   - [OpenID for Verifiable Credential Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 
+##### Other OpenID Connect Extension
+
+  - [OpenID Connect for Identity Assurance 1.0](https://openid.net/specs/openid-connect-4-identity-assurance-1_0-13.html)
+
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
 - Keycloak version : 24.0.1
 - Conformance-suite version : release-v5.1.15
+
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
   - Signature Algorithm : PS256, ES256​
