@@ -20,15 +20,11 @@ Supporting OAuth/OIDC and its related security features to Keycloak.
 
 Currently, proposed goals are as follows.
 
-### Financial-grade API (FAPI) 2.0 related features
-
-- [Financial-grade API (FAPI) 2.0 — Part 1: Baseline Security Profile](https://bitbucket.org/openid/fapi/src/master/FAPI_2_0_Baseline_Profile.md)
-
-- [Financial-grade API (FAPI) 2.0 — Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management-01.html)
+### OAuth and OIDC related security features
 
 - [OAuth 2.0 Rich Authorization Requests (RAR)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rar)
 
-- [OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-dpop)
+- [OpenID for Verifiable Credential Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 
 ### Nation/Region/Market Specific Features
 
@@ -103,6 +99,26 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
   - [RFC 9449 OAuth 2.0 Demonstrating Proof of Possession (DPoP)](https://datatracker.ietf.org/doc/html/rfc9449)
   - [FAPI 2.0 Security Profile Second Implementer’s Draft](https://openid.net/specs/fapi-2_0-security-profile-ID2.html)
   - [FAPI 2.0 Message Signing First Implementer’s Draft](https://openid.bitbucket.io/fapi/fapi-2_0-message-signing.html)
+
+#### keycloak 24
+
+  - [RFC 8032 Edwards-Curve Digital Signature Algorithm (EdDSA)](https://datatracker.ietf.org/doc/html/rfc8032)
+  - [The OAuth 2.1 Authorization Framework - Draft version 10](https://www.ietf.org/archive/id/draft-ietf-oauth-v2-1-10.html)
+
+#### In progress
+
+##### OpenID for Verifiable Credentials
+
+###### Format
+
+  - [Selective Disclosure for JWTs (SD-JWT)](https://drafts.oauth.net/oauth-selective-disclosure-jwt/draft-ietf-oauth-selective-disclosure-jwt)
+  - [SD-JWT-based Verifiable Credentials (SD-JWT VC)](https://drafts.oauth.net/oauth-sd-jwt-vc/draft-ietf-oauth-sd-jwt-vc.html)
+  - [JWT VC](https://identity.foundation/jwt-vc-presentation-profile/#jwt-vc)
+  - [W3C Verfiable Credentials Data Format(VCDM)](https://www.w3.org/TR/vc-data-model/)
+
+###### Issurance Protocol
+
+  - [OpenID for Verifiable Credential Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
@@ -308,6 +324,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 ## Other Contributions
 
 ### Conferences
+
+#### KubeCon + CloudNativeCon Europe 2024 (Paris Expo Porte de Versailles, Paris, France, March 22, 2024)
+- Title: The Leading Edge of AuthN and AuthZ by Keycloak
+- URL: https://kccnceu2024.sched.com/event/1YhiQ/the-leading-edge-of-authn-and-authz-by-keycloak-takashi-norimatsu-hitachi-thomas-darimont-codecentric-ag
 
 #### OpenID Summit Tokyo 2024 (Shibuya Stream Hall, Tokyo, Japan, January 19, 2024)
 - Title: Implementing OAuth 2.0-based Security Profiles on Open-source Software
