@@ -336,6 +336,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### OAuth Security Workshop 2024 (Auditorium Antonianum, Rome, Italy, April 11, 2024)
+- Title: Supporting OAuth 2.0 Based Security Profiles to Open-source Software - from Implementation to Operation
+- URL: https://oauth.secworkshop.events/osw2024/agenda-thursday-osw-2024
+
 #### KubeCon + CloudNativeCon Europe 2024 (Paris Expo Porte de Versailles, Paris, France, March 22, 2024)
 - Title: The Leading Edge of AuthN and AuthZ by Keycloak
 - URL: https://kccnceu2024.sched.com/event/1YhiQ/the-leading-edge-of-authn-and-authz-by-keycloak-takashi-norimatsu-hitachi-thomas-darimont-codecentric-ag
