@@ -1,0 +1,88 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 10th Meeting
+ (55th Ex FAPI-SIG)
+
+Date :
+ Wed 4 April 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Presenter :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Charalampos Savvaidis (walt.id)
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes (Groupements des Mousquetaires)
+ Guy Moyo (RCI Bank and Services)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Mostapha
+ Phil Potisk (walt.id)
+ Thomas Darimont (codecentric)
+
+Presentation Materials :
+ [1] OAuth SIG Community 10th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/10th/presentations/OAuth-SIG_10th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/g_R4QB7el4N3p8_BGkEMNSZ_SLaHdePlTclZRKQM0xLhhalYxuCjVtrziEhZWAbe.WYe_5q-M5YE8rByD
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   6 issues of 9 issues in total were resolved (2 issues were newly resolved). 1 PR was newly submitted and its review is ongoing.
+   https://github.com/keycloak/keycloak/pull/27931
+
+   In 2026, viable use cases might come due to registration like eIDAS 2.0.
+   In USA, a mobile driver license (ISO mdoc format) has been actually used.
+   In Europe, SD-JWT is also mandate.
+
+   The existing OID4VIC implementation : Microsoft Entra
+   https://learn.microsoft.com/en-us/entra/verified-id/decentralized-identifier-overview
+
+ * Token Excnahge
+   The following discussion gathers use-cases of Token Exchange.
+   https://github.com/keycloak/keycloak/discussions/26502
+   A lot of people in some community events like KubeCon EU want Token Exchange to be out of preview feature.
+
+   Current Keycloak Token Exchange depends on Fine-grained Permission which is still prevew feature.
+   Therefore, it might be good to decouple Token Exchange with Fine-grained Permission.
+   However, its alternative of some authorization mechanism for doing token exchange is needed.
+   
+ * Community event proposal: Keyconf 24
+   Other Keycloak community 1st event was held on Vienna, Austria on March 19, 2024.
+   https://www.meetup.com/keycloak-user-group-austria/
+   2nd event will be held on June 12, 2024.
+   3rd event will be held on November 6, 2024.
+
+   Vienna is close to Brno, Czech Republic, where a lot of Keycloak maintainers live.
+   Therefore, it is easy for them to participate in the conference if it would be held on Vienna.
+
+   we will continue discussing this matter.
+   It might be good if we would vote for the candidate (in slack?).
+
+ * Next Web Meeting
+   Wed 1 May 2024 12:00 - 13:00 UTC in 1 hour
+
+
