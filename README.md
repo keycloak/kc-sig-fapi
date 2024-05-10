@@ -16,10 +16,6 @@ Since June 2023, FAPI-SIG is evolved into OAuth SIG. OAuth SIG will mainly treat
 
 Supporting OAuth/OIDC and its related security features to Keycloak.
 
-## Goals
-
-Currently, proposed goals are as follows.
-
 ## Roles
 
 Tech Lead : [Takashi Norimatsu](https://github.com/tnorimat)
@@ -27,6 +23,10 @@ Tech Lead : [Takashi Norimatsu](https://github.com/tnorimat)
 ## Members
 
 Please refer to [the list](./members.adoc).
+
+## Goals
+
+Currently, proposed goals are as follows.
 
 ### OAuth and OIDC related security features
 
