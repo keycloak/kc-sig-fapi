@@ -20,6 +20,14 @@ Supporting OAuth/OIDC and its related security features to Keycloak.
 
 Currently, proposed goals are as follows.
 
+## Roles
+
+Tech Lead : [Takashi Norimatsu](https://github.com/tnorimat)
+
+## Members
+
+Please refer to [the list](./members.adoc).
+
 ### OAuth and OIDC related security features
 
 - [OAuth 2.0 Rich Authorization Requests (RAR)](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-rar)
