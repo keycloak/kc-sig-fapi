@@ -10,37 +10,7 @@
 
 #### Supported Docker Compose Version
 
-It has been confirmed that this automated FAPI conformance test run environment works with docker-compose version 1.27.4.
-
-How to use this version temporarily is as follows.
-
-##### windows
-
-Reference:
-https://docs.docker.com/compose/install/#install-compose-on-windows-server
-
-Invoke power shell with admin privilege and type the following command.
-
-```
-Invoke-WebRequest "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Windows-x86_64.exe" -UseBasicParsing -OutFile $Env:ProgramFiles\Docker\docker-compose.exe
-```
-
-Instead of originally used docker-compose, use
-"C:\Program Files\Docker\docker-compose.exe"
-
-##### linux
-
-Reference:
-https://docs.docker.com/compose/install/#install-compose-on-linux-systems
-
-```
-sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-Instead of originally used docker-compose, use
-/usr/local/bin/docker-compose
-
+It has been confirmed that this automated FAPI conformance test run environment works with docker-compose version 2.27.
 
 ### Run FAPI Conformance suite, Keycloak server and Test Runner
 

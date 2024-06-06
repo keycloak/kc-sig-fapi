@@ -13,8 +13,8 @@ echo "The 'docker internal host' available. Waiting 90 seconds before starting t
 # Sometimes keycloak is still starting up at this point if no maven dependencies need downloading in server service (sleep 90)
 sleep 90
 
-docker exec keycloak-fapi_server_1 bash -c "chmod a+x /conformance-suite/.gitlab-ci/run-tests.sh"
-docker exec keycloak-fapi_server_1 bash -c "chmod a+x /conformance-suite/scripts/*"
+docker exec keycloak-fapi-server-1 bash -c "chmod a+x /conformance-suite/.gitlab-ci/run-tests.sh"
+docker exec keycloak-fapi-server-1 bash -c "chmod a+x /conformance-suite/scripts/*"
 
 [ $AUTOMATE_TESTS == true ] &&
-docker exec keycloak-fapi_server_1 bash -c "/conformance-suite/.gitlab-ci/run-tests.sh $TEST_PLAN"
+docker exec keycloak-fapi-server-1 bash -c "/conformance-suite/.gitlab-ci/run-tests.sh $TEST_PLAN"
