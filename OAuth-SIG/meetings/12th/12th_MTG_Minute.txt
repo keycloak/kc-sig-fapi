@@ -1,0 +1,107 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 12th Meeting
+ (57th Ex FAPI-SIG)
+
+Date :
+ Wed 5 June 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Alexander Schwartz (Red Hat)
+ Charalampos Savviaidis (walt.id)
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Guy Moyo (RCI Bank and Services)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Peter Skopek (Red Hat)
+ Sebastian Schuster (Bosch)
+ Stefan Wiedemann (FIWARE)
+ Thomas Darimont (Identity Tailor GmbH)
+ Václav Muzikář (Red Hat)
+
+Presentation Materials :
+ [1] OAuth SIG Community 12th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/12th/presentations/OAuth-SIG_12th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/wc3u6ZFEZ-lL1ECHF56bH6lw8aqq8zZM4Uit2NZU9g9hY7zKdaNconIfk1KxAgkY.UWhTW-L0nyPlYeDX
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   17 issues of 17 issues in total were resolved.
+   Experimental support of OID4VCI was completed.
+   We continue working OID4VCI support to mature this feature.
+   We also continue holding weekly breaking sessions.
+
+ * Token Excnahge
+   Epic issue: TBD
+   Thomas investigated the gap between Keycloak's token exchange implementation and the token exchange specification.
+   https://docs.google.com/document/d/1plbyw5C1W8q6sYolETfoGqHKIrFWjzYio22o9i6yDOk/edit?usp=sharing
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/22311
+   3 issues are open.
+   The current DPoP support is a preview feature.
+   We continue working on DPoP support, which might be benefical for also FAPI 2.0 Final version support if it include some function of DPoP that has not yet been implemented on Keycloak.
+
+ * Passkey
+   Epic issue: https://github.com/keycloak/keycloak/issues/23656
+   6 issues of 11 issues were resolved. The remaining 5 issues are open.
+   The current Passkey support is a preview feature.
+   We want community support for continue working on Passkey support.
+
+ * Community event proposal: Keyconf 24
+   Date and Time: 10 AM to 4 PM, September 19th Thursday​
+   Venue: ARCOTEL Kaiserwasser, Vienna/Austria​
+   Sponsor: Adorsys, Banfico, Hitachi (also welcome other sponsors)​
+   Web site: https://www.eventbrite.de/e/keyconf24-tickets-887467387847
+   
+   Its program and CFP schedule were determined as follows:
+    Program:
+     9:00-10:00 Registration and Welcome Coffee ​
+     10:00-10:30 Keynote speeches and sessions : ​
+      Keynote speeches (from sponsors) 7 min x 4 (Red Hat, Adorsys, Banfico, Hitachi)​
+     10:30-12:00 Sessions :  30 min x 3​
+     12:00-13:00 Lunch Break​
+     13:00-14:30 Sessions ( or unconferences ) :  30 min x 3​
+     14:30-15:00 Coffee Break​
+     15:00-16:00 Sessions ( or unconferences ) :  30 min x 2
+     It is expected that one session consists of 25 min talk and 5 min discussion.
+     This conference has one room, so all sessions are held in tandem.
+     Any kind topic about Keycloak is OK for CfP.
+    CFP:
+     Form:​ https://forms.office.com/e/pgBuPzbgqP​
+    Schedule:​
+     CFP Closes: 31 July​
+     CFP Notifications: 19 August
+   Also, we want to record and publish its sessions.
+
+ * Next Web Meeting
+   Wed 3 July 2024 12:00 - 13:00 UTC in 1 hour
+
+
