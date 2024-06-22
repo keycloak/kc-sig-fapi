@@ -233,7 +233,7 @@
         },
         {
             "clientId": "resource-server",
-            "bearerOnly": true,
+            "bearerOnly": false,
             "standardFlowEnabled": false,
             "implicitFlowEnabled": false,
             "directAccessGrantsEnabled": false,
