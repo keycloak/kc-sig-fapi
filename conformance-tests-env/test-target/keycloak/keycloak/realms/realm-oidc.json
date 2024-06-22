@@ -120,7 +120,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -205,7 +206,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -290,7 +292,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -375,7 +378,8 @@
         "defaultClientScopes": [
             "name_claims_for_implicit",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
           "optionalClientScopes": [
             "profile",
@@ -460,7 +464,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -545,7 +550,8 @@
       "defaultClientScopes": [
         "name_claims",
         "web-origins",
-        "roles"
+        "roles",
+        "auth_time"
       ],
         "optionalClientScopes": [
           "profile",
@@ -630,7 +636,8 @@
       "defaultClientScopes": [
         "name_claims",
         "web-origins",
-        "roles"
+        "roles",
+        "auth_time"
       ],
         "optionalClientScopes": [
           "profile",
@@ -715,7 +722,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -800,7 +808,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -885,7 +894,8 @@
         "defaultClientScopes": [
             "name_claims",
             "web-origins",
-            "roles"
+            "roles",
+            "auth_time"
         ],
         "optionalClientScopes": [
             "profile",
@@ -970,7 +980,8 @@
           "defaultClientScopes": [
               "name_claims_for_implicit",
               "web-origins",
-              "roles"
+              "roles",
+              "auth_time"
           ],
             "optionalClientScopes": [
               "profile",
@@ -1055,7 +1066,8 @@
           "defaultClientScopes": [
               "name_claims",
               "web-origins",
-              "roles"
+              "roles",
+              "auth_time"
           ],
           "optionalClientScopes": [
               "profile",
@@ -1140,7 +1152,8 @@
         "defaultClientScopes": [
           "name_claims",
           "web-origins",
-          "roles"
+          "roles",
+          "auth_time"
         ],
           "optionalClientScopes": [
             "profile",
@@ -1225,7 +1238,8 @@
         "defaultClientScopes": [
           "name_claims",
           "web-origins",
-          "roles"
+          "roles",
+          "auth_time"
         ],
           "optionalClientScopes": [
             "profile",
@@ -1241,7 +1255,7 @@
       },
       {
         "clientId": "resource-server",
-        "bearerOnly": true,
+        "bearerOnly": false,
         "standardFlowEnabled": false,
         "implicitFlowEnabled": false,
         "directAccessGrantsEnabled": false,
@@ -1810,13 +1824,46 @@
               }
             }
           ]
+        },
+        {
+          "id": "06202b95-7acc-4b47-8d5a-30e2cccda261",
+          "name": "auth_time",
+          "description": "",
+          "protocol": "openid-connect",
+          "attributes": {
+            "include.in.token.scope": "false",
+            "display.on.consent.screen": "false",
+            "gui.order": "",
+            "consent.screen.text": ""
+          },
+          "protocolMappers": [
+            {
+              "id": "4d27243e-0496-4587-915b-5ad755b541e8",
+              "name": "auth_time",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-usersessionmodel-note-mapper",
+              "consentRequired": false,
+              "config": {
+                "user.session.note": "AUTH_TIME",
+                "introspection.token.claim": "false",
+                "userinfo.token.claim": "true",
+                "id.token.claim": "true",
+                "lightweight.claim": "false",
+                "access.token.claim": "false",
+                "claim.name": "auth_time",
+                "jsonType.label": "long",
+                "access.tokenResponse.claim": "false"
+              }
+            }
+          ]
         }
       ],
       "defaultDefaultClientScopes": [
         "name_claims",
         "roles",
         "role_list",
-        "web-origins"
+        "web-origins",
+        "auth_time"
       ],
       "defaultOptionalClientScopes": [
         "address",
