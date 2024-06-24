@@ -4,6 +4,9 @@
     "sslRequired": "external",
     "registrationAllowed": false,
     "requiredCredentials": [ "password" ],
+    "attributes": {
+      "cibaExpiresIn": "45"
+    },
     "users": [
         {
             "username": "john",
