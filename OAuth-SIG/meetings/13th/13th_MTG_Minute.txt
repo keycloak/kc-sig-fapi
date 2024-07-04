@@ -1,0 +1,99 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 13th Meeting
+ (58th Ex FAPI-SIG)
+
+Date :
+ Wed 3 July 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Mostapha
+ Stefan Wiedemann (FIWARE)
+ Thomas Darimont (Identity Tailor GmbH)
+
+
+Presentation Materials :
+ [1] OAuth SIG Community 13th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/13th/presentations/OAuth-SIG_13th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   22 issues of 21 issues in total were resolved (+5 new issues, +4 resolved).
+   Experimental support of OID4VCI was completed.
+   We continue working OID4VCI support to mature this feature.
+
+ * Token Excnahge
+   Epic issue: TBD
+   SPI provider for authorization of Token Exchange was proposed.
+   We might have a breakout session.
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/22311
+   3 issues are open. No progress. Currently a preview feature.
+   We might have a breakout session. (some member of OAuth SIG can work on promoting DPoP as official feature)
+
+ * Passkey
+   Epic issue: https://github.com/keycloak/keycloak/issues/23656
+   6 issues of 11 issues in total were resolved. No progress. Currently a preview feature.
+
+ * OpenID Connect Native SSO for Mobile Apps 1.0
+   Spec (Implementer's Draft): https://openid.net/specs/openid-connect-native-sso-1_0.html
+   It was proposed to support as one use-case of Token Exchange.
+
+ * OpenID Federation 1.0 (OIDFED)
+   Spec (Imprementer's Draft): https://openid.net/specs/openid-federation-1_0.html
+   One of a use-case of OIDFED is GAIN POC (https://openid.net/cg/gain-poc/)
+   There are community works of OIDFED for Keycloak.
+     https://github.com/eosc-kc/keycloak-oidc-federation (Seems to be based on an early darft version (13))
+     https://github.com/keycloak/keycloak-community/pull/201
+     https://github.com/thomasdarimont/keycloak-oidc-federation/tree/update/keycloak-25.0.x
+   Sphereon's Swagger API for OIDFED endpoints
+     https://app.swaggerhub.com/apis/SphereonInt/OpenIDFederationAPI/1.0.0-d35
+   We continue watching these works.
+
+ * Keycloak Spec Sheet
+   How about creating document showing which specification Keycloak has already supported?
+   E.g., https://www.thecyberhut.com/oauth2-capabilities-matrix-vendor-comparison/
+
+ * Community event proposal: KeyConf 24
+   Date and Time: 10 AM to 4 PM, September 19th Thursday​
+   Venue: ARCOTEL Kaiserwasser, Vienna/Austria​
+   Sponsor: Adorsys, Banfico, Hitachi (also welcome other sponsors)​
+   Web site: https://www.eventbrite.de/e/keyconf24-tickets-887467387847
+   Tickets were sold out. 
+   KeyConf 25 as a co-hosted event of KubeCon EU 2024 London was proposed.
+   We continue discussing options for KeyConf 25.
+
+ * Next Web Meeting
+   Wed 7 August 2024 12:00 - 13:00 UTC in 1 hour
+
+
