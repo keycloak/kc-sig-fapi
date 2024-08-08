@@ -1,0 +1,88 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 14th Meeting
+ (59th Ex FAPI-SIG)
+
+Date :
+ Wed 7 August 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Dmitry Telegin (Backbase)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+ Pascal Knüppel (Governikus KG)
+ Stefan Wiedemann (FIWARE)
+ Thomas Darimont (Identity Tailor GmbH)
+ Tom Kersting
+
+Presentation Materials :
+ [1] OAuth SIG Community 14th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/14th/presentations/OAuth-SIG_14th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/ZZoPMh_O_A4dKhhU0Q-JwP2H3tOKEdTZwRjO99WpXP-1pRSTwYwU0eYQAQP0sMJ1.PK9T_GMWkrDLsJRi
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   23 out of all 25 issues were resolved. (+3 new issues, +2 resolved).
+   We need to OID4VCI spec changes because it is still an implementer's draft.
+   As for VC format, we now put focus on IETF SD-JWT VC because EUDI Wallet's Architecture and Reference Framework (ARF) requires it.
+   The next focus might be ISO mDL.
+
+ * Token Exchange
+   Epic issue: https://github.com/keycloak/keycloak/issues/31546
+   1 out of all 8 issues were resolved. (+8 new issues, +1 resolved)
+   A protocol maapper of Token Exchange was proposed to modify claims of a new token.
+   We continue discussing this topic in breakout sessions.
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/22311
+   2 of 3 issues were resolved (+2 issues resolved).
+   The gap between current Keycloak's DPoP support and DPoP spec need to be analyzed. 
+   We continue discussing this topic in breakout sessions.
+   The OIDF's conformance suite start supporting conformance tests with DPoP.
+   A new issue was created to check whether Keycloak can pass these confomance tests.
+   https://github.com/keycloak/keycloak/issues/31970
+
+ * Passkey
+   Epic issue: https://github.com/keycloak/keycloak/issues/23656
+   6 issues of 11 issues in total were resolved. No progress. Currently a preview feature.
+   However, we heard that many customers were satisfied with current Keycloak Passkey support even if it is treated as preview feature.
+
+ * OpenID Federation 1.0 (OIDFED)
+   We continue keeping this topic in OAuth SIG.
+
+ * SSF: Shared Signals Framework
+   https://github.com/openid/sharedsignals
+   Discussion: Support RISC and CAEP events / Shared Signals and Events
+               https://github.com/keycloak/keycloak/discussions/14217
+   We picked up this topic in OAuth SIG.
+
+ * Next Web Meeting
+   Wed 4 September 2024 12:00 - 13:00 UTC in 1 hour
+
+
