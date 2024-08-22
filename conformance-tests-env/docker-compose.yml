@@ -51,6 +51,7 @@ services:
     depends_on:
      - resource_server
      - consent_server
+     - dpop_proof_signature_verify_server
      - auth_entity_server
      - keycloak
 
@@ -69,6 +70,12 @@ services:
   consent_server:
     build:
       context: ./spec/entities/consent-server
+
+# Dpop Proof Signature Verify Server
+
+  dpop_proof_signature_verify_server:
+    build:
+      context: ./spec/entities/dpop-proof-signature-verify-server
 
 #
 # Conformance Suite
@@ -187,6 +194,7 @@ services:
       - "--https-certificate-file=/etc/x509/https/server.crt"
       - "--https-certificate-key-file=/etc/x509/https/tls.key"
       - "--https-client-auth=request"
+      - "--features=dpop"
 
 # Keycloak Realm Setting Importer
 

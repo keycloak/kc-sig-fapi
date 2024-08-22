@@ -60,7 +60,7 @@ http {
 
     server {
         listen       443 ssl http2 default_server;
-        server_name  $SERVER_NAME;
+        server_name  ${SERVER_NAME};
         resolver local=on ipv6=off;
 
         ssl_certificate "/etc/x509/https/tls.crt";
@@ -73,19 +73,32 @@ http {
         ssl_prefer_server_ciphers on;
 
         ssl_client_certificate "/etc/x509/https/client-ca.crt";
-        ssl_verify_client on;
+        ssl_verify_client optional;
 
         location / {
-                access_by_lua_file /usr/local/openresty/fapi-verify.lua;
+            if ($ssl_client_verify != SUCCESS) {
+                return 403;
+            }
+            access_by_lua_file /usr/local/openresty/fapi-verify.lua;
+            proxy_pass http://resource_server:3000;
+        }
 
-                proxy_pass http://resource_server:3000;
+        location /dpop {
+            access_by_lua_file /usr/local/openresty/dpop-fapi-verify.lua;
+            proxy_pass http://resource_server:3000;
         }
 
         location /consents {
+            if ($ssl_client_verify != SUCCESS) {
+                return 403;
+            }
             proxy_pass http://consent_server:3000;
         }
 
         location /automated/ciba/approval {
+            if ($ssl_client_verify != SUCCESS) {
+                return 403;
+            }
             proxy_pass http://auth_entity_server:3001;
         }
 
@@ -93,7 +106,7 @@ http {
 
     server {
         listen       443 ssl http2;
-        server_name  $SERVER2_NAME;
+        server_name  ${SERVER2_NAME};
         resolver local=on ipv6=off;
 
         ssl_certificate "/etc/x509/https/tls.crt";
