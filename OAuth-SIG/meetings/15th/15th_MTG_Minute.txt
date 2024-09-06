@@ -1,0 +1,80 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 15th Meeting
+ (60th Ex FAPI-SIG)
+
+Date :
+ Wed 4 September 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Hugo D. Ibáñez
+ Ingrid Kamga (Adorsys)
+ Marek Posolda (Red Hat)
+ Pascal Knüppel (Governikus KG)
+ Philipp Potisk (walt.id)
+ Pritish Joshi (Banfico)
+ Thomas Darimont (Identity Tailor GmbH)
+
+Presentation Materials :
+ [1] OAuth SIG Community 15th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/15th/presentations/OAuth-SIG_15th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/XA1O5ftfFTdxrqOVURIXM72y2brNpaZX3oV6fysliqCK4Y6fRiZSzkhS2A4NA-_Y._0gGONSE1svaPSLi
+
+Summary :
+
+ * OID4VCI
+   Epic issue: https://github.com/keycloak/keycloak/issues/25936
+   We consider applying the following to OID4VCI support:
+    How to determine wichi VC is issued: Scope-based
+    When we define the credentials: per realm
+    One client can support both OIDC and OID4VC.
+   To distinguish a client for OIDC or OID4VC, Client Type might be used.
+   Client Type:
+     Keycloak 25 supports it as an EXPERIMENTAL feature.
+     Discussion: https://github.com/keycloak/keycloak/discussions/8497
+     Epic issue for all three milestones: https://github.com/keycloak/keycloak/issues/22263
+     Epic issue for milestone 1: https://github.com/keycloak/keycloak/issues/22262
+
+ * DPoP
+   Epic issue: https://github.com/keycloak/keycloak/issues/22311
+   2 of 4 issues were resolved (+1 issue added).
+   The OIDF's conformance suite start supporting conformance tests with DPoP.
+   A new issue was created to check whether Keycloak can pass these confomance tests.
+   https://github.com/keycloak/keycloak/issues/31970
+   However, we need to implement a resource server for the conformance test that supports DPoP.
+   The resource server has not yet been developed, so the conformance test with DPoP cannot be executed against keycloak.
+
+ * Community event proposal: KeyConf 25
+   Two options, CNCF KubeCon co-located event or Standalone event (like KeyConf 24). The former requirest at least three sponsors (9,500 USD as a gold sponsor).
+   We determine which option we take in KeyConf 24 Vienna.
+
+ * Next Web Meeting
+   Wed 2 October 2024 12:00 - 13:00 UTC in 1 hour
+
+
