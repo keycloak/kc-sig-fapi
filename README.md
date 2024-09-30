@@ -362,6 +362,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
+
+Please see [keyconf 24](https://keyconf.dev/).
+
 #### OAuth Security Workshop 2024 (Auditorium Antonianum, Rome, Italy, April 11, 2024)
 - Title: Supporting OAuth 2.0 Based Security Profiles to Open-source Software - from Implementation to Operation
 - URL: https://oauth.secworkshop.events/osw2024/agenda-thursday-osw-2024
