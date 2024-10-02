@@ -1,0 +1,78 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 16th Meeting
+ (61st Ex FAPI-SIG)
+
+Date :
+ Wed 2 October 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Gilbert Fernandes (Groupements des Mousquetaires)
+ Kannan Rasappan (Banfico)
+ Marek Posolda (Red Hat)
+
+Presentation Materials :
+ [1] Proposal: Trust Parties, Cross-Domain Trust (Dmitry)
+ [2] OAuth SIG Community 16th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/16th/presentations/OAuth-SIG_16th_MTG_agenda.pdf
+
+Recording :
+ TBD
+
+Summary :
+
+ * Keycloak's new versioning policy
+   Major version up may include breaking-change while Minor and micro version up does not allow breaking-change.
+   Major version release cycle will be about 2 years.
+   Preview and experimental feature is allowed to have breaking-change in minor version up (e.g., Passkey, OID4VCI).
+   As for not finalized standards/specifications support, we need to add new features for finalized version of standards/specification (e.g., OAuth 2.1, FAPI 2.0).
+ 
+ * OID4VCI
+   Epic issue is resolved: https://github.com/keycloak/keycloak/issues/25936
+   Next epic issues:
+    [OID4VCI] Approaching Credential Scope based API design : https://github.com/keycloak/keycloak/issues/32961
+    Pre-authorized-code flow of OID4VCI Implementation Shift to Scope-Based Approach : https://github.com/keycloak/keycloak/issues/32772 
+   We keep OID4VCI an experimental feature because we expect a lot of changes against it (considering Keycloak's new version policy).
+   When refining OID4VCI, not modifying keycloak's body codes and use some extension (OAuth Grant Type SPI, IdP extension as Dmitry proposed) is preferable.
+
+ * Community event proposal: KeyConf 25
+   It might be good to hold KeyConf 25 on a day/days just before or after OSS Summit Europe 2025 (25-27 Aug 2025, Amsterdam Netherlands) on the same location (namely, Amsterdam).
+   We continue discussing the following points:
+    How may days: 1 day or 2 days?
+    Conference format:
+     - Including unconference session?
+     - Having multiple sessions in parallel?
+    Scope:
+     - Enlarging its scope? (e.g., not only topic about Keycloak, but standards, specifications, market trends)
+    Registration:
+     - Requiring a registration fee?
+     - When opening a registration page, it is good if we add a draft version of a conference program to the page in order for potential attendees to decide whether they attend KeyConf 25.
+
+ * Next Web Meeting
+   Wed 6 November 2024 12:00 - 13:00 UTC in 1 hour
+
+
