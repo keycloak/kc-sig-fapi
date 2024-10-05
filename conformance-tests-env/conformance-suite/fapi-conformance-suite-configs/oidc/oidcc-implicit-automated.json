@@ -79,7 +79,7 @@
                                 [
                                     "wait",
                                     "xpath",
-                                    "//span[@class='pf-c-alert__title kc-feedback-text']",
+                                    "//span[@class='pf-v5-c-alert__title kc-feedback-text']",
                                     10,
                                     ".*Please re-authenticate to continue.*",
                                     "update-image-placeholder"
@@ -163,7 +163,7 @@
                                 [
                                     "wait",
                                     "xpath",
-                                    "//span[@class='pf-c-alert__title kc-feedback-text']",
+                                    "//span[@class='pf-v5-c-alert__title kc-feedback-text']",
                                     10,
                                     ".*Please re-authenticate to continue.*",
                                     "update-image-placeholder"

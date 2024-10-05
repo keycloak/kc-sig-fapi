@@ -181,7 +181,7 @@ services:
       - "--verbose"
       - "start-dev"
       - "--hostname=${KEYCLOAK_FQDN}"
-      - "--proxy=passthrough"
+      - "--proxy-headers=forwarded"
       - "--http-enabled=true"
       - "--http-relative-path=/auth"
       - "--https-certificate-file=/etc/x509/https/server.crt"
