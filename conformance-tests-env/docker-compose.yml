@@ -93,7 +93,7 @@ services:
 # Test Database
 
   mongodb:
-    image: mongo
+    image: mongo:5.0.24
 #    volumes:
 #     - mongodata:/data/db
 
