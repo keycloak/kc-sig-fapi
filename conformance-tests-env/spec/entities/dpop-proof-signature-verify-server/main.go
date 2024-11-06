@@ -77,7 +77,12 @@ func dpopHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	payload, err := jws.Verify([]byte(h), jwa.ES256, pubKey)
+	//alg := joseJsonObj.(map[string]interface{})["alg"].(string)
+    algFromJwk := jwkJson.(map[string]interface{})["alg"].(string)
+	log.Printf("  jwk - alg field = %s", algFromJwk)
+	var dst jwa.SignatureAlgorithm
+	dst.Accept(algFromJwk)
+	payload, err := jws.Verify([]byte(h), dst, pubKey)
 	if err != nil {
 		log.Printf("  JWS verification failed = %s", err.Error())
 		http.Error(w, err.Error(), http.StatusBadRequest)
