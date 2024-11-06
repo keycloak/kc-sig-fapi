@@ -76,4 +76,3 @@ if ngx.var.http_x_fapi_interaction_id == nil then
   ngx.req.set_header("x-fapi-interaction-id", uuid())
 end
 ngx.header["x-fapi-interaction-id"] = ngx.var.http_x_fapi_interaction_id
-

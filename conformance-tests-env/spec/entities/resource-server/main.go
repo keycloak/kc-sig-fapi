@@ -93,8 +93,8 @@ func accountsHandler(w http.ResponseWriter, r *http.Request) {
 func accountRequestHandler(w http.ResponseWriter, r *http.Request) {
 	h := r.Header.Get("authorization")
 	log.Printf("authorization : %s", h)
-	log.Printf("parsed jwt = %s", decode_jwt_proc(strings.Replace(h,"Bearer ","",-1)))
-	jsonObj := readJson(decode_jwt_proc(strings.Replace(h,"Bearer ","",-1)))
+	log.Printf("parsed jwt = %s", decode_jwt_proc(strings.Replace(h,"DPoP ","",-1)))
+	jsonObj := readJson(decode_jwt_proc(strings.Replace(h,"DPoP ","",-1)))
 	clientId := jsonObj.(map[string]interface{})["azp"].(string)
 	log.Printf("  azp field = %s", clientId)
 
