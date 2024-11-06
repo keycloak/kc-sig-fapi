@@ -26,7 +26,7 @@ func decodePayload(encodedDpopProof string) []byte {
 func decodeDPoPElement(encodedDpopProof string, index int) []byte {
     encodedDpopProofArray := strings.Split(encodedDpopProof, ".")
 	encededDPoPElement := encodedDpopProofArray[index]
-	decodedDPoPElement, err := base64.StdEncoding.DecodeString(encededDPoPElement)
+	decodedDPoPElement, err := base64.RawURLEncoding.DecodeString(encededDPoPElement)
     if err != nil {
 		log.Printf("error: ", err)
         return nil
