@@ -493,7 +493,7 @@ makeManualOIDCRpInitiatedLogoutTest() {
 }
 
 makeFAPI2SPTest() {
-    #TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=dpop][client_auth_type=mtls][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-id2/fapi2-ID2-FAPI2SP-DPOP-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=dpop][client_auth_type=mtls][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-id2/fapi2-ID2-FAPI2SP-DPOP-MTLS-MTLS-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-id2/fapi2-ID2-FAPI2SP-MTLS-MTLS-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=private_key_jwt][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-id2/fapi2-ID2-FAPI2SP-private-key-MTLS-PS256-PS256-automated.json"
     TESTS="${TESTS} fapi2-security-profile-id2-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=openid_connect][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-id2/fapi2-ID2-FAPI2SP-OpenID-Connect-ES256-ES256-automated.json"
