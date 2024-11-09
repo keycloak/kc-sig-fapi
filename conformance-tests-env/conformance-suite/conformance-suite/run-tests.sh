@@ -502,6 +502,7 @@ makeFAPI2SPTest() {
 }
 
 makeFAPI2MSTest() {
+    TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=dpop][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=plain_response] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-id2/fapi2-ID2-FAPI2MS-DPOP-JAR-MTLS-MTLS-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=dpop][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-id2/fapi2-ID2-FAPI2MS-DPOP-JARM-MTLS-MTLS-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=plain_response] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-id2/fapi2-ID2-FAPI2MS-JAR-MTLS-MTLS-ES256-ES256-automated.json"
     TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=mtls][client_auth_type=mtls][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-id2/fapi2-ID2-FAPI2MS-JARM-MTLS-MTLS-ES256-ES256-automated.json"
