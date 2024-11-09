@@ -1,0 +1,73 @@
+Title :
+ OAuth SIG(Special Interest Group) Community 17th Meeting
+ (61st Ex FAPI-SIG)
+
+Date :
+ Wed 6 November 2024
+
+Time :
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+Venue :
+ Zoom (presented by Adorsys)
+
+Host :
+ Francis Pouatcha (Adorsys)
+
+PM :
+ Vinod Anandan (JPMorgan Chase & Co.)
+
+Tech Lead :
+ Takashi Norimatsu (Hitachi)
+
+Participants :
+ Costas Georgilakis (GRNET)
+ Dmitry Telegin (Backbase)
+ Ingrid Kamga (Adorsys)
+ Marek Posolda (Red Hat)
+ Martin Besozzi
+ mos
+ Stefan Wiedemann
+ Thomas Darimont (Identity Tailor)
+ Welton Rodrigo Torres Nasciment0
+
+Presentation Materials :
+ [1] OAuth SIG Community 17th Meeting Agenda
+     https://github.com/keycloak/kc-sig-fapi/blob/main/OAuth-SIG/meetings/17th/presentations/OAuth-SIG_17th_MTG_agenda.pdf
+
+Recording :
+ https://us06web.zoom.us/rec/share/xAlGiy_zoHFsmVh-wMq9HHTQWOSgryp4bs2ZnO_HK9ci-Yv7BXLkoC5PFHGmbxmq._RhyObTn2AQT34SC
+
+Summary :
+
+ * Token Exchange
+   Updated: Improve Support for Token-Exchange (https://github.com/keycloak/keycloak/issues/31546)
+   Keycloak 26.2.x might include its official support, but not sure.
+
+ * SSF
+   PoC work is in progress.
+
+ * OpenID Federation
+   Experimental work is in progress.
+   - Prepared an intermediate authority and trust anchor.
+   - Confirmed that a client can be registered to Keycloak explicitly by its trust chain.
+   - Confirmed that removing clients that are not used by a batch does not work.
+
+ * OAuth 2.0 for First-Party Applications (FiPA)
+   https://drive.google.com/file/d/1_KQC9AjyTY4xSgSp2G9Lz7Fz85Ygyjw9/view
+
+ * Meeting Tool
+   Try to use HackMD from the next monthly meeting.
+   https://hackmd.io/@keycloak-oauth-sig
+
+ * Next Web Meeting
+   Wed 4 November 2024 12:00 - 13:00 UTC in 1 hour
+
