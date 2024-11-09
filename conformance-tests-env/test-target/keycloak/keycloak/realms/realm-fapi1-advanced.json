@@ -3313,11 +3313,11 @@
       "defaultDefaultClientScopes": [
         "roles",
         "role_list",
-        "profile",
-        "email",
         "web-origins"
       ],
       "defaultOptionalClientScopes": [
+        "profile",
+        "email",
         "address",
         "phone",
         "microprofile-jwt",
