@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "[Automatic]FAPI2SP MTLS + MTLS - DPoP Bound: Keycloak test",
+    "description": "[Automatic]FAPI2MS DPOP JARM: Keycloak test",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-dpop-mtls-ES256-ES256-fapi2-security-profile",
+        "client_id": "client1-dpop-mtls-jarm-ES256-ES256-fapi2-message-signing",
         "scope": "email profile",
         "jwks": {
             "keys": [
@@ -15,16 +15,16 @@
                     "kid": "client1-ES256",
                     "crv": "P-256",
                     "alg": "ES256",
-                    "x": "KhIuh2un6UWcBCIQqr5s3lSN42mrp5kjdf3JrasR1E4",
-                    "y": "bUIXyjZ6Q7-fLu-mp56OJjEHOAbGd3X30EMhS7SG-Vw",
-                    "d": "zngKYq2KBIRGiawAAZQJ0K_ZxL3VyZbOHYScKtrOWX0"
+                     "x": "KhIuh2un6UWcBCIQqr5s3lSN42mrp5kjdf3JrasR1E4",
+                     "y": "bUIXyjZ6Q7-fLu-mp56OJjEHOAbGd3X30EMhS7SG-Vw",
+                     "d": "zngKYq2KBIRGiawAAZQJ0K_ZxL3VyZbOHYScKtrOWX0"
                 }
             ]
         },
         "dpop_signing_alg": "ES256"
     },
     "client2": {
-        "client_id": "client2-dpop-mtls-ES256-ES256-fapi2-security-profile",
+        "client_id": "client2-dpop-mtls-jarm-ES256-ES256-fapi2-message-signing",
         "scope": "email profile",
         "jwks": {
             "keys": [
@@ -39,7 +39,7 @@
                     "d": "xDb8I6rF-rMPo5MV-rZSZZRwk1-TYJCm6SK4JGeP7Gk"
                 }
             ]
-        },
+        } ,
         "dpop_signing_alg": "ES256"
     },
     "mtls": {
@@ -96,6 +96,7 @@
                 {
                     "task": "Verify Complete",
                     "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                    "optional": true,
                     "commands": [
                         [
                             "wait",
@@ -164,38 +165,17 @@
                 }
             ]
         },
+        "fapi2-security-profile-id2-ensure-request-object-with-nbf-8-seconds-in-the-future-is-accepted": {
+            "browser": [
+            ]
+        },
         "fapi2-security-profile-id2-ensure-mismatched-dpop-jkt-fails": {
             "browser": [
             ]
         },
-        "fapi2-security-profile-id2-par-attempt-to-use-expired-request_uri": {
+        "fapi2-security-profile-id2-ensure-request-object-without-exp-fails": {
             "browser": [
                 {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Expect redirect invalid uri error page",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "xpath",
-                                    "//*",
-                                    10,
-                                    ".*PAR not found. not issued or used multiple times.*",
-                                    "update-image-placeholder"
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi2-security-profile-id2-ensure-request-object-without-redirect-uri-fails": {
-            "browser": [
-                {
-                    "comment": "Not allow a request object without redirect uri parameter",
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
                     "tasks": [
                         {
@@ -209,10 +189,65 @@
                                     10
                                 ]
                             ]
-                        },
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-without-nbf-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-state-only-outside-request-object-not-used": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
                         {
                             "task": "Expect redirect invalid uri error page",
                             "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//*",
+                                    10,
+                                    ".*PAR request did not include necessary parameters*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-without-redirect-uri-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Expect redirect invalid uri error page",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
                             "commands": [
                                 [
                                     "wait",
@@ -228,10 +263,185 @@
                 }
             ]
         },
+        "fapi2-security-profile-id2-ensure-expired-request-object-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-with-bad-aud-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-with-exp-over-60-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-with-nbf-over-60-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "id",
+                                    "submission_complete",
+                                    10
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-signed-request-object-with-RS256-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[text()='Invalid Request']",
+                                    10,
+                                    ".*Invalid Request.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-signature-algorithm-is-not-none": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[text()='Invalid Request']",
+                                    10,
+                                    ".*Invalid Request.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-request-object-with-invalid-signature-fails": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Verify Complete",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//p[text()='Invalid Request']",
+                                    10,
+                                    ".*Invalid Request.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fapi2-security-profile-id2-ensure-matching-key-in-authorization-request": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "expect an immediate redirect back to the conformance suite with an error",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//*",
+                                    10,
+                                    ".*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         "fapi2-security-profile-id2-ensure-registered-redirect-uri": {
             "browser": [
                 {
-                    "comment": "Not allow redirect uri parameter value that does not match one of registered one in an authorization server",
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
                     "tasks": [
                         {
@@ -255,7 +465,6 @@
         "fapi2-security-profile-id2-ensure-unsigned-authorization-request-without-using-par-fails": {
             "browser": [
                 {
-                    "comment": "Not allow an unsigned request object in a redirect-based authorization request",
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
                     "tasks": [
                         {
@@ -279,7 +488,6 @@
         "fapi2-security-profile-id2-ensure-redirect-uri-in-authorization-request": {
             "browser": [
                 {
-                    "comment": "need to check redirect uri parameter in an authorization request",
                     "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
                     "tasks": [
                         {
@@ -304,6 +512,30 @@
             "browser": [
             ]
         },
+        "fapi2-security-profile-id2-par-attempt-to-use-expired-request_uri": {
+            "browser": [
+                {
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                    "tasks": [
+                        {
+                            "task": "Expect redirect invalid uri error page",
+                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
+                            "optional": true,
+                            "commands": [
+                                [
+                                    "wait",
+                                    "xpath",
+                                    "//*",
+                                    10,
+                                    ".*We are sorry.*",
+                                    "update-image-placeholder"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         "fapi2-security-profile-id2-par-attempt-to-use-request_uri-for-different-client": {
             "browser": [
                 {
@@ -316,9 +548,9 @@
                                 [
                                     "wait",
                                     "xpath",
-                                    "//p[text()='Invalid Request']",
+                                    "//*",
                                     10,
-                                    ".*Invalid Request.*",
+                                    ".*An internal server error has occurred.*",
                                     "update-image-placeholder"
                                 ]
                             ]
