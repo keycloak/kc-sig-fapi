@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Automatic]FAPI1-Advanced-Final: Keycloak test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Automatic] FAPI1-Advanced-Final: Keycloak test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },

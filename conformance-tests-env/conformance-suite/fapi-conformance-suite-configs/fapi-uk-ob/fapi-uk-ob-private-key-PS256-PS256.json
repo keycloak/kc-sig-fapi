@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI-UK-OB: UK OpenBanking test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Manual] FAPI-UK-OB: UK OpenBanking test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },

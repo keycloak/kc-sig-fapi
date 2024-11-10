@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Automatic]FAPI-UK-OB: UK OpenBanking test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Automatic] FAPI-UK-OB: UK OpenBanking test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },

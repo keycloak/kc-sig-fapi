@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI2SP OpenID Connect: Keycloak test",
+    "description": "[Manual] FAPI2SP OpenID Connect: Keycloak test",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
@@ -8,37 +8,37 @@
         "client_id": "client1-mtls-ES256-ES256-fapi2-security-profile",
         "scope": "openid email",
         "jwks": {
-    "keys": [
-        {
-            "use": "sig",
-            "kty": "EC",
-            "kid": "client1-ES256",
-            "crv": "P-256",
-            "alg": "ES256",
-            "x": "KhIuh2un6UWcBCIQqr5s3lSN42mrp5kjdf3JrasR1E4",
-            "y": "bUIXyjZ6Q7-fLu-mp56OJjEHOAbGd3X30EMhS7SG-Vw",
-            "d": "zngKYq2KBIRGiawAAZQJ0K_ZxL3VyZbOHYScKtrOWX0"
-        }
-    ]
-} 
+            "keys": [
+                {
+                    "use": "sig",
+                    "kty": "EC",
+                    "kid": "client1-ES256",
+                    "crv": "P-256",
+                    "alg": "ES256",
+                    "x": "KhIuh2un6UWcBCIQqr5s3lSN42mrp5kjdf3JrasR1E4",
+                    "y": "bUIXyjZ6Q7-fLu-mp56OJjEHOAbGd3X30EMhS7SG-Vw",
+                    "d": "zngKYq2KBIRGiawAAZQJ0K_ZxL3VyZbOHYScKtrOWX0"
+                }
+            ]
+        } 
     },
     "client2": {
         "client_id": "client2-mtls-ES256-ES256-fapi2-security-profile",
         "scope": "openid email",
         "jwks": {
-    "keys": [
-        {
-            "use": "sig",
-            "kty": "EC",
-            "kid": "client2-ES256",
-            "crv": "P-256",
-            "alg": "ES256",
-            "x": "X1K2NP56XffP8ZvkSJiD3ZiaD6A1forvWkZ2AzqbyME",
-            "y": "S2GQUKAw0gW5kT-lEehLkt02PxA6CukInQhvo1hWcNo",
-            "d": "xDb8I6rF-rMPo5MV-rZSZZRwk1-TYJCm6SK4JGeP7Gk"
+            "keys": [
+                {
+                    "use": "sig",
+                    "kty": "EC",
+                    "kid": "client2-ES256",
+                    "crv": "P-256",
+                    "alg": "ES256",
+                    "x": "X1K2NP56XffP8ZvkSJiD3ZiaD6A1forvWkZ2AzqbyME",
+                    "y": "S2GQUKAw0gW5kT-lEehLkt02PxA6CukInQhvo1hWcNo",
+                    "d": "xDb8I6rF-rMPo5MV-rZSZZRwk1-TYJCm6SK4JGeP7Gk"
+                }
+            ]
         }
-    ]
-} 
     },
     "mtls": {
         "cert": "-----BEGIN CERTIFICATE-----\nMIIDJzCCAs6gAwIBAgIUaf4/a2nN138PyceHEIXBIO1iPPYwCgYIKoZIzj0EAwIw\ndjELMAkGA1UEBhMCSlAxEzARBgNVBAgTClByaXZhdGUgQ0ExFzAVBgNVBAoTDlNl\nY3VyZSBPU1MgU2lnMRYwFAYDVQQLEw1LZXljbG9hay1mYXBpMSEwHwYDVQQDExhL\nZXljbG9hay1mYXBpIFByaXZhdGUgQ0EwHhcNMjQwNjA1MTAyNzAwWhcNMjkwNjA0\nMTAyNzAwWjBhMQswCQYDVQQGEwJKUDEPMA0GA1UECBMGQ2xpZW50MRcwFQYDVQQK\nEw5TZWN1cmUgT1NTIFNpZzEWMBQGA1UECxMNS2V5Y2xvYWstZmFwaTEQMA4GA1UE\nAxMHY2xpZW50MTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL/6QVfl\nKyYjKUV/rBPXFD7Syc70gdsOH6aIwQKGfC3L2jCt6iqCyMjFkMpUJxmGdwp+x61c\nx1ij6GCWAxfnXA/xGRGcjVfuU/QW7Xg45BEKTxshLNKVntcbGXCFAah/bIEzOM1/\nuZLkRJsA01dtupPh9YKx4OBe9UOIDeShqHzCzyjQYysjgD7AnEkfVMOW/8rUty2f\nvDV+er0/oJEtLUooLe58XKT3nvPR85gTgdOfmIWCivobHCFXWjn9e+IeEsqr6kHQ\nNjyiGC8Ilv9Ez76psC4Cir9FFf6okE8R2LBwopsHjOrs51JWkngjqXpPlwSqLiDJ\nG70icqzHupcukpMCAwEAAaOBgzCBgDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAww\nCgYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU5/IOtbKQOx6eAVj9\nfklxc64C3iMwHwYDVR0jBBgwFoAUWbTD6OTLVu5cfWrRujoCgyoj8xowCwYDVR0R\nBAQwAoIAMAoGCCqGSM49BAMCA0cAMEQCIFaWCQmVKKr330jTe2zLcA7CcE54FnLK\nuk9K6wGhiTK1AiBVU1ek9t/AiqAEe48on8jfbT+onWdsPPn0Lw3t1kmI7g==\n-----END CERTIFICATE-----\n",

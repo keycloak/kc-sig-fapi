@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "OpenID Connect Core: Frontchannel Rp Initiated Logout Certification Profile (client_registration:static_client)",
+    "description": "[Manual] OpenID Connect Core: Frontchannel Rp Initiated Logout Certification Profile (client_registration:static_client)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration",
         "login_hint": "john"
