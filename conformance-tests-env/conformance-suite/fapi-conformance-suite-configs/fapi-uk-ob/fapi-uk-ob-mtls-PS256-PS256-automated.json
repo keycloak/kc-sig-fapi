@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI-UK-OB: UK OpenBanking test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Automatic]FAPI-UK-OB: UK OpenBanking test with mtls client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
@@ -24,19 +24,19 @@
                     "qi": "5d84bsBKb6u0YspU9hpc9o8F5PcJxqlwsfyOof80tUwA3NTk985cvaiXM5kQwM21q7bCyMoNfTi681MzlK1gt9GYRAHV4NJhw410mGDdnmGYFtsJwJIZbnwttYJsI0RIrk7Irom8HD2AnTvV5aI05Dxhv_-nCfn-bhy1Qqwce98"
                 },
                 {
-		    "use": "enc",
-		    "kty": "RSA",
-		    "kid": "client1-OAEP",
-		    "alg": "RSA-OAEP",
-		    "n": "sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q",
-		    "e": "AQAB",
-		    "d": "m_Px8QEvO3at9s7c9Zniz9qhR13sMTM6UYWh-EYzwjgPz5AU9xA_9Ns4aHR77VzY4lCVY7SLsmjXa57ZEZSe97W7I6fpyd42zjI9z9K3NRWj4YaC2zArnnNtg65MHthRxQk4V61Z0Xz8_gzFz8vJQcfUVmcwPcPFpXclBaFKtmPr7LBeT1owkmN16LcMr_Emaes4JPvopIIFxUm4m1LJu3TKBDoJutDSpJlnAc4QW16B6yMHo82r4tNYcANQ5yynvPRw-2MsVoBQSfu8i4uNKiaFT7DkrEiyJy_5lOX9_eaIFHNzqmA2-QVX51A7br7ojOsLsaIAAV2HWHqGm7m9sQ",
-		    "p": "4ElCAtFwwAfOi1aSRcV03Lu2X59Rc6qu5ym87Urn2aRiZprwSCRGxtLJL2TeAA7aGN2Sf4mTww080K0w1RnasQemtBmpH1nnOZfBuN4Ia0tMyMILRecIcbQY8BNVsV_G3cS1Cc-41rIjQtEpCtkHg_Fms2ww7Fxo9FDlPoTxWaU",
-		    "q": "y16S3_k-UOs560OWmhgQ45m__v4C8QXD-lEi7ugGzS9Rut-1fS89Et88eH6gi6dh6JmpezxPjoxgDMpHMUv3Es1x7OmZqp0U0RdTfJIs7gplNzTy1Rp8LdsUze1ta6EYa5VHXUoOA1osBkdTqdNGpCbXvnflLsquvVug8DZYkMU",
-		    "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
-		    "dq": "VGR-lqsbjQDQHC0EBhYOjCR1ZB-MoPA_j1S0JmfqyqLkS6Qh8Dz2Hyq8MVR60vk2zAtYJWe1q_XctfIK8Q4RDaBrsmCOABsHVG1Vm9AdDPsLXYl_a6d9-Jl9XKc2TP-g3qQn5TKh9gopUsGumj6uhdgIl2WxmWVKdhHcC1LCFfE",
-		    "qi": "DBz6wsZ5u8cHVP7g6AHb7DHsw25dhNtaIPkmK5hpWAk6DPdwIpy1hRf8WzR70keozjbd4p7GUCRQ3_z4OVsYz0FauJmMb_1fk3WQxDHXZa2xPsHW5MgxKpQkctIaZyXkMKOYxPO6UTMasXBPZuqJiBn87nL6mb_Imqz5Ubcfy_g"
-		}
+                    "use": "enc",
+                    "kty": "RSA",
+                    "kid": "client1-OAEP",
+                    "alg": "RSA-OAEP",
+                    "n": "sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q",
+                    "e": "AQAB",
+                    "d": "m_Px8QEvO3at9s7c9Zniz9qhR13sMTM6UYWh-EYzwjgPz5AU9xA_9Ns4aHR77VzY4lCVY7SLsmjXa57ZEZSe97W7I6fpyd42zjI9z9K3NRWj4YaC2zArnnNtg65MHthRxQk4V61Z0Xz8_gzFz8vJQcfUVmcwPcPFpXclBaFKtmPr7LBeT1owkmN16LcMr_Emaes4JPvopIIFxUm4m1LJu3TKBDoJutDSpJlnAc4QW16B6yMHo82r4tNYcANQ5yynvPRw-2MsVoBQSfu8i4uNKiaFT7DkrEiyJy_5lOX9_eaIFHNzqmA2-QVX51A7br7ojOsLsaIAAV2HWHqGm7m9sQ",
+                    "p": "4ElCAtFwwAfOi1aSRcV03Lu2X59Rc6qu5ym87Urn2aRiZprwSCRGxtLJL2TeAA7aGN2Sf4mTww080K0w1RnasQemtBmpH1nnOZfBuN4Ia0tMyMILRecIcbQY8BNVsV_G3cS1Cc-41rIjQtEpCtkHg_Fms2ww7Fxo9FDlPoTxWaU",
+                    "q": "y16S3_k-UOs560OWmhgQ45m__v4C8QXD-lEi7ugGzS9Rut-1fS89Et88eH6gi6dh6JmpezxPjoxgDMpHMUv3Es1x7OmZqp0U0RdTfJIs7gplNzTy1Rp8LdsUze1ta6EYa5VHXUoOA1osBkdTqdNGpCbXvnflLsquvVug8DZYkMU",
+                    "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
+                    "dq": "VGR-lqsbjQDQHC0EBhYOjCR1ZB-MoPA_j1S0JmfqyqLkS6Qh8Dz2Hyq8MVR60vk2zAtYJWe1q_XctfIK8Q4RDaBrsmCOABsHVG1Vm9AdDPsLXYl_a6d9-Jl9XKc2TP-g3qQn5TKh9gopUsGumj6uhdgIl2WxmWVKdhHcC1LCFfE",
+                    "qi": "DBz6wsZ5u8cHVP7g6AHb7DHsw25dhNtaIPkmK5hpWAk6DPdwIpy1hRf8WzR70keozjbd4p7GUCRQ3_z4OVsYz0FauJmMb_1fk3WQxDHXZa2xPsHW5MgxKpQkctIaZyXkMKOYxPO6UTMasXBPZuqJiBn87nL6mb_Imqz5Ubcfy_g"
+                }
             ]
         }
     },
@@ -59,20 +59,20 @@
                     "dq": "HsXrECR3FvSev3a-dQy0UJw5fZemxTTzk4WOeWdc6FR2pjMUY8nWVyYkTw8tEq5peHCglv2PCyVTLP-E5CMO1gejXhlaX_sHl6Kb-dQ54PuHEJTKRFR-uKLNuw1OqIkNFxaYisDkNIIiIezelLhUJQ6yUBzr8ywmbJB6bh45Ljs",
                     "qi": "kAh6uR9qNCv9v-9vrEyqy3dnLVeW5MUtyEH1KLegrsjVlrtBTsMQGSpmXE5oMHvyiqz9e4f0FAQItQjNfIfINMNNFlukmiXFdmqUnKqVGx65cw3Yvzk-KeF8ZiEwQ_QULj7roDOZH8-XbcMjVPCOMEDM2FCMvtIxJqUr4fFJ7_E"
                 },
-		{
-		    "use": "enc",
-		    "kty": "RSA",
-		    "kid": "client2-OAEP",
-		    "alg": "RSA-OAEP",
-		    "n": "qPNLdO3qcM4E4QU-bGiYaWSIY4tL52uDOz8o4oyFNBFAp7-W98ybc0Kww1FsguOfQqQq7w2x8NAcxX6W-roytufcn3o-o8gI_8y3gc130H-L7jjSt5pyfiI8xiiYkGuI5xwTHwAlr_WrbaEzm9EiMLoVyzmgZATYNfdLsCzlAq8HOdu0MSatBxoD8Xn05MrNwFlno8fkh8DE6hwqSKPcIBqNEccDqwiq2PZd3o8Gh85F9ISALSamsjKutjpIOsax-odOVCmUa1ae98HEgWZOg4MlU2hOsS4QKNSj54Pa766v-FlS99Tq8mSt2gjLVANeWKUOR5C29zPFcV7WrkKhWQ",
-		    "e": "AQAB",
-		    "d": "N90qqCE7Ec2tY1I-j84OB1tMlc2rbXvpSp_Zvv9D1DGYNV9uZcVr6TK2C_9SZ_0n3fs2jxDyM3Q87ziqZ4FF36DPHJRpPfKYtyxTyUHNSk3CUSTM2BTjor1jZwppV-eWvwRTdj6wN3x-EKPq0qzWJ1KAflAxrqDDdSSuDDTsDHSV149U2A7QNDU8a2gyM_qh2ZuVutK-Fni3lXecJlRXPg44wTlNG_HhBU3KF2sYhXSpvqHtSgaj47KqSbXn3u_ALOCy5c2P68ke5gR9_3bFV9FtubrbKFc7Jhsh0sHR8uf8YB4_3e3-3Cy7-trCbmTohqQmdGmBgxn0ZS9mUHAE4Q",
-		    "p": "y1VzdvIkhwi0OHW04Ghp4vv2X8pf49mY-yE7_dGHMizsepmaywW8rbmfnzchabBbp5iLfQ3D7KpuDIklAuNaVlkqR2xemUS3MehJgi13AoahxhuOGlDhw-mZfebSnBrslK1y1ZxAsUTxXBbuEClUtole1MPgD_haCy6P8jk4qU0",
-		    "q": "1LX3S_kZiUNNDMH1cwohq1NQZYy0_iNKDAJkxhDlKzWUG7DIXntMu8F7d-x57FEXAIPDwe-WuyMG-omCmTtDop9YQcdAvfDPvETNq8a629KmSS8ae8lvJ2WA8Z9maPMer6t1AjwP4WGEhKLeRxi7wfhgpoX7eviSbUUyanLWcj0",
-		    "dp": "up35tEB23-xQI8V8Nb3--NGRhMcjjOZoLoyJF-JXN-jdPYR--jiQu80ywBkENJEk_cPWufaJTEv7Zsv0SRtLDRcW46iFhhv4Gvj7hlud75aLIVym5mY3Xuyl8FSKFbXsTmSGkaCwC0KgVonBAto8IrAfdh00JtQkKEEa4hA8fb0",
-		    "dq": "Oq2j9bpW-A2v0Kgk7MJLvXZzREBHoZ_cimmSoS0B-ySBog3niGDdLyJVzCRZEf7gqIyw0OwmGaO1BiIu-9RkeRUaBLNRwdQPinE0h4GABKocoy2yUZmk5ypSItWFK8h9m5ph4ebtvo_nPausQ9Kn4P-Csg1d7XNq-WfQW5soW0U",
-		    "qi": "TjFq2A15aY0ENCzMcltRJZnlLwp50s2BFTlbPPmqWyw3jIJ3PNvvlTWtRlUc2f0-62QEvxgWDozp42pMJuRbUxSySDF4srH6p2-JEUpfsXzvGwUv2I_PyfC0V14tTHB6aLfTO1NwGqBPTVBZdnIVqtB9WsSLy6ph-Bf7Q68sxoE"
-		}
+                {
+                    "use": "enc",
+                    "kty": "RSA",
+                    "kid": "client2-OAEP",
+                    "alg": "RSA-OAEP",
+                    "n": "qPNLdO3qcM4E4QU-bGiYaWSIY4tL52uDOz8o4oyFNBFAp7-W98ybc0Kww1FsguOfQqQq7w2x8NAcxX6W-roytufcn3o-o8gI_8y3gc130H-L7jjSt5pyfiI8xiiYkGuI5xwTHwAlr_WrbaEzm9EiMLoVyzmgZATYNfdLsCzlAq8HOdu0MSatBxoD8Xn05MrNwFlno8fkh8DE6hwqSKPcIBqNEccDqwiq2PZd3o8Gh85F9ISALSamsjKutjpIOsax-odOVCmUa1ae98HEgWZOg4MlU2hOsS4QKNSj54Pa766v-FlS99Tq8mSt2gjLVANeWKUOR5C29zPFcV7WrkKhWQ",
+                    "e": "AQAB",
+                    "d": "N90qqCE7Ec2tY1I-j84OB1tMlc2rbXvpSp_Zvv9D1DGYNV9uZcVr6TK2C_9SZ_0n3fs2jxDyM3Q87ziqZ4FF36DPHJRpPfKYtyxTyUHNSk3CUSTM2BTjor1jZwppV-eWvwRTdj6wN3x-EKPq0qzWJ1KAflAxrqDDdSSuDDTsDHSV149U2A7QNDU8a2gyM_qh2ZuVutK-Fni3lXecJlRXPg44wTlNG_HhBU3KF2sYhXSpvqHtSgaj47KqSbXn3u_ALOCy5c2P68ke5gR9_3bFV9FtubrbKFc7Jhsh0sHR8uf8YB4_3e3-3Cy7-trCbmTohqQmdGmBgxn0ZS9mUHAE4Q",
+                    "p": "y1VzdvIkhwi0OHW04Ghp4vv2X8pf49mY-yE7_dGHMizsepmaywW8rbmfnzchabBbp5iLfQ3D7KpuDIklAuNaVlkqR2xemUS3MehJgi13AoahxhuOGlDhw-mZfebSnBrslK1y1ZxAsUTxXBbuEClUtole1MPgD_haCy6P8jk4qU0",
+                    "q": "1LX3S_kZiUNNDMH1cwohq1NQZYy0_iNKDAJkxhDlKzWUG7DIXntMu8F7d-x57FEXAIPDwe-WuyMG-omCmTtDop9YQcdAvfDPvETNq8a629KmSS8ae8lvJ2WA8Z9maPMer6t1AjwP4WGEhKLeRxi7wfhgpoX7eviSbUUyanLWcj0",
+                    "dp": "up35tEB23-xQI8V8Nb3--NGRhMcjjOZoLoyJF-JXN-jdPYR--jiQu80ywBkENJEk_cPWufaJTEv7Zsv0SRtLDRcW46iFhhv4Gvj7hlud75aLIVym5mY3Xuyl8FSKFbXsTmSGkaCwC0KgVonBAto8IrAfdh00JtQkKEEa4hA8fb0",
+                    "dq": "Oq2j9bpW-A2v0Kgk7MJLvXZzREBHoZ_cimmSoS0B-ySBog3niGDdLyJVzCRZEf7gqIyw0OwmGaO1BiIu-9RkeRUaBLNRwdQPinE0h4GABKocoy2yUZmk5ypSItWFK8h9m5ph4ebtvo_nPausQ9Kn4P-Csg1d7XNq-WfQW5soW0U",
+                    "qi": "TjFq2A15aY0ENCzMcltRJZnlLwp50s2BFTlbPPmqWyw3jIJ3PNvvlTWtRlUc2f0-62QEvxgWDozp42pMJuRbUxSySDF4srH6p2-JEUpfsXzvGwUv2I_PyfC0V14tTHB6aLfTO1NwGqBPTVBZdnIVqtB9WsSLy6ph-Bf7Q68sxoE"
+                }
             ]
         }
     },
@@ -116,6 +116,18 @@
                     ]
                 },
                 {
+                    "task": "Authorize Client",
+                    "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action*",
+                    "optional": true,
+                    "commands": [
+                        [
+                            "click",
+                            "name",
+                            "accept"
+                        ]
+                    ]
+                },
+                {
                     "task": "Verify Complete",
                     "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
                     "commands": [
@@ -131,64 +143,6 @@
         }
     ],
     "override": {
-        "fapi1-advanced-final": {
-            "browser": [
-                {
-                    "comment": "Must grant consent to user attributes being shared in first browser login for user john",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Initial login",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                            "optional": true,
-                            "commands": [
-                                [
-                                    "text",
-                                    "id",
-                                    "username",
-                                    "john"
-                                ],
-                                [
-                                    "text",
-                                    "id",
-                                    "password",
-                                    "john"
-                                ],
-                                [
-                                    "click",
-                                    "name",
-                                    "login"
-                                ]
-                            ]
-                        },
-                        {
-                            "task": "Grant Consent",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/login-actions/required-action*",
-                            "optional": true,
-                            "commands": [
-                                [
-                                    "click",
-                                    "name",
-                                    "accept"
-                                ]
-                            ]
-                        },
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
         "fapi1-advanced-final-user-rejects-authentication": {
             "browser": [
                 {
@@ -245,28 +199,6 @@
                 }
             ]
         },
-        "fapi1-advanced-final-ensure-response-mode-query": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
         "fapi1-advanced-final-ensure-registered-redirect-uri": {
             "browser": [
                 {
@@ -283,220 +215,6 @@
                                     10,
                                     ".*Invalid parameter: redirect_uri.*",
                                     "update-image-placeholder"
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-request-object-without-exp-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-request-object-without-scope-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-state-only-outside-request-object-not-used": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-request-object-without-nonce-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-request-object-without-redirect-uri-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "optional": true,
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        },
-                        {
-                            "task": "Expect redirect invalid uri error page",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                            "optional": true,
-                            "commands": [
-                                [
-                                    "wait",
-                                    "xpath",
-                                    "//*",
-                                    10,
-                                    ".*Invalid parameter: redirect_uri.*",
-                                    "update-image-placeholder"
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-expired-request-object-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-different-nonce-inside-and-outside-request-object": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-         "fapi1-advanced-final-ensure-response-type-code-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-request-object-with-bad-aud-fails": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
                                 ]
                             ]
                         }
@@ -568,51 +286,6 @@
                                     10,
                                     ".*Invalid parameter: redirect_uri.*",
                                     "update-image-placeholder"
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "fapi1-advanced-final-ensure-client-id-in-token-endpoint": {
-            "browser": [
-                {
-                    "comment": "expect an immediate redirect back to the conformance suite with an error",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Initial login",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                            "commands": [
-                                [
-                                    "text",
-                                    "id",
-                                    "username",
-                                    "john"
-                                ],
-                                [
-                                    "text",
-                                    "id",
-                                    "password",
-                                    "john"
-                                ],
-                                [
-                                    "click",
-                                    "name",
-                                    "login"
-                                ]
-                            ]
-                        },
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
                                 ]
                             ]
                         }

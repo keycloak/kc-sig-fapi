@@ -1,11 +1,11 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI-UK-OB: UK OpenBanking test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Manual]FAPI1-Advanced-Final, Brazil Open Finance (FAPI-BR v2): Keycloak test (PAR & private_key_jwt are required in Brazil OpenFinance & JARM is not used) (RequestObject:PS256/IDToken: sig - PS256, enc - RSA-OAEP, A128GCM)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
     "client": {
-        "client_id": "client1-private_key_jwt-PS256-PS256-fapi-uk-ob",
+        "client_id": "client1-private_key_jwt-PS256-PS256-OF-BR-fapi1-advanced-par",
         "scope": "openid email",
         "jwks": {
             "keys": [
@@ -33,7 +33,7 @@
                     "d": "m_Px8QEvO3at9s7c9Zniz9qhR13sMTM6UYWh-EYzwjgPz5AU9xA_9Ns4aHR77VzY4lCVY7SLsmjXa57ZEZSe97W7I6fpyd42zjI9z9K3NRWj4YaC2zArnnNtg65MHthRxQk4V61Z0Xz8_gzFz8vJQcfUVmcwPcPFpXclBaFKtmPr7LBeT1owkmN16LcMr_Emaes4JPvopIIFxUm4m1LJu3TKBDoJutDSpJlnAc4QW16B6yMHo82r4tNYcANQ5yynvPRw-2MsVoBQSfu8i4uNKiaFT7DkrEiyJy_5lOX9_eaIFHNzqmA2-QVX51A7br7ojOsLsaIAAV2HWHqGm7m9sQ",
                     "p": "4ElCAtFwwAfOi1aSRcV03Lu2X59Rc6qu5ym87Urn2aRiZprwSCRGxtLJL2TeAA7aGN2Sf4mTww080K0w1RnasQemtBmpH1nnOZfBuN4Ia0tMyMILRecIcbQY8BNVsV_G3cS1Cc-41rIjQtEpCtkHg_Fms2ww7Fxo9FDlPoTxWaU",
                     "q": "y16S3_k-UOs560OWmhgQ45m__v4C8QXD-lEi7ugGzS9Rut-1fS89Et88eH6gi6dh6JmpezxPjoxgDMpHMUv3Es1x7OmZqp0U0RdTfJIs7gplNzTy1Rp8LdsUze1ta6EYa5VHXUoOA1osBkdTqdNGpCbXvnflLsquvVug8DZYkMU",
-                     "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
+                    "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
                     "dq": "VGR-lqsbjQDQHC0EBhYOjCR1ZB-MoPA_j1S0JmfqyqLkS6Qh8Dz2Hyq8MVR60vk2zAtYJWe1q_XctfIK8Q4RDaBrsmCOABsHVG1Vm9AdDPsLXYl_a6d9-Jl9XKc2TP-g3qQn5TKh9gopUsGumj6uhdgIl2WxmWVKdhHcC1LCFfE",
                     "qi": "DBz6wsZ5u8cHVP7g6AHb7DHsw25dhNtaIPkmK5hpWAk6DPdwIpy1hRf8WzR70keozjbd4p7GUCRQ3_z4OVsYz0FauJmMb_1fk3WQxDHXZa2xPsHW5MgxKpQkctIaZyXkMKOYxPO6UTMasXBPZuqJiBn87nL6mb_Imqz5Ubcfy_g"
                 }
@@ -41,7 +41,7 @@
         }
     },
     "client2": {
-        "client_id": "client2-private_key_jwt-PS256-PS256-fapi-uk-ob",
+        "client_id": "client2-private_key_jwt-PS256-PS256-OF-BR-fapi1-advanced-par",
         "scope": "openid email",
         "jwks": {
             "keys": [
@@ -85,6 +85,9 @@
         "key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEogIBAAKCAQEAp3AH2+QkzVlgw8Mxqcl2Itzx371G1Hn+m6Sp0dPvCozUZ0T4\ntp9rnk0EYqIZI+TU3koZ4rM4+Jju1fIa+59v5wvEHfyDQR/+kC9l6pV78GAtWLmW\nO8DVMOBIa8wNM/zhk+Apgw8wX8JT/3050v5vE9nojGhcVfpoMjFTOdiTEmzc+0P1\nKbOiockn4Lbw8qprUidDHduUHefjA//e2wqvgcn5NO/Si9M98EB0mx4xEX6M+3XI\nbGFsz8c7F9CUYhp1WqsBwgJwymxn0RKLMgQm4AjwYz23ii8Vilpjk87elVQIPRkz\nFjBD1zX7zZHmsMthssem06WUiRmENubYmny4swIDAQABAoIBAH/v3lFqdaRiksmC\nMERnp1jkMfyfh6t6u8z5eLjXk2MgUHvH+7KvBXAjsSIccdE3XF+thzHtd66cTII1\nR+DT5pFIMEYpV7E/XSeWz+z644S8OGn/BIgLw9pgxXV4qO38X/C563408OV6euxR\nJwnNV9p3OnVumH8poswXXFxq25XLVGmlmN30ucxM6l5diXySf6Tn2vaIsVX0gOOX\nNSptkAV0QgwRYOuX2uLgdmHW8QUXIhZU6lbmXhe3QkZRDqvi67XobBwCX6/GIMAt\nkbX1Knp/aoh0N2pFbDogRRv16rlNgAWPOjzk54z7f9g3zk3bSZm18uIwzTyIHQKI\nJw0OTGECgYEA00URyY0ZRa32EQEKeZ6XJhk+eMsnXGXPgX3cgjCBwvoqLUJUxnRH\nO8bxVatWotaavbUM1tcj6RPoudcVoqKOxasy7W/MLQQTpxLR+HL9EZKvWnrDsMIQ\neAY1LPoa7ns+YqXkV755rwgfEl8H3TPTpvqDHpoJDM8JJ5DQQXvKTq0CgYEAyuM8\nE0JlCJhsquL8paema3HCh/RAjyplMWg9xzJXthmL11DL2o9Ks86+f+oBkzLvOXA2\nbnHr4J9luTFq3H85xRyVdEPnzcYH2rOWJG083JQdLJjLKyCOj3Mb3z3PeAejdAw4\nEX2hQDO+chKp/F801WFM/rSSiJlrqI/lLXmA8N8CgYA4N7Xe+wPRjdPffHZsHG49\n/hOoku57YMARxgsKPZwZ5PWaK39he4mE95A6aqhYFmEAwA+Vj5QHrnuMEBa6uyTg\npoibs9cR13bfS1vCD98VcQHmQqqV+13kgkpeGINYGEVmfJxBWPcKQ0/5VH5EN0lH\nsnt3hieIWAMomxk/g5A21QKBgDroBwVAfb0lJEfpZ5lhN7xyZxy6GhR3JrJVpbo0\nL6s7d5KobseiWvohyMWy14o5e6OdpPAkO2wYW5yNcI1ckxVb2zjKjn78REOHaMxi\nuw0AJAhSxIpdBYc40Jrcg2RCM376HT1W0H6nh1/vc1NHATwC6Cv7mZ/3i36BaPTv\nFjTZAoGADrba0Dp973akNy9hAjGiUXU9Q0CU5QjS+Ur4CjNZZa6cy0YMoepZS+1z\nY7ATqpV4LdHqKqO7IPGuS86wNhGuusSm+MOg6uIqliKbmHdOPN/KalDYXacP6kpS\nd7vop7jYminJwNPrTJQJ6eT09O8uyo4T2eDqzt1fNu/G52onuT8=\n-----END RSA PRIVATE KEY-----\n"
     },
     "resource": {
-        "resourceUrl": "https://rs.keycloak-fapi.org/"
+        "resourceUrl": "https://rs.keycloak-fapi.org/",
+        "consentUrl": "https://cs.keycloak-fapi.org/consents",
+        "brazilCpf": "12345678901",
+        "brazilCnpj": "12345678901234"
     }
 }

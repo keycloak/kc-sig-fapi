@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "FAPI1-Advanced-Final: Keycloak test with mtls client authentication (RequestObject:ES256/IDToken:ES256)",
+    "description": "[Automatic]FAPI1-Advanced-Final: Keycloak test with mtls client authentication (RequestObject:ES256/IDToken:ES256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
