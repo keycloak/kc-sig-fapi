@@ -172,10 +172,6 @@
                 }
             ]
         },
-        "fapi2-security-profile-id2-ensure-mismatched-dpop-jkt-fails": {
-            "browser": [
-            ]
-        },
         "fapi2-security-profile-id2-par-attempt-to-use-expired-request_uri": {
             "browser": [
                 {
