@@ -2558,5 +2558,8 @@
           "config": {}
         }
       ],
-      "browserFlow": "browser"
+      "browserFlow": "browser",
+      "attributes": {
+        "parRequestUriLifespan": "5"
+      }
 }

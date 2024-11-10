@@ -261,7 +261,7 @@
                                     "xpath",
                                     "//*",
                                     10,
-                                    ".*PAR not found. not issued or used multiple times.*",
+                                    ".*We are sorry.*",
                                     "update-image-placeholder"
                                 ]
                             ]
