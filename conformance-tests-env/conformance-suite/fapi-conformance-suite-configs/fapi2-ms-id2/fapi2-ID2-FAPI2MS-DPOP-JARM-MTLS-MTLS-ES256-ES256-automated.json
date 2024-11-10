@@ -165,14 +165,6 @@
                 }
             ]
         },
-        "fapi2-security-profile-id2-ensure-request-object-with-nbf-8-seconds-in-the-future-is-accepted": {
-            "browser": [
-            ]
-        },
-        "fapi2-security-profile-id2-ensure-mismatched-dpop-jkt-fails": {
-            "browser": [
-            ]
-        },
         "fapi2-security-profile-id2-ensure-request-object-without-exp-fails": {
             "browser": [
                 {
