@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "FAPI1-Advanced-Final, Brazil Open Finance (FAPI-BR v2): Keycloak test (PAR & private_key_jwt are required in Brazil OpenFinance & JARM is not used) (RequestObject:PS256/IDToken: sig - PS256, enc - RSA-OAEP, A128GCM)",
+    "description": "[Automatic]FAPI1-Advanced-Final, Brazil Open Finance (FAPI-BR v2): Keycloak test (PAR & private_key_jwt are required in Brazil OpenFinance & JARM is not used) (RequestObject:PS256/IDToken: sig - PS256, enc - RSA-OAEP, A128GCM)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
