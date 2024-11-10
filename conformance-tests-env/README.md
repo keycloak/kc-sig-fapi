@@ -423,12 +423,12 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-sp-id2.json docker-compose -p keycloa
 
 |Conformance Profile|Test Plan|sender_constrain|client_auth_type|openid|fapi_request_method|fapi_profile|fapi_response_mode|TEST_PLAN|
 |-|-|-|-|-|-|-|-|-|
-|FAPI2MS JAR|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id2-all|
-|FAPI2MS JARM|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id2-all|
+|FAPI2MS JAR|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id1-all|
+|FAPI2MS JARM|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id1-all|
 
-Note: If you run this conformance tests, please use `realm-fapi2-ms-id2.json` realm setting file like:
+Note: If you run this conformance tests, please use `realm-fapi2-ms-id1.json` realm setting file like:
 ```
-KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-ms-id2.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
+KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-ms-id1.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
 ```
 
 Eg. The following command runs `FAPI Adv. OP w/ Private Key, PAR, JARM` and `FAPI Adv. OP w/ MTLS, PAR, JARM` conformance test.
@@ -456,7 +456,7 @@ If you set `--oidc-logout-all` to `TEST_PLAN`, it runs all types of OpenID Provi
 
 If you set `--fapi2-sp-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Security Profile Second Implementer’s Draft conformance tests shown above the table automatically.
 
-If you set `--fapi2-ms-id2-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Message Signing First Implementer’s Draft conformance tests shown above the table automatically.
+If you set `--fapi2-ms-id1-all` to `TEST_PLAN`, it runs all types of FAPI 2.0 Message Signing First Implementer’s Draft conformance tests shown above the table automatically.
 
 If you set nothing to `TEST_PLAN`, it runs FAPI conformance tests the same as set `--fapi1-advanced-all`.
 
