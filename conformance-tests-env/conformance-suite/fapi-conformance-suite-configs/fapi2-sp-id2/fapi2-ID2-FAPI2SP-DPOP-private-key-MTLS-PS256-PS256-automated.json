@@ -200,42 +200,6 @@
                 }
             ]
         },
-        "fapi2-security-profile-id2-ensure-request-object-without-redirect-uri-fails": {
-            "browser": [
-                {
-                    "comment": "Not allow a request object without redirect uri parameter",
-                    "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                    "tasks": [
-                        {
-                            "task": "Verify Complete",
-                            "match": "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "id",
-                                    "submission_complete",
-                                    10
-                                ]
-                            ]
-                        },
-                        {
-                            "task": "Expect redirect invalid uri error page",
-                            "match": "https://as.keycloak-fapi.org/auth/realms/test/protocol/openid-connect/auth*",
-                            "commands": [
-                                [
-                                    "wait",
-                                    "xpath",
-                                    "//*",
-                                    10,
-                                    ".*Invalid parameter: redirect_uri.*",
-                                    "update-image-placeholder"
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
         "fapi2-security-profile-id2-ensure-registered-redirect-uri": {
             "browser": [
                 {
