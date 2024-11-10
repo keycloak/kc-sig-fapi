@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Manual]FAPI-AUS-CDR,PAR: Australian CDR test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
+    "description": "[Manual] FAPI-AUS-CDR,PAR: Australian CDR test with private_key_jwt client authentication (RequestObject:PS256/IDToken:PS256)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
@@ -24,19 +24,19 @@
                     "qi": "5d84bsBKb6u0YspU9hpc9o8F5PcJxqlwsfyOof80tUwA3NTk985cvaiXM5kQwM21q7bCyMoNfTi681MzlK1gt9GYRAHV4NJhw410mGDdnmGYFtsJwJIZbnwttYJsI0RIrk7Irom8HD2AnTvV5aI05Dxhv_-nCfn-bhy1Qqwce98"
                 },
                 {
-		    "use": "enc",
-		    "kty": "RSA",
-		    "kid": "client1-OAEP",
-		    "alg": "RSA-OAEP",
-		    "n": "sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q",
-		    "e": "AQAB",
-		    "d": "m_Px8QEvO3at9s7c9Zniz9qhR13sMTM6UYWh-EYzwjgPz5AU9xA_9Ns4aHR77VzY4lCVY7SLsmjXa57ZEZSe97W7I6fpyd42zjI9z9K3NRWj4YaC2zArnnNtg65MHthRxQk4V61Z0Xz8_gzFz8vJQcfUVmcwPcPFpXclBaFKtmPr7LBeT1owkmN16LcMr_Emaes4JPvopIIFxUm4m1LJu3TKBDoJutDSpJlnAc4QW16B6yMHo82r4tNYcANQ5yynvPRw-2MsVoBQSfu8i4uNKiaFT7DkrEiyJy_5lOX9_eaIFHNzqmA2-QVX51A7br7ojOsLsaIAAV2HWHqGm7m9sQ",
-		    "p": "4ElCAtFwwAfOi1aSRcV03Lu2X59Rc6qu5ym87Urn2aRiZprwSCRGxtLJL2TeAA7aGN2Sf4mTww080K0w1RnasQemtBmpH1nnOZfBuN4Ia0tMyMILRecIcbQY8BNVsV_G3cS1Cc-41rIjQtEpCtkHg_Fms2ww7Fxo9FDlPoTxWaU",
-		    "q": "y16S3_k-UOs560OWmhgQ45m__v4C8QXD-lEi7ugGzS9Rut-1fS89Et88eH6gi6dh6JmpezxPjoxgDMpHMUv3Es1x7OmZqp0U0RdTfJIs7gplNzTy1Rp8LdsUze1ta6EYa5VHXUoOA1osBkdTqdNGpCbXvnflLsquvVug8DZYkMU",
-		    "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
-		    "dq": "VGR-lqsbjQDQHC0EBhYOjCR1ZB-MoPA_j1S0JmfqyqLkS6Qh8Dz2Hyq8MVR60vk2zAtYJWe1q_XctfIK8Q4RDaBrsmCOABsHVG1Vm9AdDPsLXYl_a6d9-Jl9XKc2TP-g3qQn5TKh9gopUsGumj6uhdgIl2WxmWVKdhHcC1LCFfE",
-		    "qi": "DBz6wsZ5u8cHVP7g6AHb7DHsw25dhNtaIPkmK5hpWAk6DPdwIpy1hRf8WzR70keozjbd4p7GUCRQ3_z4OVsYz0FauJmMb_1fk3WQxDHXZa2xPsHW5MgxKpQkctIaZyXkMKOYxPO6UTMasXBPZuqJiBn87nL6mb_Imqz5Ubcfy_g"
-		}
+                    "use": "enc",
+                    "kty": "RSA",
+                    "kid": "client1-OAEP",
+                    "alg": "RSA-OAEP",
+                    "n": "sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q",
+                    "e": "AQAB",
+                    "d": "m_Px8QEvO3at9s7c9Zniz9qhR13sMTM6UYWh-EYzwjgPz5AU9xA_9Ns4aHR77VzY4lCVY7SLsmjXa57ZEZSe97W7I6fpyd42zjI9z9K3NRWj4YaC2zArnnNtg65MHthRxQk4V61Z0Xz8_gzFz8vJQcfUVmcwPcPFpXclBaFKtmPr7LBeT1owkmN16LcMr_Emaes4JPvopIIFxUm4m1LJu3TKBDoJutDSpJlnAc4QW16B6yMHo82r4tNYcANQ5yynvPRw-2MsVoBQSfu8i4uNKiaFT7DkrEiyJy_5lOX9_eaIFHNzqmA2-QVX51A7br7ojOsLsaIAAV2HWHqGm7m9sQ",
+                    "p": "4ElCAtFwwAfOi1aSRcV03Lu2X59Rc6qu5ym87Urn2aRiZprwSCRGxtLJL2TeAA7aGN2Sf4mTww080K0w1RnasQemtBmpH1nnOZfBuN4Ia0tMyMILRecIcbQY8BNVsV_G3cS1Cc-41rIjQtEpCtkHg_Fms2ww7Fxo9FDlPoTxWaU",
+                    "q": "y16S3_k-UOs560OWmhgQ45m__v4C8QXD-lEi7ugGzS9Rut-1fS89Et88eH6gi6dh6JmpezxPjoxgDMpHMUv3Es1x7OmZqp0U0RdTfJIs7gplNzTy1Rp8LdsUze1ta6EYa5VHXUoOA1osBkdTqdNGpCbXvnflLsquvVug8DZYkMU",
+                    "dp": "tMrYpyTk2iZw2-jg59UPKo81p0bphW9kpXoDjNQAqHPVzhe-8KgtVT-8ZLPOMAXI0Jpq6NuhfG1DRIMXBfBdVK5yNmMo7NivhsFJqxdvee2s63dfVu2w5Nbj80HipaQqzcEuncYPnSDjQ40OpGvlnvoMaz0fAqhLAgXjhM3tLvE",
+                    "dq": "VGR-lqsbjQDQHC0EBhYOjCR1ZB-MoPA_j1S0JmfqyqLkS6Qh8Dz2Hyq8MVR60vk2zAtYJWe1q_XctfIK8Q4RDaBrsmCOABsHVG1Vm9AdDPsLXYl_a6d9-Jl9XKc2TP-g3qQn5TKh9gopUsGumj6uhdgIl2WxmWVKdhHcC1LCFfE",
+                    "qi": "DBz6wsZ5u8cHVP7g6AHb7DHsw25dhNtaIPkmK5hpWAk6DPdwIpy1hRf8WzR70keozjbd4p7GUCRQ3_z4OVsYz0FauJmMb_1fk3WQxDHXZa2xPsHW5MgxKpQkctIaZyXkMKOYxPO6UTMasXBPZuqJiBn87nL6mb_Imqz5Ubcfy_g"
+                }
             ]
         }
     },

@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Automatic]FAPI2MS DPOP JARM: Keycloak test",
+    "description": "[Automatic] FAPI2MS DPOP JARM: Keycloak test",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },

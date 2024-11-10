@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "OpenID Connect Core: Config Certification Profile Authorization server test (Conformance Profile: Config OP)",
+    "description": "[Automated]OpenID Connect Core: Config Certification Profile Authorization server test (Conformance Profile: Config OP)",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     }

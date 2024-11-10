@@ -1,6 +1,6 @@
 {
     "alias": "keycloak",
-    "description": "[Automated]FAPI2MS JAR: Keycloak test",
+    "description": "[Automated] FAPI2MS JAR: Keycloak test",
     "server": {
         "discoveryUrl": "https://as.keycloak-fapi.org/auth/realms/test/.well-known/openid-configuration"
     },
