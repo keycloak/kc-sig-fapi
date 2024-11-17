@@ -1562,64 +1562,6 @@
     "clientProfiles" : {
         "profiles" : [
             {
-                "name" : "fapi-ciba-id1",
-                "description" : "Client profile, which enforce clients to conform 'Financial-grade API: Client Initiated Backchannel Authentication Profile' specification (Implementer's Draft ver1').",
-                "executors" : [
-                    {
-                        "executor": "secure-ciba-req-sig-algorithm",
-                        "configuration": {
-                            "default-algorithm": "PS256"
-                        }
-                    },
-                    {
-                        "executor" : "secure-ciba-session",
-                        "configuration" : {}
-                    },
-                    {
-                        "executor" : "secure-ciba-signed-authn-req",
-                        "configuration" : {
-                            "available-period" : "3600"
-                        }
-                    }
-                ]
-            },
-            {
-                "name" : "fapi-1-advanced-par",
-                "description": "Client profile, which enforce clients to conform 'Financial-grade API Security Profile 1.0 - Part 2: Advanced' specification. PAR is also used.",
-                "executors" : [
-                    {
-                        "executor": "pkce-enforcer",
-                        "configuration": {
-                          "auto-configure": true
-                        }
-                    }
-                ]
-            },
-            {
-                "name": "ob-br-fapi-1-advanced",
-                "description": "Additional client profile, which enforce clients to conform Open Banking Brasil FAPI 1.0",
-                "executors": [
-                    {
-                        "executor": "secure-request-object",
-                        "configuration": {
-                            "verify-nbf": true,
-                            "available-period": "3600",
-                            "encryption-required": true
-                        }
-                    }
-                ]
-            },
-            {
-                "name": "ob-br-fapi-1-advanced-id3",
-                "description": "Additional client profile, which enforce clients to conform Open Banking Brasil FAPI 1.0 ID3",
-                "executors": [
-                    {
-                        "executor" : "suppress-refresh-token-rotation",
-                        "configuration" : {}
-                    }
-                ]
-            },
-            {
               "name": "fapi-2-dpop-message-signing",
               "description": "Client profile, which enforce clients to conform 'FAPI 2.0 Message Signing' with DPoP specification.",
               "executors": [
@@ -1686,6 +1628,12 @@
                     "available-period": "3600",
                     "encryption-required": false
                   }
+                },
+                {
+                  "executor": "dpop-bind-enforcer",
+                  "configuration": {
+                    "auto-configure": "true"
+                  }
                 }
               ]
             }
@@ -1694,7 +1642,7 @@
     "clientPolicies" : {
         "policies" : [ {
             "name": "fapi2-message-signing-policy",
-            "description": "",
+            "description": "Policy for FAPI2 MS ID1",
             "enabled": true,
             "conditions": [{
                 "condition" : "client-roles",
@@ -1706,7 +1654,7 @@
         },
         {
             "name": "fapi2-dpop-message-signing-policy",
-            "description": "",
+            "description": "Policy for FAPI2 MS ID1 with DPoP",
             "enabled": true,
             "conditions": [{
                 "condition" : "client-roles",
