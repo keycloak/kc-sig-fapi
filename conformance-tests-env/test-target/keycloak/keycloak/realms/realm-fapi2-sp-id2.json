@@ -1444,6 +1444,12 @@
             {
               "executor": "secure-par-content",
               "configuration": {}
+            },
+            {
+              "executor": "dpop-bind-enforcer",
+              "configuration": {
+                "auto-configure": "true"
+              }
             }
           ]
         }
@@ -1452,7 +1458,7 @@
     "clientPolicies" : {
         "policies" : [ {
           "name": "fapi2-security-profile-policy",
-          "description": "",
+          "description": "FAPI2 SP ID2",
           "enabled": true,
           "conditions" : [ {
             "condition" : "client-roles",
