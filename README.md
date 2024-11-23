@@ -117,6 +117,10 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
   - [RFC 8032 Edwards-Curve Digital Signature Algorithm (EdDSA)](https://datatracker.ietf.org/doc/html/rfc8032)
   - [The OAuth 2.1 Authorization Framework - Draft version 10](https://www.ietf.org/archive/id/draft-ietf-oauth-v2-1-10.html)
 
+#### keycloak 25
+
+  - [OpenID for Verifiable Credential Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
+
 #### In progress
 
 ##### OpenID for Verifiable Credentials
