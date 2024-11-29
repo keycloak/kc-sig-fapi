@@ -408,11 +408,14 @@ Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conf
 
 **FAPI 2.0 Security Profile Second Implementer’s Draft**
 
-|Conformance Profile|Test Plan|sender_constrain|client_auth_type|openid|fapi_profile|TEST_PLAN|
-|-|-|-|-|-|-|-|
-|FAPI2SP MTLS + MTLS|fapi2-security-profile-id2-test-plan|mtls|mtls|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
-|FAPI2SP private key + MTLS|fapi2-security-profile-id2-test-plan|mtls|private_key_jwt|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
-|FAPI2SP OpenID Connect|fapi2-security-profile-id2-test-plan|mtls|mtls|openid_connect|plain_fapi|--fapi2-sp-id2-all|
+|Conformance Profile|Test Plan|sender_constrain|client_auth_type|authorization_request_type|openid|fapi_profile|TEST_PLAN|
+|-|-|-|-|-|-|-|-|
+|FAPI2SP MTLS + MTLS|fapi2-security-profile-id2-test-plan|mtls|mtls|simple|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP private key + MTLS|fapi2-security-profile-id2-test-plan|mtls|private_key_jwt|simple|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP OpenID Connect|fapi2-security-profile-id2-test-plan|mtls|mtls|simple|openid_connect|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP MTLS + DPoP|fapi2-security-profile-id2-test-plan|dpop|mtls|simple|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP private key + DPoP|fapi2-security-profile-id2-test-plan|dpop|private_key_jwt|simple|plain_oauth|plain_fapi|--fapi2-sp-id2-all|
+|FAPI2SP OpenID Connect + DPoP|fapi2-security-profile-id2-test-plan|dpop|mtls|simple|openid_connect|plain_fapi|--fapi2-sp-id2-all|
 
 Note: If you run this tests, please use `realm-fapi2-sp-id2.json` realm setting file like:
 ```
@@ -421,10 +424,12 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi2-sp-id2.json docker-compose -p keycloa
 
 **FAPI 2.0 Message Signing First Implementer’s Draft**
 
-|Conformance Profile|Test Plan|sender_constrain|client_auth_type|openid|fapi_request_method|fapi_profile|fapi_response_mode|TEST_PLAN|
-|-|-|-|-|-|-|-|-|-|
-|FAPI2MS JAR|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id1-all|
-|FAPI2MS JARM|fapi2-message-signing-id1-test-plan|mtls|mtls|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id1-all|
+|Conformance Profile|Test Plan|sender_constrain|client_auth_type|authorization_request_type|openid|fapi_request_method|fapi_profile|fapi_response_mode|TEST_PLAN|
+|-|-|-|-|-|-|-|-|-|-|
+|FAPI2MS JAR|fapi2-message-signing-id1-test-plan|mtls|mtls|simple|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id1-all|
+|FAPI2MS JARM|fapi2-message-signing-id1-test-plan|mtls|mtls|simple|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id1-all|
+|FAPI2MS JAR + DPoP|fapi2-message-signing-id1-test-plan|dpop|mtls|simple|plain_oauth|signed_non_repudiation|plain_fapi|plain_response|--fapi2-ms-id1-all|
+|FAPI2MS JARM + DPoP|fapi2-message-signing-id1-test-plan|dpop|mtls|simple|plain_oauth|signed_non_repudiation|plain_fapi|jarm|--fapi2-ms-id1-all|
 
 Note: If you run this conformance tests, please use `realm-fapi2-ms-id1.json` realm setting file like:
 ```
@@ -487,7 +492,6 @@ To get around this issue, modules and themes of containerized keycloak are overl
 Due to the nature of conformance suite, the following tests cannot be passed automatically. After completion of automatic tests, you can run them manually and confirm they are passed.
 
   * fapi1-advanced-final-par-attempt-reuse-request_uri
-  * fapi1-advanced-final-par-pushed-authorization-url-as-audience-in-request-object
 
   * oidcc-server-rotate-keys
  This always become `failure` status in automated tests. However, we can pass this test manually by createing a new key in sigature and disabling the exsiting key (RS256) in signature on an admin console.
