@@ -143,8 +143,8 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak 26.0.8
-- Conformance-suite version : release-v5.1.28
+- Keycloak 26.1.0
+- Conformance-suite version : release-v5.1.29
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -228,6 +228,21 @@ Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conf
     - Sender Constrain : mtls
     - OpenID : openid
     - FAPI Profile : plain​
+  - FAPI2SP MTLS + DPoP
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP private key + DPoP
+    - Client Authentication Method : private_key_jwt
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP OpenID Connect (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : openid
+    - FAPI Profile : plain​
 
 #### FAPI 2.0 Message Signing First Implementer’s Draft
   - FAPI2MS JAR
@@ -240,6 +255,20 @@ Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conf
   - FAPI2MS JARM
     - Client Authentication Method : mtls
     - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : jarm
+  - FAPI2MS JAR (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : plain_response
+  - FAPI2MS JARM (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
     - OpenID : plain_oauth
     - FAPI Profile : plain​
     - FAPI Request Method : signed_non_repudiation
@@ -304,6 +333,7 @@ We tagged the environment for every keycloak verion:
 |kc-26.0.6|26.0.6|release-v5.1.25|
 |kc-26.0.7|26.0.7|release-v5.1.26|
 |kc-26.0.8|26.0.8|release-v5.1.28|
+|kc-26.1.0|26.1.0|release-v5.1.29|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|
 |-|-|-|-|-|-|-|-|-|-|-|
@@ -365,6 +395,7 @@ We tagged the environment for every keycloak verion:
 |26.0.6|x|x|x|x|x|x|x|x|x|x|
 |26.0.7|x|x|x|x|x|x|x|x|x|x|
 |26.0.8|x|x|x|x|x|x|x|x|x|x|
+|26.1.0|x|x|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -378,7 +409,7 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 \*5 : [ISSUE-25022](https://github.com/keycloak/keycloak/issues/25022)
 
-\*6 : Conformance suite version 5.1.22.
+\*6 : Since keycloak 26.1.0, the FAPI2 with DPoP conformance tests are also passed (FAPI2SP MTLS + DPOP, FAPI2SP private key + DPOP).
 
 ## Other Contributions
 
