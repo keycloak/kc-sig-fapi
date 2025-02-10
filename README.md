@@ -417,6 +417,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### FOSDEM 2025 (Université Libre de Bruxelles Campus du Solbosch, Belgium, Brussels, February 1, 2025)
+- Title: Using DPoP to use access tokens securely in your Single Page Applications
+- URL: https://fosdem.org/2025/schedule/event/fosdem-2025-5370-using-dpop-to-use-access-tokens-securely-in-your-single-page-applications/
+
 #### Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
 
 Please see [keyconf 24](https://keyconf.dev/).
