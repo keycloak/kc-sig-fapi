@@ -1,0 +1,50 @@
+# SIG Meeting: 2025-02-12 20th Meeting (65th from Ex FAPI-SIG)
+[Meeting Slides](https://github.com/keycloak/kc-sig-fapi/blob/main/OAuth-SIG/meetings/20th/presentations/OAuth-SIG_20th_MTG_agenda.pdf)
+
+- Date: Wed 12 February 2025
+- Time:
+  12:00 - 13:00 UTC in 1 hour
+   8:00 -  9:00 EDT  (UTC-4)
+  12:00 - 13:00 GMT  (UTC+0)
+  13:00 - 14:00 CET  (UTC+1)
+  13:00 - 14:00 WAT  (UTC+1)
+  14:00 - 15:00 EET  (UTC+2)
+  17:30 - 18:30 IST  (UTC+5:30)
+  21:00 - 22:00 JST  (UTC+9)
+  22:00 - 23:00 AEST (UTC+10)
+
+## Agenda
+Agenda Items to discuss
+
+## Attendees
+- Alan Cha
+- Assah Bismark
+- Costas Georgilakis
+- Dmitry Telegin
+- Kannan Rasappan
+- Maia Iyer
+- Nathalia Pinesi
+- Takashi Norimatsu
+- Rodrick Awambeng
+- Stefan Wiedemann
+- Victoire Motouom
+- Vinod Anandan
+
+## Notes
+Notes by Topic
+
+### General
+- Takashi presents current state of efforts
+- Next OAuth SIG meeting will be held on Wednesday 5th March 2025.
+
+### Transaction Token, SPIFEE for Workload Identity
+- In the first half of the meeting, Dmitry and the IBM team (Alan, Maia) had a presentation on the progress of Transaction Token support to Keycloak, and integration of Keycloak and SPIFEE for identifying workload and its authentication.
+- We continue discussing its technical aspect in the future breakout sessions. 
+
+### KeyConf 25
+- In the second half of the meeting, Nathalia presented an initial proposal for Keyconf 25.
+- Natalia will prepare the survey form for Keyconf 25 to gather opinions from community widely.
+  (prepared: https://forms.office.com/Pages/ResponsePage.aspx?id=hFQsXiLlnUeRylFdbgziKBgok6UO9mxHnShifZvG4ehUMVVNS1lRQlpJNTFSM0tHRU5QS0RPSlI2Ry4u)
+
+## Recordings
+https://us06web.zoom.us/rec/share/crV1UaXPe6T0tGYqK_cTn6NlqcttnB-5nqCjWMuM5MiHkNg2RMVCCtOqrlaVdHaH.SE4N0qFrw0tv8GU_
