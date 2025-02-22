@@ -457,6 +457,11 @@ please see [keyconf 23](./KeyConf/Keyconf%2023).
 
 ### Referred academic paper
 
+#### Developing the Flexible Conformance Test Execution Platform for OAuth 2.0-based Security Profiles
+- Journal: Journal of Information Processing, Volume 33, pp.168-183, Information Processing Society of Japan, February 15, 2025.
+- DOI: https://doi.org/10.2197/ipsjjip.33.168
+- URL: https://www.jstage.jst.go.jp/article/ipsjjip/33/0/33_168/_pdf
+
 #### Policy-Based Method for Applying OAuth 2.0-Based Security Profiles
 - Journal: IEICE Transactions on Information and Systems, Volume E106.D-9, pp.1364-1379, Institute of Electronics, Information and Communications Engineers (IEICE), Septempber 1, 2023.
 - DOI: https://doi.org/10.1587/transinf.2022icp0004 
