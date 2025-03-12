@@ -445,6 +445,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - Title: New and Noteworthy in the OAuth World
 - URL: https://keyconf.dev/
 
+#### Open Source Summit Europe 2024 (Austria Centre Vienna, Vienna, Austria, September 18, 2024)
+- Title: Securing Workloads with Transaction Tokens and Minicloak 
+- URL: https://osseu2024.sched.com/event/1ej7U/securing-workloads-with-transaction-tokens-and-minicloak-dmitry-telegin-backbase
+
 #### OAuth Security Workshop 2024 (Auditorium Antonianum, Rome, Italy, April 11, 2024)
 - Title: Supporting OAuth 2.0 Based Security Profiles to Open-source Software - from Implementation to Operation
 - URL: https://oauth.secworkshop.events/osw2024/agenda-thursday-osw-2024
