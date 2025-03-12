@@ -421,6 +421,13 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### Keycloak DevDay 2025 (greet Hotel Darmstadt, Germany, Darmstadt, March 6, 2025)
+- Title: Enhancing Group Management in Keycloak: A Flexible Extension for Dynamic Membership Control
+- Title: Keycloak's Compliance with Security Specifications : from OAuth 2.0, OIDC to OID4VCI
+- Title: Mastering Access Control: Low-Code Authorization with ReBAC, Decoupling Patterns and Policy as Code
+- Title: Strengthening Security in Keycloak: An Introduction to the Shared Signals Framework
+- URL: https://www.keycloak-day.dev/
+
 #### OAuth Security Workshop 2025 (Harpa Concert Hall and Conference Centre, Iceland, Reykjavík, February 27, 2025)
 - Title: How to confirm an OAuth2/OIDC product is secure - a conformance test and vulnerability test
 - URL: https://talks.secworkshop.events/osw2025/talk/HBZMVK/
