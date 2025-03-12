@@ -437,8 +437,13 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - URL: https://fosdem.org/2025/schedule/event/fosdem-2025-5370-using-dpop-to-use-access-tokens-securely-in-your-single-page-applications/
 
 #### Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
-
-Please see [keyconf 24](https://keyconf.dev/).
+- Title: The Journey, Achievements, and Significance of the Keycloak SIG Community
+- Title: Streamlining Keycloak Configuration Management: Exploring keycloak-config-cli
+- Title: Keycloak's Updates on Emerging Paradigm of Identity and Compliance with Security Specifications
+- Title: Core Keycloak features developed in past 12 months
+- Title: Integrating Keycloak with Openresty as a resource server in Open Banking
+- Title: New and Noteworthy in the OAuth World
+- URL: https://keyconf.dev/
 
 #### OAuth Security Workshop 2024 (Auditorium Antonianum, Rome, Italy, April 11, 2024)
 - Title: Supporting OAuth 2.0 Based Security Profiles to Open-source Software - from Implementation to Operation
