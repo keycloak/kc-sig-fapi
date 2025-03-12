@@ -466,8 +466,12 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - URL: https://kccncna2023.sched.com/event/1R2mH/10-years-of-keycloak-whats-next-for-cloud-native-authentication-and-oidc-alexander-schwartz-red-hat-takashi-norimatsu-hitachi-ltd
 
 #### Keyconf 23 (Level39, London, United Kingdom, June 16, 2023)
-
-please see [keyconf 23](./KeyConf/Keyconf%2023).
+- Title: Recently added features in Keycloak in past years that make Keycloak a strong performer in the IAM marke
+- Title: OpenID FAPI work in the last 12 months
+- Title: Keycloak in Open Banking or consent-driven open data ecosystem
+- Title: OpenID FAPI presentation
+- Title: Roadmap on possible ideas for the future work of Keycloak
+- URL: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
 
 #### Apidays Paris 2022 (Cité des sciences et de l'industrie, Paris, France, December 6, 2022)
 - Title: Securing APIs in Open Banking - Financial-grade API security profile implementation to open-source software
