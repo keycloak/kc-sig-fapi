@@ -421,6 +421,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conferences
 
+#### OAuth Security Workshop 2025 (Harpa Concert Hall and Conference Centre, Iceland, Reykjavík, February 27, 2025)
+- Title: How to confirm an OAuth2/OIDC product is secure - a conformance test and vulnerability test
+- URL: https://talks.secworkshop.events/osw2025/talk/HBZMVK/
+
 #### FOSDEM 2025 (Université Libre de Bruxelles Campus du Solbosch, Belgium, Brussels, February 1, 2025)
 - Title: Using DPoP to use access tokens securely in your Single Page Applications
 - URL: https://fosdem.org/2025/schedule/event/fosdem-2025-5370-using-dpop-to-use-access-tokens-securely-in-your-single-page-applications/
