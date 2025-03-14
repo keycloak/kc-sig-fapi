@@ -435,6 +435,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Conference Speech
 
+#### KubeCon + CloudNativeCon Europe 2025 (Excel London, London, United Kingdom, April 4, 2025)
+- Title: Evolving OpenID Connect and Observability in Keycloak
+- URL: https://kccnceu2025.sched.com/event/1td1c/evolving-openid-connect-and-observability-in-keycloak-ryan-emerson-red-hat-takashi-norimatsu-hitachi
+
 #### Keycloak DevDay 2025 (greet Hotel Darmstadt, Germany, Darmstadt, March 6, 2025)
 - Title: Enhancing Group Management in Keycloak: A Flexible Extension for Dynamic Membership Control
 - Title: Keycloak's Compliance with Security Specifications : from OAuth 2.0, OIDC to OID4VCI
