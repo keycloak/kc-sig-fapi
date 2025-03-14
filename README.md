@@ -419,7 +419,15 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ## Other Contributions
 
-### Conferences
+### Hosting Conferences
+
+#### 🇦🇹 Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
+- URL: https://keyconf.dev/
+
+#### 🇬🇧 Keyconf 23 (Level39, London, United Kingdom, June 16, 2023)
+- URL: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
+
+### Conference Speech
 
 #### Keycloak DevDay 2025 (greet Hotel Darmstadt, Germany, Darmstadt, March 6, 2025)
 - Title: Enhancing Group Management in Keycloak: A Flexible Extension for Dynamic Membership Control
