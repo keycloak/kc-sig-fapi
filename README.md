@@ -421,10 +421,16 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Hosting Conferences
 
-#### :flag_austria: Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
+#### Keyconf 26 Amsterdam (TBD, Amsterdam, Netherlands, August 28, 2025)
+- URL: TBD
+
+#### Keyconf 25 Japan (TBD, Tokyo, Japan, June 13, 2025)
+- URL: https://community.cncf.io/events/details/cncf-cloud-native-security-japan-presents-keyconf-2025-japan/
+
+#### Keyconf 24 Vienna (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
 - URL: https://keyconf.dev/
 
-#### :flag_united_kingdom: Keyconf 23 (Level39, London, United Kingdom, June 16, 2023)
+#### Keyconf 23 London (Level39, London, United Kingdom, June 16, 2023)
 - URL: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
 
 ### Conference Speech
