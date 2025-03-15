@@ -423,7 +423,7 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Hosting Conferences
 
-#### Keyconf 26 Amsterdam (TBD, Amsterdam, Netherlands, August 28, 2025)
+#### Keyconf 25 Amsterdam (TBD, Amsterdam, Netherlands, August 28, 2025)
 - URL: TBD
 
 #### Keyconf 25 Japan (TBD, Tokyo, Japan, June 13, 2025)
