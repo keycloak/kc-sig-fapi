@@ -426,9 +426,6 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 #### Keyconf 25 Amsterdam (TBD, Amsterdam, Netherlands, August 28, 2025)
 - URL: TBD
 
-#### Keyconf 25 Japan (TBD, Tokyo, Japan, June 13, 2025)
-- URL: https://community.cncf.io/events/details/cncf-cloud-native-security-japan-presents-keyconf-2025-japan/
-
 #### Keyconf 24 Vienna (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
 - URL: https://keyconf.dev/
 
