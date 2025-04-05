@@ -423,11 +423,11 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Hosting Conferences
 
-#### Keyconf 25 Amsterdam (TBD, Amsterdam, Netherlands, August 28, 2025)
-- URL: TBD
+#### Keyconf 25 Amsterdam (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
+- URL: https://keyconf.dev/
 
 #### Keyconf 24 Vienna (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
-- URL: https://keyconf.dev/
+- URL: https://keyconf.dev/2024/
 
 #### Keyconf 23 London (Level39, London, United Kingdom, June 16, 2023)
 - URL: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
