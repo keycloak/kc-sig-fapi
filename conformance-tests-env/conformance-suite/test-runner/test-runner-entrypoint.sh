@@ -15,6 +15,9 @@ sleep 90
 
 docker exec keycloak-fapi-server-1 bash -c "chmod a+x /conformance-suite/.gitlab-ci/run-tests.sh"
 docker exec keycloak-fapi-server-1 bash -c "chmod a+x /conformance-suite/scripts/*"
+docker exec keycloak-fapi-server-1 bash -c "apk add --update --upgrade --no-cache python3-pip"
+docker exec keycloak-fapi-server-1 bash -c "apk update && apk add --no-cache py3-pip"
+docker exec keycloak-fapi-server-1 bash -c "pip3 install httpx pyparsing"
 
 [ $AUTOMATE_TESTS == true ] &&
 docker exec keycloak-fapi-server-1 bash -c "/conformance-suite/.gitlab-ci/run-tests.sh $TEST_PLAN"
