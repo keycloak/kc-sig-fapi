@@ -51,7 +51,7 @@ The following options can be set as environment variables before the above comma
 
 **Example:**
 ```
-KEYCLOAK_BASE_IMAGE=jboss/keycloak:23.0.1 docker-compose -p keycloak-fapi -f docker-compose.yml up --build
+KEYCLOAK_BASE_IMAGE=keycloak:23.0.1 docker-compose -p keycloak-fapi -f docker-compose.yml up --build
 ```
 
 To stop and remove all containers, run the following:
@@ -195,7 +195,7 @@ If you would like to run FAPI Conformance test against local built keycloak, mod
       - ./common/https/server.pem:/etc/x509/https/tls.crt
       - ./common/https/server-key.pem:/etc/x509/https/tls.key
       - ./common/https/client-ca.pem:/etc/x509/https/client-ca.crt
-+     - <path to locally built keycloak>:/opt/jboss/keycloak
++     - <path to locally built keycloak>:/opt/keycloak
      ports:
       - "8787:8787"
      environment:
@@ -480,8 +480,8 @@ To get around this issue, modules and themes of containerized keycloak are overl
       - ./common/https/server.pem:/etc/x509/https/tls.crt
       - ./common/https/server-key.pem:/etc/x509/https/tls.key
       - ./common/https/client-ca.pem:/etc/x509/https/client-ca.crt
-+     - <top directory path to locally built keycloak>/modules:/opt/jboss/keycloak/modules
-+     - <top directory path to locally built keycloak>/modules:/opt/jboss/keycloak/themes:/opt/jboss/keycloak/themes
++     - <top directory path to locally built keycloak>/modules:/opt/keycloak/modules
++     - <top directory path to locally built keycloak>/modules:/opt/keycloak/themes:/opt/keycloak/themes
      ports:
       - "8787:8787"
      environment:
