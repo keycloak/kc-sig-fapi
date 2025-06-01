@@ -144,7 +144,7 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 
 The current environment uses the following software version.
 - Keycloak 26.2.5
-- Conformance-suite version : release-v5.1.31
+- Conformance-suite version : release-v5.1.32
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -344,7 +344,7 @@ We tagged the environment for every keycloak verion:
 |kc-26.2.2|26.2.2|release-v5.1.31|
 |kc-26.2.3|26.2.3|release-v5.1.31|
 |kc-26.2.4|26.2.4|release-v5.1.31|
-|kc-26.2.5|26.2.5|release-v5.1.31|
+|kc-26.2.5|26.2.5|release-v5.1.32|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|
 |-|-|-|-|-|-|-|-|-|-|-|
