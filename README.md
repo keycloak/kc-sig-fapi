@@ -439,20 +439,24 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 ### Hosting Conferences
 
-#### Keyconf 25 Amsterdam (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
+#### Keyconf 25 (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
 - URL: https://keyconf.dev/
 
-#### Keyconf 24 Vienna (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
+#### Keyconf 24 (ARCOTEL Kaiserwasser Wien, Vienna, Austria, September 19, 2024)
 - URL: https://keyconf.dev/2024/
 
-#### Keyconf 23 London (Level39, London, United Kingdom, June 16, 2023)
+#### Keyconf 23 (Level39, London, United Kingdom, June 16, 2023)
 - URL: https://www.eventbrite.co.uk/e/keyconf-23-tickets-621079815447
 
 ### Conference Speech
 
-#### Keyconf 25 Amsterdam (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
+#### Keyconf 25 (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
 - Title: Keycloak meets AI: the possibility of integrating Keycloak with AI
 - URL: https://keyconf.dev/
+
+#### Open Source Summit Europe 2025 (RAI Amsterdam Convention Centre, Amsterdam, Netherlands, August 25, 2025)
+- Title: Confirming Safety of IAM Specifications and Their OSS Implementations: Keycloak as a Case Study
+- URL: https://osseu2025.sched.com/event/25VoP/confirming-safety-of-iam-specifications-and-their-oss-implementations-keycloak-as-a-case-study-takashi-norimatsu-hitachi-ltd
 
 #### KubeCon + CloudNativeCon Japan 2025 (Hilton Tokyo Odaiba Hotel, Tokyo, Japan, June 16, 2025)
 - Title: Add Single-sign-on To Your Applications With Keycloak and Learn About Its Latest Features
