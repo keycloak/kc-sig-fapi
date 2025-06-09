@@ -454,6 +454,11 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - Title: Add Single-sign-on To Your Applications With Keycloak and Learn About Its Latest Features
 - URL: https://kccncjpn2025.sched.com/event/1x6zG/add-single-sign-on-to-your-applications-with-keycloak-and-learn-about-its-latest-features-takashi-norimatsu-hitachi-marek-posolda-red-hat
 
+#### KeycloakCon Japan 2025 (Hilton Tokyo Odaiba Hotel, Tokyo, Japan, June 13, 2025)
+- Title: Keycloak Introduction and Demo
+- URL: https://keycloakconjapan2025.sched.com/event/2346Y/keynote-keycloak-introduction-and-demo-marek-posolda-keycloak-project-maintainer
+- Title: AI Agents with Keycloak in MCP
+- URL: https://keycloakconjapan2025.sched.com/event/23EFm/keynote-ai-agents-with-keycloak-in-mcp-takashi-norimatsu-senior-oss-specialist-hitachi-ltd
 
 #### KubeCon + CloudNativeCon Europe 2025 (Excel London, London, United Kingdom, April 4, 2025)
 - Title: Evolving OpenID Connect and Observability in Keycloak
