@@ -486,7 +486,7 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - Title: Core Keycloak features developed in past 12 months
 - Title: Integrating Keycloak with Openresty as a resource server in Open Banking
 - Title: New and Noteworthy in the OAuth World
-- URL: https://keyconf.dev/
+- URL: https://keyconf.dev/2024/
 
 #### Open Source Summit Europe 2024 (Austria Centre Vienna, Vienna, Austria, September 18, 2024)
 - Title: Securing Workloads with Transaction Tokens and Minicloak 
