@@ -532,6 +532,10 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 - Title: Consideration on how to apply multiple FAPI and its related security profiles dynamically
 - URL: https://www.youtube.com/watch?app=desktop&v=_ei7e8aOfkY
 
+### PhD Dissertation
+- Title: A Study on Information Security for End-to-End Communication by TCP/IP Internet Protocol Suite
+- DOI: http://doi.org/10.18926/68835
+
 ### Referred academic paper
 
 #### Developing the Flexible Conformance Test Execution Platform for OAuth 2.0-based Security Profiles
