@@ -143,8 +143,8 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak 26.2.5
-- Conformance-suite version : release-v5.1.32
+- Keycloak 26.3.0
+- Conformance-suite version : release-v5.1.33
 
 #### FAPI 1.0 Advanced (Final)​
   - Client Authentication Method : MTLS, private_key_jwt​
@@ -345,8 +345,9 @@ We tagged the environment for every keycloak verion:
 |kc-26.2.3|26.2.3|release-v5.1.31|
 |kc-26.2.4|26.2.4|release-v5.1.31|
 |kc-26.2.5|26.2.5|release-v5.1.32|
+|kc-26.3.0|26.3.0|release-v5.1.33|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR) (\*8)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|
 |-|-|-|-|-|-|-|-|-|-|-|
 |15.0.2|x|x|x|-|x|-|-|-|-|-|
 |17.0.0|x|x|x|-|x|-|-|-|-|-|
@@ -418,6 +419,7 @@ We tagged the environment for every keycloak verion:
 |26.2.3|x|x|x|x|x|x|x|x|x|x|
 |26.2.4|x|x|x|x|x|x|x|x|x|x|
 |26.2.5|x|x|x|x|x|x|x|x|x|x|
+|26.3.0|x|x|x|x|x|x|x|x|x|x|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -434,6 +436,8 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 \*6 : Since keycloak 26.1.0, the FAPI2 with DPoP conformance tests are also passed (FAPI2SP MTLS + DPOP, FAPI2SP private key + DPOP).
 
 \*7 : [ISSUE-39037](https://github.com/keycloak/keycloak/issues/39037)
+
+\*8 : It seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. For a while, we use v5.1.32 to run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile test.
 
 ## Other Contributions
 
