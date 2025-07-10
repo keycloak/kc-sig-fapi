@@ -316,11 +316,13 @@ KEYCLOAK_REALM_IMPORT_FILENAME=realm-of-br-fapi1-advanced.json docker-compose -p
 |-------------------|---------|----------------|------------|------------------|------------------------|---------|
 |AU-CDR Adv. OP w/ Private Key|fapi1-advanced-final-test-plan|private_key_jwt|consumerdataright_au|plain_response|by_value|--fapi-aus-cdr|
 |AU-CDR Adv. OP w/ Private Key, PAR|fapi1-advanced-final-test-plan|private_key_jwt|consumerdataright_au|plain_response|pushed|--fapi-aus-cdr-par|
+|AU-CDR Adv. OP w/ Private Key, PAR, JARM|fapi1-advanced-final-test-plan|private_key_jwt|consumerdataright_au|jarm|pushed|--fapi-aus-cdr-par-jarm|
 
 Note: If you run this tests, please use `realm-fapi-aus-cdr.json` realm setting file like:
 ```
 KEYCLOAK_REALM_IMPORT_FILENAME=realm-fapi-aus-cdr.json docker-compose -p keycloak-fapi -f docker-compose.yml up --build
 ```
+According to [Australia CDR security profile specification](https://consumerdatastandardsaustralia.github.io/standards/#authentication-flows), From May 12th 2025, JARM is mandatory, and tt seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. Therfore, from the conformance suite version v5.1.33, it only tests "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile.
 
 **UK Open Banking (Based on FAPI 1 Advanced Final)**
 

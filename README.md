@@ -181,7 +181,7 @@ Keycloak 15.0.2 have achieved [certification for 8 conformance profiles of Brazi
   - Client Authentication Method : private_key_jwt​
   - Signature Algorithm : PS256
   - Request Object Method : plain, PAR​
-  - Response Mode : plain
+  - Response Mode : plain, JARM​
 
 Keycloak 15.0.2 have achieved [certification for all 2 conformance profiles of Australia CDR (Based on FAPI 1 Advanced Final)](https://openid.net/certification/#FAPI_OPs).
 
@@ -437,7 +437,7 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 \*7 : [ISSUE-39037](https://github.com/keycloak/keycloak/issues/39037)
 
-\*8 : It seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. For a while, we use v5.1.32 to run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile test.
+\*8 : According to [Australia CDR security profile specification](https://consumerdatastandardsaustralia.github.io/standards/#authentication-flows), From May 12th 2025, JARM is mandatory, and tt seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. Therfore, from the conformance suite version v5.1.33, it only tests "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile.
 
 ## Other Contributions
 

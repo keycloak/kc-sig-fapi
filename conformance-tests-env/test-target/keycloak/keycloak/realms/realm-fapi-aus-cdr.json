@@ -461,6 +461,216 @@
         ]
       },
       {
+          "id" : "d5affd3a-5f49-447e-8b7b-7c0025682c2f",
+          "clientId": "client1-private_key_jwt-PS256-PS256-fapi-aus-cdr-par-jarm",
+          "bearerOnly": false,
+          "consentRequired": true,
+          "standardFlowEnabled": true,
+          "implicitFlowEnabled": true,
+          "directAccessGrantsEnabled": false,
+          "serviceAccountsEnabled": false,
+          "publicClient": false,
+          "enabled": true,
+          "clientAuthenticatorType": "client-jwt",
+          "fullScopeAllowed": true,
+          "protocol": "openid-connect",
+          "redirectUris": [
+              "https://www.certification.openid.net/test/a/keycloak/callback",
+              "https://staging.certification.openid.net/test/a/keycloak/callback",
+              "https://demo.certification.openid.net/test/a/keycloak/callback",
+              "https://localhost:8443/test/a/keycloak/callback",
+              "https://localhost:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback",
+              "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://localhost.emobix.co.uk/test/a/keycloak/callback",
+              "https://localhost.emobix.co.uk/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback",
+              "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback",
+              "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback",
+              "https://staging.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://www.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://demo.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+              "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
+          ],
+          "attributes": {
+              "request.object.signature.alg": "PS256",
+              "jwks.string": "{\"keys\": [\n    {\n        \"use\": \"sig\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client1-PS256\",\n        \"alg\": \"PS256\",\n        \"n\": \"0J5vAPXfZS755gaBYn2PEakdHLtAmZc0cKA5wTL89V4uz9sdkiub-S91cJUTqfxqFFwFe-acTKW7-HKOusJREq3oWNyv394-2OXSDz15Lso6GEATorSRTWzfqUjogjOOBxrvxrcMyxS2RM_NjaNPw2PDWO6u0_BHPWbzyKdKbzzGsuqpd4bZ85-xzDXhXRe0n23GCnGxpPM0SvsW9CAme23-ET_F6VdfPKkX0GSU_vxdwEwGUrk5sbBmtoLcj-pfpJKaA7ZbtLsngrIVIPRNUdcP3eCPiYHrDltsi1wnWlnRj2OBcqfM6bVOQfIiVLv-UC2PgY9gmzzw-Q86GPBQOw\",\n        \"e\": \"AQAB\"\n    },\n    {\n        \"use\": \"enc\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client1-OAEP\",\n        \"alg\": \"RSA-OAEP\",\n        \"n\": \"sizy7HrxRWsnZluxGYI7I9RStrHgaIjBkHBDnHHIrAgPWbKOB4wtRpES2pnn9CZ2KZdK1ETHMnswyPYeMn_u6vhL6NxO9sQ2-84fqxoW9vdy-LkQvRf9vp2Zcxu8RwzDDG7vBeTdJ1fez24jEj8itI-j84CEsUND6DnHFbaEVrQvKM21r1ViwVOS22Rv2ChOYX4Smt3OUkAzz6yoa_JETFcQxTnLAbkiRX3FQBkOynfZSjxPD7DXz_CFh1ZlubkAHmTnCtblFpj2Rt4T3IVqNjV0Mxb0vhvnzFizPPWFLHwvcwUsNEouKgP798eimT3gq9F3Q0NlwS6prlpzrt7L-Q\",\n        \"e\": \"AQAB\"\n    }]\n}",
+              "jwt.credential.kid": "client1-PS256",
+              "access.token.signed.response.alg": "RS256",
+              "exclude.session.state.from.auth.response": "false",
+              "exclude.issuer.from.auth.response": "true",
+              "authorization.signed.response.alg": "PS256",
+              "id.token.signed.response.alg": "PS256",
+              "id.token.encrypted.response.alg": "RSA-OAEP",
+              "id.token.encrypted.response.enc": "A128GCM",
+              "request.object.required": "request or request_uri",
+              "tls.client.certificate.bound.access.tokens": "true",
+              "use.jwks.url": "false",
+              "use.jwks.string": "true",
+              "acr.loa.map": "{\"urn:cds.au:cdr:2\":\"1\"}"
+          },
+          "protocolMappers": [
+              {
+                  "name": "aud",
+                  "protocol": "openid-connect",
+                  "protocolMapper": "oidc-audience-mapper",
+                  "consentRequired": false,
+                  "config": {
+                      "included.client.audience": "resource-server",
+                      "id.token.claim": "false",
+                      "access.token.claim": "true"
+                  }
+              },
+              {
+                "name": "ACR mapper",
+                "protocol": "openid-connect",
+                "protocolMapper": "oidc-acr-mapper",
+                "consentRequired": false,
+                "config": {
+                  "id.token.claim": "true",
+                  "access.token.claim": "true"
+                }
+            }
+          ],
+          "defaultClientScopes": [
+              "name_claims",
+              "web-origins",
+              "roles"
+          ],
+          "optionalClientScopes": [
+              "profile",
+              "email",
+              "address",
+              "phone",
+              "consent:1",
+              "offline_access",
+              "consents",
+              "resources",
+              "microprofile-jwt"
+          ]
+      },
+      {
+        "id" : "bf183f9f-e0a2-4112-ad30-ba4450aea06c",
+        "clientId": "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr-par-jarm",
+        "bearerOnly": false,
+        "consentRequired": true,
+        "standardFlowEnabled": true,
+        "implicitFlowEnabled": true,
+        "directAccessGrantsEnabled": false,
+        "serviceAccountsEnabled": false,
+        "publicClient": false,
+        "enabled": true,
+        "clientAuthenticatorType": "client-jwt",
+        "fullScopeAllowed": true,
+        "protocol": "openid-connect",
+        "redirectUris": [
+            "https://www.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback",
+            "https://demo.certification.openid.net/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback",
+            "https://localhost:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback",
+            "https://conformance-suite.keycloak-fapi.org/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback",
+            "https://localhost.emobix.co.uk:8443/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback",
+            "https://staging.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://www.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://demo.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-1.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-2.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-3.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-4.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-5.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-6.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-7.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-8.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum",
+            "https://review-app-dev-branch-9.certification.openid.net/test/a/keycloak/callback?dummy1=lorem&dummy2=ipsum"
+        ],
+        "attributes": {
+            "request.object.signature.alg": "PS256",
+            "jwks.string": "{\"keys\": [\n    {\n        \"use\": \"sig\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client2-PS256\",\n        \"alg\": \"PS256\",\n        \"n\": \"6DHkboNmEegAyz9N6ux6UwEyI7a2pB3Dv-EOalRuvtqhh6jPsUd6TQZk385DzofNgYZaO1kC9wmYqD4mmQO7N6ZMvZQAbMmCat72-vHKxvZYzjcURMHTK-GDtvOUjbXzC3C0yboOS8qnO5etwho5PXETe3xdgjnERSekgAXdqzGxJEKincPWzcpoaPTpWROf4D9wNnS-rgwyd0CKp20NzoByhUtxMOKJn2t6wmBqgp7SEVOOgwRPEKMiD8u14jY-9xNfG3kOdAHMArSFb5HJN6USyFmFXROczEXOwJgvoCkY0p0hg2NCzImkPgbDmdj_otzLGjB9m3gtIoAa7THzKQ\",\n        \"e\": \"AQAB\"\n    },\n    {\n        \"use\": \"enc\",\n        \"kty\": \"RSA\",\n        \"kid\": \"client2-OAEP\",\n        \"alg\": \"RSA-OAEP\",\n        \"n\": \"qPNLdO3qcM4E4QU-bGiYaWSIY4tL52uDOz8o4oyFNBFAp7-W98ybc0Kww1FsguOfQqQq7w2x8NAcxX6W-roytufcn3o-o8gI_8y3gc130H-L7jjSt5pyfiI8xiiYkGuI5xwTHwAlr_WrbaEzm9EiMLoVyzmgZATYNfdLsCzlAq8HOdu0MSatBxoD8Xn05MrNwFlno8fkh8DE6hwqSKPcIBqNEccDqwiq2PZd3o8Gh85F9ISALSamsjKutjpIOsax-odOVCmUa1ae98HEgWZOg4MlU2hOsS4QKNSj54Pa766v-FlS99Tq8mSt2gjLVANeWKUOR5C29zPFcV7WrkKhWQ\",\n        \"e\": \"AQAB\"\n    }]\n}",
+            "jwt.credential.kid": "client2-PS256",
+            "access.token.signed.response.alg": "RS256",
+            "exclude.session.state.from.auth.response": "false",
+            "exclude.issuer.from.auth.response": "true",
+            "authorization.signed.response.alg": "PS256",
+            "id.token.signed.response.alg": "PS256",
+            "id.token.encrypted.response.alg": "RSA-OAEP",
+            "id.token.encrypted.response.enc": "A128GCM",
+            "request.object.required": "request or request_uri",
+            "tls.client.certificate.bound.access.tokens": "true",
+            "use.jwks.url": "false",
+            "use.jwks.string": "true",
+            "acr.loa.map": "{\"urn:cds.au:cdr:2\":\"1\"}"
+        },
+        "protocolMappers": [
+            {
+                "name": "aud",
+                "protocol": "openid-connect",
+                "protocolMapper": "oidc-audience-mapper",
+                "consentRequired": false,
+                "config": {
+                    "included.client.audience": "resource-server",
+                    "id.token.claim": "false",
+                    "access.token.claim": "true"
+                }
+            },
+            {
+              "name": "ACR mapper",
+              "protocol": "openid-connect",
+              "protocolMapper": "oidc-acr-mapper",
+              "consentRequired": false,
+              "config": {
+                "id.token.claim": "true",
+                "access.token.claim": "true"
+              }
+          }
+        ],
+        "defaultClientScopes": [
+            "name_claims",
+            "web-origins",
+            "roles"
+        ],
+        "optionalClientScopes": [
+            "profile",
+            "email",
+            "address",
+            "phone",
+            "consent:1",
+            "offline_access",
+            "consents",
+            "resources",
+            "microprofile-jwt"
+        ]
+      },
+      {
         "clientId": "resource-server",
         "bearerOnly": false,
         "standardFlowEnabled": false,
@@ -1252,7 +1462,7 @@
         "conditions" : [ {
             "condition" : "client-roles",
             "configuration" : {
-                "roles" : [ "fapi1-advanced-par-jarm-client-role" ]
+                "roles" : [ "fapi-aus-cdr-par-jarm-client-role" ]
             }
         } ],
         "profiles" : [ "fapi-1-advanced", "fapi-1-advanced-par" ]
@@ -1281,14 +1491,28 @@
           "composite" : false,
           "clientRole" : true,
           "containerId" : "95dc16d6-0b68-483e-aae0-3a230bbc3da7"
-      } ],
-      "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr-par" : [ {
+        } ],
+        "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr-par" : [ {
           "name" : "fapi-aus-cdr-par-client-role",
           "description" : "Client role for fapi1-advanced-par",
           "composite" : false,
           "clientRole" : true,
           "containerId" : "aab5a713-3e55-40fd-bd35-4c788f23a471"
-      } ]
+        } ],
+          "client1-private_key_jwt-PS256-PS256-fapi-aus-cdr-par-jarm"  : [ {
+            "name" : "fapi-aus-cdr-par-jarm-client-role",
+            "description" : "Client role for fapi1-advanced-jarm",
+            "composite" : false,
+            "clientRole" : true,
+            "containerId" : "d5affd3a-5f49-447e-8b7b-7c0025682c2f"
+        } ],
+            "client2-private_key_jwt-PS256-PS256-fapi-aus-cdr-par-jarm"  : [ {
+              "name" : "fapi-aus-cdr-par-jarm-client-role",
+              "description" : "Client role for fapi1-advanced-jarm",
+              "composite" : false,
+              "clientRole" : true,
+              "containerId" : "bf183f9f-e0a2-4112-ad30-ba4450aea06c"
+        } ]
     }
   },
   "authenticationFlows": [
