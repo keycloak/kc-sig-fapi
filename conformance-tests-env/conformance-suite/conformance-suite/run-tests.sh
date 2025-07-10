@@ -690,6 +690,14 @@ makeManualCDRFAPI1AdvancedPARTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=plain_response][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr/fapi-aus-cdr-private-key-par-PS256-PS256.json"
 }
 
+makeCDRFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr/fapi-aus-cdr-private-key-par-jarm-PS256-PS256-automated.json"
+}
+
+makeManualCDRFAPI1AdvancedPARJARMTest() {
+    TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=consumerdataright_au][fapi_response_mode=jarm][fapi_auth_request_method=pushed] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-aus-cdr/fapi-aus-cdr-private-key-par-jarm-PS256-PS256.json"
+}
+
 makeUKOBFAPI1AdvancedTest() {
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=private_key_jwt][fapi_profile=openbanking_uk][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-uk-ob/fapi-uk-ob-private-key-PS256-PS256-automated.json"
     TESTS="${TESTS} fapi1-advanced-final-test-plan[client_auth_type=mtls][fapi_profile=openbanking_uk][fapi_response_mode=plain_response][fapi_auth_request_method=by_value] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi-uk-ob/fapi-uk-ob-mtls-PS256-PS256-automated.json"
@@ -1103,10 +1111,22 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-par" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-aus-cdr-par" ]; then
     echo "Run Australia CDR PAR fapi1-advanced tests manually"
     makeManualCDRFAPI1AdvancedPARTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-par-jarm" ]; then
+    echo "Run Australia CDR PAR JARM fapi1-advanced tests"
+    makeCDRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-aus-cdr-par-jarm" ]; then
+    echo "Run Australia CDR PAR JARM fapi1-advanced tests manually"
+    makeManualCDRFAPI1AdvancedPARJARMTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--manual-fapi-aus-cdr-par" ]; then
+    echo "Run Australia CDR PAR fapi1-advanced tests manually"
+    makeManualCDRFAPI1AdvancedPARTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-aus-cdr-all" ]; then
     echo "Run Australia CDR fapi1-advanced tests"
-    makeCDRFAPI1AdvancedTest
-    makeCDRFAPI1AdvancedPARTest
+# https://consumerdatastandardsaustralia.github.io/standards/#authentication-flows
+# From May 12th 2025, must support JARM
+#    makeCDRFAPI1AdvancedTest
+#    makeCDRFAPI1AdvancedPARTest
+    makeCDRFAPI1AdvancedPARJARMTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi-uk-ob-all" ]; then
     echo "Run UK OpenBanking fapi1-advanced tests"
     makeUKOBFAPI1AdvancedTest
