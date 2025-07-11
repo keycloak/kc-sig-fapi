@@ -274,6 +274,68 @@ Note: Session OP and Front-Channel OP of OpenID Provider for Logout Profile conf
     - FAPI Request Method : signed_non_repudiation
     - FAPI Response Mode : jarm
 
+#### FAPI 2.0 Security Profile (Final)
+  - FAPI2SP MTLS + MTLS
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP private key + MTLS
+    - Client Authentication Method : private_key_jwt
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP OpenID Connect
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : openid
+    - FAPI Profile : plain​
+  - FAPI2SP MTLS + DPoP
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP private key + DPoP
+    - Client Authentication Method : private_key_jwt
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+  - FAPI2SP OpenID Connect (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : openid
+    - FAPI Profile : plain​
+
+#### FAPI 2.0 Message Signing (Final)
+  - FAPI2MS JAR
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : plain_response
+  - FAPI2MS JARM
+    - Client Authentication Method : mtls
+    - Sender Constrain : mtls
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : jarm
+  - FAPI2MS JAR (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : plain_response
+  - FAPI2MS JARM (DPoP)
+    - Client Authentication Method : mtls
+    - Sender Constrain : dpop
+    - OpenID : plain_oauth
+    - FAPI Profile : plain​
+    - FAPI Request Method : signed_non_repudiation
+    - FAPI Response Mode : jarm
+
 ### Passed Conformance Tests per Keycloak version
 
 To ensure that every keycloak version can pass conformance tests, we check if a new Keycloak version pass conformance tests that the older Keycloak version could pass whenever the new Keycloak version is released.
@@ -347,79 +409,79 @@ We tagged the environment for every keycloak verion:
 |kc-26.2.5|26.2.5|release-v5.1.32|
 |kc-26.3.0|26.3.0|release-v5.1.33|
 
-|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR) (\*8)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|
-|-|-|-|-|-|-|-|-|-|-|-|
-|15.0.2|x|x|x|-|x|-|-|-|-|-|
-|17.0.0|x|x|x|-|x|-|-|-|-|-|
-|17.0.0-legacy|x|x|x|-|x|-|-|-|-|-|
-|17.0.1|x|x|x|-|x|-|-|-|-|-|
-|17.0.1-legacy|x|x|x|-|x|-|-|-|-|-|
-|18.0.0|x|x|x|-|x|-|x|x|-|-|
-|18.0.0-legacy|x|x|x|-|x|-|x|x|-|-|
-|18.0.2|x|x|x|-|x|-|x|x|-|-|
-|18.0.2-legacy|x|x|x|-|x|-|x|x|-|-|
-|19.0.1|x|x|x|-|x|-|x|x|-|-|
-|19.0.1-legacy|x|x|x|-|x|-|x|x|-|-|
-|19.0.2|x|x|x|-|x|-|x|x|-|-|
-|19.0.2-legacy|x|x|x|-|x|-|x|x|-|-|
-|20.0.0|x|x|x|-|x|x|x|x|-|-|
-|20.0.1|x|x|x|-|x|x|x|x|-|-|
-|20.0.2|x|x|x|-|x|x|x|x|-|-|
-|20.0.3|x|x|x|-|x|x|x|x|-|-|
-|20.0.5|x|x|x|-|x|x|x|x|-|-|
-|21.0.0|x|x|x|-|x|x|x|x|-|-|
-|21.0.1|x|x|x|-|x|x|x|x|-|-|
-|21.0.2|x|x|x|-|x|x|x|x|-|-|
-|21.1.0|x|x|x|-|x|x|x|x|-|-|
-|21.1.1|x|x|x|-|x|x|x|x|-|-|
-|21.1.2|x|x|x|-|x|x|x|x|-|-|
-|22.0.0|x|x|x|-|x|x|x|x|-|-|
-|22.0.1|x|x|x|-|x|x|x|x|-|-|
-|22.0.2|x|x|x|-|x|x|x|x|-|-|
-|22.0.3|x|x|x|-|x|x|x|x|-|-|
-|22.0.4|x|x|x|-|x|x|x|x|-|-|
-|22.0.5|x|x|x|-|x|x|x|x|-|-|
-|23.0.0|x|x|-(*5)|-(*5)|x|x|x|x|x|x|
-|23.0.1|x|x|x|x|x|x|x|x|x|x|
-|23.0.2|x|x|x|x|x|x|x|x|x|x|
-|23.0.3|x|x|x|x|x|x|x|x|x|x|
-|23.0.4|x|x|x|x|x|x|x|x|x|x|
-|23.0.5|x|x|x|x|x|x|x|x|x|x|
-|23.0.6|x|x|x|x|x|x|x|x|x|x|
-|23.0.7|x|x|x|x|x|x|x|x|x|x|
-|24.0.0|x|x|x|x|x|x|x|x|x|x|
-|24.0.1|x|x|x|x|x|x|x|x|x|x|
-|24.0.2|x|x|x|x|x|x|x|x|x|x|
-|24.0.3|x|x|x|x|x|x|x|x|x|x|
-|24.0.4|x|x|x|x|x|x|x|x|x|x|
-|24.0.5|x|x|x|x|x|x|x|x|x|x|
-|25.0.0|x|x|x|x|x|x|x|x|x|x|
-|25.0.1|x|x|x|x|x|x|x|x|x|x|
-|25.0.2|x|x|x|x|x|x|x|x|x|x|
-|25.0.4|x|x|x|x|x|x|x|x|x|x|
-|25.0.5|x|x|x|x|x|x|x|x|x|x|
-|25.0.6|x|x|x|x|x|x|x|x|x|x|
-|26.0.0|x|x|x|x|x|x|x|x|x|x|
-|26.0.1|x|x|x|x|x|x|x|x|x|x|
-|26.0.2|x|x|x|x|x|x|x|x|x|x|
-|26.0.4|x|x|x|x|x|x|x|x|x|x|
-|26.0.5|x|x|x|x|x|x|x|x|x|x|
-|26.0.6|x|x|x|x|x|x|x|x|x|x|
-|26.0.7|x|x|x|x|x|x|x|x|x|x|
-|26.0.8|x|x|x|x|x|x|x|x|x|x|
-|26.1.0|x|x|x|x|x|x|x|x|x|x|
-|26.1.1|x|x|x|x|x|x|x|x|x|x|
-|26.1.2|x|x|x|x|x|x|x|x|x|x|
-|26.1.3|x|x|x|x|x|x|x|x|x|x|
-|26.1.4|x|x|x|x|x|x|x|x|x|x|
-|26.1.5|x|x|x|x|x|x|x|x|x|x|
-|26.2.0|x|x|x|x|x|x|-(*7)|x|x|x|
-|26.2.1|x|x|x|x|x|x|-(*7)|x|x|x|
-|26.2.2|x|x|x|x|x|x|-(*7)|x|x|x|
-|26.2.3|x|x|x|x|x|x|x|x|x|x|
-|26.2.4|x|x|x|x|x|x|x|x|x|x|
-|26.2.5|x|x|x|x|x|x|x|x|x|x|
-|26.3.0|x|x|x|x|x|x|x|x|x|x|
+|Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR) (\*8)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|FAPI 2.0 Security Profile (\*9)|
+|-|-|-|-|-|-|-|-|-|-|-|-|
+|15.0.2|x|x|x|-|x|-|-|-|-|-|-|
+|17.0.0|x|x|x|-|x|-|-|-|-|-|-|
+|17.0.0-legacy|x|x|x|-|x|-|-|-|-|-|-|
+|17.0.1|x|x|x|-|x|-|-|-|-|-|-|
+|17.0.1-legacy|x|x|x|-|x|-|-|-|-|-|-|
+|18.0.0|x|x|x|-|x|-|x|x|-|-|-|
+|18.0.0-legacy|x|x|x|-|x|-|x|x|-|-|-|
+|18.0.2|x|x|x|-|x|-|x|x|-|-|-|
+|18.0.2-legacy|x|x|x|-|x|-|x|x|-|-|-|
+|19.0.1|x|x|x|-|x|-|x|x|-|-|-|
+|19.0.1-legacy|x|x|x|-|x|-|x|x|-|-|-|
+|19.0.2|x|x|x|-|x|-|x|x|-|-|-|
+|19.0.2-legacy|x|x|x|-|x|-|x|x|-|-|-|
+|20.0.0|x|x|x|-|x|x|x|x|-|-|-|
+|20.0.1|x|x|x|-|x|x|x|x|-|-|-|
+|20.0.2|x|x|x|-|x|x|x|x|-|-|-|
+|20.0.3|x|x|x|-|x|x|x|x|-|-|-|
+|20.0.5|x|x|x|-|x|x|x|x|-|-|-|
+|21.0.0|x|x|x|-|x|x|x|x|-|-|-|
+|21.0.1|x|x|x|-|x|x|x|x|-|-|-|
+|21.0.2|x|x|x|-|x|x|x|x|-|-|-|
+|21.1.0|x|x|x|-|x|x|x|x|-|-|-|
+|21.1.1|x|x|x|-|x|x|x|x|-|-|-|
+|21.1.2|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.0|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.1|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.2|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.3|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.4|x|x|x|-|x|x|x|x|-|-|-|
+|22.0.5|x|x|x|-|x|x|x|x|-|-|-|
+|23.0.0|x|x|-(*5)|-(*5)|x|x|x|x|x|x|-|
+|23.0.1|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.2|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.3|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.4|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.5|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.6|x|x|x|x|x|x|x|x|x|x|-|
+|23.0.7|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.0|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.1|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.2|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.3|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.4|x|x|x|x|x|x|x|x|x|x|-|
+|24.0.5|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.0|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.1|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.2|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.4|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.5|x|x|x|x|x|x|x|x|x|x|-|
+|25.0.6|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.0|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.1|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.2|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.4|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.5|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.6|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.7|x|x|x|x|x|x|x|x|x|x|-|
+|26.0.8|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.0|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.1|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.2|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.3|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.4|x|x|x|x|x|x|x|x|x|x|-|
+|26.1.5|x|x|x|x|x|x|x|x|x|x|-|
+|26.2.0|x|x|x|x|x|x|-(*7)|x|x|x|-|
+|26.2.1|x|x|x|x|x|x|-(*7)|x|x|x|-|
+|26.2.2|x|x|x|x|x|x|-(*7)|x|x|x|-|
+|26.2.3|x|x|x|x|x|x|x|x|x|x|-|
+|26.2.4|x|x|x|x|x|x|x|x|x|x|-|
+|26.2.5|x|x|x|x|x|x|x|x|x|x|-|
+|26.3.0|x|x|x|x|x|x|x|x|x|x|-|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -438,6 +500,8 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 \*7 : [ISSUE-39037](https://github.com/keycloak/keycloak/issues/39037)
 
 \*8 : According to [Australia CDR security profile specification](https://consumerdatastandardsaustralia.github.io/standards/#authentication-flows), From May 12th 2025, JARM is mandatory, and tt seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. Therfore, from the conformance suite version v5.1.33, it only tests "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile.
+
+/*9 : Since conformance suite version 5.1.33, FAPI 2.0 Security Profile Final and Message Signing Final conformance test is supported.
 
 ## Other Contributions
 

@@ -889,6 +889,22 @@ makeFAPI2MSTest() {
     TESTS="${TESTS} fapi2-message-signing-id1-test-plan[sender_constrain=mtls][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-id1/fapi2-ID1-FAPI2MS-JARM-MTLS-MTLS-ES256-ES256-automated.json"
 }
 
+makeFAPI2SPFinalTest() {
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=dpop][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-DPOP-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=dpop][client_auth_type=private_key_jwt][authorization_request_type=simple][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-DPOP-private-key-MTLS-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=dpop][client_auth_type=mtls][authorization_request_type=simple][openid=openid_connect][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-OpenID-Connect-DPOP-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=mtls][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=mtls][client_auth_type=private_key_jwt][authorization_request_type=simple][openid=plain_oauth][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-private-key-MTLS-PS256-PS256-automated.json"
+    TESTS="${TESTS} fapi2-security-profile-final-test-plan[sender_constrain=mtls][client_auth_type=mtls][authorization_request_type=simple][openid=openid_connect][fapi_profile=plain_fapi] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-sp-final/fapi2-final-FAPI2SP-OpenID-Connect-ES256-ES256-automated.json"
+}
+
+makeFAPI2MSFinalTest() {
+    TESTS="${TESTS} fapi2-message-signing-final-test-plan[sender_constrain=dpop][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=plain_response] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-final/fapi2-final-FAPI2MS-DPOP-JAR-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-message-signing-final-test-plan[sender_constrain=dpop][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-final/fapi2-final-FAPI2MS-DPOP-JARM-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-message-signing-final-test-plan[sender_constrain=mtls][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=plain_response] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-final/fapi2-final-FAPI2MS-JAR-MTLS-MTLS-ES256-ES256-automated.json"
+    TESTS="${TESTS} fapi2-message-signing-final-test-plan[sender_constrain=mtls][client_auth_type=mtls][authorization_request_type=simple][openid=plain_oauth][fapi_request_method=signed_non_repudiation][fapi_profile=plain_fapi][fapi_response_mode=jarm] ../conformance-suite/.gitlab-ci/fapi-conformance-suite-configs/fapi2-ms-final/fapi2-final-FAPI2MS-JARM-MTLS-MTLS-ES256-ES256-automated.json"
+}
+
 TESTS="${TESTS} --verbose"
 if [ "$#" -eq 0 ]; then
     echo "Run all tests"
@@ -1026,6 +1042,12 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-sp-id2-all" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-ms-id1-all" ]; then
     echo "Run fapi2-ms-id1 all tests"
     makeFAPI2MSTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-sp-final-all" ]; then
+    echo "Run fapi2-sp-final all tests"
+    makeFAPI2SPFinalTest
+elif [ "$#" -eq 1 ] && [ "$1" = "--fapi2-ms-final-all" ]; then
+    echo "Run fapi2-ms-final all tests"
+    makeFAPI2MSFinalTest
 elif [ "$#" -eq 1 ] && [ "$1" = "--client-tests-only" ]; then
     EXPECTED_FAILURES_FILE="../conformance-suite/.gitlab-ci/expected-failures-client.json"
     EXPECTED_SKIPS_FILE="../conformance-suite/.gitlab-ci/expected-skips-client.json"
@@ -1206,7 +1228,7 @@ elif [ "$#" -eq 1 ] && [ "$1" = "--oidc-rp-initiated-logout" ]; then
 elif [ "$#" -eq 1 ] && [ "$1" = "--manual-oidc-rp-initiated-logout" ]; then
     makeManualOIDCRpInitiatedLogoutTest
 else
-    echo "Syntax: run-tests.sh [--client-tests-only|--server-tests-only|--ciba-tests-only|--local-provider-tests|--panva-tests-only|--ekyc-tests|--federation-tests|--ssf-tests|--vci-tests|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--fapi2-sp-id2-all|--fapi2-ms-id1-all|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidc-config|--oidc-basic|--oidc-implicit|--oidc-hybrid|--oidc-formpost|--oidc-dynamic|--oidc-3rdparty-init-login]"
+    echo "Syntax: run-tests.sh [--client-tests-only|--server-tests-only|--ciba-tests-only|--local-provider-tests|--panva-tests-only|--ekyc-tests|--federation-tests|--ssf-tests|--vci-tests|--fapi1-advanced-all|--fapi-ciba-all|--ob-br-fapi1-advanced-all|--fapi-aus-cdr-all|--fapi-uk-ob-all|--oidc-all|--client-tests-only|--fapi1-advanced|--fapi-ciba-poll-id1|--fapi1-advanced-par|--fapi1-advanced-jarm|--fapi1-advanced-par-jarm|--fapi2-sp-id2-all|--fapi2-ms-id1-all|--fapi2-sp-final-all|--fapi2-ms-final-all|--ob-br-fapi1-advanced|--ob-br-fapi1-advanced-par|--ob-br-fapi1-advanced-jarm|--ob-br-fapi1-advanced-par-jarm|--fapi-aus-cdr|--fapi-aus-cdr-par|--oidc-config|--oidc-basic|--oidc-implicit|--oidc-hybrid|--oidc-formpost|--oidc-dynamic|--oidc-3rdparty-init-login]"
     exit 1
 fi
 
