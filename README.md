@@ -143,7 +143,7 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 ### Automated Conformance Test Run Environment by this kc-fapi-sig repository
 
 The current environment uses the following software version.
-- Keycloak 26.3.0
+- Keycloak 26.3.1
 - Conformance-suite version : release-v5.1.33
 
 #### FAPI 1.0 Advanced (Final)​
@@ -408,6 +408,7 @@ We tagged the environment for every keycloak verion:
 |kc-26.2.4|26.2.4|release-v5.1.31|
 |kc-26.2.5|26.2.5|release-v5.1.32|
 |kc-26.3.0|26.3.0|release-v5.1.33|
+|kc-26.3.1|26.3.1|release-v5.1.33|
 
 |Keycloak version|FAPI 1.0 Advanced|FAPI-CIBA|Open Banking Brasil FAPI 1.0 (\*1,\*2)|Open Finance Brasil FAPI 1.0 (\*3)|Australia Consumer Data Right (CDR) (\*8)|UK Open Banking|OpenID Connect OP (\*4)|OpenID Connect OP for Logout Profile|FAPI 2.0 Security Profile Implementer’s Draft (\*6)|FAPI 2.0 Message Signing Implementer’s Draft (\*6)|FAPI 2.0 Security Profile (\*9)|FAPI 2.0 Message Signing (\*9)|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
@@ -481,7 +482,8 @@ We tagged the environment for every keycloak verion:
 |26.2.3|x|x|x|x|x|x|x|x|x|x|-|-|
 |26.2.4|x|x|x|x|x|x|x|x|x|x|-|-|
 |26.2.5|x|x|x|x|x|x|x|x|x|x|-|-|
-|26.3.0|x|x|x|x|x|x|x|x|x|x|-|-|
+|26.3.0|x|x|x|x|x|x|x|x|x|x|x(*10)|x(*11)|
+|26.3.1|x|x|x|x|x|x|x|x|x|x|x(*10)|x(*11)|
 
 Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https://www.keycloak.org/docs/latest/release_notes/index.html#wildfly-distribution-removed).
 
@@ -502,6 +504,17 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 \*8 : According to [Australia CDR security profile specification](https://consumerdatastandardsaustralia.github.io/standards/#authentication-flows), From May 12th 2025, JARM is mandatory, and tt seems that the conformance suite from v5.1.33 only accepts the "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile while the current Conformance Test Execution Platform can run the "AU-CDR Adv. OP w/ Private Key" and "AU-CDR Adv. OP w/ Private Key, PAR" conformance profile tests. Therfore, from the conformance suite version v5.1.33, it only tests "AU-CDR Adv. OP w/ Private Key, PAR, JARM" conformance profile.
 
 \*9 : Since conformance suite version 5.1.33, FAPI 2.0 Security Profile Final and Message Signing Final conformance test is supported.
+
+\10* : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), Keycloak can pass some conformance tests among the five conformance profiles' conformance tests of FAPI 2.0 Serurity Profile Final specification:
+ - FAPI2SP MTLS + MTLS: passed
+ - FAPI2SP MTLS + DPOP: passed
+ - FAPI2SP private key + MTLS: not passed
+ - FAPI2SP private key + DPOP: not passed
+ - FAPI2SP OpenID Connect: passed (if not using private_key_jwt as client authentication method)
+
+\11* : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), , Keycloak can pass some conformance tests among the two conformance profiles' conformance tests of FAPI 2.0 Message Signing Final specification:
+ - FAPI2MS JAR: passed (if not using private_key_jwt as client authentication method)
+ - FAPI2MS JARM: passed (if not using private_key_jwt as client authentication method)
 
 ## Other Contributions
 
