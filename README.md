@@ -505,14 +505,14 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 
 \*9 : Since conformance suite version 5.1.33, FAPI 2.0 Security Profile Final and Message Signing Final conformance test is supported.
 
-\10* : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), Keycloak can pass some conformance tests among the five conformance profiles' conformance tests of FAPI 2.0 Serurity Profile Final specification:
+\*10 : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), Keycloak can pass some conformance tests among the five conformance profiles' conformance tests of FAPI 2.0 Serurity Profile Final specification:
  - FAPI2SP MTLS + MTLS: passed
  - FAPI2SP MTLS + DPOP: passed
  - FAPI2SP private key + MTLS: not passed
  - FAPI2SP private key + DPOP: not passed
  - FAPI2SP OpenID Connect: passed (if not using private_key_jwt as client authentication method)
 
-\11* : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), , Keycloak can pass some conformance tests among the two conformance profiles' conformance tests of FAPI 2.0 Message Signing Final specification:
+\*11 : Due to [ISSUE-41119](https://github.com/keycloak/keycloak/issues/41119), , Keycloak can pass some conformance tests among the two conformance profiles' conformance tests of FAPI 2.0 Message Signing Final specification:
  - FAPI2MS JAR: passed (if not using private_key_jwt as client authentication method)
  - FAPI2MS JARM: passed (if not using private_key_jwt as client authentication method)
 
