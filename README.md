@@ -648,6 +648,9 @@ Not only OAuth SIG member but others can communicate with each other by the foll
 - Mail : Google Group [keycloak developer mailing list](https://groups.google.com/forum/#!topic/keycloak-dev/Ck_1i5LHFrE)
 - Chat : Zulip Chat stream ([#dev-sig-fapi](https://keycloak.zulipchat.com/#narrow/stream/248413-dev-sig-fapi))
 - Meeting : Web meeting on a regular basis
+  - When: Every Wednesday
+  - Time: 12:00 PM - 1:00 PM London Time
+  - Where: https://zoom.us/j/93447076633
 
 ## Automated Conformance Test Run Environment
 
