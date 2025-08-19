@@ -34,7 +34,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 35th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/35th/presentations/FAPI-SIG_35th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/35th/presentations/FAPI-SIG_35th_MTG_agenda.pdf
 
 Recording :
  TBD
@@ -43,7 +43,7 @@ Summary :
 
  * Passed Conformance Tests per Keycloak version
    Listed up which version of keycloak could pass which types of conformance tests:
-   https://github.com/keycloak/kc-sig-fapi#passed-conformance-tests-per-keycloak-version
+   https://github.com/keycloak/keycloak-oauth-sig#passed-conformance-tests-per-keycloak-version
 
  * OIDC OP for Logout Profiles conformance test support
    Automated:

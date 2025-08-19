@@ -18,14 +18,14 @@ Presenter :
 
 Presentation Materials :
  [1] FAPI-SIG Community 2nd Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI-SIG_2nd_MTG_agenda.pdf [2] FAPI Support Milestone
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI_Support_Milestone.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI-SIG_2nd_MTG_agenda.pdf [2] FAPI Support Milestone
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/2nd/presentations/FAPI_Support_Milestone.pdf
  [3] FAPI-SIG Activities Update #1 in Japan
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No1_JPN.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/updates/FAPI_Update_No1_JPN.pdf
  [4] FAPI-SIG Activities Update #2 in Japan
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No2_JPN.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/updates/FAPI_Update_No2_JPN.pdf
  [5] FAPI-SIG Activities Update #3 in Japan
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No3_JPN.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/updates/FAPI_Update_No3_JPN.pdf
 
 Recording :
  https://zoom.us/rec/share/qi4aAj00m2g0FAF888K65HW2xCDeNHN9UgxOhp0wv0IVrtvPIYIyY_EJnPmxTMoT.AkyD6x6JuVvjWzSI

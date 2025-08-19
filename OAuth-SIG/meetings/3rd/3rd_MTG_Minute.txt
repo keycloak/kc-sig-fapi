@@ -39,7 +39,7 @@ Participants :
 
 Presentation Materials :
  [1] OAuth SIG Community 3rd Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/3rd/presentations/OAuth-SIG_3rd_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/OAuth-SIG/meetings/3rd/presentations/OAuth-SIG_3rd_MTG_agenda.pdf
 
 Recording :
  https://us06web.zoom.us/rec/share/7oYlpyvBlBdh_0YpZuTV4-gAAbpD81miT8UzeOAnRHG8p3VI5OcVu4fwF6Z3AUL7.RsVUXgQ67QArOrxW

@@ -1,5 +1,5 @@
 # SIG Meeting: 2025-02-12 20th Meeting (65th from Ex FAPI-SIG)
-[Meeting Slides](https://github.com/keycloak/kc-sig-fapi/blob/main/OAuth-SIG/meetings/20th/presentations/OAuth-SIG_20th_MTG_agenda.pdf)
+[Meeting Slides](https://github.com/keycloak/keycloak-oauth-sig/blob/main/OAuth-SIG/meetings/20th/presentations/OAuth-SIG_20th_MTG_agenda.pdf)
 
 - Date: Wed 12 February 2025
 - Time:

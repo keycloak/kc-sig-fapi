@@ -41,7 +41,7 @@ Participants :
 
 Presentation Materials :
  [1] OAuth SIG Community 6th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/6th/presentations/OAuth-SIG_6th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/OAuth-SIG/meetings/6th/presentations/OAuth-SIG_6th_MTG_agenda.pdf
 
 Recording :
  https://us06web.zoom.us/rec/share/fKEHIPyUFvD7hggf7zRzEiNrGLkND_X6R2q1gHnUpvFLYHP4JGLhTGaQUzQcFWth.-nyb6FcqL-dZORC1
@@ -55,7 +55,7 @@ Summary :
    - What we need to cover them to move its status of technology preview to official supported.
 
  * OID4VCs
-   The 2nd breakout session minute is available in https://github.com/keycloak/kc-sig-fapi/blob/main/OAuth-SIG/Breakouts/OID4VCs/2nd/2nd_breakout_session_minute.txt
+   The 2nd breakout session minute is available in https://github.com/keycloak/keycloak-oauth-sig/blob/main/OAuth-SIG/Breakouts/OID4VCs/2nd/2nd_breakout_session_minute.txt
    The 3rd breakout sessoin will be held on Wed 13 Dec.
 
  * CORS SPI

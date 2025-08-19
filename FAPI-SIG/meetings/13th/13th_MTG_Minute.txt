@@ -29,7 +29,7 @@ TBD
 
 Presentation Materials :
  [1] FAPI-SIG Community 13th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/13th/presentations/FAPI-SIG_13th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/13th/presentations/FAPI-SIG_13th_MTG_agenda.pdf
 
 Recording :
  https://zoom.us/rec/share/MTZZwU5g_nCPSVVUcqWSXm91lIoTJWQ-v6-wRI3-OsEFPOUsKoum1PZHDCYOtjP3.pCRtm697PmqADN0w
@@ -84,7 +84,7 @@ Summary :
      This makes us to use ECDSA and RSASSA-PSS based algorithm client public key easily and in more convenient way.
      The details are published in order for other member to work on this issue.
      -> uploaded on FAPI-SIG github repository.
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/OIDC-Client-Keys/FAPI-SIG-Annex_OIDC_Client_Keys.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/OIDC-Client-Keys/FAPI-SIG-Annex_OIDC_Client_Keys.pdf
    - How to accelerate PR review for pure CIBA support to help keycloak development team's review
      The web meeting as other time slot would be set up so that Takashi describes and explains the pure CIBA support PR if needed.
    - Keycloak and Client Authentication on the TLS layer (eIDAS) 

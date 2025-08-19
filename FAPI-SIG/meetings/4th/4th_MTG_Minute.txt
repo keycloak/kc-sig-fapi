@@ -21,12 +21,12 @@ Presenter :
 
 Presentation Materials :
  [1] FAPI-SIG Community 4th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/4th/presentations/FAPI-SIG_4th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/4th/presentations/FAPI-SIG_4th_MTG_agenda.pdf
  [2] CIBA Prototype Implementation Practical Guide
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/FAPI-CIBA/CIBA_PrototypeImplPracticalGuide.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/FAPI-CIBA/CIBA_PrototypeImplPracticalGuide.pdf
 
  [3] FAPI-CIBA Contribution Guide
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/FAPI-CIBA/FAPI-CIBA_ContributionGuide.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/FAPI-CIBA/FAPI-CIBA_ContributionGuide.pdf
 
 Recording :
  https://zoom.us/rec/play/bzOjuI1h-4pjPXkX71Snoq1FM44S836S-PnZ7DDd8bip6mNxCcY3T8Or2TuIuEmoobvnroTNqajyzrtr.aChNRjeHzRN6Ro5i?continueMode=true&_x_zm_rtaid=DdA5aV8dRdasmB9cAJvwYA.1602553613512.e4af3969e7924a5b475cf5e114ce444e&_x_zm_rhtaid=86
@@ -34,7 +34,7 @@ Recording :
 Summary :
 
  * FAPI-SIG members
-   found in https://github.com/keycloak/kc-sig-fapi/blob/master/members.adoc
+   found in https://github.com/keycloak/keycloak-oauth-sig/blob/master/members.adoc
 
  * FAPI-SIG repository
    It has been transferred from jsoss-sig/keycloak-fapi to keycloak/kc-sig-fapi.

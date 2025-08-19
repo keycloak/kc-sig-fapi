@@ -34,7 +34,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 36th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/36th/presentations/FAPI-SIG_36th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/36th/presentations/FAPI-SIG_36th_MTG_agenda.pdf
 
 Recording :
  https://us06web.zoom.us/rec/share/RzemuDC9itHYcmNOeOXb0R0hFByFRgMDy27nhLDmYNVoelJqfiOnzYyfq_yfoT-u.r3S-1_8pRwyrutyg

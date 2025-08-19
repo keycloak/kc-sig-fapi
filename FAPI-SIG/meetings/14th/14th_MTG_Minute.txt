@@ -30,7 +30,7 @@ TBD
 
 Presentation Materials :
  [1] FAPI-SIG Community 14th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/14th/presentations/FAPI-SIG_14th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/14th/presentations/FAPI-SIG_14th_MTG_agenda.pdf
 
 Summary :
  * Updates : FAPI-RW project
@@ -70,7 +70,7 @@ Summary :
 
  * Other Discussion Topics
    - OIDC Client's Public Keys Management
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/OIDC-Client-Keys/FAPI-SIG-Annex_OIDC_Client_Keys.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/OIDC-Client-Keys/FAPI-SIG-Annex_OIDC_Client_Keys.pdf
      Hitachi will start working on it.
    - Keycloak and Client Authentication on the TLS layer (eIDAS) 
      Investigation of the current keycloak12 are shown in page 22 to 30 of presentation material [1].
