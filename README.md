@@ -121,6 +121,10 @@ FAPI related accomplishments by FAPI-SIG and OAuth SIG, other contributors and k
 
   - [OpenID for Verifiable Credential Issuance](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 
+#### Keycloak 26
+
+  - [Initiating User Registration via OpenID Connect 1.0](https://openid.net/specs/openid-connect-prompt-create-1_0.html)
+
 #### In progress
 
 ##### OpenID for Verifiable Credentials
