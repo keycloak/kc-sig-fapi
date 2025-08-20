@@ -38,7 +38,7 @@ Participants :
 Presentation Materials :
  [1] Proposal: Trust Parties, Cross-Domain Trust (Dmitry)
  [2] OAuth SIG Community 16th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/16th/presentations/OAuth-SIG_16th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/OAuth-SIG/meetings/16th/presentations/OAuth-SIG_16th_MTG_agenda.pdf
 
 Recording :
  https://us06web.zoom.us/rec/share/MkGLwC5YYN4GFyX5TbwgkGrCi-Js8Pkg2zM3SfwB3NyBl1VXbZmu2DnCdH-NhEad.jYCRg5XdvXZxl7gN

@@ -21,9 +21,9 @@ Presenter :
 
 Presentation Materials :
  [1] FAPI-SIG Community 3rd Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/3rd/presentations/FAPI-SIG_3rd_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/3rd/presentations/FAPI-SIG_3rd_MTG_agenda.pdf
  [2] FAPI-SIG Activities Update #4 in Japan
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/updates/FAPI_Update_No4_JPN.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/updates/FAPI_Update_No4_JPN.pdf
 
 Recording :
  https://zoom.us/rec/share/tyE3d1lXhHX60RZvUeBZMD3Ev1J2LLm9KcbW1h5s6vUm0xqcRChhRaYyEj7x_93b.g5iYH-rFG783TtAq

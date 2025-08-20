@@ -39,7 +39,7 @@ Participants :
 
 Presentation Materials :
  [1] OAuth SIG Community 2nd Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/OAuth-SIG/meetings/2nd/presentations/OAuth-SIG_2nd_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/OAuth-SIG/meetings/2nd/presentations/OAuth-SIG_2nd_MTG_agenda.pdf
 
 Recording :
  https://drive.google.com/file/d/1uJezFG-lt9UfHRnF2ubHAUAOkY6zY-JS/view?usp=drive_link
@@ -47,7 +47,7 @@ Recording :
 Summary :
 
  * Keycloak 23
-   Presentation materials in Keycloak 23 can be posted to https://github.com/keycloak/kc-sig-fapi/tree/main/KeyConf/Keyconf%2023
+   Presentation materials in Keycloak 23 can be posted to https://github.com/keycloak/keycloak-oauth-sig/tree/main/KeyConf/Keyconf%2023
 
  * Examples and demos for security features
    These are useful when we demonstrate Keycloak's security features to clients and present them in conferences.

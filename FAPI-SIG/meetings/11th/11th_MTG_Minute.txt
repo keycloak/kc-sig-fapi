@@ -32,7 +32,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 11th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/11th/presentations/FAPI-SIG_11th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/11th/presentations/FAPI-SIG_11th_MTG_agenda.pdf
 
 Summary :
 

@@ -21,9 +21,9 @@ Presenter :
 
 Presentation Materials :
  [1] FAPI-SIG Community 5th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/5th/presentations/FAPI-SIG_5th_MTG_agenda%20.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/5th/presentations/FAPI-SIG_5th_MTG_agenda%20.pdf
  [2] Client Policies Practical Guide
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf
 
 Recording :
  https://zoom.us/rec/share/qBtek4D3EyPKFNV02fSnQoR2xYolyqJA40uwu6tCufPVGnjponl_d8Adu2ePYlZo.CtYPWewjgPSGCW3U

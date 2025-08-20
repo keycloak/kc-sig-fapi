@@ -41,7 +41,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 20th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/20th/presentations/FAPI-SIG_20th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/20th/presentations/FAPI-SIG_20th_MTG_agenda.pdf
 
 Recording :
  https://zoom.us/rec/share/bCuL5owqEBdtnzAUMn2uPpsoGrPfRUEilNPjkEHfOaC78gg5TMQ4miHHaHdhvmkr.dVAQ60YLgTAT7wvU
@@ -65,7 +65,7 @@ Summary :
    https://github.com/keycloak/keycloak/pull/8006
 
    Constructing automated test run environment for FAPI-CIBA conformance test has started.
-   https://github.com/keycloak/kc-sig-fapi/issues/65
+   https://github.com/keycloak/keycloak-oauth-sig/issues/65
 
  * Updates : Common Security Features​
    PR for OIDC Client’s Public Key Management 2nd phase has been submitted., waiting for its review.

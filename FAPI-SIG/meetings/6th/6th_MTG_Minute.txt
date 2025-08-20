@@ -33,7 +33,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 6th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/6th/presentations/FAPI-SIG_6th_MTG_agenda%20.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/6th/presentations/FAPI-SIG_6th_MTG_agenda%20.pdf
 
 Recording :
  https://zoom.us/rec/share/aS7xgxAeLSV351wQcOSpOmKEa4m8jPoPG7u8bErjkFdruijOd8Ce4-a41gSSeJGL.G1a7IBkWADkaDFpQ
@@ -122,7 +122,7 @@ Summary :
      - Adorsys member might help with not assigned issues.
      - Compared with issues on M/S#1 and M/S#2, issues on this milestone seems to be relatively easy
        because there is the document for Client Policies 
-       (Client Policies Practical Guide : https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf) .
+       (Client Policies Practical Guide : https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/documents/ClientPolicies/ClientPoliciesPracticalGuide.pdf) .
      - keycloak development team will review the PRs currently waiting for review and PRs that will be sent afterwards.
 
  * Other Topics of Client Policy Official Support

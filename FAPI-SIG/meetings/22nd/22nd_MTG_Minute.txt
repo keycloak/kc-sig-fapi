@@ -41,7 +41,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 22nd Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/22nd/presentations/FAPI-SIG_22nd_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/22nd/presentations/FAPI-SIG_22nd_MTG_agenda.pdf
 
 Recording :
  TBD
@@ -73,7 +73,7 @@ Summary :
    Keycloak has already satisfied some requirements by Open Banking Brasil. However, some requirements has not yet been satisfied by keycloak.
 
    PR sent to kc-sig-fapi to support automated conformance test run.
-   https://github.com/keycloak/kc-sig-fapi/pull/192
+   https://github.com/keycloak/keycloak-oauth-sig/pull/192
    -> Hopefully, someone add instructions (README.md might be appropriate) to run it.
 
  * Other Discussion Topics

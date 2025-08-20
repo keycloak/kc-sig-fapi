@@ -32,7 +32,7 @@ Participants :
 
 Presentation Materials :
  [1] FAPI-SIG Community 18th Meeting Agenda
-     https://github.com/keycloak/kc-sig-fapi/blob/master/FAPI-SIG/meetings/18th/presentations/FAPI-SIG_18th_MTG_agenda.pdf
+     https://github.com/keycloak/keycloak-oauth-sig/blob/master/FAPI-SIG/meetings/18th/presentations/FAPI-SIG_18th_MTG_agenda.pdf
 
 Recording :
  https://zoom.us/rec/share/iM0Fb8wh2jsXfkRn2A5SyWNFHs7e7HFDiwLUJYleWsMYbykLMP1tcxTpjTw5Dkxm.QLDleTzMkbVA6hSS
