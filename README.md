@@ -538,6 +538,7 @@ Note: Keycloak legacy (wildfly) is no longer supported since [keycloak 20](https
 ### Conference Speech
 
 #### Keyconf 25 (Van der Valk Hotel Amsterdam Zuidas – RAI, Amsterdam, Netherlands, August 28, 2025)
+- Title: Keycloak & OpenID Federation: Empowering Dynamic Trust in Federated Environments
 - Title: Keycloak meets AI: the possibility of integrating Keycloak with AI
 - URL: https://keyconf.dev/
 
